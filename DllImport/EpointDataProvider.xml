@@ -1,0 +1,997 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EpointDataProvider</name>
+    </assembly>
+    <members>
+        <member name="T:Epoint.Data.DataProviders.Object_Data">
+            <summary>
+            模块名称：数据服务组件。
+            版    本：1.0.0.0。
+            内    容：对象数据源。
+            摘    要：加载外部DLL，将DLL某个类中的方法和属性当成数据源提供。
+            文 件 名：Object_Data.cs。
+            编 写 人：周剑峰。
+            编写日期：2009年1月5日。
+            </summary>
+        </member>
+        <member name="T:Epoint.Data.DSNodeBase">
+            <summary>
+            模块名称：数据服务组件。
+            版    本：1.0.0.0。
+            内    容：数据服务处理器基类。
+            摘    要：为每个类型的数据服务提供者提供统一管理的基类。
+            文 件 名：DSNodeBase.cs。
+            编 写 人：周剑峰。
+            编写日期：2009年1月5日。
+            </summary>
+        </member>
+        <member name="M:Epoint.Data.DSNodeBase.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:Epoint.Data.DSNodeBase.SetFieldValue(System.String,System.Object)">
+            <summary>
+            通过反射设置值
+            </summary>
+        </member>
+        <member name="M:Epoint.Data.DSNodeBase.GetColumn(System.String)">
+            <summary>
+            根据名字取得列
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Epoint.Data.DSNodeBase.m_columns">
+            <summary>
+            列集合
+            </summary>
+        </member>
+        <member name="M:Epoint.Data.DSNodeBase.ReloadColumns">
+            <summary>
+            重新加载列
+            </summary>
+        </member>
+        <member name="F:Epoint.Data.DSNodeBase.IsChanged">
+            <summary>
+            标记是否为新增状态
+            </summary>
+        </member>
+        <member name="M:Epoint.Data.DSNodeBase.GetColumns">
+            <summary>
+            取得数据列集合属性
+            </summary>
+            <returns>数据列集合</returns>
+        </member>
+        <member name="M:Epoint.Data.DSNodeBase.FillData">
+            <summary>
+            填充数据（从外界读入数据）
+            </summary>
+        </member>
+        <member name="M:Epoint.Data.DSNodeBase.UpdateData">
+            <summary>
+            更新数据（数据写入外界）
+            </summary>
+        </member>
+        <member name="M:Epoint.Data.DSNodeBase.ClearData">
+            <summary>
+            清空数据
+            </summary>
+        </member>
+        <member name="M:Epoint.Data.DSNodeBase.ResetNode">
+            <summary>
+            重置结点
+            </summary>
+        </member>
+        <member name="M:Epoint.Data.DSNodeBase.GetListData">
+            <summary>
+            取得数据集合
+            </summary>
+        </member>
+        <member name="M:Epoint.Data.DSNodeBase.SetData(System.Object,Epoint.Data.DSColumn,System.Object)">
+            <summary>
+            设置对象数据
+            </summary>
+            <param name="component">数据集合子项</param>
+            <param name="column">数据列</param>
+            <param name="value">数据值</param>
+        </member>
+        <member name="M:Epoint.Data.DSNodeBase.GetData(System.Object,Epoint.Data.DSColumn)">
+            <summary>
+            取得对象数据
+            </summary>
+            <param name="component">数据集合子项</param>
+            <param name="column">数据列</param>
+            <returns>数据值得</returns>
+        </member>
+        <member name="M:Epoint.Data.DSNodeBase.SaveProvider">
+            <summary>
+            保存配置信息
+            </summary>
+            <returns>配置信息字符串</returns>
+        </member>
+        <member name="M:Epoint.Data.DSNodeBase.LoadProvider(System.String)">
+            <summary>
+            打印配置信息
+            </summary>
+            <param name="val">配置信息字符串</param>
+        </member>
+        <member name="M:Epoint.Data.DSNodeBase.GetColumnFromWeb">
+            <summary>
+            从Web程序中获取初使化信息
+            </summary>
+        </member>
+        <member name="M:Epoint.Data.DSNodeBase.GetResValue(System.String)">
+            <summary>
+            取得资源名称
+            </summary>
+            <param name="ResName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Data.DSNodeBase.Log(System.String)">
+            <summary>
+            记录日志信息
+            </summary>
+            <param name="info"></param>
+        </member>
+        <member name="M:Epoint.Data.DSNodeBase.GetMethods">
+            <summary>
+            取得方法列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Data.DSNodeBase.InvokeMethod(System.Reflection.MethodInfo,System.Object[])">
+            <summary>
+            调用方法
+            </summary>
+            <param name="Method"></param>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Data.DSNodeBase.CanRemoveMethod(System.String)">
+            <summary>
+            判断方法是否不显示
+            </summary>
+            <param name="MethodName">方法名</param>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Data.DSNodeBase.GetPath">
+            <summary>
+            取得路径
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Data.DSNodeBase.Clone">
+            <summary>
+            复制对象
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Epoint.Data.DSNodeBase.Order">
+            <summary>
+            排序号
+            </summary>
+        </member>
+        <member name="P:Epoint.Data.DSNodeBase.DSName">
+            <summary>
+            数据源名称
+            </summary>
+        </member>
+        <member name="P:Epoint.Data.DSNodeBase.Parent">
+            <summary>
+            父结点对象
+            </summary>
+        </member>
+        <member name="P:Epoint.Data.DSNodeBase.ParentName">
+            <summary>
+            父结点名称
+            </summary>
+        </member>
+        <member name="P:Epoint.Data.DSNodeBase.FromParentFilter">
+            <summary>
+            对父结点的筛选条件
+            </summary>
+        </member>
+        <member name="P:Epoint.Data.DSNodeBase.FromChildFilter">
+            <summary>
+            对子结点的筛选条件
+            </summary>
+        </member>
+        <member name="P:Epoint.Data.DSNodeBase.Filter">
+            <summary>
+            筛选条件
+            </summary>
+        </member>
+        <member name="P:Epoint.Data.DSNodeBase.Child">
+            <summary>
+            子对象集合
+            </summary>
+        </member>
+        <member name="P:Epoint.Data.DSNodeBase.Provider">
+            <summary>
+            数据提供者
+            </summary>
+        </member>
+        <member name="P:Epoint.Data.DSNodeBase.IsMultValue">
+            <summary>
+            取得和设置是否多值
+            </summary>
+        </member>
+        <member name="P:Epoint.Data.DSNodeBase.Columns">
+            <summary>
+            取得列集合
+            </summary>
+        </member>
+        <member name="P:Epoint.Data.DSNodeBase.Changedcol">
+            <summary>
+            记录变更的列信息
+            </summary>
+        </member>
+        <member name="M:Epoint.Data.DataProviders.Object_Data.SaveProvider">
+            <summary>
+            序列化
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Data.DataProviders.Object_Data.LoadProvider(System.String)">
+            <summary>
+            反序列化
+            </summary>
+            <param name="val"></param>
+        </member>
+        <member name="M:Epoint.Data.DataProviders.Object_Data.GetColumns">
+            <summary>
+            取得列名
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Data.DataProviders.Object_Data.Init">
+            <summary>
+            初使化
+            </summary>
+        </member>
+        <member name="M:Epoint.Data.DataProviders.Object_Data.GetMethods">
+            <summary>
+            取得方法列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Data.DataProviders.Object_Data.ResetNode">
+            <summary>
+            重置结点
+            </summary>
+        </member>
+        <member name="M:Epoint.Data.DataProviders.Object_Data.GetListData">
+            <summary>
+            取得对象集合数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Data.DataProviders.Object_Data.SetData(System.Object,Epoint.Data.DSColumn,System.Object)">
+            <summary>
+            设置数据
+            </summary>
+            <param name="component"></param>
+            <param name="column"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:Epoint.Data.DataProviders.Object_Data.GetData(System.Object,Epoint.Data.DSColumn)">
+            <summary>
+            取得数据
+            </summary>
+            <param name="component"></param>
+            <param name="column"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Data.DataProviders.Object_Data.InvokeMethod(System.Reflection.MethodInfo,System.Object[])">
+            <summary>
+            调用方法
+            </summary>
+            <param name="Method"></param>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Data.DataProviders.Object_Data.FillData">
+            <summary>
+            填充数据
+            </summary>
+        </member>
+        <member name="M:Epoint.Data.DataProviders.Object_Data.UpdateData">
+            <summary>
+            更新数据
+            </summary>
+        </member>
+        <member name="M:Epoint.Data.DataProviders.Object_Data.ClearData">
+            <summary>
+            清空数据
+            </summary>
+        </member>
+        <member name="P:Epoint.Data.DataProviders.Object_Data.DllFilePath">
+            <summary>
+            取得和设置DLL资源
+            </summary>
+        </member>
+        <member name="P:Epoint.Data.DataProviders.Object_Data.ClassName">
+            <summary>
+            取得和设置类名
+            </summary>
+        </member>
+        <member name="T:Epoint.Data.DataProviders.Object_Data.ClassSelectEditor">
+            <summary>
+            类名选择器
+            </summary>
+        </member>
+        <member name="T:Epoint.Data.DataProviderManage">
+            <summary>
+            模块名称：数据服务组件。
+            版    本：1.0.0.0。
+            内    容：数据源提供管理器。
+            摘    要：与framework通用绑定相关联。
+            文 件 名：DataProviderManage.cs。
+            编 写 人：周剑峰。
+            编写日期：2009年3月22日。
+            </summary>
+        </member>
+        <member name="M:Epoint.Data.DataProviderManage.FindNode(Epoint.Data.DSNodeBase,System.ComponentModel.PropertyDescriptor[],System.Int32)">
+            <summary>
+            根据属性查找子结点
+            </summary>
+            <param name="basenode"></param>
+            <param name="props"></param>
+            <param name="propStart"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Epoint.Data.DSColumn">
+            <summary>
+            数据字段描述定义
+            </summary>
+        </member>
+        <member name="M:Epoint.Data.DSColumn.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:Epoint.Data.DSColumn.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="Name">字段名</param>
+        </member>
+        <member name="M:Epoint.Data.DSColumn.#ctor(System.String,System.String,System.Type)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="Name">字段名</param>
+            <param name="Description">字段描述</param>
+            <param name="DataType">字段类型</param>
+        </member>
+        <member name="M:Epoint.Data.DSColumn.NotifyChange``1(``0@,``0)">
+            <summary>
+            属性变动
+            </summary>
+        </member>
+        <member name="M:Epoint.Data.DSColumn.IsObjectEqual``1(``0,``0)">
+            <summary>
+            判断对象是否相同
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="obj1"></param>
+            <param name="obj2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Data.DSColumn.SaveChangedInfo">
+            <summary>
+            保存变动的信息
+            </summary>
+        </member>
+        <member name="M:Epoint.Data.DSColumn.LoadChangedInfo(System.String)">
+            <summary>
+            加载变动的信息
+            </summary>
+        </member>
+        <member name="M:Epoint.Data.DSColumn.ToString">
+            <summary>
+            取得对象字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Data.DSColumn.ConvertToString">
+            <summary>
+            转为字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Data.DSColumn.ConvertFromString(System.String)">
+            <summary>
+            从字符串转化为对象
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Data.DSColumn.GetDefaultValue">
+            <summary>
+            取得默认值
+            </summary>
+        </member>
+        <member name="P:Epoint.Data.DSColumn.Isneedsave">
+            <summary>
+            标记该列信息是否需要保存
+            </summary>
+        </member>
+        <member name="P:Epoint.Data.DSColumn.Name">
+            <summary>
+            取得和设置字段名称
+            </summary>
+        </member>
+        <member name="P:Epoint.Data.DSColumn.Description">
+            <summary>
+            取得和设置字段描述
+            </summary>
+        </member>
+        <member name="P:Epoint.Data.DSColumn.DataType">
+            <summary>
+            取得和设置字段类型
+            </summary>
+        </member>
+        <member name="P:Epoint.Data.DSColumn.DefaultValue">
+            <summary>
+            取得设置字段默认值
+            </summary>
+        </member>
+        <member name="P:Epoint.Data.DSColumn.CanResetValue">
+            <summary>
+            取得和设置是否可以重置值
+            </summary>
+        </member>
+        <member name="P:Epoint.Data.DSColumn.IsReadOnly">
+            <summary>
+            取得和设置是否只读
+            </summary>
+        </member>
+        <member name="P:Epoint.Data.DSColumn.Tag">
+            <summary>
+            取得和设置用户自定义值
+            </summary>
+        </member>
+        <member name="P:Epoint.Data.DSColumn.Order">
+            <summary>
+            取得和设置字段顺序
+            </summary>
+        </member>
+        <member name="P:Epoint.Data.DSColumn.MaxLength">
+            <summary>
+            取得和设置字段最大值
+            </summary>
+        </member>
+        <member name="P:Epoint.Data.DSColumn.IsKey">
+            <summary>
+            取得和设置字段是否有关健字
+            </summary>
+        </member>
+        <member name="P:Epoint.Data.DSColumn.AllowNull">
+            <summary>
+            取得和设置是否可空
+            </summary>
+        </member>
+        <member name="P:Epoint.Data.DSColumn.DisplayType">
+            <summary>
+            取得和设置显示控件类型
+            </summary>
+        </member>
+        <member name="P:Epoint.Data.DSColumn.DragValue">
+            <summary>
+            拖放值
+            </summary>
+        </member>
+        <member name="P:Epoint.Data.DSColumn.CodeName">
+            <summary>
+            代码表名称
+            </summary>
+        </member>
+        <member name="T:Epoint.Data.Web.EpointDataSource">
+            <summary>
+            模块名称：数据服务BS组件。
+            版    本：1.0.0.0。
+            内    容：数据服务BS组件。
+            摘    要：通过读取配置文件来获取业务对象。通用的DataSource提供者
+            文 件 名：YZDataSource.cs。
+            编 写 人：周剑峰。
+            编写日期：2009年1月5日。
+            </summary>
+        </member>
+        <member name="M:Epoint.Data.Web.EpointDataSource.GetView(System.String)">
+            <summary>
+            取得数据视图
+            </summary>
+            <param name="viewName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Data.Web.EpointDataSource.FillData">
+            <summary>
+            填充数据
+            </summary>
+        </member>
+        <member name="M:Epoint.Data.Web.EpointDataSource.SaveData">
+            <summary>
+            保存数据
+            </summary>
+        </member>
+        <member name="M:Epoint.Data.Web.EpointDataSource.GetMisRowGuid(System.Int32)">
+            <summary>
+            取得数据Guid
+            </summary>
+            <param name="TableID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Data.Web.EpointDataSource.SetMisRowGuid(System.Int32,System.String)">
+            <summary>
+            取得数据Guid
+            </summary>
+            <param name="TableID"></param>
+            <param name="RowGuid"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Epoint.Data.Web.EpointDataSource.DSFileName">
+            <summary>
+            数据源文件名
+            </summary>
+        </member>
+        <member name="E:Epoint.Data.Web.EpointDataSource.getExternStream">
+            <summary>
+            取得额外对象流事件
+            </summary>
+        </member>
+        <member name="E:Epoint.Data.Web.EpointDataSource.dataSourceSaved">
+            <summary>
+            数据源保存事件
+            </summary>
+        </member>
+        <member name="P:Epoint.Data.Web.EpointDataSource.BndingContext">
+            <summary>
+            取得和设置BindingContext对象
+            </summary>
+        </member>
+        <member name="P:Epoint.Data.Web.EpointDataSource.InputKeyValues">
+            <summary>
+            取得和设置关健字值
+            </summary>
+        </member>
+        <member name="P:Epoint.Data.Web.EpointDataSource.DataObject">
+            <summary>
+            取得数据对象
+            </summary>
+        </member>
+        <member name="T:Epoint.Data.Web.EpointDataSource.DSExternStream">
+            <summary>
+            额外对象流事件代理
+            </summary>
+            <param name="sender"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Epoint.Data.Web.EpointDataSourceView">
+            <summary>
+            数据提供视图
+            </summary>
+        </member>
+        <member name="M:Epoint.Data.Web.EpointDataSourceView.#ctor(Epoint.Data.Web.EpointDataSource)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="ids"></param>
+        </member>
+        <member name="M:Epoint.Data.Web.EpointDataSourceView.ExecuteSelect(System.Web.UI.DataSourceSelectArguments)">
+            <summary>
+            取得数据
+            </summary>
+            <param name="arguments"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Epoint.Data.DSColumnPropertyDescriptor">
+            <summary>
+            模块名称：数据服务组件。
+            版    本：1.0.0.0。
+            内    容：数据列属性描述。
+            摘    要：与framework通用绑定相关联，由CurrencyManager使用
+            文 件 名：ColumnPropertyDescriptor.cs。
+            编 写 人：周剑峰。
+            编写日期：2009年3月22日。
+            </summary>
+        </member>
+        <member name="T:Epoint.Data.DSNodePropertyDescriptor">
+            <summary>
+            模块名称：数据服务组件。
+            版    本：1.0.0.0。
+            内    容：数据对象属性描述。
+            摘    要：与framework通用绑定相关联，由CurrencyManager使用
+            文 件 名：DSNodePropertyDescriptor.cs。
+            编 写 人：周剑峰。
+            编写日期：2009年3月22日。
+            </summary>
+        </member>
+        <member name="T:Epoint.Data.DataProviders.DataFilter">
+            <summary>
+            模块名称：数据服务组件。
+            版    本：1.0.0.0。
+            内    容：数据筛选器。
+            摘    要：接收输入值，然后跟据配置生成筛选条件，并设置父对象的筛选条件。
+            文 件 名：DataFilter.cs。
+            编 写 人：周剑峰。
+            编写日期：2009年1月5日。
+            </summary>
+        </member>
+        <member name="M:Epoint.Data.DataProviders.DataFilter.SaveProvider">
+            <summary>
+            序列化
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Data.DataProviders.DataFilter.LoadProvider(System.String)">
+            <summary>
+            反序列化
+            </summary>
+            <param name="val"></param>
+        </member>
+        <member name="M:Epoint.Data.DataProviders.DataFilter.GetColumns">
+            <summary>
+            取得字段集合
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Data.DataProviders.DataFilter.RefreshData">
+            <summary>
+            数据生效
+            </summary>
+        </member>
+        <member name="M:Epoint.Data.DataProviders.DataFilter.SetData(System.Object,Epoint.Data.DSColumn,System.Object)">
+            <summary>
+            设置数据
+            </summary>
+            <param name="component"></param>
+            <param name="column"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:Epoint.Data.DataProviders.DataFilter.GetData(System.Object,Epoint.Data.DSColumn)">
+            <summary>
+            取得数据
+            </summary>
+            <param name="component"></param>
+            <param name="column"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Data.DataProviders.DataFilter.FillData">
+            <summary>
+            填充数据
+            </summary>
+        </member>
+        <member name="M:Epoint.Data.DataProviders.DataFilter.UpdateData">
+            <summary>
+            更新数据
+            </summary>
+        </member>
+        <member name="M:Epoint.Data.DataProviders.DataFilter.ClearData">
+            <summary>
+            清空数据
+            </summary>
+        </member>
+        <member name="M:Epoint.Data.DataProviders.DataFilter.ResetNode">
+            <summary>
+            重置结点
+            </summary>
+        </member>
+        <member name="M:Epoint.Data.DataProviders.DataFilter.GetListData">
+            <summary>
+            取得列表数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Epoint.Data.DataProviders.DataFilter.Fields">
+            <summary>
+            取得和设置参与筛选的字段项，多个用豆号隔开
+            </summary>
+        </member>
+        <member name="T:Epoint.Data.ResourceDefine">
+            <summary>
+            模块名称：数据服务组件。
+            版    本：1.0.0.0。
+            内    容：资源信息定义类。
+            摘    要：记录共用资源信息，主要为目录，数据库，WebService等。
+            文 件 名：ResourceDefine.cs。
+            编 写 人：周剑峰。
+            编写日期：2009年6月5日。
+            </summary>
+        </member>
+        <member name="P:Epoint.Data.ResourceDefine.Name">
+            <summary>
+            取得和设置资源名称
+            </summary>
+        </member>
+        <member name="P:Epoint.Data.ResourceDefine.ResourceType">
+            <summary>
+            取得和设置资源类型
+            </summary>
+        </member>
+        <member name="P:Epoint.Data.ResourceDefine.DefaultValue">
+            <summary>
+            取得和设置资源值
+            </summary>
+        </member>
+        <member name="T:Epoint.Data.ResourceDefine.ResType">
+            <summary>
+            资源类型枚举
+            </summary>
+        </member>
+        <member name="F:Epoint.Data.ResourceDefine.ResType.DataBase">
+            <summary>
+            数据库
+            </summary>
+        </member>
+        <member name="F:Epoint.Data.ResourceDefine.ResType.File">
+            <summary>
+            文件
+            </summary>
+        </member>
+        <member name="F:Epoint.Data.ResourceDefine.ResType.Directory">
+            <summary>
+            目录
+            </summary>
+        </member>
+        <member name="F:Epoint.Data.ResourceDefine.ResType.WebService">
+            <summary>
+            WebService
+            </summary>
+        </member>
+        <member name="T:Epoint.Data.DataProvider">
+            <summary>
+            模块名称：数据服务组件。
+            版    本：1.0.0.0。
+            内    容：数据服务组件。
+            摘    要：通过读取配置文件来操作数据。通用的DataSource提供者
+            文 件 名：DataProvider.cs。
+            编 写 人：周剑峰。
+            编写日期：2009年1月5日。
+            </summary>
+        </member>
+        <member name="M:Epoint.Data.DataProvider.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:Epoint.Data.DataProvider.SetRootFilter(System.String)">
+            <summary>
+            传入第一个子结点的筛选条件
+            </summary>
+            <param name="filter"></param>
+        </member>
+        <member name="M:Epoint.Data.DataProvider.SaveProvider(System.IO.Stream)">
+            <summary>
+            保存
+            </summary>
+        </member>
+        <member name="M:Epoint.Data.DataProvider.LoadProvider(System.IO.Stream)">
+            <summary>
+            加载
+            </summary>
+        </member>
+        <member name="M:Epoint.Data.DataProvider.Log(System.String)">
+            <summary>
+            日志记录
+            </summary>
+            <param name="info"></param>
+        </member>
+        <member name="M:Epoint.Data.DataProvider.IsChanged">
+            <summary>
+            取得是否改变
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Data.DataProvider.SetSaved">
+            <summary>
+            设置已经保存
+            </summary>
+        </member>
+        <member name="M:Epoint.Data.DataProvider.Reset">
+            <summary>
+            重置对象
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Data.DataProvider.AllNodes">
+            <summary>
+            取得所有子结点集合
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Data.DataProvider.AddNode(Epoint.Data.DSNodeBase)">
+            <summary>
+            添加结点
+            </summary>
+            <param name="node"></param>
+        </member>
+        <member name="M:Epoint.Data.DataProvider.ContainsNode(Epoint.Data.DSNodeBase)">
+            <summary>
+            判断是否包含结点
+            </summary>
+            <param name="node"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Data.DataProvider.SetDBRes(System.String)">
+            <summary>
+            重置数据库连接属性资源
+            </summary>
+            <param name="connstr"></param>
+        </member>
+        <member name="M:Epoint.Data.DataProvider.LoadALlColumns">
+            <summary>
+            预先加载所有列
+            </summary>
+        </member>
+        <member name="M:Epoint.Data.DataProvider.ResetNode">
+            <summary>
+            重初始化
+            </summary>
+        </member>
+        <member name="M:Epoint.Data.DataProvider.FillData">
+            <summary>
+            填充数据
+            </summary>
+        </member>
+        <member name="M:Epoint.Data.DataProvider.UpdateData">
+            <summary>
+            更新数据
+            </summary>
+        </member>
+        <member name="M:Epoint.Data.DataProvider.ClearData">
+            <summary>
+            清空数据
+            </summary>
+        </member>
+        <member name="M:Epoint.Data.DataProvider.GetFieldInStr(System.String)">
+            <summary>
+            取得字符串中含有的第一个字段
+            </summary>
+        </member>
+        <member name="M:Epoint.Data.DataProvider.GetTagIndex(System.String,System.Int32)">
+            <summary>
+            取得非字段字符的位置，用于定们字符串中的字段结束。
+            </summary>
+            <param name="str"></param>
+            <param name="startPos"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Data.DataProvider.GetNodeFieldValue(System.String,System.String)">
+            <summary>
+            取得结点当前某字段的值
+            </summary>
+            <param name="DSName">结点名称</param>
+            <param name="Field">字段</param>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Data.DataProvider.SetNodeFieldValue(System.String,System.String,System.Object)">
+            <summary>
+            设置结点当前某字段的值
+            </summary>
+            <param name="DSName">结点名称</param>
+            <param name="Field">字段</param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Data.DataProvider.ReplaceFilter(System.String,System.String)">
+            <summary>
+            替换筛选条件中的字段值
+            </summary>
+            <param name="DSName">结点名</param>
+            <param name="filter">字段</param>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Data.DataProvider.GetDataBMB(Epoint.Data.DSNodeBase)">
+            <summary>
+            取得对点的绑定对象
+            </summary>
+            <param name="node"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Data.DataProvider.BeginInit">
+            <summary>
+            开始初使化
+            </summary>
+        </member>
+        <member name="M:Epoint.Data.DataProvider.EndInit">
+            <summary>
+            结束初使化，主要用于CS系统中，界面设计器中的状态。
+            </summary>
+        </member>
+        <member name="M:Epoint.Data.DataProvider.Clone">
+            <summary>
+            复制对象
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="E:Epoint.Data.DataProvider.srcChanged">
+            <summary>
+            数据源改变事件
+            </summary>
+        </member>
+        <member name="P:Epoint.Data.DataProvider.FileName">
+            <summary>
+            取得和设置文件名
+            </summary>
+        </member>
+        <member name="P:Epoint.Data.DataProvider.InputKeyValues">
+            <summary>
+            取得和设置主健值
+            </summary>
+        </member>
+        <member name="P:Epoint.Data.DataProvider.IsInDesign">
+            <summary>
+            取得和设置是否在设计中
+            </summary>
+        </member>
+        <member name="P:Epoint.Data.DataProvider.UrlPath">
+            <summary>
+            取得和设置服务器Url地址
+            </summary>
+        </member>
+        <member name="P:Epoint.Data.DataProvider.UpdateTime">
+            <summary>
+            取得和设置对象更新时间
+            </summary>
+        </member>
+        <member name="P:Epoint.Data.DataProvider.DataSourceID">
+            <summary>
+            取得和设置数据标识
+            </summary>
+        </member>
+        <member name="P:Epoint.Data.DataProvider.ResDefines">
+            <summary>
+            取得和设置资源定义集合
+            </summary>
+        </member>
+        <member name="P:Epoint.Data.DataProvider.RootNodes">
+            <summary>
+            根据数据源结点(名称，实例)
+            </summary>
+        </member>
+        <member name="E:Epoint.Data.DataProvider.Initialized">
+            <summary>
+            初使化事件
+            </summary>
+        </member>
+        <member name="P:Epoint.Data.DataProvider.IsInitialized">
+            <summary>
+            取得是否已经初始化过
+            </summary>
+        </member>
+        <member name="T:Epoint.Data.ProviderMethod">
+            <summary>
+            数据提供都方法
+            </summary>
+        </member>
+        <member name="M:Epoint.Data.ProviderMethod.#ctor(System.Object)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="datasource"></param>
+        </member>
+        <member name="M:Epoint.Data.ProviderMethod.Save">
+            <summary>
+            保存
+            </summary>
+        </member>
+        <member name="T:Epoint.Data.IDSEditor">
+            <summary>
+            数据源资源编辑器接口
+            </summary>
+        </member>
+        <member name="M:Epoint.Data.IDSEditor.Edit">
+            <summary>
+            修改记录
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Epoint.Data.IDSEditor.baseNode">
+            <summary>
+            数据源结点对象
+            </summary>
+        </member>
+    </members>
+</doc>

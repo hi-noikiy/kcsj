@@ -1,0 +1,72 @@
+﻿<job id="main">
+    <script language="JScript">
+        var WshShell = new ActiveXObject("WSCript.Shell");
+
+        //添加信息站点
+
+        //WEB IP
+        WshShell.RegWrite("HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\ZoneMap\\Ranges\\Range100\\", "");
+        WshShell.RegWrite("HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\ZoneMap\\Ranges\\Range100\\http", "2", "REG_DWORD");
+        WshShell.RegWrite("HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\ZoneMap\\Ranges\\Range100\\:Range", "218.90.162.101");
+
+
+        //域名
+        //WshShell.RegWrite("HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\ZoneMap\\Domains\\cfca.com.cn\\", "");
+        //WshShell.RegWrite("HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\ZoneMap\\Domains\\cfca.com.cn\\www","");
+        //WshShell.RegWrite("HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\ZoneMap\\Domains\\cfca.com.cn\\www\\http", "2", "REG_DWORD");
+
+
+        //修改IE AciveX安全设置
+        //Zones
+        //0  我的电脑
+        //1  本地Intranet区域
+        //2  受信任的站点区域
+        //3  Internet区域
+        //4  受限制的站点区域
+
+        //1001下载已签名的ActiveX控件  3表示禁用，0表示启用，1表示提示
+        WshShell.RegWrite("HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Zones\\2\\1001", "0", "REG_DWORD");
+        //1004下载未签名的ActiveX控件
+        WshShell.RegWrite("HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Zones\\2\\1004", "0", "REG_DWORD");
+        //1200运行ActiveX控件和插件
+        WshShell.RegWrite("HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Zones\\2\\1200", "0", "REG_DWORD");
+        //1201对没有标记为安全的ActiveX控件进行初始化和脚本运行
+        WshShell.RegWrite("HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Zones\\2\\1201", "0", "REG_DWORD");
+        //1206其他：允许IE浏览器控件的脚本编写
+        //1207保留
+        //1208ActiveX控件和插件：允许以前未使用的ActiveX在没有提示的情况下运行
+        //1209ActiveX控件和插件：允许脚本小程序
+
+        //1405对标记为安全的ActiveX控件进行初始化和脚本运行
+        WshShell.RegWrite("HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Zones\\2\\1405", "0", "REG_DWORD");
+
+        //1407  脚本，允许编程对剪贴板进行访问
+        WshShell.RegWrite("HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Zones\\2\\1407", "0", "REG_DWORD");
+
+        //2201 ActiveX控件和插件：ActiveX控件自动提示
+        WshShell.RegWrite("HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Zones\\2\\2201", "0", "REG_DWORD");
+        //------------------------------------------------------
+        //1803 下载：文件下载
+        WshShell.RegWrite("HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Zones\\2\\1803", "0", "REG_DWORD");
+
+        //2200 下载：文件下载自动提示
+        WshShell.RegWrite("HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Zones\\2\\2200", "0", "REG_DWORD");
+
+        //1604 下载：字体下载
+        WshShell.RegWrite("HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Zones\\2\\1604", "0", "REG_DWORD");
+        //------------------------------------------------------        
+        //1809 其他：使用弹出窗口阻止程序
+        WshShell.RegWrite("HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Zones\\2\\1809", "3", "REG_DWORD");
+
+        //禁用WinXP弹出窗口阻止窗口
+        WshShell.RegWrite("HKCU\\Software\\Microsoft\\Internet Explorer\\New Windows\\PopupMgr", "no");
+
+        // v1.2 Internet临时文件，检查网页的较新版本：3为每次访问网页时，4为自动
+        WshShell.RegWrite("HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\SyncMode5", "3", "REG_DWORD");
+
+
+        WSH.Echo("IE浏览器设置完毕!");
+
+ 
+    </script>
+</job>

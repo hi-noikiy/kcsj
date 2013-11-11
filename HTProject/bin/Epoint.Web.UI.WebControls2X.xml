@@ -1,0 +1,4963 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Epoint.Web.UI.WebControls2X</name>
+    </assembly>
+    <members>
+        <member name="T:Epoint.Web.UI.WebControls2X.Uploader.UploadContext">
+            <summary>
+            大文件上传上下文
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.Uploader.UploadContext.aByte">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.Uploader.UploadContext.strTempFilePath">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.Uploader.UploadContext.stream">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.Uploader.UploadContext.e">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.Uploader.UploadContext.PreloadedEntityBody">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.Uploader.UploadContext.g">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.Uploader.UploadContext.h">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.Uploader.UploadContext.i">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.Uploader.UploadContext.j">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.Uploader.UploadContext.k">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.Uploader.UploadContext.l">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.Uploader.UploadContext.m">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.Uploader.UploadContext.n">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.Uploader.UploadContext.#ctor(System.Web.HttpContext)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.Uploader.UploadContext.a(System.Web.HttpWorkerRequest)">
+            <summary>
+            
+            </summary>
+            <param name="hwr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.Uploader.UploadContext.a(System.Byte[],System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="A_0"></param>
+            <param name="A_1"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.Uploader.UploadContext.GetPreloadedEntityBody">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.Uploader.UploadContext.getStream">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.Uploader.UploadContext.Dispose">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Epoint.Web.UI.WebControls2X.Uploader.eUploadStatus">
+            <summary>
+            上传状态
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.Uploader.eUploadStatus.Initializing">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.Uploader.eUploadStatus.Uploading">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.Uploader.eUploadStatus.HasError">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.Uploader.eUploadStatus.UserCancel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.Uploader.eUploadStatus.Complete">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Epoint.Web.UI.WebControls2X.AttachList">
+            <summary>
+            TreeView,继承自HierarchicalDataBoundControl, ICallbackEventHandler
+            Author：XGC
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.AttachList.AddAttributesToRender(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.AttachList.CreateChildControls">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.AttachList.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            重构Render
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.AttachList.getInitScript">
+            <summary>
+            添加初始化JS函数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.AttachList.Setlink">
+            <summary>
+            在<head></head>标签中添加css,JAVASCRIPT链接
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.AttachList.OnPreRender(System.EventArgs)">
+            <summary>
+            重构OnPreRender，添加JS或者Css的注册
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.AttachList.Count">
+            <summary>
+            获取上传的附加个数
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.AttachList.InputButtonCssClass">
+            <summary>
+            添加附件按钮的样式表
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.AttachList.InputDelButtonCssClass">
+            <summary>
+            删除附件按钮的样式表
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.AttachList.InputPrevButtonCssClass">
+            <summary>
+            预览附件按钮的样式表
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.AttachList.TagKey">
+            <summary>
+            TableTag
+            </summary>
+        </member>
+        <member name="T:Epoint.Web.UI.WebControls2X.DateFromTo">
+            <summary>
+            DateFromTo类，继承自System.Web.UI.WebControls.WebControl, INamingContainer
+            Author：XGC
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.DateFromTo.CreateChildControls">
+            <summary>
+            重构CreateChildControls，创建两个DateTextBox控件
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.DateFromTo.ValidatorDisplayDynamic">
+            <summary>
+            ValidatorDisplay的模式是否为Dynamic，默认Dynamic
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.DateFromTo.FromText">
+            <summary>
+            起始日期框的值
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.DateFromTo.FromValue">
+            <summary>
+            只读,起始日期的值,分隔符固定为 /
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.DateFromTo.ToText">
+            <summary>
+            结束日期框的值
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.DateFromTo.ToValue">
+            <summary>
+            只读,结束日期的值,分隔符固定为 /
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.DateFromTo.ShowLongDate">
+            <summary>
+            是否显示长日期
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.DateFromTo.FromReadOnly">
+            <summary>
+            起始日期是否只读
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.DateFromTo.ToReadOnly">
+            <summary>
+            结束日期是否只读
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.DateFromTo.Character">
+            <summary>
+            日期分节符 CN=中文 XG='/' HX='-'
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.DateFromTo.TagKey">
+            <summary>
+            控件的起始TagKey
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.DateFromTo.Width">
+            <summary>
+            控件宽度,默认为100%
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.DateFromTo.FromWidth">
+            <summary>
+            控件宽度,默认为100%
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.DateFromTo.ToAllowNull">
+            <summary>
+            结束日期是否必须输入
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.DateFromTo.FromAllowNull">
+            <summary>
+            结束日期是否必须输入
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.DateFromTo.ToWidth">
+            <summary>
+            控件宽度,默认为100%
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.DateFromTo.FromMaxYear">
+            <summary>
+            起始日期可选择的最大年 默认当前年后100年
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.DateFromTo.FromMinYear">
+            <summary>
+            起始日期可选择的最小年 默认1900年
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.DateFromTo.ToMaxYear">
+            <summary>
+            结束日期可选择的最大年 默认当前年后100年
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.DateFromTo.ToMinYear">
+            <summary>
+            结束日期可选择的最小年 默认1900年
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.DateFromTo.MinFromDate">
+            <summary>
+            可选择的起始最小日期
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.DateFromTo.MaxFromDate">
+            <summary>
+            可选择的起始最大日期
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.DateFromTo.MinToDate">
+            <summary>
+            可选择的结束最小日期
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.DateFromTo.MaxToDate">
+            <summary>
+            可选择的结束最大日期
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.DateFromTo.DateGapType">
+            <summary>
+            日期间隔类型
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.DateFromTo.DateGapNum">
+            <summary>
+            日期最小间隔值
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.DateFromTo.FromTextCssClass">
+            <summary>
+            FromText文本框的样式表
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.DateFromTo.ToTextCssClass">
+            <summary>
+            ToText文本框的样式表
+            </summary>
+        </member>
+        <member name="T:Epoint.Web.UI.WebControls2X.eTextBoxType">
+            <summary>
+            数值框的类型 整形、数值、Money、百分比
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.eTextBoxType.Int">
+            <summary>
+            整数
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.eTextBoxType.Numeric">
+            <summary>
+            数值
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.eTextBoxType.Money">
+            <summary>
+            Money
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.eTextBoxType.Rate">
+            <summary>
+            百分比
+            </summary>
+        </member>
+        <member name="T:Epoint.Web.UI.WebControls2X.eSpecialType">
+            <summary>
+            特殊文本框的类型，Email,身份证，邮编，手机
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.eSpecialType.Email">
+            <summary>
+            Email
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.eSpecialType.IdentityCard">
+            <summary>
+            身份证
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.eSpecialType.PostCode">
+            <summary>
+            邮编
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.eSpecialType.Mobile">
+            <summary>
+            手机
+            </summary>
+        </member>
+        <member name="T:Epoint.Web.UI.WebControls2X.SelectionOnFocusType">
+            <summary>
+            文本框获取焦点的模式，普通、最后、最前、全选
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.SelectionOnFocusType.Normal">
+            <summary>
+            普通
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.SelectionOnFocusType.CaretToEnd">
+            <summary>
+            最后
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.SelectionOnFocusType.CaretToBeginning">
+            <summary>
+            最前
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.SelectionOnFocusType.SelectAll">
+            <summary>
+            全选
+            </summary>
+        </member>
+        <member name="T:Epoint.Web.UI.WebControls2X.ShowMessageType">
+            <summary>
+            文本框失去焦点提示信息的显示模式
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.ShowMessageType.None">
+            <summary>
+            不显示
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.ShowMessageType.Alert">
+            <summary>
+            最后
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.ShowMessageType.Div">
+            <summary>
+            最前
+            </summary>
+        </member>
+        <member name="T:Epoint.Web.UI.WebControls2X.eInputType">
+            <summary>
+            TreeView的叶子控件样式，没有、CheckBox、Radio
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.eInputType.None">
+            <summary>
+            没有
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.eInputType.CheckBox">
+            <summary>
+            CheckBox
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.eInputType.Radio">
+            <summary>
+            Radio
+            </summary>
+        </member>
+        <member name="T:Epoint.Web.UI.WebControls2X.DateCharacter">
+             <summary>
+            中文、斜杠、横线
+             </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.DateCharacter.CN">
+            <summary>
+            中文
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.DateCharacter.XG">
+            <summary>
+            斜杠
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.DateCharacter.HX">
+            <summary>
+            横线
+            </summary>
+        </member>
+        <member name="T:Epoint.Web.UI.WebControls2X.eDateTextBoxType">
+            <summary>
+            日期输入框的类型 Single 单个 From 复合控件的起始日期框,To 复合控件的结束日期框
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.eDateTextBoxType.Single">
+            <summary>
+            单个
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.eDateTextBoxType.From">
+            <summary>
+            复合控件的起始日期框
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.eDateTextBoxType.To">
+            <summary>
+            复合控件的结束日期框
+            </summary>
+        </member>
+        <member name="T:Epoint.Web.UI.WebControls2X.eDateGapType">
+            <summary>
+            日期间隔类型
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.eDateGapType.Year">
+            <summary>
+            年
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.eDateGapType.Season">
+            <summary>
+            季度
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.eDateGapType.Month">
+            <summary>
+            月份
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.eDateGapType.Day">
+            <summary>
+            天
+            </summary>
+        </member>
+        <member name="T:Epoint.Web.UI.WebControls2X.eInputDateType">
+            <summary>
+            日期输入类型
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.eInputDateType.Input">
+            <summary>
+            输入
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.eInputDateType.Select">
+            <summary>
+            选择
+            </summary>
+        </member>
+        <member name="T:Epoint.Web.UI.WebControls2X.eAfterClick">
+            <summary>
+            按钮Click事件结束后执行的代码
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.eAfterClick.None">
+            <summary>
+            不执行任何东西
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.eAfterClick.Refresh">
+            <summary>
+            刷新
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.eAfterClick.Close">
+            <summary>
+            关闭
+            </summary>
+        </member>
+        <member name="T:Epoint.Web.UI.WebControls2X.eOpenType">
+            <summary>
+            AddButton的打开模式，open、模式化、非模式化
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.eOpenType.open">
+            <summary>
+            open
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.eOpenType.showModalDialog">
+            <summary>
+            模式化打开
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.eOpenType.showModelessDialog">
+            <summary>
+            非模式化
+            </summary>
+        </member>
+        <member name="T:Epoint.Web.UI.WebControls2X.OpenStatus">
+            <summary>
+            Open，模式化打开窗口的各属性值
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.OpenStatus.None">
+            <summary>
+            未设置
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.OpenStatus.yes">
+            <summary>
+            是
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.OpenStatus.no">
+            <summary>
+            否
+            </summary>
+        </member>
+        <member name="T:Epoint.Web.UI.WebControls2X.StyleOfControl">
+            <summary>
+            控件的样式库
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.StyleOfControl.Normal">
+            <summary>
+            标准,蓝色
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.StyleOfControl.Gray">
+            <summary>
+            灰色
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.StyleOfControl.Green">
+            <summary>
+            绿色
+            </summary>
+        </member>
+        <member name="T:Epoint.Web.UI.WebControls2X.ArrowsPosition">
+            <summary>
+             The UpDown Arrows Position enumeration
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.ArrowsPosition.Left">
+            <summary>
+            左边
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.ArrowsPosition.Right">
+            <summary>
+            右边
+            </summary>
+        </member>
+        <member name="T:Epoint.Web.UI.WebControls2X.eTextMode">
+            <summary>
+            文本框的模式
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.eTextMode.Single">
+            <summary>
+            单行
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.eTextMode.MultiLine">
+            <summary>
+            多行
+            </summary>
+        </member>
+        <member name="T:Epoint.Web.UI.WebControls2X.eSelectAreaPosition">
+            <summary>
+             TextTreeView 的选择区域出现位置。
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.eSelectAreaPosition.Left">
+            <summary>
+            左边
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.eSelectAreaPosition.Right">
+            <summary>
+            右边
+            </summary>
+        </member>
+        <member name="T:Epoint.Web.UI.WebControls2X.EditorStyle">
+            <summary>
+            编辑器的样式枚举standard/s_yellow/s_red/s_mini/s_light/s_green/s_full/s_coolblue/s_blue/s_3d
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.EditorStyle.Full">
+            <summary>
+            显示所有的功能按钮
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.EditorStyle.Standard">
+            <summary>
+            显示常用的功能按钮
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.EditorStyle.Mini">
+            <summary>
+            显示最简单的功能
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.EditorStyle.Yellow">
+            <summary>
+            浅黄色按钮
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.EditorStyle.Red">
+            <summary>
+            红色按钮
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.EditorStyle.Light">
+            <summary>
+            浅色按钮
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.EditorStyle.Green">
+            <summary>
+            浅绿按钮
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.EditorStyle.Blue">
+            <summary>
+            浅蓝色按钮
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.EditorStyle.CoolBlue">
+            <summary>
+            蓝色按钮
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.EditorStyle.Office3D">
+            <summary>
+            Office标准风格3D凹凸按钮
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.EditorStyle.NewsSystem">
+            <summary>
+            酷蓝样式，用于新闻系统
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.EditorStyle.Popup">
+            <summary>
+            酷蓝样式，主要用于标准弹窗，增加弹窗返回按钮。
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.EditorStyle.Button">
+            <summary>
+            按钮风格
+            </summary>
+        </member>
+        <member name="T:Epoint.Web.UI.WebControls2X.WaterMarkPosition">
+            <summary>
+            水印位置
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.WaterMarkPosition.TOP_LEFT">
+            <summary>
+            左上
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.WaterMarkPosition.TOP_RIGHT">
+            <summary>
+            右上
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.WaterMarkPosition.BOTTOM_LEFT">
+            <summary>
+            左下
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.WaterMarkPosition.BOTTOM_RIGHT">
+            <summary>
+            右下
+            </summary>
+        </member>
+        <member name="T:Epoint.Web.UI.WebControls2X.eDateTextBox">
+            <summary>
+            日期控件类型
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.eDateTextBox.Date">
+            <summary>
+            日期
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.eDateTextBox.DateTime">
+            <summary>
+            日期和时间
+            </summary>
+        </member>
+        <member name="T:Epoint.Web.UI.WebControls2X.eCalenderType">
+            <summary>
+            日期选择区域类型，指弹出选择日期的类型，Div或者Dialog模式
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.eCalenderType.Div">
+            <summary>
+            日期
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.eCalenderType.Dialog">
+            <summary>
+            日期和时间
+            </summary>
+        </member>
+        <member name="T:Epoint.Web.UI.WebControls2X.eStypeOfControl">
+            <summary>
+            控件风格，暂时提供两种，有部分控件不支持。Blue Gray
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.eStypeOfControl.Blue">
+            <summary>
+            蓝色
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.eStypeOfControl.Gray">
+            <summary>
+            灰色
+            </summary>
+        </member>
+        <member name="T:Epoint.Web.UI.WebControls2X.eFormatTime">
+            <summary>
+            时间格式，HH，HHMM，HHMMSS
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.eFormatTime.HH">
+            <summary>
+            精确到小时
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.eFormatTime.HHMM">
+            <summary>
+            精确到分钟
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.eFormatTime.HHMMSS">
+            <summary>
+            精确到秒
+            </summary>
+        </member>
+        <member name="T:Epoint.Web.UI.WebControls2X.ProgressBarType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.ProgressBarType.Blocks">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.ProgressBarType.Continuous">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Epoint.Web.UI.WebControls2X.Button">
+            <summary>
+            Button类，继承自System.Web.UI.WebControls.Button
+            Author：XGC
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.Button.OnClick(System.EventArgs)">
+            <summary>
+            Click事件,实现了Click后的相应JS事件
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.Button.AddScript">
+            <summary>
+            添加初始化ButtonScript
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.Button.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            重构Render
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.Button.AddAttributesToRender(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            添加button的mouseover和mouseout事件
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.Button.OnInit(System.EventArgs)">
+            <summary>
+            初始化函数
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.Button.AutoDisableWhenClick">
+            <summary>
+            自动Disable当Click的时候，以防止多次点击
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.Button.MouseOverClass">
+            <summary>
+            设置当鼠标移上去后的ClassName
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.Button.AfterClickJSFunction">
+            <summary>
+            执行完Click后,执行的JS函数
+            </summary>
+        </member>
+        <member name="T:Epoint.Web.UI.WebControls2X.OpenWindowProperty">
+            <summary>
+            打开窗口的属性集合
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.OpenWindowProperty.AddUrl">
+            <summary>
+            打开窗口的Url
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.OpenWindowProperty.OpenType">
+            <summary>
+            打开窗口的类型
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.OpenWindowProperty.WindowOpenFeatrues">
+            <summary>
+            如果打开方式为Open,请设置此属性
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.OpenWindowProperty.WindowModalDialogFeatures">
+            <summary>
+            如果打开方式为ModalDialog,请设置此属性
+            </summary>
+        </member>
+        <member name="T:Epoint.Web.UI.WebControls2X.OpenFeatures">
+            <summary>
+            Addbutton的属性设置类
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.OpenFeatures.alwaysLowered">
+            <summary>
+            指定窗口隐藏在所有窗口之后
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.OpenFeatures.alwaysRaised">
+            <summary>
+            指定窗口悬浮在所有窗口之上
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.OpenFeatures.depended">
+            <summary>
+            是否和父窗口同时关闭
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.OpenFeatures.height">
+            <summary>
+            打开窗口的宽度
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.OpenFeatures.location">
+            <summary>
+            打开窗口的宽度
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.OpenFeatures.menubar">
+            <summary>
+            菜单栏是否可见
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.OpenFeatures.resizable">
+            <summary>
+            窗口大小是否可调整
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.OpenFeatures.scrollBars">
+            <summary>
+            窗口是否可有滚动栏
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.OpenFeatures.titlebar">
+            <summary>
+            窗口题目栏是否可见
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.OpenFeatures.toolBar">
+            <summary>
+            窗口工具栏是否可见
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.OpenFeatures.width">
+            <summary>
+            打开窗口的宽度
+            </summary>
+        </member>
+        <member name="T:Epoint.Web.UI.WebControls2X.ModalDialogFeatures">
+            <summary>
+            模式化打开窗口的属性集合
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.ModalDialogFeatures.FunArguments">
+            <summary>
+            取得传递参数的函数,请返回字符串或对象
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.ModalDialogFeatures.FunAfterDialogClose">
+            <summary>
+            对话框关闭后执行的函数
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.ModalDialogFeatures.dialogHeight">
+            <summary>
+            对话框宽度
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.ModalDialogFeatures.dialogWidth">
+            <summary>
+            对话框宽度
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.ModalDialogFeatures.dialogLeft">
+            <summary>
+            离屏幕左的距离
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.ModalDialogFeatures.dialogTop">
+            <summary>
+            离屏幕上的距离
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.ModalDialogFeatures.center">
+            <summary>
+            窗口是否居中，默认yes
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.ModalDialogFeatures.help">
+            <summary>
+            是否显示帮助按钮，默认yes
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.ModalDialogFeatures.resizable">
+            <summary>
+            是否可被改变大小,默认no
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.ModalDialogFeatures.status">
+            <summary>
+            是否显示状态栏。默认为yes
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.ModalDialogFeatures.scroll">
+            <summary>
+            对话框是否显示滚动条。默认为yes
+            </summary>
+        </member>
+        <member name="T:Epoint.Web.UI.WebControls2X.TextBoxControls.LoadSelectChangedEventHandler">
+            <summary>
+            动态加载的事件
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:Epoint.Web.UI.WebControls2X.TextBoxControls.SelectTextBox">
+            <summary>
+            SelectTextBox类，继承自TextBox,ICallbackEventHandler
+            Author：XGC
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.TextBoxControls.SelectTextBox.OnLoadOnSelectChanged(Epoint.Web.UI.WebControls2X.EpointTreeNodeEventArgs)">
+            <summary>
+            事件OnTreeNodePopulate
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.TextBoxControls.SelectTextBox.RaiseCallbackEvent(System.String)">
+            <summary>
+            触发事件
+            </summary>
+            <param name="eventArgument"></param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.TextBoxControls.SelectTextBox.GetCallbackResult">
+            <summary>
+            获取回调事件的返回值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.TextBoxControls.SelectTextBox.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            重构Render，添加对齐方式和初始化JS函数
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.TextBoxControls.SelectTextBox.CreateChildControls">
+            <summary>
+            CreateChildControls
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.TextBoxControls.SelectTextBox.OnPreRender(System.EventArgs)">
+            <summary>
+            重构OnPreRender
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.TextBoxControls.SelectTextBox.Setlink">
+            <summary>
+            在<head></head>标签中添加css,JAVASCRIPT链接
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.TextBoxControls.SelectTextBox.getInitScript">
+            <summary>
+            添加初始化JS函数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TextBoxControls.SelectTextBox.CodeName">
+            <summary>
+            关联代码名称，显示用，默认“代码”
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TextBoxControls.SelectTextBox.Text">
+            <summary>
+            选择控件的TEXT文本。
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TextBoxControls.SelectTextBox.Value">
+            <summary>
+            选择控件的Value值
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TextBoxControls.SelectTextBox.SelectImageVisible">
+            <summary>
+            是否显示选择图片
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TextBoxControls.SelectTextBox.ClearImageVisible">
+            <summary>
+            是否显示清除图片
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TextBoxControls.SelectTextBox.SelectItemMax">
+            <summary>
+            Tree允许多选，最多选择项目数，最大30，默认10
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TextBoxControls.SelectTextBox.ColsNum">
+            <summary>
+            选择区域里面每行显示几列,默认为3，最大10
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TextBoxControls.SelectTextBox.TextCssClass">
+            <summary>
+            Text文本框的样式表
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TextBoxControls.SelectTextBox.JSFunAfterSelect">
+            <summary>
+            选择日期结束后触发的JS函数
+            不要以javascript:开头，直接写函数名就行
+            例如：alert('1');请记得加分号,请使用单引号；
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TextBoxControls.SelectTextBox.JSFunAfterClear">
+            <summary>
+            清除日期结束后触发的JS函数
+            不要以javascript:开头，直接写函数名就行
+            例如：alert('1');请记得加分号；
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TextBoxControls.SelectTextBox.TextMode">
+            <summary>
+            文本框模式
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TextBoxControls.SelectTextBox.TotalLevel">
+            <summary>
+            选择代码总级数，默认2，最小1，不是1、2的均作2处理
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TextBoxControls.SelectTextBox.Rows">
+            <summary>
+            文本框行数
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TextBoxControls.SelectTextBox.DivHeight">
+            <summary>
+            弹出Div的高度
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TextBoxControls.SelectTextBox.DivWidth">
+            <summary>
+            弹出Div的宽度
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TextBoxControls.SelectTextBox.CreateWhenShow">
+            <summary>
+            主要是解决加载控件速度慢的问题
+            true，则在页面加载的时候不生成树，在显示的时候生成
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TextBoxControls.SelectTextBox.SelectAreaPosition">
+            <summary>
+            文本框模式
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TextBoxControls.SelectTextBox.TagKey">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TextBoxControls.SelectTextBox.AllowNull">
+            <summary>
+            文本框是否必须输入
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TextBoxControls.SelectTextBox.RelationName">
+            <summary>
+            文本框的提示值
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TextBoxControls.SelectTextBox.Nodes">
+            <summary>
+            树的节点结合
+            </summary>
+        </member>
+        <member name="E:Epoint.Web.UI.WebControls2X.TextBoxControls.SelectTextBox.LoadSelectChanged">
+            <summary>
+            动态加载节点事件
+            </summary>
+        </member>
+        <member name="T:Epoint.Web.UI.WebControls2X.HtmlEditor">
+            <summary>
+            专用于 ASP.Net 的Web编辑器
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.HtmlEditor.#ctor">
+            <summary>
+            实例化 <see cref="T:Epoint.Web.UI.WebControls2X.HtmlEditor"/>
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.HtmlEditor.OnLoad(System.EventArgs)">
+            <summary>
+            重写 <see cref="M:System.Web.UI.Control.OnLoad(System.EventArgs)"/> 方法。
+            </summary>
+            <param name="e">包含事件数据的 <see cref="T:System.EventArgs"/> 对象。</param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.HtmlEditor.getEditStyle(Epoint.Web.UI.WebControls2X.EditorStyle)">
+            <summary>
+            将枚举转换成对应的字符串
+            </summary>
+            <param name="eStyle"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.HtmlEditor.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            将此控件呈现给指定的输出参数。
+            </summary>
+            <param name="output"> 要写出到的 HTML 编写器 </param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.HtmlEditor.Dispose">
+            <summary>
+            处置使用的资源。
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.HtmlEditor.GetHeadPicUrl">
+            <summary>
+            取得头条图片的URL
+            约定：一段文本中只有一个头条图片
+            add by liq 2007-11-25
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.HtmlEditor.RemoveAbsolutePath">
+            <summary>
+            去掉编辑器HTML中的http://www.gov.cn/upfile/1.jpg这样的绝对路径，编辑器中图片拖动后会出现这个现象
+            李强2008-12-21
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.HtmlEditor.Image_Resize_AddWaterMark(System.Boolean)">
+            <summary>
+            add by liq 2007-11-25
+            根据Html编辑器中的内容，检查每个图片的实际尺寸是否和设置显示尺寸一致，如果不一致，自动缩略，如果高度和宽度都放大就不再缩略率
+            </summary>
+            <param name="AddWaterMark">如果设置为<c>true</c> 就添加水印.</param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.HtmlEditor.checkNeedResize(System.String,System.String,System.Drawing.Image,System.Boolean)">
+            <summary>
+            检查是否需要重新缩放处理图片
+            </summary>
+            <param name="width">The width.</param>
+            <param name="height">The height.</param>
+            <param name="originalImage">The original image.</param>
+            <param name="AddWaterMark">是否添加水印</param>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.HtmlEditor.MakeThumbnail_And_AddWaterMark(System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            生成缩略图，添加水印
+            </summary>
+            <param name="originalImagePath">原始图</param>
+            <param name="width">缩略后的宽度</param>
+            <param name="height">缩略后的高度</param>     
+            <param name="AddWaterMark">是否添加水印</param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.HtmlEditor.addWatermarkText(System.Drawing.Graphics,System.Int32,System.Int32)">
+            <summary>
+            加水印文字
+            </summary>
+            <param name="picture">imge 对象</param>
+            <param name="_width">原始图片的宽度</param>
+            <param name="_height">原始图片的高度.</param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.HtmlEditor.addWatermarkImage(System.Drawing.Graphics,System.Int32,System.Int32)">
+            <summary>
+            加水印图片
+            </summary>
+            <param name="picture">imge 对象</param>
+            <param name="_width">原始图片的宽度</param>
+            <param name="_height">原始图片的高度.</param>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.HtmlEditor.ConfigFile">
+            <summary>
+            <see cref="T:Epoint.Web.UI.WebControls2X.HtmlEditor"/> 的配置文件目录，默认配置文件默认放置在：/Epoint_Client/Epoint.HtmlEditor.2/目录下面
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.HtmlEditor.EditorStyle">
+            <summary>
+            编辑器的样式
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.HtmlEditor.EditorWidth">
+            <summary>
+            编辑器的宽度
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.HtmlEditor.EditorHeight">
+            <summary>
+            编辑器的高度
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.HtmlEditor.Text">
+            <summary>
+            Epoint.HtmlEditor.HtmlEditor 的Text值
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.HtmlEditor.OriginalFileName">
+            <summary>
+            保存上传文件成功返回原文件名[如:Logo.gif]的控件ID
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.HtmlEditor.SaveFileName">
+            <summary>
+            保存上传文件成功后的随机文件名[如:200406082044129049.gif]的控件ID
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.HtmlEditor.SavePathFileName">
+            <summary>
+            保存上传文件成功后的路径文件名[如:/UploadFile/200406082044129049.gif]的控件ID
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.HtmlEditor.WatermarkImageUrl">
+            <summary>
+            水印图片文件地址，比水印文字优先，如果设置了，就是用该图片
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.HtmlEditor.WatermarkText">
+            <summary>
+            水印文字，如果水印图片没有设置,就是用水印文字
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.HtmlEditor.WaterMarkPosition">
+            <summary>
+            水印位置，不设置的话，默认为右下方
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.HtmlEditor.Scriptfilter">
+            <summary>
+            是否允许Epoint.HtmlEditor.HtmlEditor 的Text值使用javascript,vbscript等，事件onclick,ondlbclick等
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.HtmlEditor.Tablefilter">
+            <summary>
+            是否允许Epoint.HtmlEditor.HtmlEditor 的Text值使用table,th,td,tr标签
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.HtmlEditor.Classfilter">
+            <summary>
+            是否允许Epoint.HtmlEditor.HtmlEditor 的Text值使用class= 这样的标签
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.HtmlEditor.Stylefilter">
+            <summary>
+            是否允许Epoint.HtmlEditor.HtmlEditor 的Text值使用style= 这样的标签
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.HtmlEditor.XMLfilter">
+            <summary>
+            是否允许Epoint.HtmlEditor.HtmlEditor的Text值使用xml 标签
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.HtmlEditor.NAMESPACEfilter">
+            <summary>
+            是否允许Epoint.HtmlEditor.HtmlEditor 的Text值使用<![CDATA[<o:p></o:p>]]> 这种格式
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.HtmlEditor.Fontfilter">
+            <summary>
+            是否允许Epoint.HtmlEditor.HtmlEditor 的Text值使用font 标签，不建议使用
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.HtmlEditor.Marqueefilter">
+            <summary>
+            是否允许Epoint.HtmlEditor.HtmlEditor 的Text值使用marquee 标签，也就没有移动滚动的特殊
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.HtmlEditor.OBJECTfilter">
+            <summary>
+            是否允许Epoint.HtmlEditor.HtmlEditor 的Text值使用bject, param, embed 标签，不能嵌入对象
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.HtmlEditor.EnableViewState">
+            <summary>
+            获取或设置一个值，该值指示 HtmlEditor 服务器控件是否向发出请求的客户端保持自己的视图状态，该属性经重写后不允许设为false。
+            </summary>
+            <remarks><see cref="T:Epoint.Web.UI.WebControls2X.HtmlEditor"/> 服务器控件将一些重要的信息保存在ViewState中
+            <p><note>该属性并不能禁止用户用<![CDATA[<%@Page EnableViewState=false%> ]]>页指令来禁用整个页面的视图状态。</note></p></remarks>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.HtmlEditor.HeadPicUrl">
+            <summary>
+            当前编辑器内容中的头条图片设置，如果没有设置，返回空字符，否则，返回该图片的URL
+            此属性为只读
+            add by liq 2007-11-25
+            </summary>
+        </member>
+        <member name="T:Epoint.Web.UI.WebControls2X.HtmlEdit.Manager">
+            <summary>
+            实现对资源文件（resx）的管理
+            </summary>
+            <remarks>
+            暂时用于获取全球化的语言信息资源<br/>
+            Create By lion  <br/>
+            2004-08-11 11:56  <br/>
+            Support .Net Framework v1.1.4322 <br/> 
+            调用时只要传递Thread.CurentThread.CurentUICulutre给那个类就可<br/> 
+            </remarks>
+            <permission cref="T:System.Security.PermissionSet">sealed</permission>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.HtmlEdit.Manager._resources">
+            <summary>
+            资源文件列表
+            </summary>
+            <permission cref="T:System.Security.PermissionSet">private</permission>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.HtmlEdit.Manager.#ctor">
+            <summary>
+            Manager 构造函数
+            </summary>
+            <permission cref="T:System.Security.PermissionSet">public</permission>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.HtmlEdit.Manager.EnsureResources(System.String)">
+            <summary>
+            确定区域性特定资源的访问
+            </summary>
+            <param name="resxName">资源名称</param>
+            <permission cref="T:System.Security.PermissionSet">internal</permission>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.HtmlEdit.Manager.GetObject(System.String,System.String)">
+            <summary>
+            获取指定的 <see cref="T:System.Object"/> 资源的值
+            </summary>
+            <param name="resxName">资源名称</param>
+            <param name="name">要获取的资源名</param>
+            <returns>针对调用方的当前区域性设置而本地化的资源的值。如果不可能有匹配项，则返回空引用（Visual Basic 中为 Nothing）。资源值可以为空引用 (Nothing)。</returns>
+            <example>
+            下面的代码演示如何调用GetObject
+            <code>
+            Manager.GetObject("A.Aspx","a")
+            </code>
+            </example>
+            <permission cref="T:System.Security.PermissionSet">public</permission>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.HtmlEdit.Manager.GetObject(System.String,System.String,System.Globalization.CultureInfo)">
+            <summary>
+            获取指定的 <see cref="T:System.Object"/> 资源的值
+            </summary>
+            <param name="resxName">资源名称</param>		
+            <param name="name">要获取的资源名</param>
+            <param name="culture"> <see cref="T:System.Globalization.CultureInfo"/> 对象，它表示资源被本地化为的区域性。注意，如果尚未为该区域性本地化此资源，则查找将使用区域性的 Parent 属性回退，并在签入非特定语言区域性后停止。 如果该值为空引用（Visual Basic 中为 Nothing），则使用区域性的 CurrentUICulture 属性获取 CultureInfo</param>
+            <returns>为指定区域性本地化的资源的值。如果不可能有“最佳匹配”，则返回空引用（Visual Basic 中为 Nothing）。</returns>
+            <example>
+            下面的代码演示如何调用 GetObject
+            <code>
+            Manager.GetString("A.Aspx",new System.Globalization.CultureInfo("zh-CN"),"a")
+            </code>
+            </example>
+            <permission cref="T:System.Security.PermissionSet">public</permission>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.HtmlEdit.Manager.GetString(System.String,System.String)">
+            <summary>
+            获取指定的 <see cref="T:System.String"/> 资源的值
+            </summary>
+            <param name="resxName">资源名称</param>
+            <param name="name">要获取的资源名。</param>
+            <returns>针对调用方的当前区域性设置而本地化的资源的值。如果不可能有匹配项，则返回空引用（Visual Basic 中为 Nothing）。</returns>
+            <example>
+            下面的代码演示如何调用 GetString
+            <code>
+            Manager.GetObject("A.Aspx","a")
+            </code>
+            </example>
+            <permission cref="T:System.Security.PermissionSet">public</permission>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.HtmlEdit.Manager.GetString(System.String,System.String,System.Globalization.CultureInfo)">
+            <summary>
+            获取指定的 <see cref="T:System.String"/> 资源的值
+            </summary>
+            <param name="resxName">资源名称</param>		
+            <param name="name">要获取的资源名。</param>
+            <param name="culture"> <see cref="T:System.Globalization.CultureInfo"/> 对象，它表示资源被本地化为的区域性。注意，如果尚未为该区域性本地化此资源，则查找将使用区域性的 Parent 属性回退，并在签入非特定语言区域性后停止。 如果该值为空引用（Visual Basic 中为 Nothing），则使用区域性的 CurrentUICulture 属性获取 CultureInfo</param>
+            <returns>为指定区域性本地化的资源的值。如果不可能有最佳匹配，则返回空引用（Visual Basic 中为 Nothing）。</returns>
+            <example>
+            下面的代码演示如何调用 GetString
+            <code>
+            Manager.GetString("A.Aspx",new System.Globalization.CultureInfo("zh-CN"),"a")
+            </code>
+            </example>
+            <permission cref="T:System.Security.PermissionSet">public</permission>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.HtmlEdit.Manager.ReleaseAllResources">
+             <summary>
+             通知 ResourceManager 对所有 ResourceSet 对象调用 Close，并释放所有资源
+             </summary>
+             <remarks>此方法将缩小正在运行的应用程序中的工作集。以后在此 ResourceManager 上的任何资源查找都和第一次查找一样花费时间，因为它需要再次搜索和加载资源。<br/>
+             这在某些复杂线程处理方案中可能有用；在这种情况下创建新的 ResourceManager 不失为明智之举。<br/>
+             此方法还可用于以下情况：由当前的 ResourceManager 打开的 .resources 文件必须被明确释放，而无需等到 ResourceManager 完全超出范围并对它进行垃圾回收。
+            </remarks>
+            <permission cref="T:System.Security.PermissionSet">public</permission>
+        </member>
+        <member name="T:Epoint.Web.UI.WebControls2X.HtmlEdit.HtmlHandler">
+            <summary>
+            用于显示资源文件中的 Html 页面
+            </summary>
+            <seealso cref="T:Epoint.Web.UI.WebControls2X.HtmlEdit.Helper"/>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.HtmlEdit.HtmlHandler.HtmlDialogContent(System.Web.HttpContext)">
+            <summary>
+            显示资源文件中的 Html 页面
+            </summary>
+            <param name="context">为当前 HTTP 请求获取 <see cref="T:System.Web.HttpContext"/> 对象</param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.HtmlEdit.HtmlHandler.GetImageList(System.String,System.String)">
+            <summary>
+            获取图片文件列表
+            </summary>
+            <returns>返回包含 Table 标记的图片文件列表</returns>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.HtmlEdit.HtmlHandler.CheckValidExt(System.String,System.String)">
+            <summary>
+            检测扩展名的有效性
+            </summary>
+            <param name="sExt">文件名扩展名</param>
+            <param name="fileExtList"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.HtmlEdit.Resx._files">
+            <summary>
+            用来存储资源文件中的文件内容
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.HtmlEdit.Resx._asmfiles">
+            <summary>
+            用来存储资源文件中的文件内容
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.HtmlEdit.Resx.LoadAssemblyFiles(System.String)">
+            <summary>
+            载入资源文件中的所有内容
+            </summary>
+            <param name="filename">资源文件名称</param>
+            <returns>返回 filename 文件中的内容</returns>
+            <remarks>
+            此文件为 Resx 内部使用,仅供 LoadFile 文件调用
+            </remarks>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.HtmlEdit.Resx.LoadFile(System.String)">
+            <summary>
+            载入资源文件中的所有内容
+            </summary>
+            <param name="filename">资源文件名称</param>
+            <returns>返回 filename 文件中的内容</returns>
+            <example>
+            以下示例演示了如何调用　LoadFile　方法：<br />
+            <code>
+            	byte[] bs;
+            	bs = Resx.LoadFile("/web.config");
+            </code>
+            </example>
+        </member>
+        <member name="T:Epoint.Web.UI.WebControls2X.HtmlEdit.AjaxImageUploadHandler">
+            <summary>
+            AjaxImageUploadHandler 主要用来处理word内容中图像的自动上传
+            <seealso cref="T:Epoint.Web.UI.WebControls2X.HtmlEdit.Helper"/>
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.HtmlEdit.AjaxImageUploadHandler.InitialBufferLength">
+            <summary>
+            上传时的buffer大小
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.HtmlEdit.AjaxImageUploadHandler.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.HtmlEdit.AjaxImageUploadHandler.processImageUpload(System.Web.HttpContext)">
+            <summary>
+            上传图片
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.HtmlEdit.AjaxImageUploadHandler.UploadData(System.String,System.Int32,System.Byte[])">
+            <summary>
+            上传文件
+            </summary>
+            <param name="fileName"></param>
+            <param name="fileSize"></param>
+            <param name="file"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.HtmlEdit.AjaxImageUploadHandler.InitUpload(System.Int32,System.String,System.Boolean)">
+            <summary>
+            初期化上传文件
+            </summary>
+            <param name="fileSize"></param>
+            <param name="fileName"></param>
+            <param name="overwriteFile"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Epoint.Web.UI.WebControls2X.ButtonControls.CloseButton">
+            <summary>
+            CloseButton类，继承自Button
+            Author：XGC
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.ButtonControls.CloseButton.AddScript">
+            <summary>
+            初始化Button的JS函数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.ButtonControls.CloseButton.AddAttributesToRender(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Type置为button
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="T:Epoint.Web.UI.WebControls2X.HtmlEdit.UpLoadHandler">
+            <summary>
+            UpLoadHandler 主要用来处理和上传文件有关的东东
+            <seealso cref="T:Epoint.Web.UI.WebControls2X.HtmlEdit.Helper"/>
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.HtmlEdit.UpLoadHandler.sType">
+            <summary>
+            URL 中传入的 type 类型
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.HtmlEdit.UpLoadHandler.sStyleName">
+            <summary>
+            URL 中传入的 style 名称
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.HtmlEdit.UpLoadHandler.sBaseUrl">
+            <summary>
+            文件路径模式：0相对路径,1绝对根路径,2绝对全路径
+            </summary>
+            <remarks>
+            0、相对路径：指所有的相关上传或自动插入文件路径，编辑后都以"UploadFile/..."或"../UploadFile/..."形式呈现。<br />
+            1、绝对根路径：指所有的相关上传或自动插入文件路径，编辑后都以"/LionSky/UploadFile/..."这种形式呈现。<br />
+            2、绝对全路径：指所有的相关上传或自动插入文件路径，编辑后都以"http://www.lionsky.net/LionSky/UploadFile/..."这种形式呈现。<br />		
+            </remarks>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.HtmlEdit.UpLoadHandler.nAutoDir">
+            <summary>
+            上传文件自动建目录标志：0不建目录，1年目录，2年月目录，3年月日目录
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.HtmlEdit.UpLoadHandler.sUploadDir">
+            <summary>
+            上传文件存放目录名
+            </summary>
+            <remarks>
+            必须是相对路径：相对于Epoint_Client/Epoint.HtmlEditor.x/的路径
+            </remarks>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.HtmlEdit.UpLoadHandler.sContentPath">
+            <summary>
+            根据 sBaseUrl 参数转化后的路径(包含sUploadDir)路径
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.HtmlEdit.UpLoadHandler.sAllowExt">
+            <summary>
+            允许上传的文件类型
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.HtmlEdit.UpLoadHandler.nAllowSize">
+            <summary>
+            允许上传的文件大小
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.HtmlEdit.UpLoadHandler.Path">
+            <summary>
+            上传需要建立目录的临时变量
+            </summary>
+            <permission cref="T:System.Security.PermissionSet">private</permission>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.HtmlEdit.UpLoadHandler.sFileExt">
+            <summary>
+            上传文件的扩展名
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.HtmlEdit.UpLoadHandler.sOriginalFileName">
+            <summary>
+            上传的源文件名称
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.HtmlEdit.UpLoadHandler.sSaveFileName">
+            <summary>
+            上传后的文件名称
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.HtmlEdit.UpLoadHandler.sPathFileName">
+            <summary>
+            结合 sContentPath 得取的带路径的上传路径名称
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.HtmlEdit.UpLoadHandler.initSystem(System.Web.HttpContext)">
+            <summary>
+            初始化 UpLoadHandler 系统信息
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.HtmlEdit.UpLoadHandler.ShowForm(System.Web.HttpContext)">
+            <summary>
+            初始化 UpLoadHandler 所需要的文件内容信息
+            </summary>
+            <param name="context">当前请求的 HttpContext 对象。</param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.HtmlEdit.UpLoadHandler.DoRemote(System.Web.HttpContext)">
+            <summary>
+            自动获取远程文件操作
+            </summary>
+            <param name="context">当前请求的 HttpContext 对象。</param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.HtmlEdit.UpLoadHandler.ReplaceRemoteUrl(System.String,System.String)">
+            <summary>
+            替换字符串中的远程文件为本地文件并保存远程文件
+            </summary>
+            <param name="sHTML">要上传的内容</param>
+            <param name="sExt">允许上传的扩展名</param>
+            <returns>返回最后上传的文件(路径+文件名称)</returns>
+            <remarks>
+            此方法仅供内部使用，由 DoRemote 进行调用
+            </remarks>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.HtmlEdit.UpLoadHandler.SaveRemoteFile(System.String,System.String)">
+            <summary>
+            保存远程的文件到本地
+            </summary>
+            <param name="s_LocalFileName">保存到本地文件名</param>
+            <param name="s_RemoteFileUrl">远程读取的文件URL</param>
+            <returns>如果保存成功则返回 true,否则返回 false</returns>
+            <remarks>
+            此方法仅供内部使用，由 ReplaceRemoteUrl 进行调用
+            </remarks>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.HtmlEdit.UpLoadHandler.UploadFile(System.Web.HttpPostedFile)">
+            <summary>
+            进行本地文件上传
+            </summary>
+            <param name="postedFile">本地上传的文件</param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.HtmlEdit.UpLoadHandler.DoSave(System.Web.HttpContext)">
+            <summary>
+            本地文件上传保存操作
+            </summary>
+            <param name="context">当前请求的 HttpContext 对象。</param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.HtmlEdit.UpLoadHandler.UploadImage2DB(System.String,System.String,System.Byte[])">
+            <summary>
+            将文件上传到数据库
+            </summary>
+            <param name="ImageName">文件名</param>
+            <param name="ImageContentType">MIME类型</param>
+            <param name="ImageContent">文件内容</param>
+            <returns>图片的编号</returns>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.HtmlEdit.UpLoadHandler.InitPara(System.Web.HttpContext)">
+            <summary>
+            初始化 style 配置文件参数
+            </summary>
+            <param name="context">当前请求的 HttpContext 对象。</param>
+            <remarks>
+            此方法为 UpLoadHandler 内部使用
+            </remarks>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.HtmlEdit.UpLoadHandler.OutScript(System.String,System.Web.HttpContext)">
+            <summary>
+            输出客户端脚本
+            </summary>
+            <param name="msg">脚本消息</param>
+            <param name="context">请求的HTTP特定信息</param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.HtmlEdit.UpLoadHandler.OutScriptNoBack(System.String)">
+            <summary>
+            输出客户端脚本
+            </summary>
+            <param name="msg">脚本消息</param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.HtmlEdit.UpLoadHandler.GetRndFileName(System.String)">
+            <summary>
+            取随机文件名
+            </summary>
+            <param name="sExt">文件名扩展名</param>
+            <returns>返回加工过的　随机文件名称</returns>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.HtmlEdit.UpLoadHandler.CheckValidExt(System.String)">
+            <summary>
+            检测扩展名的有效性
+            </summary>
+            <param name="sExt">文件名扩展名</param>
+            <returns></returns>
+        </member>
+        <member name="T:Epoint.Web.UI.WebControls2X.BizLogic">
+            <summary>
+            逻辑类
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.BizLogic.getJSLink(System.Web.UI.ClientScriptManager,System.Type,System.String,System.String)">
+            <summary>
+            获取JS链接的方法
+            </summary>
+            <param name="cs"></param>
+            <param name="rsType"></param>
+            <param name="key"></param>
+            <param name="strSourceControl">使用此JS脚本的控件类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.BizLogic.getCssLink(System.Web.UI.ClientScriptManager,System.Type,System.String)">
+            <summary>
+            获取Css链接的方法
+            </summary>
+            <param name="cs"></param>
+            <param name="rsType"></param>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.BizLogic.InitCommonJS(System.Web.UI.Page,System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="page"></param>
+            <param name="obj"></param>
+        </member>
+        <member name="T:Epoint.Web.UI.WebControls2X.ButtonControls.DeleteButton">
+            <summary>
+            DeleteButton类，继承自Button
+            Author：XGC
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.ButtonControls.DeleteButton.AddScript">
+            <summary>
+            添加初始化JS函数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.ButtonControls.DeleteButton.OnInit(System.EventArgs)">
+            <summary>
+            初始化函数
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.ButtonControls.DeleteButton.RaiseMsg">
+            <summary>
+            删除前的提示信息
+            </summary>
+        </member>
+        <member name="T:Epoint.Web.UI.WebControls2X.TextBox">
+            <summary>
+            重构TextBox
+            Author：XGC
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.TextBox.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            重构Render，添加对齐方式和初始化JS函数
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.TextBox.getInitScript">
+            <summary>
+            添加初始化JS函数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.TextBox.Setlink">
+            <summary>
+            在<head></head>标签中添加css,JAVASCRIPT链接
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.TextBox.OnPreRender(System.EventArgs)">
+            <summary>
+            重构OnPreRender，添加JS或者Css的注册
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.TextBox.CreateChildControls">
+            <summary>
+            重构CreateChildControls,根据是否允许Null，添加验证控件
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.TextBox.OnInit(System.EventArgs)">
+            <summary>
+            初始化函数
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TextBox.RelationName">
+            <summary>
+            文本框的提示值
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TextBox.ValidatorDisplayDynamic">
+            <summary>
+            ValidatorDisplay的模式是否为Dynamic，默认Dynamic
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TextBox.AllowNull">
+            <summary>
+            文本框是否必须输入
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TextBox.AllowSBC">
+            <summary>
+            文本框是否允许输入全角字符,
+            false,则自动转换为半角字符
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TextBox.AllowSBCPoint">
+            <summary>
+            文本框是否允许输入全角标点,
+            false,则自动转换为半角标点
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TextBox.AllowSBCNum">
+            <summary>
+            文本框是否允许输入全角数字,
+            false,则自动转换为半角数字
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TextBox.TextAlign">
+            <summary>
+            文本框的对齐方式，左、右
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TextBox.SelectionOnFocus">
+            <summary>
+            获取焦点时，光标的位置和选择
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TextBox.ForbiddenChar">
+            <summary>
+            不允许输入的字符串，请用“;”隔开,请不要输入“"”
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TextBox.ShowMessageType">
+            <summary>
+            文本框失去焦点提示信息的显示模式
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TextBox.ReqNotNullClientID">
+            <summary>
+            文本框验证控件ClientID
+            </summary>
+        </member>
+        <member name="T:Epoint.Web.UI.WebControls2X.WebControlDesigner.HtmlEditorDesigner">
+            <summary>
+            服务器控件设计器。
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.WebControlDesigner.HtmlEditorDesigner.#ctor">
+            <summary>
+            初始化 <see cref="T:Epoint.Web.UI.WebControls2X.HtmlEditor"/> 的新实例
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.WebControlDesigner.HtmlEditorDesigner.Initialize(System.ComponentModel.IComponent)">
+            <summary>
+            使设计器准备查看、编辑和设计指定的组件
+            </summary>
+            <param name="component">此设计器的组件</param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.WebControlDesigner.HtmlEditorDesigner.GetDesignTimeHtml">
+            <summary>
+            获取用于在设计时表示关联控件的 HTML。
+            </summary>
+            <returns>用于在设计时表示控件的 HTML。</returns>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.WebControlDesigner.HtmlEditorDesigner.GetErrorDesignTimeHtml(System.Exception)">
+            <summary>
+            获取在呈现控件时遇到错误后在设计时为指定的异常显示的 HTML。
+            </summary>
+            <param name="e">要为其显示错误信息的异常。</param>
+            <returns>设计时为指定的异常显示的 HTML。</returns>
+        </member>
+        <member name="T:Epoint.Web.UI.WebControls2X.TreeViewControls.TextTreeView">
+            <summary>
+            TextTreeView类，继承自TreeView
+            Author：XGC
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.TreeViewControls.TextTreeView.OnTreeNodePopulate(Epoint.Web.UI.WebControls2X.EpointTreeNodeEventArgs)">
+            <summary>
+            事件OnTreeNodePopulate
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.TreeViewControls.TextTreeView.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            重构 Render
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.TreeViewControls.TextTreeView.AddAttributesToRender(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            重构，添加属性
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.TreeViewControls.TextTreeView.CreateChildControls">
+            <summary>
+            CreateChildControls
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TreeViewControls.TextTreeView.ValidatorDisplayDynamic">
+            <summary>
+            ValidatorDisplay的模式是否为Dynamic，默认Dynamic
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TreeViewControls.TextTreeView.Text">
+            <summary>
+            选择树控件的TEXT文本。
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TreeViewControls.TextTreeView.Value">
+            <summary>
+            选择树控件的Value值
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TreeViewControls.TextTreeView.EnableSearch">
+            <summary>
+            是否启用搜索功能
+            </summary>
+            <example>
+                示例代码：
+                <code>
+                    this.TextTreeView.EnableSearch = false;
+            
+            
+                </code>
+            
+            </example>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TreeViewControls.TextTreeView.Nodes">
+            <summary>
+            树的节点结合
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TreeViewControls.TextTreeView.AllowNull">
+            <summary>
+            文本框是否必须输入
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TreeViewControls.TextTreeView.RelationName">
+            <summary>
+            文本框的提示值
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TreeViewControls.TextTreeView.RootNodeText">
+            <summary>
+            根结点显示的值
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TreeViewControls.TextTreeView.RootNodeUrl">
+            <summary>
+            根结点的URL
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TreeViewControls.TextTreeView.InputType">
+            <summary>
+            树节点的控件类型None不显示
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TreeViewControls.TextTreeView.SelectImageVisible">
+            <summary>
+            是否显示选择图片
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TreeViewControls.TextTreeView.ClearImageVisible">
+            <summary>
+            是否显示清除图片
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TreeViewControls.TextTreeView.MultiSelect">
+            <summary>
+            Tree是否允许多选，如果允许，则出现CheckBox
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TreeViewControls.TextTreeView.SelectItemMax">
+            <summary>
+            Tree允许多选，最多选择项目数，最大100，默认10
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TreeViewControls.TextTreeView.CheckChildCheckBox">
+            <summary>
+            当点击父CheckBox是否同时Checked子CheckBox
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TreeViewControls.TextTreeView.TextCssClass">
+            <summary>
+            Text文本框的样式表
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TreeViewControls.TextTreeView.JSFunAfterSelect">
+            <summary>
+            选择日期结束后触发的JS函数
+            不要以javascript:开头，直接写函数名就行
+            例如：alert('1');请记得加分号,请使用单引号；
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TreeViewControls.TextTreeView.JSFunAfterClear">
+            <summary>
+            清除日期结束后触发的JS函数
+            不要以javascript:开头，直接写函数名就行
+            例如：alert('1');请记得加分号；
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TreeViewControls.TextTreeView.OrderField">
+            <summary>
+            树节点的排序字段,暂未启用
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TreeViewControls.TextTreeView.TextField">
+            <summary>
+            树节点的文本字段,暂未启用
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TreeViewControls.TextTreeView.ValueField">
+            <summary>
+            树节点的Value字段,暂未启用
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TreeViewControls.TextTreeView.ParentField">
+            <summary>
+            生成树使用的父字段,暂未启用
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TreeViewControls.TextTreeView.DataSource">
+            <summary>
+            生成树使用的DataTable,暂未启用
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TreeViewControls.TextTreeView.ImgFolds">
+            <summary>
+            图片所在目录
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TreeViewControls.TextTreeView.Target">
+            <summary>
+            目标
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TreeViewControls.TextTreeView.TreeStyle">
+            <summary>
+            样式
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TreeViewControls.TextTreeView.TextMode">
+            <summary>
+            文本框模式
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TreeViewControls.TextTreeView.Rows">
+            <summary>
+            文本框行数
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TreeViewControls.TextTreeView.TextBoxHeight">
+            <summary>
+            TextBox的高度
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TreeViewControls.TextTreeView.DivHeight">
+            <summary>
+            弹出Div的高度
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TreeViewControls.TextTreeView.DivWidth">
+            <summary>
+            弹出Div的宽度
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TreeViewControls.TextTreeView.CreateWhenShow">
+            <summary>
+            主要是解决加载控件速度慢的问题
+            true，则在页面加载的时候不生成树，在显示的时候生成
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TreeViewControls.TextTreeView.SelectAreaPosition">
+            <summary>
+            文本框模式
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TreeViewControls.TextTreeView.OnlyReturnLeaf">
+            <summary>
+            是否仅返回叶子节点
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TreeViewControls.TextTreeView.TagKey">
+            <summary>
+            控件的起始TagKey
+            </summary>
+        </member>
+        <member name="E:Epoint.Web.UI.WebControls2X.TreeViewControls.TextTreeView.TreeNodePopulate">
+            <summary>
+            动态加载节点事件
+            </summary>
+        </member>
+        <member name="T:Epoint.Web.UI.WebControls2X.EpointTreeNodeEventHandler">
+            <summary>
+            动态加载的事件
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:Epoint.Web.UI.WebControls2X.TreeView">
+             <summary>
+             TreeView,继承自HierarchicalDataBoundControl, ICallbackEventHandler
+             Author：XGC
+             </summary>
+             <example>
+                 示例代码：
+                 <font color="red">注意，本控件用到了一套图片，为了节约时间，在编写控件的时候没有把图片打包成资源文件，所以需要在项目中添加这样的文件夹。</font>
+                 Aspx页面：
+                 <code>
+                     //1、注册本控件。
+                     &lt;%@ Register Assembly="Epoint.Web.UI.WebControls2X" Namespace="Epoint.Web.UI.WebControls2X" TagPrefix="epoint" %&gt;
+                     //2、控件HTML代码。
+                     &lt;epoint:TreeView ID="TreeView1" CheckChildCheckBox=false runat="server" OnTreeNodePopulate="TreeView1_TreeNodePopulate" InputType="CheckBox" RootNodeText="RootNodeText设置的值" Target="MainFrame" ImgFolds="TreeImages" &gt;
+                     &lt;/epoint:TreeView&gt;
+                 </code>
+             
+                 Aspx.cs页面：
+                 <code>
+                     protected void Page_Load(object sender, EventArgs e)
+                     {
+                         this.TreeView1.RootNodeUrl = "www.sina.com.cn";
+                         //<font color="red">此处代码一定要放在Page.IsPostBack外面，否则页面递交后，树会出现JS错误。</font>
+                         GetNewData();
+                         if (!Page.IsPostBack)
+                         {
+                             //...
+                         }
+                         else
+                         {
+                             //...
+                         }
+                     }
+                     
+                     //初始化树节点。
+                     private void GetNewData()
+                     {
+                         EpointTreeNode tn;
+                         for (int i = 1; i &lt; 10; i++)
+                         {
+                             tn = new EpointTreeNode(Convert.ToString(i + 100), i.ToString());
+                  
+                             tn.CtrlClickFunction = "javascript:alert(\'test\');";
+                             tn.ShowInputCtrl = true;
+                             tn.NavigateUrl = "Main.aspx";
+                 
+                             tn.PopulateOnDemand = true;
+                             TreeView1.Nodes.Add(tn);
+                         }
+                     }
+                     
+                     //动态加载节点的字节点。
+                     protected void TreeView1_TreeNodePopulate(object sender, EpointTreeNodeEventArgs e)
+                     {
+                         EpointTreeNode tn = new EpointTreeNode();
+                         EpointTreeNode node = e.Node;
+                         for (int j = 1; j &lt; 10; j++)
+                         {
+                             tn = new EpointTreeNode("1" + Convert.ToString(node.Value) + Convert.ToString(j), Convert.ToString(node.Value) + Convert.ToString(j));
+                             tn.CtrlClickFunction = "javascript:alert(\'" + tn.Value + "\');";
+                             node.ChildNodes.Add(tn);
+                         }
+                     }
+                 </code>
+             </example>
+            
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.TreeView.#ctor">
+            <summary>
+            TreeView构造函数
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.TreeView.OnTreeNodePopulate(Epoint.Web.UI.WebControls2X.EpointTreeNodeEventArgs)">
+            <summary>
+            事件OnTreeNodePopulate
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.TreeView.RaiseCallbackEvent(System.String)">
+            <summary>
+            触发事件
+            </summary>
+            <param name="eventArgument"></param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.TreeView.GetCallbackResult">
+            <summary>
+            获取回调事件的返回值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.TreeView.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            重构 Render
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.TreeView.AddAttributesToRender(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            重构 AddAttributesToRender
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.TreeView.getNodeScript(Epoint.Web.UI.WebControls2X.EpointTreeNode)">
+            <summary>
+            一个节点的初始化JS串
+            </summary>
+            <param name="node"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.TreeView.OnPreRender(System.EventArgs)">
+            <summary>
+            重构OnPreRender
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.TreeView.Setlink">
+            <summary>
+            在<head></head>标签中添加css,JAVASCRIPT链接
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.TreeView.CreateNode">
+            <summary>
+            创建一个节点
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.TreeView.LoadViewState(System.Object)">
+            <summary>
+            重构LoadViewState
+            </summary>
+            <param name="state"></param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.TreeView.SaveViewState">
+            <summary>
+            重构SaveViewState
+            </summary>        
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.TreeView.TrackViewState">
+            <summary>
+            重构TrackViewState
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TreeView.Nodes">
+            <summary>
+            树的节点结合
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TreeView.RootNodeText">
+            <summary>
+            根结点显示的值
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TreeView.RootNodeUrl">
+            <summary>
+            根结点的URL
+            </summary>
+            <example>
+            
+            <code>
+                //根结点的目的URL为www.sina.com.cn
+                this.TreeView1.RootNodeUrl = "www.sina.com.cn";
+            </code>
+            
+            </example>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TreeView.ShowRootNode">
+            <summary>
+            是否显示根节点
+            </summary>
+            <example>
+                示例代码：
+                <code>
+                    this.TreeView1.ShowRootNode = false;
+            
+            
+                </code>
+            
+            </example>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TreeView.EnableSearch">
+            <summary>
+            是否启用搜索功能
+            </summary>
+            <example>
+                示例代码：
+                <code>
+                    this.TreeView1.EnableSearch = false;
+            
+            
+                </code>
+            
+            </example>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TreeView.InputType">
+             <summary>
+             树节点的控件类型，None不显示
+             </summary>
+             <example>
+                 示例代码：
+                 <code>
+                     this.TreeView1.InputType = Epoint.Web.UI.WebControls2X.eInputType.CheckBox;
+                 </code>
+             
+             </example> 
+            
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TreeView.CheckChildCheckBox">
+            <summary>
+            当点击父CheckBox是否同时Check子节点的CheckBox
+            </summary>
+            <example>
+                示例代码：
+                <code>
+                    this.TreeView1.CheckChildCheckBox = false;
+            
+            
+                </code>
+            
+            </example>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TreeView.RunClickEvtWhenCheckChild">
+            <summary>
+            当点击父CheckBox,且CheckChildCheckBox属性为True,是否运行字节点的Checkbox的Click事件
+            </summary>
+            <example>
+                <font color="red">注意：本属性需要和CheckChildCheckBox结合使用，只有当CheckChildCheckBox=true时，本属性才起作用。</font>
+                <br />
+                示例代码：
+                <code>
+                    this.TreeView1.CheckChildCheckBox = true;
+                    this.TreeView1.RunClickEvtWhenCheckChild = true;
+            
+                </code>
+            
+            </example>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TreeView.OrderField">
+            <summary>
+            树节点的排序字段,暂未启用
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TreeView.TextField">
+            <summary>
+            树节点的文本字段,暂未启用
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TreeView.ValueField">
+            <summary>
+            树节点的Value字段,暂未启用
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TreeView.ParentField">
+            <summary>
+            生成树使用的父字段,暂未启用
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TreeView.DataSource">
+            <summary>
+            生成树使用的DataTable,暂未启用
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TreeView.ImgFolds">
+            <summary>
+            树图片所在目录
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TreeView.Target">
+            <summary>
+            目标
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TreeView.TreeType">
+            <summary>
+            内部属性，如果Tree，则是TextTreeView中的树，否则是普通树
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TreeView.MultiSelect">
+            <summary>
+            内部属性，如果TreeType，为Tree，则此属性起作用
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TreeView.CreateWhenShow">
+            <summary>
+            内部属性，供TextTreeView使用
+            主要是解决加载控件速度慢的问题
+            true，则在页面加载的时候不生成树，在显示的时候生成
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TreeView.UserLocalJSFile">
+            <summary>       
+            是否使用本地JS文件，默认否
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TreeView.ExpandWhenClick">
+            <summary>
+            当点击节点时，是否展开节点。
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TreeView.TagKey">
+            <summary>
+            DivTag
+            </summary>
+        </member>
+        <member name="E:Epoint.Web.UI.WebControls2X.TreeView.TreeNodePopulate">
+            <summary>
+            动态加载节点事件
+            </summary>
+        </member>
+        <member name="T:Epoint.Web.UI.WebControls2X.EpointTreeNode">
+            <summary>
+            EpointTreeNode类
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.EpointTreeNode.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.EpointTreeNode.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.EpointTreeNode.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.EpointTreeNode.#ctor(Epoint.Web.UI.WebControls2X.TreeView,System.Boolean)">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.EpointTreeNode.#ctor(Epoint.Web.UI.WebControls2X.TreeView,System.Boolean,System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.EpointTreeNode.#ctor(System.String,System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.EpointTreeNode.#ctor(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.EpointTreeNode.Clone">
+            <summary>
+            Clone方法
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.EpointTreeNode.LoadViewState(System.Object)">
+            <summary>
+            实现接口LoadViewState
+            </summary>
+            <param name="state"></param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.EpointTreeNode.FindByValue(System.String)">
+            <summary>
+            根据_Value查找所有子节点，
+            </summary>
+            <param name="_Value"></param>
+            <returns>EpointTreeNode</returns>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.EpointTreeNode.SaveViewState">
+            <summary>
+            实现接口SaveViewState
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.EpointTreeNode.TrackViewState">
+            <summary>
+            实现接口TrackViewState
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.EpointTreeNode.Checked">
+            <summary>
+            是否选中
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.EpointTreeNode.SelectLeafForTextTreeView">
+            <summary>
+            是否选中节点就返回值，即不需要点击节点的Input控件，只对TextTreeView有效
+            
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.EpointTreeNode.CanSelectForTextTreeView">
+            <summary>
+            是否可以选择，只对TextTreeView有效
+            
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.EpointTreeNode.ChildNodes">
+            <summary>
+            子节点集合
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.EpointTreeNode.CtrlClickFunction">
+            <summary>
+            节点的InputClick函数
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.EpointTreeNode.CtrlEnable">
+            <summary>
+            节点的Input有效性
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.EpointTreeNode.Depth">
+            <summary>
+            深度，不起作用，暂时保留
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.EpointTreeNode.Expanded">
+            <summary>
+            是否展开，只对于已经添加了子节点的节点有效
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.EpointTreeNode.Level">
+            <summary>
+            节点的深度，暂时无效
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.EpointTreeNode.ExpandOnCheckedChanged">
+            <summary>
+            CheckedChanged时候是否展开所有子节点
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.EpointTreeNode.ImageUrl">
+            <summary>
+            图片URL
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.EpointTreeNode.ExpandImageUrl">
+            <summary>
+            EXPAND时的图片URL
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.EpointTreeNode.IsTrackingViewState">
+            <summary>
+            实现接口IsTrackingViewState
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.EpointTreeNode.NavigateUrl">
+            <summary>
+            节点的URL
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.EpointTreeNode.ImageToolTip">
+            <summary>
+            图片的注释
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.EpointTreeNode.Owner">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.EpointTreeNode.Parent">
+            <summary>
+            父节点
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.EpointTreeNode.PopulateOnDemand">
+            <summary>
+            是否允许动态展开
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.EpointTreeNode.RightButtonFun">
+            <summary>
+            节点的右键函数
+            </summary>
+            
+            <example>
+                示例代码：
+                <code>
+                    EpointTreeNode tn = new EpointTreeNode();
+                    tn.RightButtonFun = "javascript:alert('RightButtonFun:" + tn.Value + "');";
+                </code>
+            </example>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.EpointTreeNode.RunClickEvtOnInit">
+            <summary>
+            生成节点时运行Input的Click事件        
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.EpointTreeNode.ReturnFullPath">
+            <summary>
+            是否返回全路径名称
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.EpointTreeNode.Selected">
+            <summary>
+            是否选中，不起作用，暂时保留
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.EpointTreeNode.ShowImage">
+            <summary>
+            是否显示节点Image        
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.EpointTreeNode.ShowInputCtrl">
+            <summary>
+            是否显示Input控件
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.EpointTreeNode.Text">
+            <summary>
+            节点的文本值
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.EpointTreeNode.ToolTip">
+            <summary>
+            节点的ToolTip
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.EpointTreeNode.Value">
+            <summary>
+            节点的Value值
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.EpointTreeNode.ValuePath">
+            <summary>
+            节点的ValuePath，暂时不起作用
+            </summary>
+        </member>
+        <member name="T:Epoint.Web.UI.WebControls2X.EpointTreeNodeCollection">
+            <summary>
+            EpointTreeNodeCollection类
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.EpointTreeNodeCollection.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.EpointTreeNodeCollection.#ctor(Epoint.Web.UI.WebControls2X.EpointTreeNode)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="owner"></param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.EpointTreeNodeCollection.#ctor(Epoint.Web.UI.WebControls2X.EpointTreeNode,System.Boolean)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="owner"></param>
+            <param name="updateParent"></param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.EpointTreeNodeCollection.Add(Epoint.Web.UI.WebControls2X.EpointTreeNode)">
+            <summary>
+            添加节点
+            </summary>
+            <param name="child"></param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.EpointTreeNodeCollection.AddAt(System.Int32,Epoint.Web.UI.WebControls2X.EpointTreeNode)">
+            <summary>
+            在指定位置添加节点
+            </summary>
+            <param name="index"></param>
+            <param name="child"></param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.EpointTreeNodeCollection.Clear">
+            <summary>
+            清除
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.EpointTreeNodeCollection.Contains(Epoint.Web.UI.WebControls2X.EpointTreeNode)">
+            <summary>
+            是否包含
+            </summary>
+            <param name="c"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.EpointTreeNodeCollection.CopyTo(Epoint.Web.UI.WebControls2X.EpointTreeNode[],System.Int32)">
+            <summary>
+            复制
+            </summary>
+            <param name="nodeArray"></param>
+            <param name="index"></param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.EpointTreeNodeCollection.System#Collections#ICollection#CopyTo(System.Array,System.Int32)">
+            <summary>
+            复制
+            </summary>
+            <param name="array"></param>
+            <param name="index"></param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.EpointTreeNodeCollection.GetEnumerator">
+            <summary>
+            GetEnumerator
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.EpointTreeNodeCollection.Remove(Epoint.Web.UI.WebControls2X.EpointTreeNode)">
+            <summary>
+            移除
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.EpointTreeNodeCollection.RemoveAt(System.Int32)">
+            <summary>
+            移除
+            </summary>
+            <param name="index"></param>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.EpointTreeNodeCollection.Count">
+            <summary>
+            集合数量
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.EpointTreeNodeCollection.SyncRoot">
+            <summary>
+            SyncRoot
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.EpointTreeNodeCollection.Item(System.Int32)">
+            <summary>
+            获取Node
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.EpointTreeNodeCollection.IsSynchronized">
+            <summary>
+            IsSynchronized
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.EpointTreeNodeCollection.EpointTreeNodeCollectionEnumerator.Reset">
+            <summary>
+            重置
+            </summary>
+        </member>
+        <member name="T:Epoint.Web.UI.WebControls2X.EpointSR">
+            <summary>
+            无实际意义。
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.EpointSR.GetString(System.String)">
+            <summary>
+            获取字符串
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Epoint.Web.UI.WebControls2X.EpointTreeNodeEventArgs">
+            <summary>
+            EpointTreeNodeEventArgs类
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.EpointTreeNodeEventArgs.#ctor(Epoint.Web.UI.WebControls2X.EpointTreeNode)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="node"></param>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.EpointTreeNodeEventArgs.Node">
+            <summary>
+            Node属性
+            </summary>
+        </member>
+        <member name="T:Epoint.Web.UI.WebControls2X.ImageButtonControls.AddImageButton">
+            <summary>
+            AddImageButton类，继承自ImageButton
+            Author：XGC
+            </summary>
+        </member>
+        <member name="T:Epoint.Web.UI.WebControls2X.ImageButton">
+            <summary>
+            ImageButton，继承自System.Web.UI.WebControls.ImageButton
+            Author：XGC
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.ImageButton.OnClick(System.Web.UI.ImageClickEventArgs)">
+            <summary>
+            重构OnClick，添加了Click结束后执行JS函数
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.ImageButton.AddScript">
+            <summary>
+            初始化JS函数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.ImageButton.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            重构Render
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.ImageButton.AddAttributesToRender(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            重构AddAttributesToRender，添加了onmouseover，onmouseout事件
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.ImageButton.Initialize(System.Object,System.EventArgs)">
+            <summary>
+            初始化函数
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.ImageButton.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.ImageButton.MouseOverClass">
+            <summary>
+            设置当鼠标移上去后的ClassName
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.ImageButton.AfterClickJSFunction">
+            <summary>
+            执行完Click后,执行的JS脚本,请用单引号
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.ImageButtonControls.AddImageButton.AddScript">
+            <summary>
+            初始化button的JS函数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.ImageButtonControls.AddImageButton.TagKey">
+            <summary>
+            TagKey
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.ImageButtonControls.AddImageButton.OpenWindowProp">
+            <summary>
+            打开窗口属性集合
+            </summary>
+        </member>
+        <member name="T:Epoint.Web.UI.WebControls2X.HtmlEdit.Helper">
+            <summary>
+            用于 HtmlEditor 内部使用的帮助类
+            <seealso cref="T:Epoint.Web.UI.WebControls2X.HtmlEdit.Resx"/>
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.HtmlEdit.Helper.resinited">
+            <summary>
+            是否初始化过 web.config 资源文件
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.HtmlEdit.Helper.GetButtonNode(System.String)">
+            <summary>
+            得到Button样式的 XmlNode 节点
+            </summary>
+            <param name="code"> Name </param>
+            <returns>与 code 查询匹配的第一个 Button　样式；如果未找到任何匹配节点，则为空引用（Visual Basic 中为 Nothing）。</returns>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.HtmlEdit.Helper.GetStyleNode(System.String)">
+            <summary>
+            得到Style样式的 XmlNode 节点
+            </summary>
+            <param name="name"> Name </param>
+            <returns>与 name 查询匹配的第一个 Style样式；如果未找到任何匹配节点，则为空引用（Visual Basic 中为 Nothing）。</returns>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.HtmlEdit.Helper.GetToolBarNodeList(System.String)">
+            <summary>
+            得到 ToolBar 样式的 XmlNode 节点列表
+            </summary>
+            <param name="s_name">s_name</param>
+            <returns>一个包含匹配 s_name 查询的节点集合</returns>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.HtmlEdit.Helper.GetResx(System.String)">
+            <summary>
+            得到资源文件中的内容
+            </summary>
+            <param name="filename">HtmlEditor　中的资源文件文件名</param>
+            <returns>返回 filename 中的资源文件内容</returns>
+            <permission cref="T:System.Security.PermissionSet">public</permission>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.HtmlEdit.Helper.GetFormatFileLengthString(System.Double)">
+            <summary>
+            Format readsize/Seconds flow[unit:M or KB]
+            </summary>
+            <param name="size">readsize/Seconds flow</param>
+            <returns>Format readsize/Seconds string</returns>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.HtmlEdit.Helper.GetImage(System.String)">
+            <summary>
+            得到Image文件内容
+            </summary>
+            <param name="filename">文件名</param>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.HtmlEdit.Helper.RelativePath2RootPath(System.String)">
+            <summary>
+            相对路径转为根路径格式"/UploadFile/..."
+            </summary>
+            <param name="path">相对路径的字符串</param>
+            <returns>转换后的根路径字符串</returns>
+            <example>
+            可以把相对路径(../../UpLoadFile)转换为站点下的根路径(/UpLoadFile)，下面的示例演示了如何使用 RelativePath2RootPath 方法<br/>
+            <code>
+            	String Path;
+            	Path = RelativePath2RootPath("../../UpLoadFile");
+            </code>
+            </example>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.HtmlEdit.Helper.RootPath2DomainPath(System.String)">
+            <summary>
+            相对路径(../../UpLoadFile)转为带域名全路径格式(http://www.lionsky.net/UpLoadFile)
+            </summary>
+            <param name="path">相对路径的字符串</param>
+            <returns>转换后的带域名的全路径字符串</returns>
+            <example>
+            可以把相对路径(../../UpLoadFile)转换为带域名全路径格式(http://www.lionsky.net/UpLoadFile)，下面的示例演示了如何使用 RootPath2DomainPath 方法<br />
+            <code>
+            	String Path;
+            	Path = RelativePath2RootPath("../../UpLoadFile");
+            </code>
+            </example>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.HtmlEdit.Helper.ResolvePath(System.String)">
+            <summary>
+            获取 HtmlEditor 所使用的配置文件路径名称(Epoint_Client\Epoint.HtmlEditor.x)
+            </summary>
+            <param name="path">配置文件路径后面要跟随的目录或文件名</param>
+            <returns>返回配置文件路径字符串</returns>
+            <remarks>
+            如果 path 为空或null,则只返回当前 HtmlEditor 所使用的配置文件路径(Epoint_Client/Epoint.HtmlEditor)．如果 path　不为空或null,则返回当前 HtmlEditor 所使用的配置文件路径加上path
+            </remarks>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.HtmlEdit.Helper.InitResources">
+            <summary>
+            初始化 web.config 资源文件
+            </summary>
+            <remarks>
+            此方法会判断站点根目录下的　Epoint_Client\Epoint.HtmlEditor.X　是否包含和 HtmlEditor 资源文件中的 web.config　文件相同，如果不同，则会重写 Epoint_Client\Epoint.HtmlEditor.X　中的 web.config
+            </remarks>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.HtmlEdit.Helper.IsFileExists(System.String,System.Byte[])">
+            <summary>
+            判断 filepath 文件中的内容是否和 bs 相等　
+            </summary>
+            <param name="filepath">表示一个物理路径的文件名称</param>
+            <param name="bs">物理路径文件名称的内容</param>
+            <returns>如果　filepath 文件中的内容和 bs 相等,返回 true ,否则返回 false．</returns>
+            <remarks>
+            此方法为 HtmlEditor 内部使用，其他地方用不到
+            </remarks>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.HtmlEdit.Helper.InitConfigFile(System.String,System.String)">
+            <summary>
+            初始化 HtmlEditor 的配置文件
+            </summary>
+            <param name="filename">文件名称</param>
+            <param name="path">用于初始化配置文件的路径</param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.HtmlEdit.Helper.InitConfigFile(System.String)">
+            <summary>
+            初始化 Epoint.HtmlEditor.HtmlEditor 配置文件
+            </summary>
+            <param name="path">配置文件的路径</param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.HtmlEdit.Helper.CreateDateTimeDirectory(System.String)">
+            <summary>
+            主要用在文件上传时获取根据上传自动建立目录标记所建立的目录名称
+            </summary>
+            <param name="sign">上传自动建立目录标记．0不建目录，1年目录，2年月目录，3年月日目录</param>
+            <returns>返回根据上传自动建立目录标记所建立的目录名称</returns>
+            <permission cref="T:System.Security.PermissionSet">public</permission>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.HtmlEdit.Helper.GetStringLength(System.String)">
+            <summary>
+            检测含有中文字符串的实际长度
+            </summary>
+            <param name="str">要检测的字符串</param>
+            <returns>返回结果长度</returns>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.HtmlEdit.Helper.GetRandomNext(System.Int32)">
+            <summary>
+            获得随机数字
+            </summary>
+            <param name="Length">随机数字的长度</param>
+            <returns>返回长度为 Length 的　<see cref="T:System.Int32"/> 类型的随机数</returns>
+            <example>
+            Length 不能大于9,以下为示例演示了如何调用 GetRandomNext：<br/>
+            <code>
+            	int le = GetRandomNext(8);
+            </code>
+            </example>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.HtmlEdit.Helper.isNumber(System.Object)">
+            <summary>
+            返回一个 bool 值，指明提供的值是不是整数
+            </summary>
+            <param name="obj">要判断的值</param>
+            <returns>true[是整数]false[不是整数]</returns>
+            <remarks>
+            	isNumber　只能判断正(负)整数，如果 obj 为小数则返回 false;
+            </remarks>
+            <example>
+            下面的示例演示了判断 obj 是不是整数：<br />
+            <code>
+            	bool flag;
+            	flag = isNumber("200");
+            </code>
+            </example>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.HtmlEdit.Helper.DecodeFilter(System.String,System.String)">
+            <summary>
+            代码解释功能，目的是为了防止一些人恶意的提交一些代码，影响系统的安全使用，通过字符转换的方法，防止这种现象的发生
+            </summary>
+            <param name="html">要转换的数据字符串</param>
+            <param name="filter">要过滤掉的单个格式</param>
+            <returns>替换后的字符</returns>
+            <remarks>
+            DecodeFilter 方法是为了防止提交恶意代码而使用的，可以过滤 Script,Table,Class,Style,XML,NAMESPACE,MARQUEE,FONT,Object等标签的内容
+            </remarks>
+            <example>
+            以下示例演示了如何使用 DecodeFilter 过滤包含Script脚本的内容：<br />
+            <code>
+            	string str = "<script>alert('welcome www.Epoint.com.cn');</script>";
+            	str = DecodeFilter(str,"SCRIPT");
+            </code>
+            </example>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.HtmlEdit.Helper.Context">
+            <summary>
+            为当前 HTTP 请求获取 <see cref="T:System.Web.HttpContext"/> 对象
+            </summary>
+            <value>当前请求的 HttpContext 对象。</value>
+        </member>
+        <member name="T:Epoint.Web.UI.WebControls2X.HtmlEdit.ImageHandler">
+            <summary>
+            用于获取 HtmlEditor 资源文件中图像的类
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.HtmlEdit.ImageHandler.ImageContent(System.Web.HttpContext)">
+            <summary>
+            获取 HtmlEditor 资源文件中图像
+            </summary>
+            <param name="context">为当前 HTTP 请求获取 <see cref="T:System.Web.HttpContext"/> 对象</param>
+        </member>
+        <member name="T:Epoint.Web.UI.WebControls2X.HtmlEdit.HtmlEditor">
+            <summary>
+            实现 <see cref="T:System.Web.IHttpHandler"/> 接口的 HtmlEditor
+            <seealso cref="T:Epoint.Web.UI.WebControls2X.HtmlEdit.Helper"/>
+            <see cref="T:System.Web.IHttpHandler"/>
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.HtmlEdit.HtmlEditor.sStyleName">
+            <summary>
+            URL 中传入的 style 名称
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.HtmlEdit.HtmlEditor.sStyleDir">
+            <summary>
+            图片文件夹名
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.HtmlEdit.HtmlEditor.sStyleCSS">
+            <summary>
+            CSS文件所在文件夹名
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.HtmlEdit.HtmlEditor.sStyleUploadDir">
+            <summary>
+            上传文件存放目录名
+            </summary>
+            <remarks>
+            必须是相对路径：相对于Epoint_Client/Epoint.HtmlEditor.x/的路径
+            </remarks>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.HtmlEdit.HtmlEditor.nStateFlag">
+            <summary>
+            是否有状态栏：false，true
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.HtmlEdit.HtmlEditor.sDetectFromWord">
+            <summary>
+            是否自动检测从Word粘贴："false"否，"true"是
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.HtmlEdit.HtmlEditor.sInitMode">
+            <summary>
+            初始模式："EDIT"编辑模式,"CODE"代码模式,"VIEW"预览模式
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.HtmlEdit.HtmlEditor.sBaseUrl">
+            <summary>
+            文件路径模式：0相对路径,1绝对根路径,2绝对全路径
+            </summary>
+            <remarks>
+            0、相对路径：指所有的相关上传或自动插入文件路径，编辑后都以"UploadFile/..."或"../UploadFile/..."形式呈现。<br />
+            1、绝对根路径：指所有的相关上传或自动插入文件路径，编辑后都以"/LionSky/UploadFile/..."这种形式呈现。<br />
+            2、绝对全路径：指所有的相关上传或自动插入文件路径，编辑后都以"http://www.lionsky.net/LionSky/UploadFile/..."这种形式呈现。<br />		
+            </remarks>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.HtmlEdit.HtmlEditor.sBaseHref">
+            <summary>
+            显示内容或网页的基路径，以/开头
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.HtmlEdit.HtmlEditor.sAutoRemote">
+            <summary>
+            自动远程文件上传
+            </summary>
+            <remarks>
+            0不要自动，1自动[注:远程上传暂时只能在form的action等于另一页面取得内容]
+            </remarks>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.HtmlEdit.HtmlEditor.sShowBorder">
+            <summary>
+            默认显示指导方针
+            </summary>
+            <remarks>
+            0否，1是
+            </remarks>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.HtmlEdit.HtmlEditor.sButtonImgPath">
+            <summary>
+            HtmlEditor 的按钮图片路径
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.HtmlEdit.HtmlEditor.sVersion">
+            <summary>
+            HtmlEditor 的版本号
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.HtmlEdit.HtmlEditor.sReleaseDate">
+            <summary>
+            发布日期
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.HtmlEdit.HtmlEditor.sLicense">
+            <summary>
+            许可证
+            </summary>
+            <remarks>
+            可以是 html 语法，说明许可给某人
+            </remarks>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.HtmlEdit.HtmlEditor.sContentID">
+            <summary>
+            获取　HtmlEditor 的唯一的、以分层形式限定的标识符
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.HtmlEdit.HtmlEditor.sFullScreen">
+            <summary>
+            是否在全屏编辑模式
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.HtmlEdit.HtmlEditor.originalfilename">
+            <summary>
+            上传文件成功返回原文件名[如:Logo.gif]
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.HtmlEdit.HtmlEditor.savepathfilename">
+            <summary>
+            上传文件成功后的路径文件名[如:/UploadFile/200406082044129049.gif]
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.HtmlEdit.HtmlEditor.savefilename">
+            <summary>
+            上传文件成功后的随机文件名[如:200406082044129049.gif]
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.HtmlEdit.HtmlEditor.Argument">
+            <summary>
+            URL 中返回的 configfile 参数
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.HtmlEdit.HtmlEditor.aButton">
+            <summary>
+            按钮列表
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.HtmlEdit.HtmlEditor.ProcessRequest(System.Web.HttpContext)">
+            <summary>
+            通过实现 IHttpHandler 接口的自定义 HttpHandler 启用 HTTP Web 请求的处理。
+            </summary>
+            <param name="context">HttpContext 对象，它提供对用于为 HTTP 请求提供服务的内部服务器对象（如 Request、Response、Session 和 Server）的引用</param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.HtmlEdit.HtmlEditor.initSystem">
+            <summary>
+            初始化系统信息
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.HtmlEdit.HtmlEditor.InitPara">
+            <summary>
+            初始化 Style 文件中的参数配置
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.HtmlEdit.HtmlEditor.InitButtonArray">
+            <summary>
+            初始化按钮数组
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.HtmlEdit.HtmlEditor.GetToolBar">
+            <summary>
+            初始化当前 Style 的工具栏
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.HtmlEdit.HtmlEditor.IsReusable">
+            <summary>
+            获取一个值，该值指示其他请求是否可以使用 IHttpHandler 实例。
+            </summary>
+        </member>
+        <member name="T:Epoint.Web.UI.WebControls2X.Uploader.UploadModule">
+            <summary>
+            大文件上传处理模块
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.Uploader.UploadModule.GetMultipartBoundary(System.String)">
+            <summary>
+            获取分隔符的字符数组
+            </summary>
+            <param name="ContentType">请求类型</param>
+            <returns>分隔符字节数组</returns>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.Uploader.UploadModule.RaiseInfo(System.Web.HttpContext,System.Exception)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <param name="exception"></param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.Uploader.UploadModule.RaiseInfo(System.Web.HttpContext,System.Guid)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <param name="guid"></param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.Uploader.UploadModule.IsUploadRequest(System.Web.HttpRequest)">
+            <summary>
+            是否为附件上传
+            判断的根据是ContentType中有无multipart/form-data
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.Uploader.UploadModule.LimitSpeedForTest">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.Uploader.UploadModule.UploadModuleSkipKB">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Epoint.Web.UI.WebControls2X.Uploader.UploaderDesigner">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.Uploader.UploaderDesigner.GetDesignTimeHtml">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.Uploader.UploaderDesigner.GetHTML">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Epoint.Web.UI.WebControls2X.Uploader.UploaderProvider">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.Uploader.UploaderProvider.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.Uploader.UploaderProvider.CopyTo(System.Guid,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="fileguid"></param>
+            <param name="newpath"></param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.Uploader.UploaderProvider.Delete(System.Guid)">
+            <summary>
+            
+            </summary>
+            <param name="guid"></param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.Uploader.UploaderProvider.Dispose">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.Uploader.UploaderProvider.Exists(System.Guid)">
+            <summary>
+            
+            </summary>
+            <param name="guid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.Uploader.UploaderProvider.GetFSPath(System.Guid)">
+            <summary>
+            
+            </summary>
+            <param name="guid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.Uploader.UploaderProvider.GetInfo(System.Guid,System.String@,System.Int32@,System.Boolean@)">
+            <summary>
+            
+            </summary>
+            <param name="guid"></param>
+            <param name="filename"></param>
+            <param name="filesize"></param>
+            <param name="persist"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.Uploader.UploaderProvider.GetName(System.Guid)">
+            <summary>
+            
+            </summary>
+            <param name="guid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.Uploader.UploaderProvider.GetSize(System.Guid)">
+            <summary>
+            
+            </summary>
+            <param name="guid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.Uploader.UploaderProvider.Init(Epoint.Web.UI.WebControls2X.Uploader.Uploader,System.Web.HttpContext)">
+            <summary>
+            
+            </summary>
+            <param name="uploader"></param>
+            <param name="context"></param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.Uploader.UploaderProvider.Maintain">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.Uploader.UploaderProvider.MoveTo(System.Guid,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="fileguid"></param>
+            <param name="newpath"></param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.Uploader.UploaderProvider.OpenStream(System.Guid)">
+            <summary>
+            
+            </summary>
+            <param name="guid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.Uploader.UploaderProvider.Persist(System.Guid)">
+            <summary>
+            
+            </summary>
+            <param name="guid"></param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.Uploader.UploaderProvider.Save(System.Guid,System.String,System.IO.Stream)">
+            <summary>
+            
+            </summary>
+            <param name="guid"></param>
+            <param name="filename"></param>
+            <param name="stream"></param>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.Uploader.UploaderProvider.SupportFS">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Epoint.Web.UI.WebControls2X.ButtonControls.AddButton">
+            <summary>
+            AddButton类，继承自Button
+            Author：XGC
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.ButtonControls.AddButton.AddScript">
+            <summary>
+            初始化ButtonJS函数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.ButtonControls.AddButton.AddAttributesToRender(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            重构AddAttributesToRender,强制type为button
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.ButtonControls.AddButton.OpenWindowProp">
+            <summary>
+            打开窗口属性集合
+            </summary>
+        </member>
+        <member name="T:Epoint.Web.UI.WebControls2X.TextBoxControls.UpDown">
+            <summary>
+            UpDown
+            </summary>
+        </member>
+        <member name="T:Epoint.Web.UI.WebControls2X.TextBoxControls.NumericTextBox">
+            <summary>
+            NumericTextBox类，继承自TextBox
+            Author：XGC
+            </summary>
+            
+            <example>
+                示例代码
+                <br />
+                <code>
+                    Aspx页面。先注册控件。
+                    &lt;%@ Register Assembly="Epoint.Web.UI.WebControls2X" Namespace="Epoint.Web.UI.WebControls2X.TextBoxControls" TagPrefix="epoint" %&gt;
+            
+                    Form里面：
+                    &lt;epoint:NumericTextBox ID="NumericTextBox1" runat="server" AllowNull="False"&gt;
+                               &lt;NumericProperty TextBoxType="Numeric" ShowMoneyChar="True" Precision="3" MaxValue="1000000" MinValue="0"&gt;&lt;/NumericProperty&gt;
+                    &lt;/epoint:NumericTextBox&gt;
+                    
+                    Aspx.cs
+                    获取控件值请用，<font color="red">请注意下面的写法，不要使用Text属性，否则超过999将有可能出问题。</font>：
+                    this.NumericTextBox1.Value;    
+                    
+                </code>
+            
+            
+            
+            </example>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.TextBoxControls.NumericTextBox.AddAttributesToRender(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            添加不允许中文输入法的限制
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.TextBoxControls.NumericTextBox.getInitScript">
+            <summary>
+            获取初始化JS函数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TextBoxControls.NumericTextBox.NumericProperty">
+            <summary>
+            数值属性集合
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TextBoxControls.NumericTextBox.Value">
+            <summary>
+            只读,文本框的值,返回的是去除分节符和Money符号的字符串
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.TextBoxControls.UpDown.#ctor">
+            <summary>
+            Control constructor.
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.TextBoxControls.UpDown.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            This is the function that does the rendering of the control. It is called by 
+            framework to give chance to the control to emi its HTML tags. Based on the
+            properties set by the yser at design or run time, the control renders itself
+            accordingly. For example, based on the side choses by user, the up-down images
+            are placed are placed either on left or right.
+            </summary>
+            <param name="output"></param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.TextBoxControls.UpDown.AddAttributesToRender(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            重构AddAttributesToRender
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.TextBoxControls.UpDown.AddImageSection(System.Text.StringBuilder)">
+            <summary>
+            This function emits HTML tages for placing the up-down arraow images.
+            </summary>
+            <param name="strRender"></param>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TextBoxControls.UpDown.NumericProperty">
+            <summary>
+            重构,只读,设置无效,数值属性
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TextBoxControls.UpDown.ShowCharacter">
+            <summary>
+            是否显示分节符
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TextBoxControls.UpDown.ArrowsPositionSide">
+            <summary>
+            Propert for specifying the side on which the arrows should be placed. It
+            acepts two values "Left" and "Right"
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TextBoxControls.UpDown.MaxValue">
+            <summary>
+            Property for specifying  MAX value for up-down control.
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TextBoxControls.UpDown.MinValue">
+            <summary>
+            Property for specifying the MIN value for up-down control.
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TextBoxControls.UpDown.Increment">
+            <summary>
+            Property for specifying increment for up-down control.
+            </summary>
+        </member>
+        <member name="T:Epoint.Web.UI.WebControls2X.TextBoxControls.LoadTextChangedEventHandler">
+            <summary>
+            动态加载的事件
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:Epoint.Web.UI.WebControls2X.TextBoxControls.DropDownTextBox">
+            <summary>
+            DropDownTextBox类，继承自TextBox,ICallbackEventHandler
+            Author：XGC
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.TextBoxControls.DropDownTextBox.OnLoadOnTextChanged(Epoint.Web.UI.WebControls2X.EpointStringEventArgs)">
+            <summary>
+            事件OnTreeNodePopulate
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.TextBoxControls.DropDownTextBox.RaiseCallbackEvent(System.String)">
+            <summary>
+            触发事件
+            </summary>
+            <param name="eventArgument"></param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.TextBoxControls.DropDownTextBox.GetCallbackResult">
+            <summary>
+            获取回调事件的返回值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.TextBoxControls.DropDownTextBox.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            重构Render，添加对齐方式和初始化JS函数
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.TextBoxControls.DropDownTextBox.CreateChildControls">
+            <summary>
+            CreateChildControls
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.TextBoxControls.DropDownTextBox.CreateDive">
+            <summary>
+            CreateDive
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.TextBoxControls.DropDownTextBox.getInitScript">
+            <summary>
+            DropDown文本框的初始化JS函数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.TextBoxControls.DropDownTextBox.Setlink">
+            <summary>
+            添加Div的样式表
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.TextBoxControls.DropDownTextBox.OnPreRender(System.EventArgs)">
+            <summary>
+            重构OnPreRender
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="E:Epoint.Web.UI.WebControls2X.TextBoxControls.DropDownTextBox.LoadTextChanged">
+            <summary>
+            动态加载节点事件
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TextBoxControls.DropDownTextBox.Text">
+            <summary>
+            选择控件的TEXT文本。
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TextBoxControls.DropDownTextBox.Value">
+            <summary>
+            选择控件的Value值
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TextBoxControls.DropDownTextBox.SelectImageVisible">
+            <summary>
+            是否显示选择图片
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TextBoxControls.DropDownTextBox.RelationName">
+            <summary>
+            文本框的提示值
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TextBoxControls.DropDownTextBox.AllowNull">
+            <summary>
+            文本框是否必须输入
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TextBoxControls.DropDownTextBox.Width">
+            <summary>
+            控件宽度
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TextBoxControls.DropDownTextBox.Height">
+            <summary>
+            重写Height，高度22px
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TextBoxControls.DropDownTextBox.DropDownStyle">
+            <summary>
+            下拉文本的样式
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TextBoxControls.DropDownTextBox.Items">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TextBoxControls.DropDownTextBox.DivHeight">
+            <summary>
+            弹出Div的高度,整数
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TextBoxControls.DropDownTextBox.DivWidth">
+            <summary>
+            弹出Div的宽度,整数
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TextBoxControls.DropDownTextBox.TagKey">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Epoint.Web.UI.WebControls2X.EpointStringEventArgs">
+            <summary>
+            EpointStringEventArgs类
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.EpointStringEventArgs.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="val"></param>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.EpointStringEventArgs.Value">
+            <summary>
+            Node属性
+            </summary>
+        </member>
+        <member name="T:Epoint.Web.UI.WebControls2X.DropDownTextItem">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.DropDownTextItem.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.DropDownTextItem.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="text"></param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.DropDownTextItem.#ctor(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="text"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.DropDownTextItem.#ctor(System.String,System.String,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="text"></param>
+            <param name="value"></param>
+            <param name="enabled"></param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.DropDownTextItem.Equals(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="o"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.DropDownTextItem.FromString(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="s"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.DropDownTextItem.ToString">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.DropDownTextItem.Attributes">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.DropDownTextItem.Enabled">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.DropDownTextItem.Selected">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.DropDownTextItem.Text">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.DropDownTextItem.Value">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Epoint.Web.UI.WebControls2X.DropDownItemCollection">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.DropDownItemCollection.Add(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.DropDownItemCollection.Add(Epoint.Web.UI.WebControls2X.DropDownTextItem)">
+            <summary>
+            
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.DropDownItemCollection.AddRange(Epoint.Web.UI.WebControls2X.DropDownTextItem[])">
+            <summary>
+            
+            </summary>
+            <param name="items"></param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.DropDownItemCollection.Clear">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.DropDownItemCollection.Contains(Epoint.Web.UI.WebControls2X.DropDownTextItem)">
+            <summary>
+            
+            </summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.DropDownItemCollection.CopyTo(System.Array,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="array"></param>
+            <param name="index"></param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.DropDownItemCollection.FindByText(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="text"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.DropDownItemCollection.FindByTextInternal(System.String,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="text"></param>
+            <param name="includeDisabled"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.DropDownItemCollection.FindByValue(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.DropDownItemCollection.FindByValueInternal(System.String,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+            <param name="includeDisabled"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.DropDownItemCollection.GetEnumerator">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.DropDownItemCollection.IndexOf(Epoint.Web.UI.WebControls2X.DropDownTextItem)">
+            <summary>
+            
+            </summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.DropDownItemCollection.Insert(System.Int32,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="index"></param>
+            <param name="item"></param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.DropDownItemCollection.Insert(System.Int32,Epoint.Web.UI.WebControls2X.DropDownTextItem)">
+            <summary>
+            
+            </summary>
+            <param name="index"></param>
+            <param name="item"></param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.DropDownItemCollection.Remove(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.DropDownItemCollection.Remove(Epoint.Web.UI.WebControls2X.DropDownTextItem)">
+            <summary>
+            
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.DropDownItemCollection.RemoveAt(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="index"></param>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.DropDownItemCollection.Capacity">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.DropDownItemCollection.Count">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.DropDownItemCollection.IsReadOnly">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.DropDownItemCollection.IsSynchronized">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.DropDownItemCollection.Item(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.DropDownItemCollection.SyncRoot">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Epoint.Web.UI.WebControls2X.DateTextBox">
+            <summary>
+            DateFromTo类，继承自System.Web.UI.WebControls.WebControl
+            Author：XGC
+            </summary>
+            <example>
+                示例代码
+                <br />
+                <code>
+                    Aspx页面。先注册控件。
+                    &lt;%@ Register Assembly="Epoint.Web.UI.WebControls2X" Namespace="Epoint.Web.UI.WebControls2X" TagPrefix="epoint" %&gt;
+            
+                    Form里面：
+                    &lt;epoint:datetextbox id="DateTextBox1" DateControlType="DateTime"  runat="server" Character="CN" ShowLongDate="true" InputDateType="Input"&gt;&lt;/epoint:datetextbox&gt;
+                    
+                    Aspx.cs
+                    获取控件之：
+                    this.DateTextBox1.Value;    
+                    
+            
+                    <font color="red">注意：如果是起始日期，请用 DateFromTo控件</font>
+                </code>
+            
+            
+            
+            </example>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.DateTextBox.AddAttributesToRender(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            重构AddAttributesToRender
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.DateTextBox.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            重构Render
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.DateTextBox.OnPreRender(System.EventArgs)">
+            <summary>
+            重构OnPreRender
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.DateTextBox.Setlink">
+            <summary>
+            在<head></head>标签中添加css,JAVASCRIPT链接
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.DateTextBox.CreateChildControls">
+            <summary>
+            重构CreateChildControls,根据是否允许Null，添加验证控件
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.DateTextBox.getInitScript">
+            <summary>
+            获得初始化前台对象的Js脚本
+            是否为单个控件，还是DateFromTo中的控件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.DateTextBox.getTabString(System.Int32)">
+            <summary>
+            html的分隔符换行符
+            </summary>
+            <param name="count"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.DateTextBox.generateHTMLFristPart">
+            <summary>
+            生成前台HTML第一块
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.DateTextBox.generateHTMLSecondPart">
+            <summary>
+            生成前台HTML第二块，中间的就是input text
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.DateTextBox.generateHTMLThirdPart">
+            <summary>
+            生成前台HTML第二块，中间的就是input text
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.DateTextBox.AllowSBCPoint">
+            <summary>
+            文本框是否允许输入全角标点,
+            固定设置为不允许
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.DateTextBox.AllowSBCNum">
+            <summary>
+            文本框是否允许输入全角数字,
+            固定设置为不允许
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.DateTextBox.DateControlType">
+            <summary>
+            控件类型，日期控件OR日期时间控件
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.DateTextBox.Value">
+            <summary>
+            文本框的值,取值时分隔符固定为 /
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.DateTextBox.ShowLongDate">
+            <summary>
+            是否显示长日期
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.DateTextBox.InputDateType">
+            <summary>
+            是否可以输入
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.DateTextBox.Character">
+            <summary>
+            日期分节符 CN=中文 XG='/' HX='-'
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.DateTextBox.CalenderType">
+            <summary>
+            日期选择区域类型，指弹出选择日期的类型，Div或者Dialog模式
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.DateTextBox.Width">
+            <summary>
+            控件宽度,默认为120px
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.DateTextBox.DateTextBoxType">
+            <summary>
+            日期框的格式,Single单个日期框,其余为,DateFromTo中使用
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.DateTextBox.RelationDateTextID">
+            <summary>
+            与本控件关联的控件,DateFromTo中使用
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.DateTextBox.MaxYear">
+            <summary>
+            可选择的最大年
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.DateTextBox.MinYear">
+            <summary>
+            可选择的最小年
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.DateTextBox.MinDate">
+            <summary>
+            可选择的最小日期
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.DateTextBox.MaxDate">
+            <summary>
+            可选择的最大日期
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.DateTextBox.DateGapType">
+            <summary>
+            日期间隔类型,DateFromTo中使用
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.DateTextBox.DateGapNum">
+            <summary>
+            日期最小间隔值,DateFromTo中使用
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.DateTextBox.FormatTime">
+            <summary>
+            时间格式，当DateControlType=DateTime
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.DateTextBox.CalendStyle">
+            <summary>
+            日历的样式
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.DateTextBox.JSFunAfterSelect">
+            <summary>
+            选择日期结束后触发的JS函数
+            不要以javascript:开头，直接写函数名就行
+            例如：alert('1');请记得加分号,请使用单引号；
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.DateTextBox.JSFunAfterClear">
+            <summary>
+            清除日期结束后触发的JS函数
+            不要以javascript:开头，直接写函数名就行
+            例如：alert('1');请记得加分号；
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.DateTextBox.PixX">
+            <summary>
+            日期Div显示位置X,可以自己定义日期Div显示位置
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.DateTextBox.PixY">
+            <summary>
+            日期Div显示位置Y,可以自己定义日期Div显示位置
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.DateTextBox.MaskChar">
+            <summary>
+            日期输入替代字符,当InputDateType为Input时有效
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.DateTextBox.Mask">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.DateTextBox.SelectImageVisible">
+            <summary>
+            是否显示选择图片
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.DateTextBox.ClearImageVisible">
+            <summary>
+            是否显示清除图片
+            </summary>
+        </member>
+        <member name="T:Epoint.Web.UI.WebControls2X.ImageButtonControls.CloseImageButton">
+            <summary>
+            CloseImageButton类，继承自ImageButton
+            Author：XGC
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.ImageButtonControls.CloseImageButton.AddScript">
+            <summary>
+            添加初始化Script
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.ImageButtonControls.CloseImageButton.TagKey">
+            <summary>
+            把前缀改为Img
+            </summary>
+        </member>
+        <member name="T:Epoint.Web.UI.WebControls2X.WebControlDesigner.DateFromToDesigner">
+            <summary>
+            DateFromTo的设计时类，继承自ControlDesigner
+            Author：XGC
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.WebControlDesigner.DateFromToDesigner.GetDesignTimeHtml">
+            <summary>
+            重构GetDesignTimeHtml，获取设计时HTML
+            Author：XGC
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Epoint.Web.UI.WebControls2X.Uploader.UploaderEventArgs">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.Uploader.UploaderEventArgs.#ctor(Epoint.Web.UI.WebControls2X.Uploader.Uploader,System.Guid)">
+            <summary>
+            
+            </summary>
+            <param name="uploader"></param>
+            <param name="guid"></param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.Uploader.UploaderEventArgs.#ctor(Epoint.Web.UI.WebControls2X.Uploader.Uploader,System.Guid,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="uploader"></param>
+            <param name="guid"></param>
+            <param name="filename"></param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.Uploader.UploaderEventArgs.#ctor(Epoint.Web.UI.WebControls2X.Uploader.Uploader,System.Guid,System.String,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="uploader"></param>
+            <param name="guid"></param>
+            <param name="filename"></param>
+            <param name="filesize"></param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.Uploader.UploaderEventArgs.CopyTo(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="newpath"></param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.Uploader.UploaderEventArgs.Delete">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.Uploader.UploaderEventArgs.GetTempFilePath">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.Uploader.UploaderEventArgs.MoveTo(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="newpath"></param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.Uploader.UploaderEventArgs.OpenStream">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.Uploader.UploaderEventArgs.Persist">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.Uploader.UploaderEventArgs.FileGuid">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.Uploader.UploaderEventArgs.FileName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.Uploader.UploaderEventArgs.FileSize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Epoint.Web.UI.WebControls2X.HtmlEdit.ClientFileUploadHander">
+            <summary>
+            ClientFileUploadHander 主要用来处理word内容中图像的自动上传
+            <seealso cref="T:Epoint.Web.UI.WebControls2X.HtmlEdit.Helper"/>
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.HtmlEdit.ClientFileUploadHander.sStyleName">
+            <summary>
+            URL 中传入的 style 名称
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.HtmlEdit.ClientFileUploadHander.sBaseUrl">
+            <summary>
+            文件路径模式：0相对路径,1绝对根路径,2绝对全路径
+            </summary>
+            <remarks>
+            0、相对路径：指所有的相关上传或自动插入文件路径，编辑后都以"UploadFile/..."或"../UploadFile/..."形式呈现。<br />
+            1、绝对根路径：指所有的相关上传或自动插入文件路径，编辑后都以"/LionSky/UploadFile/..."这种形式呈现。<br />
+            2、绝对全路径：指所有的相关上传或自动插入文件路径，编辑后都以"http://www.lionsky.net/LionSky/UploadFile/..."这种形式呈现。<br />		
+            </remarks>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.HtmlEdit.ClientFileUploadHander.nAutoDir">
+            <summary>
+            上传文件自动建目录标志：0不建目录，1年目录，2年月目录，3年月日目录
+            </summary>
+        </member>
+        <member name="F:Epoint.Web.UI.WebControls2X.HtmlEdit.ClientFileUploadHander.sUploadDir">
+            <summary>
+            上传文件存放目录名
+            </summary>
+            <remarks>
+            必须是相对路径：相对于Epoint_Client/Epoint.HtmlEditor.x/的路径
+            </remarks>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.HtmlEdit.ClientFileUploadHander.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.HtmlEdit.ClientFileUploadHander.InitPara(System.Web.HttpContext)">
+            <summary>
+            初始化 style 配置文件参数
+            </summary>
+            <param name="context">当前请求的 HttpContext 对象。</param>
+            <remarks>
+            此方法为 UpLoadHandler 内部使用
+            </remarks>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.HtmlEdit.ClientFileUploadHander.OutScript(System.String,System.Web.HttpContext)">
+            <summary>
+            输出客户端脚本
+            </summary>
+            <param name="msg">脚本消息</param>
+            <param name="context">请求的HTTP特定信息</param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.HtmlEdit.ClientFileUploadHander.OutScriptNoBack(System.String)">
+            <summary>
+            输出客户端脚本
+            </summary>
+            <param name="msg">脚本消息</param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.HtmlEdit.ClientFileUploadHander.processImageUpload(System.Web.HttpContext)">
+            <summary>
+            上传图片
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:Epoint.Web.UI.WebControls2X.HtmlEdit.ScriptHandler">
+            <summary>
+            用于获取 HtmlEditor 资源文件中的脚本内容
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.HtmlEdit.ScriptHandler.ScriptContent(System.Web.HttpContext)">
+            <summary>
+            获取  HtmlEditor 资源文件中的脚本内容
+            </summary>
+            <param name="context">为当前 HTTP 请求获取 <see cref="T:System.Web.HttpContext"/> 对象</param>
+        </member>
+        <member name="T:Epoint.Web.UI.WebControls2X.Uploader.UploaderEventHandler">
+            <summary>
+            delegate UploaderEventHandler
+            </summary>
+            <param name="sender"></param>
+            <param name="args"></param>
+        </member>
+        <member name="T:Epoint.Web.UI.WebControls2X.Uploader.Uploader">
+            <summary>
+            一点智慧文件上传控件，参考CuteWebUI.Uploader
+            作者：徐国春
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.Uploader.Uploader.#ctor">
+            <summary>
+            本类的构造函数，初始化各按钮
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.Uploader.Uploader.OnInit(System.EventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.Uploader.Uploader.OnLoad(System.EventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.Uploader.Uploader.OnUnload(System.EventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.Uploader.Uploader.OnFileUploaded(Epoint.Web.UI.WebControls2X.Uploader.UploaderEventArgs)">
+            <summary>
+            FileUpload时触发本事件
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.Uploader.Uploader.ValidateShortName(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="filename"></param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.Uploader.Uploader.GetUploaderProvider">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.Uploader.Uploader.OnFileValidating(Epoint.Web.UI.WebControls2X.Uploader.UploaderEventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.Uploader.Uploader.OnPreRender(System.EventArgs)">
+            <summary>
+            装载JS函数
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.Uploader.Uploader.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.Uploader.Uploader.AddControlIDToAttribute(System.Web.UI.HtmlTextWriter,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="writer"></param>
+            <param name="buttonid"></param>
+            <param name="buttonName"></param>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.Uploader.Uploader.Upload(System.Int32,System.String,System.IO.Stream)">
+            <summary>
+            
+            </summary>
+            <param name="filesize"></param>
+            <param name="filename"></param>
+            <param name="stream"></param>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.Uploader.Uploader.IsBrowserSupportUploadScript">
+            <summary>
+            浏览器是否支持装载Script
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.Uploader.Uploader.TempDirectory">
+            <summary>
+            存放临时文件目录
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.Uploader.Uploader.ValidateOption">
+            <summary>
+            ValidateOption属性
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.Uploader.Uploader.CancelButtonID">
+            <summary>
+            取消buttonID
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.Uploader.Uploader.CancelButton">
+            <summary>
+            取消Button控件
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.Uploader.Uploader.InsertButtonID">
+            <summary>
+            上传buttonID
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.Uploader.Uploader.InsertButton">
+            <summary>
+            上传button控件
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.Uploader.Uploader.InsertButtonStyle">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.Uploader.Uploader.ProgressCtrlID">
+            <summary>
+            进度条控件ID
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.Uploader.Uploader.ProgressPanel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.Uploader.Uploader.ProgressTextID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.Uploader.Uploader.ShowProgressBar">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.Uploader.Uploader.ShowProgressInfo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.Uploader.Uploader.FileTypeNotSupportMsg">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.Uploader.Uploader.FileTooLargeMsg">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.Uploader.Uploader.UploadProcessingMsg">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.Uploader.Uploader.ProgressTextTemplate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.Uploader.Uploader.ProgressPanelWidth">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.Uploader.Uploader.ProgressBarHeight">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.Uploader.Uploader.ProgressInfoStyle">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.Uploader.Uploader.ProgressBarStyle">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.Uploader.Uploader.ProgressBarBackgroundImage">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.Uploader.Uploader.ProgressPicture">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.Uploader.Uploader.ProgressBarBorderStyle">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.Uploader.Uploader.InsertText">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.Uploader.Uploader.InputboxCSSText">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:Epoint.Web.UI.WebControls2X.Uploader.Uploader.FileUploaded">
+            <summary>
+            上传完毕后调用事件
+            </summary>
+        </member>
+        <member name="E:Epoint.Web.UI.WebControls2X.Uploader.Uploader.FileValidating">
+            <summary>
+            文件检查
+            </summary>
+        </member>
+        <member name="T:Epoint.Web.UI.WebControls2X.TextBoxControls.SpecialTextBox">
+            <summary>
+            SpecialTextBox类，继承自TextBox
+            Author：XGC
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.TextBoxControls.SpecialTextBox.getInitScript">
+            <summary>
+            特殊文本框的初始化JS函数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TextBoxControls.SpecialTextBox.SpecialType">
+            <summary>
+            文本框类型
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TextBoxControls.SpecialTextBox.MaxLength">
+            <summary>
+            如果是邮编，则最大长度为6
+            </summary>
+        </member>
+        <member name="T:Epoint.Web.UI.WebControls2X.Page">
+            <summary>
+            Page类
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.Page.OnPreRender(System.EventArgs)">
+            <summary>
+            注册通用函数
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="T:Epoint.Web.UI.WebControls2X.Uploader.UploaderValidateOption">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.Uploader.UploaderValidateOption.MatchExtension(System.String)">
+            <summary>
+            判断上传的文件名称是否在允许的文件扩展名之内
+            </summary>
+            <param name="filename"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.Uploader.UploaderValidateOption.ToString">
+            <summary>
+            重载，得到ToString方法
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.Uploader.UploaderValidateOption.AllowedFileExtensions">
+            <summary>
+            允许的文件扩展名
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.Uploader.UploaderValidateOption.MaxSizeKB">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.Uploader.UploaderValidateOption.UploadSkipKB">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Epoint.Web.UI.WebControls2X.TextBoxControls.cNumericProperty">
+            <summary>
+            Numeric属性类
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TextBoxControls.cNumericProperty.TextBoxType">
+            <summary>
+            文本框的类型
+            Rate类型后面自动加上“%”
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TextBoxControls.cNumericProperty.MaxValue">
+            <summary>
+            允许输入的最大值,请结合你的文本框类型使用
+            如果是Rate类型，最大100，针对Rate类型设置大于100的值是无效的。
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TextBoxControls.cNumericProperty.MinValue">
+            <summary>
+            允许输入的最小值,请结合你的文本框类型使用
+            如果是Rate类型，最小0，针对Rate类型设置小于0的值是无效的。
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TextBoxControls.cNumericProperty.Precision">
+            <summary>
+            精度,对Numeric、Rate适用,
+            Int控件精度为0，Money控件精度为2，针对这两个控件设置进度是无意义的
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TextBoxControls.cNumericProperty.MoneyChar">
+            <summary>
+            货币符号,Money有效，其余控件类型都无效。
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TextBoxControls.cNumericProperty.ShowMoneyChar">
+            <summary>
+            是否显示货币符号,Money有效，其余控件类型都无效。
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TextBoxControls.cNumericProperty.ShowCharacter">
+            <summary>
+            是否显示分节符
+            </summary>
+        </member>
+        <member name="T:Epoint.Web.UI.WebControls2X.WebControlDesigner.TreeViewDesigner">
+            <summary>
+            TreeView的设计时类，继承自ControlDesigner
+            Author：XGC
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.WebControlDesigner.TreeViewDesigner.GetDesignTimeHtml">
+            <summary>
+            重构GetDesignTimeHtml，获取设计时HTML
+            Author：XGC
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Epoint.Web.UI.WebControls2X.ImageButtonControls.DeleteImageButton">
+            <summary>
+            DeleteImageButton类，继承自ImageButton
+            Author：XGC
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.ImageButtonControls.DeleteImageButton.AddScript">
+            <summary>
+            添加初始化JS函数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.ImageButtonControls.DeleteImageButton.OnInit(System.EventArgs)">
+            <summary>
+            初始化函数
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.ImageButtonControls.DeleteImageButton.RaiseMsg">
+            <summary>
+            删除前的提示信息
+            </summary>
+        </member>
+        <member name="T:Epoint.Web.UI.WebControls2X.WebControlDesigner.DateTextBoxDesigner">
+            <summary>
+            DateTextBox的设计时类，继承自ControlDesigner
+            Author：XGC
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.WebControlDesigner.DateTextBoxDesigner.GetDesignTimeHtml">
+            <summary>
+            重构GetDesignTimeHtml，获取设计时HTML
+            Author：XGC
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.WebControlDesigner.DateTextBoxDesigner.getTabString(System.Int32)">
+            <summary>
+            html的分隔符换行符
+            </summary>
+            <param name="count"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.WebControlDesigner.DateTextBoxDesigner.generateHTMLFristPart">
+            <summary>
+            生成前台HTML第一块
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.WebControlDesigner.DateTextBoxDesigner.generateHTMLSecondPart">
+            <summary>
+            生成前台HTML第二块，中间的就是input text
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Epoint.Web.UI.WebControls2X.TabMenu">
+            <summary>
+            一点智慧TabMenu控件
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.TabMenu.CreateChildControls">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TabMenu.Tabs">
+            <summary>
+            Tabs集合
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TabMenu.ImageFolds">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TabMenu.TagKey">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Epoint.Web.UI.WebControls2X.TabContent">
+            <summary>
+            Tab标签页
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TabContent.Text">
+            <summary>
+            标签的目标Text
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TabContent.TargetUrl">
+            <summary>
+            标签的目标Url
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TabContent.CssClass">
+            <summary>
+            标签页的Class
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TabContent.MouseOverClass">
+            <summary>
+            标签页MouseOver时的Class
+            </summary>
+        </member>
+        <member name="P:Epoint.Web.UI.WebControls2X.TabContent.SelectedClass">
+            <summary>
+            选中标签页的Class
+            </summary>
+        </member>
+        <member name="T:Epoint.Web.UI.WebControls2X.HtmlEdit.ImageAction">
+            <summary>
+            相对于图片列表操作的 Class
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.HtmlEdit.ImageAction.Initialize_Page">
+            <summary>
+            对 ImageAction 进行初始化
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.HtmlEdit.ImageAction.DeleteFile">
+            <summary>
+            删除文件
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.HtmlEdit.ImageAction.GetDirectoryParentImageList">
+            <summary>
+            获得上一级菜单下的图片列表
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.HtmlEdit.ImageAction.GetDirectoryChildImageList">
+            <summary>
+            获得下一级菜单下的图片列表
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.HtmlEdit.ImageAction.Init_BasicInfo">
+            <summary>
+            初始化基本信息
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.HtmlEdit.ImageAction.Init_BasicInfo_AfterDelete">
+            <summary>
+            初始化基本信息 AddByXGC 2007/4/14
+            </summary>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.HtmlEdit.ImageAction.Init_ImageList(System.String,System.String,System.String,System.String)">
+            <summary>
+            获取图片列表
+            </summary>
+            <param name="currPath">上传文件夹的根路径</param>
+            <param name="filePath">访问的路径</param>
+            <param name="imgExtList">允许上传的图片列表</param>
+            <param name="trulyPath">真实保存在内容中的路径</param>
+            <returns>包含图片列表的脚本，供img.htm.*.resx文件调用</returns>
+            <remarks>
+            <strong>filePath</strong> 主要在访问目录下的文件时调用
+            <strong>TrulyPath</strong> 主要在 文件路径模式（相对路径、绝对根路、绝对全路径）设置时使用
+            </remarks>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.HtmlEdit.ImageAction.Init_ImageList_AfterDelete(System.String,System.String,System.String,System.String)">
+            <summary>
+            获取图片列表 AddByXGC 2007/4/14
+            </summary>
+            <param name="currPath">上传文件夹的根路径</param>
+            <param name="filePath">访问的路径</param>
+            <param name="imgExtList">允许上传的图片列表</param>
+            <param name="trulyPath">真实保存在内容中的路径</param>
+            <returns>包含图片列表的脚本，供img.htm.*.resx文件调用</returns>
+            <remarks>
+            <strong>filePath</strong> 主要在访问目录下的文件时调用
+            <strong>TrulyPath</strong> 主要在 文件路径模式（相对路径、绝对根路、绝对全路径）设置时使用
+            </remarks>
+        </member>
+        <member name="M:Epoint.Web.UI.WebControls2X.HtmlEdit.ImageAction.CheckValidExt(System.String,System.String)">
+            <summary>
+            检测扩展名的有效性
+            </summary>
+            <param name="sExt">文件名扩展名</param>
+            <param name="fileExtList"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

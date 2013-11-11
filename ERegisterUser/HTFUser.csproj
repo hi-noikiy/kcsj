@@ -1,0 +1,531 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B0F6C81C-D14F-4D6F-BF66-421CB64E36F4}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EpointRegisterUser</RootNamespace>
+    <AssemblyName>EpointRegisterUser</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <FilesToIncludeForPublish>OnlyFilesToRunTheApp</FilesToIncludeForPublish>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=1.0.10618.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DllImport\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="AjaxPro.2">
+      <HintPath>..\DllImport\AjaxPro.2.dll</HintPath>
+    </Reference>
+    <Reference Include="aspnetpager, Version=4.3.3.0, Culture=neutral, PublicKeyToken=fb0a0fe055d40fd4">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DllImport\aspnetpager.dll</HintPath>
+    </Reference>
+    <Reference Include="Epoint.Ajax.FileUpload, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DllImport\Epoint.Ajax.FileUpload.dll</HintPath>
+    </Reference>
+    <Reference Include="Epoint.Common, Version=1.0.3664.25040, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DllImport\Epoint.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Epoint.Frame.Bizlogic, Version=2007.12.21.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DllImport\Epoint.Frame.Bizlogic.dll</HintPath>
+    </Reference>
+    <Reference Include="Epoint.Frame.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DllImport\Epoint.Frame.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Epoint.Frame.Entity, Version=2007.12.21.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DllImport\Epoint.Frame.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="Epoint.Messages.Bizlogic, Version=2007.12.21.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DllImport\Epoint.Messages.Bizlogic.dll</HintPath>
+    </Reference>
+    <Reference Include="Epoint.MisBizLogic2, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DllImport\Epoint.MisBizLogic2.dll</HintPath>
+    </Reference>
+    <Reference Include="Epoint.RegisterUser.Bizlogic">
+      <HintPath>..\DllImport\Epoint.RegisterUser.Bizlogic.dll</HintPath>
+    </Reference>
+    <Reference Include="Epoint.RegisterUser.DataSyn.Bizlogic">
+      <HintPath>..\DllImport\Epoint.RegisterUser.DataSyn.Bizlogic.dll</HintPath>
+    </Reference>
+    <Reference Include="Epoint.RegisterUser.Front.Bizlogic">
+      <HintPath>..\DllImport\Epoint.RegisterUser.Front.Bizlogic.dll</HintPath>
+    </Reference>
+    <Reference Include="Epoint.Session.Extra.Bizlogic">
+      <HintPath>..\DllImport\Epoint.Session.Extra.Bizlogic.dll</HintPath>
+    </Reference>
+    <Reference Include="Epoint.Web.UI.WebControls2X, Version=1.0.0.0, Culture=neutral, PublicKeyToken=bc248407fcf377e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DllImport\Epoint.Web.UI.WebControls2X.dll</HintPath>
+    </Reference>
+    <Reference Include="Epoint.Workflow.Bizlogic, Version=2007.12.21.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DllImport\Epoint.Workflow.Bizlogic.dll</HintPath>
+    </Reference>
+    <Reference Include="EpointMis">
+      <HintPath>..\DllImport\EpointMis.dll</HintPath>
+    </Reference>
+    <Reference Include="EpointNetoffice7">
+      <HintPath>..\DllImport\EpointNetoffice7.dll</HintPath>
+    </Reference>
+    <Reference Include="EpointRegisterUser_Bizlogic, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DllImport\EpointRegisterUser_Bizlogic.dll</HintPath>
+    </Reference>
+    <Reference Include="FredCK.FCKeditorV2, Version=2.6.3.0, Culture=neutral, PublicKeyToken=4f86767c9b519a06, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DllImport\FredCK.FCKeditorV2.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.WebUI.Shared.v6.3, Version=6.3.20063.53, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DllImport\Infragistics2.WebUI.Shared.v6.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.WebUI.UltraWebTab.v6.3, Version=6.3.20063.53, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DllImport\Infragistics2.WebUI.UltraWebTab.v6.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DllImport\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DllImport\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ObjectBuilder, Version=1.0.51205.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DllImport\Microsoft.Practices.ObjectBuilder.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Ascx\CaiLiao.ascx" />
+    <Content Include="Pages\RG_Matters\Matter_Add.aspx" />
+    <Content Include="Pages\RG_Matters\Matter_Edit.aspx" />
+    <Content Include="Pages\RG_Matters\Matter_Frame.aspx" />
+    <Content Include="Pages\RG_Matters\Matter_LeftTree.aspx" />
+    <Content Include="Pages\RG_Matters\Matter_List.aspx" />
+    <Content Include="Pages\RG_Matters\RG_Matter_OUTypeRight.aspx" />
+    <Content Include="Pages\RG_Matters\RG_Matter_RoleRight.aspx" />
+    <Content Include="Pages\RG_Module\GetOUTypeTree.aspx" />
+    <Content Include="Pages\RG_Module\GetRoleTree.aspx" />
+    <Content Include="Pages\RG_Module\GetUserTree.aspx" />
+    <Content Include="Pages\RG_Module\OUTypeRight.aspx" />
+    <Content Include="Pages\RG_Module\Record_Add.aspx" />
+    <Content Include="Pages\RG_Module\Record_Detail.aspx" />
+    <Content Include="Pages\RG_Module\Record_Edit.aspx" />
+    <Content Include="Pages\RG_Module\Record_Frame.aspx" />
+    <Content Include="Pages\RG_Module\Record_LeftTree.aspx" />
+    <Content Include="Pages\RG_Module\Record_List.aspx" />
+    <Content Include="Pages\RG_OuTypeRight\OuTypeModule_Setting.aspx" />
+    <Content Include="Pages\RG_OuTypeRight\OuTypeShortcut_Setting.aspx" />
+    <Content Include="Pages\RG_OuTypeRight\OuType_List.aspx" />
+    <Content Include="Pages\RG_OU\RG_OU_Add.aspx" />
+    <Content Include="Pages\RG_OU\RG_OU_Detail.aspx" />
+    <Content Include="Pages\RG_OU\RG_OU_Edit.aspx" />
+    <Content Include="Pages\RG_OU\RG_OU_List.aspx" />
+    <Content Include="Pages\RG_OU\RG_OU_DetailForPro.aspx" />
+    <Content Include="Pages\RG_ShortcutMenu\ShortcutMenu_OUTypeRight.aspx" />
+    <Content Include="Pages\RG_ShortcutMenu\ShortcutMenu_RoleRight.aspx" />
+    <Content Include="Pages\RG_ShortcutMenu\ShortcutMenu_UserRight.aspx" />
+    <Content Include="Pages\RG_User\RecordCheck_List.aspx" />
+    <Content Include="Pages\RG_User\Record_Add.aspx" />
+    <Content Include="Pages\RG_User\Record_Detail.aspx" />
+    <Content Include="Pages\RG_User\Record_Edit.aspx" />
+    <Content Include="Pages\RG_User\RG_SendMessage.aspx" />
+    <Content Include="Pages\RG_User\RG_UserActivation.aspx" />
+    <Content Include="Pages\RG_User\RG_User_List.aspx" />
+    <Content Include="Pages\SelDW.aspx" />
+    <Content Include="Pages\SelDWForPro.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Ascx\CaiLiao.ascx.cs">
+      <DependentUpon>CaiLiao.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ascx\CaiLiao.ascx.designer.cs">
+      <DependentUpon>CaiLiao.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RG_Matters\Matter_Add.aspx.cs">
+      <DependentUpon>Matter_Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RG_Matters\Matter_Add.aspx.designer.cs">
+      <DependentUpon>Matter_Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RG_Matters\Matter_Edit.aspx.cs">
+      <DependentUpon>Matter_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RG_Matters\Matter_Edit.aspx.designer.cs">
+      <DependentUpon>Matter_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RG_Matters\Matter_Frame.aspx.cs">
+      <DependentUpon>Matter_Frame.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RG_Matters\Matter_Frame.aspx.designer.cs">
+      <DependentUpon>Matter_Frame.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RG_Matters\Matter_LeftTree.aspx.cs">
+      <DependentUpon>Matter_LeftTree.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RG_Matters\Matter_LeftTree.aspx.designer.cs">
+      <DependentUpon>Matter_LeftTree.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RG_Matters\Matter_List.aspx.cs">
+      <DependentUpon>Matter_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RG_Matters\Matter_List.aspx.designer.cs">
+      <DependentUpon>Matter_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RG_Matters\RG_Matter_OUTypeRight.aspx.cs">
+      <DependentUpon>RG_Matter_OUTypeRight.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RG_Matters\RG_Matter_OUTypeRight.aspx.designer.cs">
+      <DependentUpon>RG_Matter_OUTypeRight.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RG_Matters\RG_Matter_RoleRight.aspx.cs">
+      <DependentUpon>RG_Matter_RoleRight.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RG_Matters\RG_Matter_RoleRight.aspx.designer.cs">
+      <DependentUpon>RG_Matter_RoleRight.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RG_Module\GetOUTypeTree.aspx.cs">
+      <DependentUpon>GetOUTypeTree.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RG_Module\GetOUTypeTree.aspx.designer.cs">
+      <DependentUpon>GetOUTypeTree.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RG_Module\GetRoleTree.aspx.cs">
+      <DependentUpon>GetRoleTree.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RG_Module\GetRoleTree.aspx.designer.cs">
+      <DependentUpon>GetRoleTree.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RG_Module\GetUserTree.aspx.cs">
+      <DependentUpon>GetUserTree.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RG_Module\GetUserTree.aspx.designer.cs">
+      <DependentUpon>GetUserTree.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RG_Module\OUTypeRight.aspx.cs">
+      <DependentUpon>OUTypeRight.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RG_Module\OUTypeRight.aspx.designer.cs">
+      <DependentUpon>OUTypeRight.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RG_Module\Record_Add.aspx.cs">
+      <DependentUpon>Record_Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RG_Module\Record_Add.aspx.designer.cs">
+      <DependentUpon>Record_Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RG_Module\Record_Detail.aspx.cs">
+      <DependentUpon>Record_Detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RG_Module\Record_Detail.aspx.designer.cs">
+      <DependentUpon>Record_Detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RG_Module\Record_Edit.aspx.cs">
+      <DependentUpon>Record_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RG_Module\Record_Edit.aspx.designer.cs">
+      <DependentUpon>Record_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RG_Module\Record_Frame.aspx.cs">
+      <DependentUpon>Record_Frame.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RG_Module\Record_Frame.aspx.designer.cs">
+      <DependentUpon>Record_Frame.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RG_Module\Record_LeftTree.aspx.cs">
+      <DependentUpon>Record_LeftTree.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RG_Module\Record_LeftTree.aspx.designer.cs">
+      <DependentUpon>Record_LeftTree.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RG_Module\Record_List.aspx.cs">
+      <DependentUpon>Record_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RG_Module\Record_List.aspx.designer.cs">
+      <DependentUpon>Record_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RG_Module\RoleRight.aspx.cs">
+      <DependentUpon>RoleRight.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RG_Module\RoleRight.aspx.designer.cs">
+      <DependentUpon>RoleRight.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RG_Module\UserRight.aspx.cs">
+      <DependentUpon>UserRight.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RG_Module\UserRight.aspx.designer.cs">
+      <DependentUpon>UserRight.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RG_OuTypeRight\OuTypeModule_Setting.aspx.cs">
+      <DependentUpon>OuTypeModule_Setting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RG_OuTypeRight\OuTypeModule_Setting.aspx.designer.cs">
+      <DependentUpon>OuTypeModule_Setting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RG_OuTypeRight\OuTypeShortcut_Setting.aspx.cs">
+      <DependentUpon>OuTypeShortcut_Setting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RG_OuTypeRight\OuTypeShortcut_Setting.aspx.designer.cs">
+      <DependentUpon>OuTypeShortcut_Setting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RG_OuTypeRight\OuType_List.aspx.cs">
+      <DependentUpon>OuType_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RG_OuTypeRight\OuType_List.aspx.designer.cs">
+      <DependentUpon>OuType_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RG_OU\RG_OU_Add.aspx.cs">
+      <DependentUpon>RG_OU_Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RG_OU\RG_OU_Add.aspx.designer.cs">
+      <DependentUpon>RG_OU_Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RG_OU\RG_OU_Detail.aspx.cs">
+      <DependentUpon>RG_OU_Detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RG_OU\RG_OU_Detail.aspx.designer.cs">
+      <DependentUpon>RG_OU_Detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RG_OU\RG_OU_Edit.aspx.cs">
+      <DependentUpon>RG_OU_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RG_OU\RG_OU_Edit.aspx.designer.cs">
+      <DependentUpon>RG_OU_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RG_OU\RG_OU_List.aspx.cs">
+      <DependentUpon>RG_OU_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RG_OU\RG_OU_List.aspx.designer.cs">
+      <DependentUpon>RG_OU_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RG_OU\RG_OU_DetailForPro.aspx.cs">
+      <DependentUpon>RG_OU_DetailForPro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RG_OU\RG_OU_DetailForPro.aspx.designer.cs">
+      <DependentUpon>RG_OU_DetailForPro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RG_ShortcutMenu\ShortcutMenu_OUTypeRight.aspx.cs">
+      <DependentUpon>ShortcutMenu_OUTypeRight.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RG_ShortcutMenu\ShortcutMenu_OUTypeRight.aspx.designer.cs">
+      <DependentUpon>ShortcutMenu_OUTypeRight.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RG_ShortcutMenu\ShortcutMenu_RoleRight.aspx.cs">
+      <DependentUpon>ShortcutMenu_RoleRight.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RG_ShortcutMenu\ShortcutMenu_RoleRight.aspx.designer.cs">
+      <DependentUpon>ShortcutMenu_RoleRight.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RG_ShortcutMenu\ShortcutMenu_UserRight.aspx.cs">
+      <DependentUpon>ShortcutMenu_UserRight.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RG_ShortcutMenu\ShortcutMenu_UserRight.aspx.designer.cs">
+      <DependentUpon>ShortcutMenu_UserRight.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RG_ShortcutMenu\ShortcutMenu_Add.aspx.cs">
+      <DependentUpon>ShortcutMenu_Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RG_ShortcutMenu\ShortcutMenu_Add.aspx.designer.cs">
+      <DependentUpon>ShortcutMenu_Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RG_ShortcutMenu\ShortcutMenu_Edit.aspx.cs">
+      <DependentUpon>ShortcutMenu_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RG_ShortcutMenu\ShortcutMenu_Edit.aspx.designer.cs">
+      <DependentUpon>ShortcutMenu_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RG_ShortcutMenu\ShortcutMenu_List.aspx.cs">
+      <DependentUpon>ShortcutMenu_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RG_ShortcutMenu\ShortcutMenu_List.aspx.designer.cs">
+      <DependentUpon>ShortcutMenu_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RG_User\RecordCheck_List.aspx.cs">
+      <DependentUpon>RecordCheck_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RG_User\RecordCheck_List.aspx.designer.cs">
+      <DependentUpon>RecordCheck_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RG_User\Record_Add.aspx.cs">
+      <DependentUpon>Record_Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RG_User\Record_Add.aspx.designer.cs">
+      <DependentUpon>Record_Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RG_User\Record_Detail.aspx.cs">
+      <DependentUpon>Record_Detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RG_User\Record_Detail.aspx.designer.cs">
+      <DependentUpon>Record_Detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RG_User\Record_Edit.aspx.cs">
+      <DependentUpon>Record_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RG_User\Record_Edit.aspx.designer.cs">
+      <DependentUpon>Record_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RG_User\RG_SendMessage.aspx.cs">
+      <DependentUpon>RG_SendMessage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RG_User\RG_SendMessage.aspx.designer.cs">
+      <DependentUpon>RG_SendMessage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RG_User\RG_UserActivation.aspx.cs">
+      <DependentUpon>RG_UserActivation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RG_User\RG_UserActivation.aspx.designer.cs">
+      <DependentUpon>RG_UserActivation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RG_User\RG_User_List.aspx.cs">
+      <DependentUpon>RG_User_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RG_User\RG_User_List.aspx.designer.cs">
+      <DependentUpon>RG_User_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SelDW.aspx.cs">
+      <DependentUpon>SelDW.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\SelDW.aspx.designer.cs">
+      <DependentUpon>SelDW.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SelDWForPro.aspx.cs">
+      <DependentUpon>SelDWForPro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\SelDWForPro.aspx.designer.cs">
+      <DependentUpon>SelDWForPro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Pages\RG_Module\RoleRight.aspx" />
+    <Content Include="Pages\RG_Module\UserRight.aspx" />
+    <Content Include="Pages\RG_ShortcutMenu\ShortcutMenu_Add.aspx" />
+    <Content Include="Pages\RG_ShortcutMenu\ShortcutMenu_Edit.aspx" />
+    <Content Include="Pages\RG_ShortcutMenu\ShortcutMenu_List.aspx" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1694</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+    <PostBuildEvent>生成事件.bat</PostBuildEvent>
+  </PropertyGroup>
+</Project>

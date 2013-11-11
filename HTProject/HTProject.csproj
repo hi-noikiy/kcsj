@@ -1,0 +1,923 @@
+﻿<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{38255BD4-D982-4511-A026-02B9CE12F274}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HTProject</RootNamespace>
+    <AssemblyName>HTProject</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <TargetFrameworkSubset>
+    </TargetFrameworkSubset>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=1.0.10618.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DllImport\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="AjaxPro.2, Version=7.4.24.1, Culture=neutral, PublicKeyToken=eabb1b8f6347d5af, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DllImport\AjaxPro.2.dll</HintPath>
+    </Reference>
+    <Reference Include="aspnetpager, Version=4.3.3.0, Culture=neutral, PublicKeyToken=fb0a0fe055d40fd4">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DllImport\aspnetpager.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Web, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\WINDOWS\assembly\GAC_MSIL\CrystalDecisions.Web\10.5.3700.0__692fbea5521e1304\CrystalDecisions.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Epoint.Ajax.FileUpload, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DllImport\Epoint.Ajax.FileUpload.dll</HintPath>
+    </Reference>
+    <Reference Include="Epoint.Common, Version=1.0.3664.25040, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DllImport\Epoint.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Epoint.Frame.Bizlogic, Version=2007.12.21.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DllImport\Epoint.Frame.Bizlogic.dll</HintPath>
+    </Reference>
+    <Reference Include="Epoint.Frame.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DllImport\Epoint.Frame.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Epoint.Frame.Entity, Version=2007.12.21.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DllImport\Epoint.Frame.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="Epoint.Messages.Bizlogic, Version=2007.12.21.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DllImport\Epoint.Messages.Bizlogic.dll</HintPath>
+    </Reference>
+    <Reference Include="Epoint.MisBizLogic2, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DllImport\Epoint.MisBizLogic2.dll</HintPath>
+    </Reference>
+    <Reference Include="Epoint.RegisterUser.Bizlogic, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DllImport\Epoint.RegisterUser.Bizlogic.dll</HintPath>
+    </Reference>
+    <Reference Include="Epoint.RegisterUser.DataSyn.Bizlogic, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DllImport\Epoint.RegisterUser.DataSyn.Bizlogic.dll</HintPath>
+    </Reference>
+    <Reference Include="Epoint.RegisterUser.Front.Bizlogic, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DllImport\Epoint.RegisterUser.Front.Bizlogic.dll</HintPath>
+    </Reference>
+    <Reference Include="Epoint.Web.UI.WebControls2X, Version=1.0.0.0, Culture=neutral, PublicKeyToken=bc248407fcf377e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DllImport\Epoint.Web.UI.WebControls2X.dll</HintPath>
+    </Reference>
+    <Reference Include="Epoint.Workflow.Bizlogic, Version=2007.12.21.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DllImport\Epoint.Workflow.Bizlogic.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.85.5.452, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DllImport\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Excel.v6.3, Version=6.3.20063.53, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DllImport\Infragistics2.Excel.v6.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.WebUI.Misc.v6.3, Version=6.3.20063.53, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DllImport\Infragistics2.WebUI.Misc.v6.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.WebUI.Shared.v6.3, Version=6.3.20063.53, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DllImport\Infragistics2.WebUI.Shared.v6.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.WebUI.UltraWebChart.v6.3, Version=6.3.20063.53, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DllImport\Infragistics2.WebUI.UltraWebChart.v6.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.WebUI.UltraWebGrid.ExcelExport.v6.3, Version=6.3.20063.53, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DllImport\Infragistics2.WebUI.UltraWebGrid.ExcelExport.v6.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.WebUI.UltraWebGrid.v6.3, Version=6.3.20063.53, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DllImport\Infragistics2.WebUI.UltraWebGrid.v6.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.WebUI.UltraWebListbar.v6.3, Version=6.3.20063.53, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DllImport\Infragistics2.WebUI.UltraWebListbar.v6.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.WebUI.UltraWebNavigator.v6.3, Version=6.3.20063.53, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DllImport\Infragistics2.WebUI.UltraWebNavigator.v6.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.WebUI.UltraWebTab.v6.3, Version=6.3.20063.53, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DllImport\Infragistics2.WebUI.UltraWebTab.v6.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.WebUI.UltraWebToolbar.v6.3, Version=6.3.20063.53, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DllImport\Infragistics2.WebUI.UltraWebToolbar.v6.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.WebUI.WebDataInput.v6.3, Version=6.3.20063.53, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DllImport\Infragistics2.WebUI.WebDataInput.v6.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.WebUI.WebDateChooser.v6.3, Version=6.3.20063.53, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DllImport\Infragistics2.WebUI.WebDateChooser.v6.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.WebUI.WebSchedule.v6.3, Version=6.3.20063.53, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DllImport\Infragistics2.WebUI.WebSchedule.v6.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.WebUI.WebScheduleDataProvider.v6.3, Version=6.3.20063.53, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DllImport\Infragistics2.WebUI.WebScheduleDataProvider.v6.3.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=4.1.6.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DllImport\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DllImport\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DllImport\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\WINDOWS\assembly\GAC_MSIL\Microsoft.ReportViewer.WebForms\9.0.0.0__b03f5f7f11d50a3a\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="System.Web.Extensions.Design, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\DllImport\System.Web.Extensions.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ADDefault.aspx" />
+    <Content Include="Ascx\FuJian.ascx" />
+    <Content Include="Ascx\OUCheck.ascx" />
+    <Content Include="Ascx\OUEdit.ascx" />
+    <Content Include="Ascx\ReadAttachFile.aspx" />
+    <Content Include="Ascx\RetrieveImageData.aspx" />
+    <Content Include="Ascx\RYCheck.ascx" />
+    <Content Include="Ascx\ZZCheck.ascx" />
+    <Content Include="Ascx\XMCheck.ascx" />
+    <Content Include="Ascx\FuJian_BA.ascx" />
+    <Content Include="Ascx\ReadAttachFileWithZhang.aspx" />
+    <Content Include="Pages\CheckCode.aspx" />
+    <Content Include="Pages\Code\Code_Item_AddInfo.aspx" />
+    <Content Include="Pages\Code\Code_Item_Frame.aspx" />
+    <Content Include="Pages\Code\Code_Item_LeftTree.aspx" />
+    <Content Include="Pages\Code\Code_Item_List.aspx" />
+    <Content Include="Pages\epasslogin.aspx" />
+    <Content Include="Pages\epassverify.aspx" />
+    <Content Include="Pages\IDCard.js" />
+    <Content Include="Pages\images\bg.jpg" />
+    <Content Include="Pages\images\index_r2_c2.jpg" />
+    <Content Include="Pages\images\index_r3_c2.jpg" />
+    <Content Include="Pages\images\index_r4_c14.jpg" />
+    <Content Include="Pages\images\index_r4_c2.jpg" />
+    <Content Include="Pages\images\index_r5_c12.jpg" />
+    <Content Include="Pages\images\index_r6_c4.jpg" />
+    <Content Include="Pages\images\index_r6_c8.jpg" />
+    <Content Include="Pages\images\index_r9_c2.jpg" />
+    <Content Include="Pages\images\login_01.jpg" />
+    <Content Include="Pages\images\login_02.gif" />
+    <Content Include="Pages\images\login_05.gif" />
+    <Content Include="Pages\images\login_06.gif" />
+    <Content Include="Pages\images\login_06.JPG" />
+    <Content Include="Pages\images\login_07.gif" />
+    <Content Include="Pages\images\login_07.jpg" />
+    <Content Include="Pages\images\login_08.gif" />
+    <Content Include="Pages\images\login_09.gif" />
+    <Content Include="Pages\images\login_09_1.gif" />
+    <Content Include="Pages\images\login_10.gif" />
+    <Content Include="Pages\images\login_10_1.gif" />
+    <Content Include="Pages\images\login_11.gif" />
+    <Content Include="Pages\images\login_12.gif" />
+    <Content Include="Pages\images\Rzm_bg.gif" />
+    <Content Include="Pages\images\STYLE.css" />
+    <Content Include="Pages\images\user_all_bg.gif" />
+    <Content Include="Pages\images\user_bottom_c.gif" />
+    <Content Include="Pages\images\user_bottom_l.gif" />
+    <Content Include="Pages\images\user_bottom_r.gif" />
+    <Content Include="Pages\images\user_botton.gif" />
+    <Content Include="Pages\images\User_Login.css" />
+    <Content Include="Pages\images\user_login_name.gif" />
+    <Content Include="Pages\images\user_login_password.gif" />
+    <Content Include="Pages\images\user_login_re.gif" />
+    <Content Include="Pages\images\user_main_c.gif" />
+    <Content Include="Pages\images\user_main_l.gif" />
+    <Content Include="Pages\images\user_main_r.gif" />
+    <Content Include="Pages\images\user_top_c.gif" />
+    <Content Include="Pages\images\user_top_l.gif" />
+    <Content Include="Pages\images\user_top_r.gif" />
+    <Content Include="Pages\Login.aspx" />
+    <Content Include="Pages\Print\BeiAnPrint.aspx" />
+    <Content Include="Pages\Print\BeiAnPrint_WS.aspx" />
+    <Content Include="Pages\Print\pdfReader.aspx" />
+    <Content Include="Pages\Print\BeiAnPrint_ND.aspx" />
+    <Content Include="Pages\ReadTempImg.aspx" />
+    <Content Include="Pages\RG_OU\RG_OU_Add.aspx" />
+    <Content Include="Pages\RG_OU\RG_OU_Detail.aspx" />
+    <Content Include="Pages\RG_OU\RG_OU_Edit.aspx" />
+    <Content Include="Pages\RG_OU\RG_OU_List.aspx" />
+    <Content Include="Pages\RG_OU\RG_OU_All_Detail.aspx" />
+    <Content Include="Pages\RG_OU\RG_OU_AllAD_Detail.aspx" />
+    <Content Include="Pages\RG_OU\RG_OU_Edit2.aspx" />
+    <Content Include="Pages\RG_QYUser\GetUserImageByte.aspx" />
+    <Content Include="Pages\RG_QYUser\RetrieveImageData.aspx" />
+    <Content Include="Pages\RG_QYUser\RG_QYUser_Add.aspx" />
+    <Content Include="Pages\RG_QYUser\RG_QYUser_Detail.aspx" />
+    <Content Include="Pages\RG_QYUser\RG_QYUser_Edit.aspx" />
+    <Content Include="Pages\RG_QYUser\RG_QYUser_List.aspx" />
+    <Content Include="Pages\RG_QYUser\SelQYUser_M.aspx" />
+    <Content Include="Pages\RG_QYUser\RG_QYUserAD_List.aspx" />
+    <Content Include="Pages\RG_QYUser\RG_QYUser_Add_Card.aspx" />
+    <Content Include="Pages\RG_QYUser\RG_QYUser_Edit_Card.aspx" />
+    <Content Include="Pages\RG_QYUser\RG_QYUser_LiZhi_Detail.aspx" />
+    <Content Include="Pages\RG_QYZiZhi\RG_QYZiZhi_Add.aspx" />
+    <Content Include="Pages\RG_QYZiZhi\RG_QYZiZhi_Detail.aspx" />
+    <Content Include="Pages\RG_QYZiZhi\RG_QYZiZhi_Edit.aspx" />
+    <Content Include="Pages\RG_QYZiZhi\RG_QYZiZhi_List.aspx" />
+    <Content Include="Pages\RG_QYZiZhi\RG_QYZiZhiAD_List.aspx" />
+    <Content Include="Pages\RG_QYZiZhi\RG_QYZiZhi_ADDetail.aspx" />
+    <Content Include="Pages\RG_QYZiZhi\RG_QYZiZhi_Edit2.aspx" />
+    <Content Include="Pages\RG_User\ChangePwd.aspx" />
+    <Content Include="Pages\RG_User\Record_Add.aspx" />
+    <Content Include="Pages\RG_User\Record_Detail.aspx" />
+    <Content Include="Pages\RG_User\Record_Edit.aspx" />
+    <Content Include="Pages\RG_User\RG_User_List.aspx" />
+    <Content Include="Pages\RG_User\SelDW.aspx" />
+    <Content Include="Pages\RG_User\Record_Edit2.aspx" />
+    <Content Include="Pages\RG_XMBeiAn\AddZYForZZInfo.aspx" />
+    <Content Include="Pages\RG_XMBeiAn\RetrieveImageData.aspx" />
+    <Content Include="Pages\RG_XMBeiAn\RG_XMAndRY_Edit.aspx" />
+    <Content Include="Pages\RG_XMBeiAn\RG_XMBeiAn_Add.aspx" />
+    <Content Include="Pages\RG_XMBeiAn\RG_XMBeiAn_Detail.aspx" />
+    <Content Include="Pages\RG_XMBeiAn\RG_XMBeiAn_Edit.aspx" />
+    <Content Include="Pages\RG_XMBeiAn\RG_XMBeiAn_List.aspx" />
+    <Content Include="Pages\RG_XMBeiAn\ZZZYGX_Frame.aspx" />
+    <Content Include="Pages\RG_XMBeiAn\ZZZYGX_LeftTree.aspx" />
+    <Content Include="Pages\RG_XMBeiAn\ZZZYGX_List.aspx" />
+    <Content Include="Pages\RG_XMBeiAn\RG_XMBeiAnAD_Detail.aspx" />
+    <Content Include="Pages\RG_XMBeiAn\RG_XMBeiAnAD_List.aspx" />
+    <Content Include="Pages\tensunlogin.aspx" />
+    <Content Include="Pages\TongJi\ZiZhiHeYan_SW.aspx" />
+    <Content Include="Pages\WaitBL\WaitHandle_NeedHandle_Banli.aspx" />
+    <Content Include="Pages\ADLogin.aspx" />
+    <Content Include="RGDefault.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ADDefault.aspx.cs">
+      <DependentUpon>ADDefault.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ADDefault.aspx.designer.cs">
+      <DependentUpon>ADDefault.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ascx\FuJian.ascx.cs">
+      <DependentUpon>FuJian.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ascx\FuJian.ascx.designer.cs">
+      <DependentUpon>FuJian.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Ascx\OUCheck.ascx.cs">
+      <DependentUpon>OUCheck.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ascx\OUCheck.ascx.designer.cs">
+      <DependentUpon>OUCheck.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Ascx\OUEdit.ascx.cs">
+      <DependentUpon>OUEdit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ascx\OUEdit.ascx.designer.cs">
+      <DependentUpon>OUEdit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Ascx\ReadAttachFile.aspx.cs">
+      <DependentUpon>ReadAttachFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ascx\ReadAttachFile.aspx.designer.cs">
+      <DependentUpon>ReadAttachFile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ascx\RetrieveImageData.aspx.cs">
+      <DependentUpon>RetrieveImageData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ascx\RetrieveImageData.aspx.designer.cs">
+      <DependentUpon>RetrieveImageData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ascx\RYCheck.ascx.cs">
+      <DependentUpon>RYCheck.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ascx\RYCheck.ascx.designer.cs">
+      <DependentUpon>RYCheck.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Ascx\ZZCheck.ascx.cs">
+      <DependentUpon>ZZCheck.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ascx\ZZCheck.ascx.designer.cs">
+      <DependentUpon>ZZCheck.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Ascx\XMCheck.ascx.cs">
+      <DependentUpon>XMCheck.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ascx\XMCheck.ascx.designer.cs">
+      <DependentUpon>XMCheck.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Ascx\FuJian_BA.ascx.cs">
+      <DependentUpon>FuJian_BA.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ascx\FuJian_BA.ascx.designer.cs">
+      <DependentUpon>FuJian_BA.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Ascx\ReadAttachFileWithZhang.aspx.cs">
+      <DependentUpon>ReadAttachFileWithZhang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ascx\ReadAttachFileWithZhang.aspx.designer.cs">
+      <DependentUpon>ReadAttachFileWithZhang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\CheckCode.aspx.cs">
+      <DependentUpon>CheckCode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\CheckCode.aspx.designer.cs">
+      <DependentUpon>CheckCode.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Code\Code_Item_AddInfo.aspx.cs">
+      <DependentUpon>Code_Item_AddInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Code\Code_Item_AddInfo.aspx.designer.cs">
+      <DependentUpon>Code_Item_AddInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Code\Code_Item_Frame.aspx.cs">
+      <DependentUpon>Code_Item_Frame.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Code\Code_Item_Frame.aspx.designer.cs">
+      <DependentUpon>Code_Item_Frame.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Code\Code_Item_LeftTree.aspx.cs">
+      <DependentUpon>Code_Item_LeftTree.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Code\Code_Item_LeftTree.aspx.designer.cs">
+      <DependentUpon>Code_Item_LeftTree.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Code\Code_Item_List.aspx.cs">
+      <DependentUpon>Code_Item_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Code\Code_Item_List.aspx.designer.cs">
+      <DependentUpon>Code_Item_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\epasslogin.aspx.cs">
+      <DependentUpon>epasslogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\epasslogin.aspx.designer.cs">
+      <DependentUpon>epasslogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\epassverify.aspx.cs">
+      <DependentUpon>epassverify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\epassverify.aspx.designer.cs">
+      <DependentUpon>epassverify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Print\BeiAnPrint.aspx.cs">
+      <DependentUpon>BeiAnPrint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Print\BeiAnPrint.aspx.designer.cs">
+      <DependentUpon>BeiAnPrint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Print\HeTongBeiAn.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HeTongBeiAn.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Pages\Print\HeTongBeiAn_ND.cs">
+      <DependentUpon>HeTongBeiAn_ND.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Pages\Print\HeTongBeiAn_WS.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HeTongBeiAn_WS.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Pages\Print\HeTongInfo.cs">
+      <DependentUpon>HeTongInfo.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Pages\Print\HeTongInfo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HeTongInfo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Print\BeiAnPrint_WS.aspx.cs">
+      <DependentUpon>BeiAnPrint_WS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Print\BeiAnPrint_WS.aspx.designer.cs">
+      <DependentUpon>BeiAnPrint_WS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Print\pdfReader.aspx.cs">
+      <DependentUpon>pdfReader.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Print\pdfReader.aspx.designer.cs">
+      <DependentUpon>pdfReader.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Print\BeiAnPrint_ND.aspx.cs">
+      <DependentUpon>BeiAnPrint_ND.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Print\BeiAnPrint_ND.aspx.designer.cs">
+      <DependentUpon>BeiAnPrint_ND.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ReadTempImg.aspx.cs">
+      <DependentUpon>ReadTempImg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ReadTempImg.aspx.designer.cs">
+      <DependentUpon>ReadTempImg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RG_OU\RG_OU_Add.aspx.cs">
+      <DependentUpon>RG_OU_Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RG_OU\RG_OU_Add.aspx.designer.cs">
+      <DependentUpon>RG_OU_Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RG_OU\RG_OU_Detail.aspx.cs">
+      <DependentUpon>RG_OU_Detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RG_OU\RG_OU_Detail.aspx.designer.cs">
+      <DependentUpon>RG_OU_Detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RG_OU\RG_OU_Edit.aspx.cs">
+      <DependentUpon>RG_OU_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RG_OU\RG_OU_Edit.aspx.designer.cs">
+      <DependentUpon>RG_OU_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RG_OU\RG_OU_List.aspx.cs">
+      <DependentUpon>RG_OU_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RG_OU\RG_OU_List.aspx.designer.cs">
+      <DependentUpon>RG_OU_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RG_OU\RG_OU_All_Detail.aspx.cs">
+      <DependentUpon>RG_OU_All_Detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RG_OU\RG_OU_All_Detail.aspx.designer.cs">
+      <DependentUpon>RG_OU_All_Detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RG_OU\RG_OU_AllAD_Detail.aspx.cs">
+      <DependentUpon>RG_OU_AllAD_Detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RG_OU\RG_OU_AllAD_Detail.aspx.designer.cs">
+      <DependentUpon>RG_OU_AllAD_Detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RG_OU\RG_OU_Edit2.aspx.cs">
+      <DependentUpon>RG_OU_Edit2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RG_OU\RG_OU_Edit2.aspx.designer.cs">
+      <DependentUpon>RG_OU_Edit2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RG_QYUser\GetUserImageByte.aspx.cs">
+      <DependentUpon>GetUserImageByte.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RG_QYUser\GetUserImageByte.aspx.designer.cs">
+      <DependentUpon>GetUserImageByte.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RG_QYUser\RetrieveImageData.aspx.cs">
+      <DependentUpon>RetrieveImageData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RG_QYUser\RetrieveImageData.aspx.designer.cs">
+      <DependentUpon>RetrieveImageData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RG_QYUser\RG_QYUser_Add.aspx.cs">
+      <DependentUpon>RG_QYUser_Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RG_QYUser\RG_QYUser_Add.aspx.designer.cs">
+      <DependentUpon>RG_QYUser_Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RG_QYUser\RG_QYUser_Detail.aspx.cs">
+      <DependentUpon>RG_QYUser_Detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RG_QYUser\RG_QYUser_Detail.aspx.designer.cs">
+      <DependentUpon>RG_QYUser_Detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RG_QYUser\RG_QYUser_Edit.aspx.cs">
+      <DependentUpon>RG_QYUser_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RG_QYUser\RG_QYUser_Edit.aspx.designer.cs">
+      <DependentUpon>RG_QYUser_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RG_QYUser\RG_QYUser_List.aspx.cs">
+      <DependentUpon>RG_QYUser_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RG_QYUser\RG_QYUser_List.aspx.designer.cs">
+      <DependentUpon>RG_QYUser_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RG_QYUser\SelQYUser_M.aspx.cs">
+      <DependentUpon>SelQYUser_M.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RG_QYUser\SelQYUser_M.aspx.designer.cs">
+      <DependentUpon>SelQYUser_M.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RG_QYUser\RG_QYUserAD_List.aspx.cs">
+      <DependentUpon>RG_QYUserAD_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RG_QYUser\RG_QYUserAD_List.aspx.designer.cs">
+      <DependentUpon>RG_QYUserAD_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RG_QYUser\RG_QYUser_Add_Card.aspx.cs">
+      <DependentUpon>RG_QYUser_Add_Card.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RG_QYUser\RG_QYUser_Add_Card.aspx.designer.cs">
+      <DependentUpon>RG_QYUser_Add_Card.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RG_QYUser\RG_QYUser_Edit_Card.aspx.cs">
+      <DependentUpon>RG_QYUser_Edit_Card.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RG_QYUser\RG_QYUser_Edit_Card.aspx.designer.cs">
+      <DependentUpon>RG_QYUser_Edit_Card.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RG_QYUser\RG_QYUser_LiZhi_Detail.aspx.cs">
+      <DependentUpon>RG_QYUser_LiZhi_Detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RG_QYUser\RG_QYUser_LiZhi_Detail.aspx.designer.cs">
+      <DependentUpon>RG_QYUser_LiZhi_Detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RG_QYZiZhi\RG_QYZiZhi_Add.aspx.cs">
+      <DependentUpon>RG_QYZiZhi_Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RG_QYZiZhi\RG_QYZiZhi_Add.aspx.designer.cs">
+      <DependentUpon>RG_QYZiZhi_Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RG_QYZiZhi\RG_QYZiZhi_Detail.aspx.cs">
+      <DependentUpon>RG_QYZiZhi_Detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RG_QYZiZhi\RG_QYZiZhi_Detail.aspx.designer.cs">
+      <DependentUpon>RG_QYZiZhi_Detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RG_QYZiZhi\RG_QYZiZhi_Edit.aspx.cs">
+      <DependentUpon>RG_QYZiZhi_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RG_QYZiZhi\RG_QYZiZhi_Edit.aspx.designer.cs">
+      <DependentUpon>RG_QYZiZhi_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RG_QYZiZhi\RG_QYZiZhi_List.aspx.cs">
+      <DependentUpon>RG_QYZiZhi_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RG_QYZiZhi\RG_QYZiZhi_List.aspx.designer.cs">
+      <DependentUpon>RG_QYZiZhi_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RG_QYZiZhi\RG_QYZiZhiAD_List.aspx.cs">
+      <DependentUpon>RG_QYZiZhiAD_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RG_QYZiZhi\RG_QYZiZhiAD_List.aspx.designer.cs">
+      <DependentUpon>RG_QYZiZhiAD_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RG_QYZiZhi\RG_QYZiZhi_ADDetail.aspx.cs">
+      <DependentUpon>RG_QYZiZhi_ADDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RG_QYZiZhi\RG_QYZiZhi_ADDetail.aspx.designer.cs">
+      <DependentUpon>RG_QYZiZhi_ADDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RG_QYZiZhi\RG_QYZiZhi_Edit2.aspx.cs">
+      <DependentUpon>RG_QYZiZhi_Edit2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RG_QYZiZhi\RG_QYZiZhi_Edit2.aspx.designer.cs">
+      <DependentUpon>RG_QYZiZhi_Edit2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RG_User\ChangePwd.aspx.cs">
+      <DependentUpon>ChangePwd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RG_User\ChangePwd.aspx.designer.cs">
+      <DependentUpon>ChangePwd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RG_User\Record_Add.aspx.cs">
+      <DependentUpon>Record_Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RG_User\Record_Add.aspx.designer.cs">
+      <DependentUpon>Record_Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RG_User\Record_Detail.aspx.cs">
+      <DependentUpon>Record_Detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RG_User\Record_Detail.aspx.designer.cs">
+      <DependentUpon>Record_Detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RG_User\Record_Edit.aspx.cs">
+      <DependentUpon>Record_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RG_User\Record_Edit.aspx.designer.cs">
+      <DependentUpon>Record_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RG_User\RG_User_List.aspx.cs">
+      <DependentUpon>RG_User_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RG_User\RG_User_List.aspx.designer.cs">
+      <DependentUpon>RG_User_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RG_User\SelDW.aspx.cs">
+      <DependentUpon>SelDW.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RG_User\SelDW.aspx.designer.cs">
+      <DependentUpon>SelDW.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RG_User\Record_Edit2.aspx.cs">
+      <DependentUpon>Record_Edit2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RG_User\Record_Edit2.aspx.designer.cs">
+      <DependentUpon>Record_Edit2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RG_XMBeiAn\AddZYForZZInfo.aspx.cs">
+      <DependentUpon>AddZYForZZInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RG_XMBeiAn\AddZYForZZInfo.aspx.designer.cs">
+      <DependentUpon>AddZYForZZInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RG_XMBeiAn\RetrieveImageData.aspx.cs">
+      <DependentUpon>RetrieveImageData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RG_XMBeiAn\RetrieveImageData.aspx.designer.cs">
+      <DependentUpon>RetrieveImageData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RG_XMBeiAn\RG_XMAndRY_Edit.aspx.cs">
+      <DependentUpon>RG_XMAndRY_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RG_XMBeiAn\RG_XMAndRY_Edit.aspx.designer.cs">
+      <DependentUpon>RG_XMAndRY_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RG_XMBeiAn\RG_XMBeiAn_Add.aspx.cs">
+      <DependentUpon>RG_XMBeiAn_Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RG_XMBeiAn\RG_XMBeiAn_Add.aspx.designer.cs">
+      <DependentUpon>RG_XMBeiAn_Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RG_XMBeiAn\RG_XMBeiAn_Detail.aspx.cs">
+      <DependentUpon>RG_XMBeiAn_Detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RG_XMBeiAn\RG_XMBeiAn_Detail.aspx.designer.cs">
+      <DependentUpon>RG_XMBeiAn_Detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RG_XMBeiAn\RG_XMBeiAn_Edit.aspx.cs">
+      <DependentUpon>RG_XMBeiAn_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RG_XMBeiAn\RG_XMBeiAn_Edit.aspx.designer.cs">
+      <DependentUpon>RG_XMBeiAn_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RG_XMBeiAn\RG_XMBeiAn_List.aspx.cs">
+      <DependentUpon>RG_XMBeiAn_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RG_XMBeiAn\RG_XMBeiAn_List.aspx.designer.cs">
+      <DependentUpon>RG_XMBeiAn_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RG_XMBeiAn\ZZZYGX_Frame.aspx.cs">
+      <DependentUpon>ZZZYGX_Frame.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RG_XMBeiAn\ZZZYGX_Frame.aspx.designer.cs">
+      <DependentUpon>ZZZYGX_Frame.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RG_XMBeiAn\ZZZYGX_LeftTree.aspx.cs">
+      <DependentUpon>ZZZYGX_LeftTree.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RG_XMBeiAn\ZZZYGX_LeftTree.aspx.designer.cs">
+      <DependentUpon>ZZZYGX_LeftTree.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RG_XMBeiAn\ZZZYGX_List.aspx.cs">
+      <DependentUpon>ZZZYGX_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RG_XMBeiAn\ZZZYGX_List.aspx.designer.cs">
+      <DependentUpon>ZZZYGX_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RG_XMBeiAn\RG_XMBeiAnAD_Detail.aspx.cs">
+      <DependentUpon>RG_XMBeiAnAD_Detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RG_XMBeiAn\RG_XMBeiAnAD_Detail.aspx.designer.cs">
+      <DependentUpon>RG_XMBeiAnAD_Detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RG_XMBeiAn\RG_XMBeiAnAD_List.aspx.cs">
+      <DependentUpon>RG_XMBeiAnAD_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RG_XMBeiAn\RG_XMBeiAnAD_List.aspx.designer.cs">
+      <DependentUpon>RG_XMBeiAnAD_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\TongJi\ZiZhiHeYan_SW.aspx.cs">
+      <DependentUpon>ZiZhiHeYan_SW.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\TongJi\ZiZhiHeYan_SW.aspx.designer.cs">
+      <DependentUpon>ZiZhiHeYan_SW.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\WaitBL\WaitHandle_NeedHandle_Banli.aspx.cs">
+      <DependentUpon>WaitHandle_NeedHandle_Banli.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\WaitBL\WaitHandle_NeedHandle_Banli.aspx.designer.cs">
+      <DependentUpon>WaitHandle_NeedHandle_Banli.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ADLogin.aspx.cs">
+      <DependentUpon>ADLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ADLogin.aspx.designer.cs">
+      <DependentUpon>ADLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Pages\tensunlogin.aspx.cs">
+      <DependentUpon>tensunlogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\tensunlogin.aspx.designer.cs">
+      <DependentUpon>tensunlogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RGDefault.aspx.cs">
+      <DependentUpon>RGDefault.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RGDefault.aspx.designer.cs">
+      <DependentUpon>RGDefault.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HTProject_Bizlogic\HTProject_Bizlogic.csproj">
+      <Project>{385AFC0B-C9F9-4BD4-8625-E4CD9B93A39D}</Project>
+      <Name>HTProject_Bizlogic</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\Print\HeTongBeiAn.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>HeTongBeiAn.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Print\HeTongBeiAn_ND.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>HeTongBeiAn_ND.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Print\HeTongBeiAn_WS.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>HeTongBeiAn_WS.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pages\Print\HeTongInfo.xsc">
+      <DependentUpon>HeTongInfo.xsd</DependentUpon>
+    </None>
+    <None Include="Pages\Print\HeTongInfo.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HeTongInfo.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Pages\Print\HeTongInfo.xss">
+      <DependentUpon>HeTongInfo.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Images\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1205</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+    <PostBuildEvent>生成事件.bat</PostBuildEvent>
+  </PropertyGroup>
+</Project>

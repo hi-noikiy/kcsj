@@ -1,0 +1,1820 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Epoint.Frame.Common</name>
+    </assembly>
+    <members>
+        <member name="T:Epoint.Frame.Common.StringOperate">
+            <summary>
+            字符串操作类
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+        </member>
+        <member name="M:Epoint.Frame.Common.StringOperate.GetLength(System.String)">
+            <summary>
+            获取字符串长度
+            当字符串中有中文时，一个中文的长度表示为2。
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Frame.Common.StringOperate.ConvertToString(System.Object)">
+            <summary>
+            把一个对象转换为字符串。
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <param name="obj">obj</param>
+            <returns>字符串</returns>
+        </member>
+        <member name="M:Epoint.Frame.Common.StringOperate.GetPYString(System.String)">
+            <summary>
+            获取字符串的拼音字符。
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Frame.Common.StringOperate.GetPYChar(System.String)">
+            <summary>   
+            取单个字符的拼音声母   
+            作者：徐国春
+            时间：2010-4-8
+            </summary>   
+            <param   name="c">要转换的单个汉字</param>   
+            <returns>拼音声母</returns>   
+        </member>
+        <member name="M:Epoint.Frame.Common.StringOperate.GetFixedLength(System.String,System.Int32)">
+            <summary>
+            将字符串截断至指定的长度,如果长度小于给定的长度,原字符串返回
+            否则,返回给定长度的字符串。
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <param name="str">需要截断的字符串</param>
+            <param name="length">给定的长度</param>
+            <returns>截断的字符串</returns>
+        </member>
+        <member name="M:Epoint.Frame.Common.StringOperate.strReplace(System.String,System.String,System.String)">
+            <summary>
+            替换Expression中的 Find 为 ReplaceMent  
+            替换的时候，不区分大小写
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <param name="Expression">Expression</param>
+            <param name="Find">Find</param>
+            <param name="ReplaceMent">ReplaceMent</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="T:Epoint.Frame.Common.NetOperate">
+            <summary>
+            网络操作类
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+        </member>
+        <member name="M:Epoint.Frame.Common.NetOperate.GetClientIp">
+            <summary>
+            穿过代理服务器取远程用户真实IP地址
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <returns>真实IP地址</returns>
+        </member>
+        <member name="M:Epoint.Frame.Common.NetOperate.getClientMacAddress">
+            <summary>
+            取远程用户的Mac地址
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <returns>Mac地址</returns>
+        </member>
+        <member name="M:Epoint.Frame.Common.NetOperate.getServerMacAddress">
+            <summary>
+            获取服务器本地Mac地址
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Epoint.Frame.Common.EpointEnum">
+            <summary>
+            所有新点软件用到的枚举类
+            </summary>
+        </member>
+        <member name="T:Epoint.Frame.Common.EpointEnum.DBType">
+            <summary>
+            数据库类型枚举。
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+        </member>
+        <member name="F:Epoint.Frame.Common.EpointEnum.DBType.SQLServer">
+            <summary>
+            SQLServer数据库
+            </summary>
+        </member>
+        <member name="F:Epoint.Frame.Common.EpointEnum.DBType.Oracle">
+            <summary>
+            Oracle数据库
+            </summary>
+        </member>
+        <member name="F:Epoint.Frame.Common.EpointEnum.DBType.OleDB">
+            <summary>
+            OleDB类型的数据库
+            </summary>
+        </member>
+        <member name="T:Epoint.Frame.Common.EpointEnum.ImagePosition">
+            <summary>
+            图片的位置。
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+        </member>
+        <member name="F:Epoint.Frame.Common.EpointEnum.ImagePosition.TopLeft">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Epoint.Frame.Common.EpointEnum.ImagePosition.BottomLeft">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Epoint.Frame.Common.EpointEnum.ImagePosition.BottomRight">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Epoint.Frame.Common.EpointEnum.ImagePosition.TopRigth">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Epoint.Frame.Common.EpointEnum.LogFileType">
+            <summary>
+            记录日志的文件类型，是每天一个还是每月形成一个文件。
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+        </member>
+        <member name="F:Epoint.Frame.Common.EpointEnum.LogFileType.LogMonth">
+            <summary>
+            每月一个日志文件
+            </summary>
+        </member>
+        <member name="F:Epoint.Frame.Common.EpointEnum.LogFileType.LogDay">
+            <summary>
+            每天一个日志文件
+            </summary>
+        </member>
+        <member name="T:Epoint.Frame.Common.EpointEnum.ThumbnailMode">
+            <summary>
+            缩略图类型。
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+        </member>
+        <member name="F:Epoint.Frame.Common.EpointEnum.ThumbnailMode.H">
+            <summary>
+            指定高度
+            </summary>
+        </member>
+        <member name="F:Epoint.Frame.Common.EpointEnum.ThumbnailMode.W">
+            <summary>
+            指定宽度
+            </summary>
+        </member>
+        <member name="F:Epoint.Frame.Common.EpointEnum.ThumbnailMode.HW">
+            <summary>
+            指定高宽、宽度
+            </summary>
+        </member>
+        <member name="F:Epoint.Frame.Common.EpointEnum.ThumbnailMode.Cut">
+            <summary>
+            剪切
+            </summary>
+        </member>
+        <member name="T:Epoint.Frame.Common.FileOperate">
+            <summary>
+            文件操作类。
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+        </member>
+        <!-- 对于成员“M:Epoint.Frame.Common.FileOperate.ReplaceFileName(System.String)”忽略有格式错误的 XML 注释 -->
+        <member name="M:Epoint.Frame.Common.FileOperate.GetFileName(System.String)">
+            <summary>
+            取得路径中的文件名。
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <param name="filePath">文件全路径</param>
+            <returns>string</returns>
+        </member>
+        <member name="M:Epoint.Frame.Common.FileOperate.GetFileContentType(System.String)">
+            <summary>
+            如何获取现有文件的ContentType属性。
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <param name="filename">filename</param>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Frame.Common.FileOperate.ListFilesFromDir(System.String,System.String)">
+            <summary>
+            按照提供的目录取得所有的文件信息。
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <param name="dir">dir</param>
+            <param name="fileType">fileType
+            css/gif/jpg等
+            </param>
+            <returns>DataView</returns>
+        </member>
+        <member name="M:Epoint.Frame.Common.FileOperate.UploadFile(System.Web.UI.HtmlControls.HtmlInputFile,System.String)">
+            <summary>
+            将文件上传到固定的路径,文件名保持不变。
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <param name="iFile">文件上传控件的ID</param>
+            <param name="path">文件路径</param>
+        </member>
+        <member name="M:Epoint.Frame.Common.FileOperate.UploadFile(System.Web.UI.HtmlControls.HtmlInputFile,System.String,System.String)">
+            <summary>
+            把文件上传到新的路径,文件名按照设定的文件名存储，文件名为filename
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <param name="iFile">文件上传控件的ID</param>
+            <param name="path">文件路径</param>
+            <param name="filename">文件名称</param>
+        </member>
+        <member name="M:Epoint.Frame.Common.FileOperate.RetriveUploadFileByte(System.Web.UI.HtmlControls.HtmlInputFile)">
+            <summary>
+            取得上传文件的二进制数据
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <param name="iFile">文件上传控件的ID</param>
+            <returns>二进制数据</returns>
+        </member>
+        <member name="M:Epoint.Frame.Common.FileOperate.DeleteFile(System.String)">
+            <summary>
+            删除指定路径的文件
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <param name="filePath">文件路径</param>
+        </member>
+        <member name="M:Epoint.Frame.Common.FileOperate.DeleteDir(System.String,System.Boolean)">
+            <summary>
+            删除目录
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <param name="dirPath">目录名称</param>
+            <param name="recursive">是否删除子目录中的文件</param>
+        </member>
+        <member name="M:Epoint.Frame.Common.FileOperate.ReadStrFromFilePath(System.String)">
+            <summary>
+            从文件中读取内容[相对路径]。
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <param name="sFilePath">文件路径</param>
+            <returns>文件内容字符串</returns>
+        </member>
+        <member name="M:Epoint.Frame.Common.FileOperate.ReadStrFromAbsoluteFilePath(System.String)">
+            <summary>
+            从文件中读取内容[绝对路径]。
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <param name="sFilePath">文件路径</param>
+            <returns>文件内容字符串</returns>
+        </member>
+        <member name="M:Epoint.Frame.Common.FileOperate.ReadStrFromAbsoluteFilePath(System.String,System.Text.Encoding)">
+            <summary>
+            从文件中读取内容。
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <param name="sFilePath">绝对路径</param>
+            <param name="Encode">编码方式<see cref="T:System.Text.Encoding"/></param>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Frame.Common.FileOperate.WriteStrToFilePath(System.String,System.String)">
+            <summary>
+            把内容写入文件。
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <param name="strPath">文件路径[相对路径]</param>
+            <param name="strContent">文件内容</param>
+        </member>
+        <member name="M:Epoint.Frame.Common.FileOperate.WriteStrToMapFilePath(System.String,System.String)">
+            <summary>
+            把内容写入虚拟目录中的文件[相对路径]。
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <param name="strMapPath">虚拟路径</param>
+            <param name="strContent">文件内容</param>
+        </member>
+        <member name="M:Epoint.Frame.Common.FileOperate.WriteByteToFilePath(System.String,System.Byte[],System.Boolean)">
+            <summary>
+            把二进制内容写入文件。
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <param name="strPath">路径名称[相对路径]</param>
+            <param name="bFile">文件的二进制数据</param>
+            <param name="isCover">是否覆盖</param>
+        </member>
+        <member name="M:Epoint.Frame.Common.FileOperate.ReadBytesFromFilePath(System.String)">
+            <summary>
+            将相对路径中的文件读成一个Byte[]类型的数据。
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <param name="strPath">相对路径名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Frame.Common.FileOperate.WriteStrToFilePathAppend(System.String,System.String)">
+            <summary>
+            把内容追加到文件。
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <param name="strPath">文件路径</param>
+            <param name="strContent">文件内容</param>
+        </member>
+        <member name="M:Epoint.Frame.Common.FileOperate.WriteStrToFileMapPathAppend(System.String,System.String)">
+            <summary>
+            把内容追加到虚拟路径的文件。
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <param name="strMapPath">路径名称</param>
+            <param name="strContent">文件内容</param>
+        </member>
+        <member name="M:Epoint.Frame.Common.FileOperate.CreatFileByByte(System.String,System.Byte[])">
+            <summary>
+            根据文件名称和对应的二进制内容在服务器上生成文件
+            返回此文件的绝对路径
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <param name="FileName">文件名称</param>
+            <param name="FileContent">文件对应的二进制内容</param>
+            <returns>返回此文件的绝对路径</returns>
+        </member>
+        <member name="M:Epoint.Frame.Common.FileOperate.LogFileWrite(System.String,System.String)">
+            <summary>
+            往日志文件插入一条日志。
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <param name="FilePath">日志文件路径</param>
+            <param name="strLog">记录日志内容</param>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Frame.Common.FileOperate.CheckFileCanUpload(System.String,System.String@)">
+            <summary>
+            检查文件的后缀是否在配置文件中
+            如果在配置文件中，返回true，否则返回false
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <param name="filePre">filePre</param>
+            <param name="AllowFileLst">AllowFileLst</param>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Frame.Common.FileOperate.getFileSize(System.Int64)">
+            <summary>
+            根据Length获取文件对应的大小
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <param name="Length">Length</param>
+            <returns>string</returns>
+        </member>
+        <member name="T:Epoint.Frame.Common.EncryptOperate">
+            <summary>
+            加密、解密类
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+        </member>
+        <member name="M:Epoint.Frame.Common.EncryptOperate.#ctor">
+            <summary>
+            构造,初始化
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+        </member>
+        <member name="M:Epoint.Frame.Common.EncryptOperate.GetLegalKey">
+            <summary>
+            获得密钥
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <returns>密钥</returns>
+        </member>
+        <member name="M:Epoint.Frame.Common.EncryptOperate.GetLegalIV">
+            <summary>
+            获得初始向量IV
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <returns>初始向量IV</returns>
+        </member>
+        <member name="M:Epoint.Frame.Common.EncryptOperate.EscapeMessage(System.String)">
+            <summary>
+            生成封装消息格式的字符串，公司公文交换中的格式
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <param name="Message">需要封装的字符串</param>
+            <returns>封装好的字符串</returns>
+        </member>
+        <member name="M:Epoint.Frame.Common.EncryptOperate.GetFirstX509Token(Microsoft.Web.Services.Security.Security)">
+            <summary>
+            获取安全信息中的第一个X509证书
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <param name="sec"></param>
+            <returns>证书令牌</returns>
+        </member>
+        <member name="M:Epoint.Frame.Common.EncryptOperate.generate_Asyc_Key">
+            <summary>
+            生成密钥容器名称，生成不对称加密密钥
+            注意：请把DocumentSetting/AllUser/applicationData/Microsoft/crypto/machineKey目录对asp.net开放	
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Frame.Common.EncryptOperate.EncryptSymmKeyIV(System.Security.Cryptography.RSACryptoServiceProvider,System.Byte[]@,System.Byte[]@)">
+            <summary>
+            用不对称公钥加密对称密钥，调用该接口设置被不对称公钥加密的对称密钥。
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <param name="rsa">RSA加密对象</param>
+            <param name="EncryptKey">需要加密的Key</param>
+            <param name="EncryptIV">需要加密的IV</param>
+            <returns>RijndaelManaged方式加密的对象</returns>
+        </member>
+        <member name="M:Epoint.Frame.Common.EncryptOperate.DecryptSymmKeyIV(System.IO.Stream,System.Security.Cryptography.RSACryptoServiceProvider)">
+            <summary>
+            用不对称私钥解密被不对称公钥加密的对称密钥。
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <param name="streamTemp">需要解密的Stream流,存放加密过的对称密钥的流</param>
+            <param name="rsa">RSACryptoServiceProvider对象,不对称加密实例</param>
+            <returns>解密好的二进制流</returns>
+        </member>
+        <member name="M:Epoint.Frame.Common.EncryptOperate.DecryptedDataWithSymmKey(System.String)">
+            <summary>
+            解密BASE64编码的密文。
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <param name="strSource">加密数据流</param>
+            <returns>明文数据</returns>
+        </member>
+        <member name="M:Epoint.Frame.Common.EncryptOperate.DecryptedDataWithSymmKey(System.IO.Stream,System.Security.Cryptography.RijndaelManaged)">
+            <summary>
+            用对称密钥解密数据,调用该接口返回被对称密钥解密的数据。
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <param name="streamTemp">加密数据流</param>
+            <param name="symmKey">key，IV</param>
+            <returns>明文数据</returns>
+        </member>
+        <member name="M:Epoint.Frame.Common.EncryptOperate.DecryptAffix_with_SymmKey_To_Byte(System.IO.Stream,System.Security.Cryptography.RijndaelManaged)">
+            <summary>
+            解密附件流，并返回解密后的byte数组。
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <param name="streamTemp">需要加密的柳</param>
+            <param name="symmKey"></param>
+            <returns>和函数DecryptedDataWithSymmKey的区别在于返回的类型不同</returns>
+        </member>
+        <member name="M:Epoint.Frame.Common.EncryptOperate.getSymmetricKeyFromKeyIV(System.Byte[],System.Byte[])">
+            <summary>
+            根据key与iv生成对称密钥。
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <param name="key">Key</param>
+            <param name="IV">IV</param>
+            <returns>RijndaelManaged对称加密对象</returns>
+        </member>
+        <member name="M:Epoint.Frame.Common.EncryptOperate.EncryptWithSymmKey_Return_Stream(System.String,System.Security.Cryptography.RijndaelManaged)">
+            <summary>
+            用对称密钥加密数据，调用该接口返回被对称密钥加密的数据。
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <param name="strData">明文数据</param>
+            <param name="symmKey"></param>
+            <returns>加密数据流</returns>
+        </member>
+        <member name="M:Epoint.Frame.Common.EncryptOperate.EncryptWithSymmKey(System.String)">
+            <summary>
+            用对称密钥加密数据，调用该接口返回被对称密钥加密的数据。
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <param name="strData">明文数据</param>
+            <returns>BASE64编码的加密数据</returns>
+        </member>
+        <member name="M:Epoint.Frame.Common.EncryptOperate.Encrypt_ByteData_WithSymmKey_Return_Stream(System.Byte[],System.Security.Cryptography.RijndaelManaged)">
+            <summary>
+            用对称密钥加密byte数组，并返回二进制流。
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <param name="byteData">明文数据</param>
+            <param name="symmKey"></param>
+            <returns>加密数据</returns>
+        </member>
+        <member name="M:Epoint.Frame.Common.EncryptOperate.getMyCert">
+            <summary>
+            根据传入的证书唯一id获取数字证书
+            根据配置文件中的设置，决定从哪里读取证书内容
+            获取证书文件的设置：
+            如果在Web.config中EpointCertFrom配置成File，系统自动会到配置文件中EpointClientCertFile中设置的路径中取证书文件
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <returns>取得证书文件</returns>
+        </member>
+        <member name="M:Epoint.Frame.Common.EncryptOperate.getMyCert(System.String)">
+            <summary>
+            根据传入证书的绝对地址获取证书文件的设置。
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <param name="FilePathName">证书在服务器上的绝对路径</param>
+            <returns>取得证书文件</returns>
+        </member>
+        <member name="M:Epoint.Frame.Common.EncryptOperate.getMyPublicKey">
+            <summary>
+            获取下载数据时交给公文交换中心的不对称加密公钥，中心用它加密dime数据后，把数据返回客户端，客户端再用对应的私钥解密数据。
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <returns>RSACryptoServiceProvider的容器</returns>
+        </member>
+        <member name="M:Epoint.Frame.Common.EncryptOperate.DecryptSymmKeyIV(System.IO.Stream,System.Boolean,System.Security.Cryptography.RSACryptoServiceProvider)">
+            <summary>
+            用不对称私钥解密被不对称公钥加密的对称密钥，调用该接口设置解密的对称密钥。
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <param name="streamTemp"></param>
+            <param name="blnKey">返回的方式，返回对称加密的Key</param>
+            <param name="rsa">RSACryptoServiceProvider</param>
+            <returns>二进制流</returns>
+        </member>
+        <member name="M:Epoint.Frame.Common.EncryptOperate.authPassword(System.String)">
+            <summary>
+            用SHA1加密文本。
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <param name="oriPassWrd">需要加密的文本</param>
+            <returns>加密过的字符串</returns>
+        </member>
+        <member name="M:Epoint.Frame.Common.EncryptOperate.SHA1Encrypt(System.DateTime)">
+            <summary>
+            通过加密时间，仅仅算到分钟
+            SHA1加密，不可逆转,
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <param name="time">被加密的时间</param>
+            <returns>返回加密后的字符串</returns>
+        </member>
+        <member name="M:Epoint.Frame.Common.EncryptOperate.Encrypt(System.String,System.String)">
+            <summary>
+            用指定的英文字符串作为密钥加密明文
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <param name="pToEncrypt">The p to encrypt.</param>
+            <param name="sKey">The s key.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Frame.Common.EncryptOperate.Decrypt(System.String,System.String)">
+            <summary>
+            用指定的英文字符串作为密钥加密明文
+            </summary>
+            <param name="pToDecrypt">The p to decrypt.</param>
+            <param name="sKey">The s key.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Epoint.Frame.Common.DateTimeOperate">
+            <summary>
+            日期、时间操作类。
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+        </member>
+        <member name="M:Epoint.Frame.Common.DateTimeOperate.GetCurrentDate">
+            <summary>
+            取得当前的系统时间，返回格式为：yyyy-MM-dd
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <returns>String</returns>
+        </member>
+        <member name="M:Epoint.Frame.Common.DateTimeOperate.GetCurrentDate(System.DateTime)">
+            <summary>
+            根据dt取得当前的dt时间，返回格式为：yyyy-MM-dd
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <returns>String</returns>
+        </member>
+        <member name="M:Epoint.Frame.Common.DateTimeOperate.GetCurrentShortDate">
+            <summary>
+            取得当前的系统时间，返回格式为：yyyy-M-d
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <returns>String</returns>
+        </member>
+        <member name="M:Epoint.Frame.Common.DateTimeOperate.GetCurrentShortDate(System.DateTime)">
+            <summary>
+            根据dt取得当前的dt时间，返回格式为：yyyy-M-d
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <returns>String</returns>
+        </member>
+        <member name="M:Epoint.Frame.Common.DateTimeOperate.GetCurrentDateTime">
+            <summary>
+            取得当前的系统时间，返回格式为：yyyy-MM-dd HH:mm:ss
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <returns>String</returns>
+        </member>
+        <member name="M:Epoint.Frame.Common.DateTimeOperate.GetCurrentDateTime(System.DateTime)">
+            <summary>
+            根据dt取得当前的dt时间，返回格式为：yyyy-MM-dd HH:mm:ss
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <returns>String</returns>
+        </member>
+        <member name="M:Epoint.Frame.Common.DateTimeOperate.GetCurrentDateTime_noSecond">
+            <summary>
+            取得当前的系统时间，返回格式为：yyyy-MM-dd HH:mm
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <returns>String</returns>
+        </member>
+        <member name="M:Epoint.Frame.Common.DateTimeOperate.GetCurrentDateTime_noSecond(System.DateTime)">
+            <summary>
+            根据dt取得当前的dt时间，返回格式为：yyyy-MM-dd HH:mm
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <returns>String</returns>
+        </member>
+        <member name="M:Epoint.Frame.Common.DateTimeOperate.ConvertToDateTime(System.Object)">
+            <summary>
+            把字符串转换为日期格式。
+            </summary>
+            <param name="dt"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Epoint.Frame.Common.ApplicationOperate">
+            <summary>
+            系统参数操作类，本类已启用缓存机制。
+            一般情况下所有系统参数都可以从本类获取。
+            类中提供了RefreshConfigInfo方法类强制刷新缓存中的参数配置项。
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+        </member>
+        <member name="M:Epoint.Frame.Common.ApplicationOperate.RefreshConfigInfo">
+            <summary>
+            刷新全局配置信息
+            编写日期：2010-4-8
+            编写人：徐国春
+            </summary>
+        </member>
+        <member name="M:Epoint.Frame.Common.ApplicationOperate.Select">
+            <summary>
+            选择所有配置参数
+            编写日期：2010-4-8
+            编写人：徐国春
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Frame.Common.ApplicationOperate.Select(System.String)">
+            <summary>
+            根据配置参数名称获取参数值
+            编写日期：2010-4-8
+            编写人：徐国春
+            </summary>
+        </member>
+        <member name="M:Epoint.Frame.Common.ApplicationOperate.GetConfigValueByName(System.String,System.String)">
+            <summary>
+            根据ConfigName从缓存中读取对应的配置值,如果没有该参数值则返回默认值
+            编写日期：2010-4-8
+            编写人：徐国春
+            </summary>
+            <param name="ConfigName">配置参数名称</param>
+            <param name="defaultValue">配置参数默认值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Frame.Common.ApplicationOperate.GetConfigValueByName(System.String)">
+            <summary>
+            根据ConfigName从缓存中读取对应的配置值
+            </summary>
+            <param name="ConfigName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Frame.Common.ApplicationOperate.GetConfigValueByName_DB(System.String,System.String)">
+            <summary>
+            从数据库中获取参数配置值,如果没有该参数值则返回默认值
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <param name="ConfigName">配置参数名称</param>
+            <param name="defaultValue">配置参数默认值</param>
+            <returns></returns>
+        </member>
+        <member name="P:Epoint.Frame.Common.ApplicationOperate.AlertMsgCount">
+            <summary>
+            为了防止错误，限制消息提醒每种类型提示数量最大值不超过10
+            </summary>
+        </member>
+        <member name="P:Epoint.Frame.Common.ApplicationOperate.AllowFileLst">
+            <summary>
+            系统中允许的可以上传的文件类型（缓存）
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+        </member>
+        <member name="P:Epoint.Frame.Common.ApplicationOperate.AllowFileSize">
+            <summary>
+            允许上传的附件的大小，单位M（缓存）
+            如果没有配置，默认为5M。
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+        </member>
+        <member name="P:Epoint.Frame.Common.ApplicationOperate.AppDeptName">
+            <summary>
+            使用单位名称（缓存）
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+        </member>
+        <member name="P:Epoint.Frame.Common.ApplicationOperate.BigFileUpLoad_ApplicationPath">
+            <summary>
+            上传大文件程序的虚拟目录。（缓存）
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+        </member>
+        <member name="P:Epoint.Frame.Common.ApplicationOperate.CanUpdateLoginID">
+            <summary>
+            是否允许修改登录名。（缓存）
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+        </member>
+        <member name="P:Epoint.Frame.Common.ApplicationOperate.CanZhuanYiUserInDeptManage">
+            <summary>
+            部门管理员 有跨部门转移人员的功能。（缓存）
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+        </member>
+        <member name="P:Epoint.Frame.Common.ApplicationOperate.ComplexPassWord">
+            <summary>
+            是否启用密码复杂度控制，在用户修改密码的时候判断。不启用=0，默认不启用,
+            1=必须长度8位以上，
+            2＝长度8位以上，且拥有小写、大写字母、数字、特殊字符4中组合中的两种，
+            3＝长度8，组合3种以上
+            </summary>
+        </member>
+        <member name="P:Epoint.Frame.Common.ApplicationOperate.CuteWebUIFileSaveAbsolutePath">
+            <summary>
+            CuteWebUI.AjaxUpload上传控件文件保存的绝对路径。
+            此配置不从系统参数表读取，而是从Web.config读取。
+            如果此参数在Web.Config中不配置，则返回"";
+            </summary>
+        </member>
+        <member name="P:Epoint.Frame.Common.ApplicationOperate.DefaultPassWord">
+            <summary>
+            系统默认的用户登录密码，如果为空，或无此配置，则默认为11111。（缓存）
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+        </member>
+        <member name="P:Epoint.Frame.Common.ApplicationOperate.DefaultUserThemeName">
+            <summary>
+            如果系统没有配置主题，则默认为用户的主题。（缓存）
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+        </member>
+        <member name="P:Epoint.Frame.Common.ApplicationOperate.DefulatMainModuleCode">
+            <summary>
+            首页面默认左边菜单的模块代码。（缓存）
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+        </member>
+        <member name="P:Epoint.Frame.Common.ApplicationOperate.EnableGetMACAddress">
+            <summary>
+            是否获取MAC地址。（缓存）
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+        </member>
+        <member name="P:Epoint.Frame.Common.ApplicationOperate.EnableMessageAlertWhenInit">
+            <summary>
+            在新增用户的时候是否启用消息/待办事宜提醒。（缓存）
+            </summary>
+        </member>
+        <member name="P:Epoint.Frame.Common.ApplicationOperate.ExportToWeb_CateGoryLength">
+            <summary>
+            退送到外网的每级栏目的长度。（缓存）
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+        </member>
+        <member name="P:Epoint.Frame.Common.ApplicationOperate.FawenTableID">
+            <summary>
+            发文单对应的MIS表中的存储表ID号。（缓存）
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+        </member>
+        <member name="P:Epoint.Frame.Common.ApplicationOperate.FawenTemplateNotAddDefaultEmpty">
+            <summary>
+            发文模板中是否默认添加空白模板，1：默认不添加；其他为默认添加模板。（缓存）
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+        </member>
+        <member name="P:Epoint.Frame.Common.ApplicationOperate.FramePageUrl">
+            <summary>
+            登录后的主页面Url地址，默认为Pages/FrameAll.aspx，如果是其他，请填写其他地址。（缓存）
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+        </member>
+        <member name="P:Epoint.Frame.Common.ApplicationOperate.GridItemsCount">
+            <summary>
+            默认表格显示行数、如果未配置，则默认为15行。（缓存）
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+        </member>
+        <member name="P:Epoint.Frame.Common.ApplicationOperate.InfoDeptOuGuid">
+            <summary>
+            内部通讯中默认显示的部门对应的OuGuid。（缓存）
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+        </member>
+        <member name="P:Epoint.Frame.Common.ApplicationOperate.InstallPath">
+            <summary>
+            系统安装绝对路径。（缓存）
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+        </member>
+        <member name="P:Epoint.Frame.Common.ApplicationOperate.Is_UsingCache">
+            <summary>
+            系统中是否允许是否Cache，暂时不起作用。（缓存）
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+        </member>
+        <member name="P:Epoint.Frame.Common.ApplicationOperate.Is_UsingHeaderFlash">
+            <summary>
+            系统中是否启用Flash。（缓存）
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+        </member>
+        <member name="P:Epoint.Frame.Common.ApplicationOperate.Is_UsingTaskMail">
+            <summary>
+            是否启动任务邮件Cache。（缓存）
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+        </member>
+        <member name="P:Epoint.Frame.Common.ApplicationOperate.IsAutoRefreshSession">
+            <summary>
+            是否不启用自动刷新Session功能，这样能在20分钟后，自动过期。默认启用。（缓存）
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+        </member>
+        <member name="P:Epoint.Frame.Common.ApplicationOperate.IsAutoSysMain">
+            <summary>
+            是否自动同步首页元件（缓存）
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+        </member>
+        <member name="P:Epoint.Frame.Common.ApplicationOperate.IsEditAuditOpinion">
+            <summary>
+            设置是否可以修改工作流审批意见（缓存）
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+        </member>
+        <member name="P:Epoint.Frame.Common.ApplicationOperate.IsEnableDefaultPWD">
+            <summary>
+            是否允许使用默认密码（缓存）
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+        </member>
+        <member name="P:Epoint.Frame.Common.ApplicationOperate.IsShowAddressBookTab">
+            <summary>
+            是否在工作流流转选择下一步处理者时显示地址簿选择页面。1 显示 0 不显示。（缓存）
+            </summary>
+        </member>
+        <member name="P:Epoint.Frame.Common.ApplicationOperate.IsShowLastLoginTime">
+            <summary>
+            是否在Top.aspx页面显示上次登录时间，默认显示。（缓存）
+            </summary>
+        </member>
+        <member name="P:Epoint.Frame.Common.ApplicationOperate.IsShowSpecialUserTab">
+            <summary>
+            是否在工作流流转选择下一步处理者时显示特殊用户选择页面。1 显示 0 不显示。（缓存）
+            </summary>
+        </member>
+        <member name="P:Epoint.Frame.Common.ApplicationOperate.IsUSBKEYSupported">
+            <summary>
+            是否支持USBKEY登入（缓存）
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+        </member>
+        <member name="P:Epoint.Frame.Common.ApplicationOperate.IsUseOUMailBox">
+            <summary>
+            是否支持是否使用部门邮箱登入（缓存）
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+        </member>
+        <member name="P:Epoint.Frame.Common.ApplicationOperate.IsUsingPinYinSearch">
+            <summary>
+            是否启用拼音检索功能（缓存）
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+        </member>
+        <member name="P:Epoint.Frame.Common.ApplicationOperate.MaxFileSizeToDB">
+            <summary>
+            通过CuteWebUI控件上传文件后可以进入数据库的大小限制。以M为单位。
+            如果不设置，默认为5。如果设置为0则全部以文件形式存储。目前最大只能设置100，超过100的默认为100。
+            （缓存）
+            </summary>
+        </member>
+        <member name="P:Epoint.Frame.Common.ApplicationOperate.MaxAttachCount">
+            <summary>
+            通过CuteWebUI控件上传文件一次最多可以上传的文件数。
+            如果不设置，默认为5,目前最大只能设置100，超过100的默认为100
+            </summary>
+        </member>
+        <member name="P:Epoint.Frame.Common.ApplicationOperate.OnlineUserHoldMinutes">
+            <summary>
+            单位分钟，设置参数值指定的时间内部活动的用户为离线状态
+            作者：徐国春
+            时间：2010-7-8
+            </summary>
+        </member>
+        <member name="P:Epoint.Frame.Common.ApplicationOperate.OutLookMenuAutoCreate">
+            <summary>
+            系统左边的OutLook菜单是否实现自动混排。1：如果顶级菜单没有3级，则使用大图标。0：都使用小图标（缓存）
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+        </member>
+        <member name="P:Epoint.Frame.Common.ApplicationOperate.SaveTempFileDays">
+            <summary>
+            临时文件的保存天数。如果为0或不配置，则系统默认为3天（缓存）
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+        </member>
+        <member name="P:Epoint.Frame.Common.ApplicationOperate.ShouWenTableID">
+            <summary>
+            收文单对应的MIS表中的存储表ID号（缓存）
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+        </member>
+        <member name="P:Epoint.Frame.Common.ApplicationOperate.SystemName">
+            <summary>
+            系统名称（缓存）
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+        </member>
+        <member name="P:Epoint.Frame.Common.ApplicationOperate.TotalMaxSize">
+            <summary>
+            通过CuteWebUI控件上传文件一次最多可以上传的文件大小。
+            如果不设置，默认为1024M,目前最大只能设置1024M，超过1024M的默认为1024M。
+            </summary>
+        </member>
+        <member name="P:Epoint.Frame.Common.ApplicationOperate.VisitLog">
+            <summary>
+            是否需要记录访问日志。（缓存）
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+        </member>
+        <member name="P:Epoint.Frame.Common.ApplicationOperate.WaitHandle_IsShowRead">
+            <summary>
+            首页待办事宜中是否显示阅读。（缓存）
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+        </member>
+        <member name="P:Epoint.Frame.Common.ApplicationOperate.WebInfo_AllowMutiCategory">
+            <summary>
+            分类信息是否允许多栏目发布。（缓存）
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+        </member>
+        <member name="P:Epoint.Frame.Common.ApplicationOperate.WebinfoCanManageMyPublishInfo">
+            <summary>
+            是否有权限对自己发布的信息进行管理。（缓存）
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+        </member>
+        <member name="P:Epoint.Frame.Common.ApplicationOperate.WF_IsAlertMessage">
+            <summary>
+            工作流是否弹出确定提交按钮提示。（缓存）
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+        </member>
+        <member name="P:Epoint.Frame.Common.ApplicationOperate.WF_SearchAddressName">
+            <summary>
+            工作流查询使用默认定义地址簿名称。（缓存）
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+        </member>
+        <member name="P:Epoint.Frame.Common.ApplicationOperate.newWaithandle_MsgClientIdentifier">
+            <summary>
+            newWaithandle.ascx 控件中需要显示的ClientIdentifier 的列表，多个之间采用;分开，如果是不要显示，则在前面添加。（缓存）
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+        </member>
+        <member name="T:Epoint.Frame.Common.XMLOperate">
+            <summary>
+            XML操作类
+            </summary>
+        </member>
+        <member name="M:Epoint.Frame.Common.XMLOperate.getDataTableFromXml(System.Xml.XmlNode)">
+             <summary>	
+             把传入的可以转换成dataTable的xml节点转换成dataTable
+             作者：徐国春
+             时间：2010-4-8
+             </summary>
+             <param name="sourceXml"></param>
+             <returns></returns>
+             <example>
+             例如：
+             <code>
+            <![CDATA[ <PaperList>
+                  <Paper><SysGUID>a0be669c-fad6-4f7d-9dea-d0d12e51498a</SysGUID>
+            		<ArchiveID_Send>555</ArchiveID_Send>
+            		<Title>555</Title><SendTime>2003-8-15 15:00:56</SendTime>
+            		<SendDeptName>信息产业部</SendDeptName>
+            		<DeptName>人大</DeptName></Paper>
+            		<Paper><SysGUID>e7c3d6ef-b240-46ac-93a7-e8c286b85ccd</SysGUID>
+            		<ArchiveID_Send>sdf</ArchiveID_Send><Title>dsrgb</Title>
+            		<SendTime>2003-8-15 14:58:40</SendTime><SendDeptName>信息产业部</SendDeptName>
+            		<DeptName>人大</DeptName></Paper>
+            		<Paper><SysGUID>8fbd01fa-b4b1-49fd-a409-43cb4430a7a5</SysGUID>
+            		<ArchiveID_Send>jrtuuy</ArchiveID_Send>
+            		<Title>jjhj</Title><SendTime>2003-8-15 14:22:06</SendTime><SendDeptName>信息产业部</SendDeptName><DeptName>人大</DeptName></Paper></PaperList>
+            	]]>
+            	</code>
+            	</example>
+        </member>
+        <member name="M:Epoint.Frame.Common.XMLOperate.XMLEncode(System.String)">
+            <summary>
+            替换xml中的保留字符,主要字符有<![CDATA[ <PaperList>& ' " < >]]>
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <param name="strWithReserveChar">需要替换的字符串</param>
+            <returns>替换好的字符串</returns>
+        </member>
+        <member name="T:Epoint.Frame.Common.NumericOperate">
+            <summary>
+            数值操作类
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+        </member>
+        <member name="M:Epoint.Frame.Common.NumericOperate.ConvertToInt(System.Object)">
+            <summary>
+            将obj对象转换成整型数值。
+            如果数据类型不正确,返回0;
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <param name="obj">需要转换的对象</param>
+            <returns>整型的数值</returns>
+        </member>
+        <member name="M:Epoint.Frame.Common.NumericOperate.ConvertToFloat(System.Object)">
+            <summary>
+            将obj对象转换成浮点类型的数值。
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <param name="obj">需要转换的对象</param>
+            <returns>浮点类型数据</returns>
+        </member>
+        <member name="M:Epoint.Frame.Common.NumericOperate.ConvertToDecimal(System.Object)">
+            <summary>
+            将obj对象转换成Decimal类型。
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <param name="obj">需要转换的对象</param>
+            <returns>Decimal数值</returns>
+        </member>
+        <member name="M:Epoint.Frame.Common.NumericOperate.ConvertToDouble(System.Object)">
+            <summary>
+            将obj对象转换成Double类型。
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <param name="obj">需要转换的对象</param>
+            <returns>Double数值</returns>
+        </member>
+        <member name="M:Epoint.Frame.Common.NumericOperate.ConvertToLong(System.Object)">
+            <summary>
+            将obj对象转换成Long类型的数据。
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <param name="obj">需要转换的对象</param>
+            <returns>long类型的字符</returns>
+        </member>
+        <member name="M:Epoint.Frame.Common.FrameDelegateOperate.FrameDelegateOperate_GetAnothMessageCount">
+            <summary>
+            获取额外的消息提醒数量
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Frame.Common.FrameDelegateOperate.FrameDelegateOperate_GetAnothMailMessage">
+            <summary>
+            获取额外的邮件消息提醒DataView.
+            该DataView只需要一个字段，里面是每条信息显示的Html代码。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Frame.Common.FrameDelegateOperate.FrameDelegateOperate_GetAnothWaitHandleMessage">
+            <summary>
+            获取额外的待办事宜提醒DataView.
+            该DataView只需要一个字段，里面是每条信息显示的Html代码。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Frame.Common.FrameDelegateOperate.FrameDelegateOperate_GetAnothMessage">
+            <summary>
+            获取额外的需要提醒信息DataView.
+            该DataView只需要一个字段，里面是每条信息显示的Html代码。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="E:Epoint.Frame.Common.FrameDelegateOperate.GetAnothMessageCount">
+            <summary>
+            FrameAll.Aspx使用的获取额外的消息提醒数量的事件对象
+            </summary>
+        </member>
+        <member name="E:Epoint.Frame.Common.FrameDelegateOperate.GetAnothMailMessage">
+            <summary>
+            PopDivePage.aspx使用的获取额外的邮件消息提醒DataView的委托.
+            </summary>
+        </member>
+        <member name="E:Epoint.Frame.Common.FrameDelegateOperate.GetAnothWaitHandleMessage">
+            <summary>
+            PopDivePage.aspx使用的获取额外的待办事宜提醒DataView的委托.
+            </summary>
+        </member>
+        <member name="E:Epoint.Frame.Common.FrameDelegateOperate.GetAnothMessage">
+            <summary>
+            PopDivePage.aspx使用的获取额外的其他类消息提醒DataView的委托.
+            </summary>
+        </member>
+        <member name="T:Epoint.Frame.Common.FrameDelegateOperate.DelegateGetAnothMessageCountHandle">
+            <summary>
+            FrameAll.Aspx使用的获取额外的消息提醒数量的委托
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Epoint.Frame.Common.FrameDelegateOperate.DelegateGetAnothMessageHandle">
+            <summary>
+            PopDivePage.aspx使用的获取额外的消息提醒DataView的委托,
+            该DataView只需要一个字段，里面是每条信息显示的Html代码。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Epoint.Frame.Common.CacheOperate">
+            <summary>
+            缓存操作类
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+        </member>
+        <member name="M:Epoint.Frame.Common.CacheOperate.Cache_Delete(System.String)">
+            <summary>
+            删除KeyCache
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <param name="Key">Cache Key</param>
+        </member>
+        <member name="M:Epoint.Frame.Common.CacheOperate.Cache_Add(System.String,System.Object)">
+            <summary>
+            判断Cache是否存在，如果存在，修改，否则添加.
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <param name="Key">Cache Key</param>
+            <param name="obj">缓存的对象</param>
+        </member>
+        <member name="M:Epoint.Frame.Common.CacheOperate.Cache_Get(System.String)">
+            <summary>
+            取得Cache，如果存在，返回Object，否则返回Null
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <param name="Key">Cache Key</param>
+        </member>
+        <member name="T:Epoint.Frame.Common.DatabaseOperate">
+            <summary>
+            数据库通用操作类
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+        </member>
+        <member name="M:Epoint.Frame.Common.DatabaseOperate.GetConnectionStringName_Discuz(System.String)">
+            <summary>
+            获取当前操作人员使用的连接字符串的名字。
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <param name="ConnectionStringName">连接字符串名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Frame.Common.DatabaseOperate.GetConnectionStringName(System.String)">
+            <summary>
+            获取当前操作人员使用的连接字符串的名字。 
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <param name="ConnectionStringName">连接字符串名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Frame.Common.DatabaseOperate.GetConnectionStringName">
+            <summary>
+            获取默认的连接字符串名称，默认为Frame_ConnectionString。
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Frame.Common.DatabaseOperate.GetConnectionString">
+            <summary>
+            获取默认的连接字符串
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Frame.Common.DatabaseOperate.GetConnectionString(System.String)">
+            <summary>
+            获取当前操作人员使用的连接字符串。 
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <param name="ConnectionStringName">连接字符串名称</param>
+            <returns>数据库连接字符串</returns>
+        </member>
+        <member name="M:Epoint.Frame.Common.DatabaseOperate.CheckDataBaseisExist(System.String)">
+            <summary>
+            根据连接字符串检查数据库是否存在，如果存在，返回True，否则返回False
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <param name="sqlCon">数据库连接字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Frame.Common.DatabaseOperate.IsOracle(System.String)">
+            <summary>
+            判断当前是否使用的是ORACLE，如果是返回True，否则返回False。如果是Flase，则说明使SQL
+            根据当前Mis平台数据库的类型，确定是Oracle，还是SQL
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <param name="ConnectionStringName">连接字符串名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Frame.Common.DatabaseOperate.IsOracle">
+            <summary>
+            判断当前是否使用的是ORACLE，如果是返回True，否则返回False。如果是Flase，则说明使SQL
+            默认：使用模块框架名称
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Frame.Common.DatabaseOperate.HandleNClobParameter(System.String)">
+            <summary>
+            使用NCLOB，如果参数为空，返回‘’
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <param name="ParameterValue">ParameterValue</param>
+            <returns></returns>
+        </member>
+        <member name="T:Epoint.Frame.Common.RegisterOperate">
+            <summary>
+            系统注册操作类
+            作者：徐国春
+            时间：2010-5-5
+            </summary>
+        </member>
+        <member name="M:Epoint.Frame.Common.RegisterOperate.Check_HasRegister">
+            <summary>
+            验证系统是否注册
+            作者：徐国春
+            时间：2010-5-5
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Frame.Common.RegisterOperate.getNeedRegisterCode">
+            <summary>
+            获取需要注册的机器码或者加密狗设备号。
+            作者：徐国春
+            时间：2010-5-5
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Frame.Common.RegisterOperate.ReadRegisterCode_From_KeyFile">
+            <summary>
+            获取已输入的注册码
+            作者：徐国春
+            时间：2010-5-5
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Epoint.Frame.Common.LogOperate">
+            <summary>
+            日志操作类
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+        </member>
+        <member name="M:Epoint.Frame.Common.LogOperate.WriteLog(System.String,System.String)">
+            <summary>
+            记录服务日志
+            其中的日志文件放在系统安装目录下面的LogFiles文件夹下面，文件命名规则：每个月一个日志。名称规范：当前年_当前月.log 
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <param name="strLog">日志内容</param>
+            <param name="cycle">日志文件生成周期，date 或者month</param>
+        </member>
+        <member name="M:Epoint.Frame.Common.LogOperate.WriteLog(System.String,Epoint.Frame.Common.EpointEnum.LogFileType)">
+            <summary>
+            记录服务日志
+            其中的日志文件放在系统安装目录下面的LogFiles文件夹下面，文件命名规则：每个月一个日志。名称规范：当前年_当前月.log 
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <param name="strLog">日志内容</param>
+            <param name="logtype">日志文件生成周期，LogMonth 或者LogDay</param>
+        </member>
+        <member name="M:Epoint.Frame.Common.LogOperate.WriteLog(System.String)">
+            <summary>
+            记录服务日志
+            其中的日志文件放在系统安装目录下面的LogFiles文件夹下面，根据Web.config中配置的LogCycle参数决定日志采用日新建还是月新建方式
+            文件命名规则：如果每个月一个日志，名称规范：当前年_当前月.log；如果每日一个日志，名称为： 当前年_当前月_当前日.log
+            默认为：每天一个日志文件
+            名称规范：DateTime.Now.Year.ToString() + "_" + DateTime.Now.Month.ToString() + "_" + DateTime.Now.Day.ToString() + ".log"
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <param name="strLog">日志内容</param>
+        </member>
+        <member name="M:Epoint.Frame.Common.LogOperate.WriteLog_WithDateTime(System.String)">
+            <summary>
+            自动添加日志发生时间的日志记录函数
+            同上面的方法相同，只是在日志内容前面加上记录的时间
+            其中的日志文件放在系统安装目录下面的LogFiles文件夹下面，文件命名规则：每个月一个日志。名称规范：当前年_当前月.log 
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <param name="strLog">日志内容</param>
+        </member>
+        <member name="M:Epoint.Frame.Common.LogOperate.WriteLog_WithDateTime(System.String,System.String)">
+            <summary>
+            自动添加日志发生时间的日志记录函数
+            同上面的方法相同，只是在日志内容前面加上记录的时间
+            其中的日志文件放在系统安装目录下面的LogFiles文件夹下面，文件命名规则：每个月一个日志。名称规范：当前年_当前月.log
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <param name="strLog">日志内容</param>
+            <param name="cycle">日志文件生成周期，日志文件生成周期，date 或者month</param>
+        </member>
+        <member name="M:Epoint.Frame.Common.LogOperate.WriteLog_WithDateTime(System.String,Epoint.Frame.Common.EpointEnum.LogFileType)">
+            <summary>
+            自动添加日志发生时间的日志记录函数
+            同上面的方法相同，只是在日志内容前面加上记录的时间
+            其中的日志文件放在系统安装目录下面的LogFiles文件夹下面，文件命名规则：每个月一个日志。名称规范：当前年_当前月.log 
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <param name="strLog">日志内容</param>
+            <param name="logtype">日志文件生成周期，LogMonth 或者LogDay</param>
+        </member>
+        <member name="M:Epoint.Frame.Common.LogOperate.WriteLog_ToFileName(System.String,System.String)">
+            <summary>
+            把日志记录到制定的文件里面
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <param name="FileName">日志文件名称，不需要指定路径</param>
+            <param name="strLog"></param>
+        </member>
+        <member name="T:Epoint.Frame.Common.EventArgsOperate.CustomeEventArgs">
+            <summary>
+            文件上传完成事件传递的参数，包含3个属性：文件名和文件路径和Guid
+            </summary>
+        </member>
+        <member name="P:Epoint.Frame.Common.EventArgsOperate.CustomeEventArgs.FileName">
+            <summary>
+            不含路径的文件名称
+            </summary>
+        </member>
+        <!-- 对于成员“P:Epoint.Frame.Common.EventArgsOperate.CustomeEventArgs.FilePath”忽略有格式错误的 XML 注释 -->
+        <member name="P:Epoint.Frame.Common.EventArgsOperate.CustomeEventArgs.AttachGuid">
+            <summary>
+            IsSaveToDB=true，AttachGuid为文件保存到数据库的主键，否则没有意义。
+            </summary>
+        </member>
+        <member name="P:Epoint.Frame.Common.EventArgsOperate.CustomeEventArgs.IsSaveToDB">
+            <summary>
+            是否保存到数据库，还是以文件形式存放。
+            </summary>
+        </member>
+        <member name="P:Epoint.Frame.Common.EventArgsOperate.CustomeEventArgs.ContentType">
+            <summary>
+            暂时无意义。
+            </summary>
+        </member>
+        <member name="P:Epoint.Frame.Common.EventArgsOperate.CustomeEventArgs.DocumentType">
+            <summary>
+            文件后缀名
+            </summary>
+        </member>
+        <member name="P:Epoint.Frame.Common.EventArgsOperate.CustomeEventArgs.FileSize">
+            <summary>
+            文件大小
+            </summary>
+        </member>
+        <member name="T:Epoint.Frame.Common.EventArgsOperate.AttachEventArgs">
+            <summary>
+            删除上传文件事件传递的参数，包含3个属性：文件名，文件大小和Guid
+            </summary>
+        </member>
+        <member name="T:Epoint.Frame.Common.DBAccessBaseType">
+            <summary>
+            数据库访问基类，所有数据库访问中间层都可以集成此类。
+            在数据库访问子类中的构造函数中加入连接字符串参数，方便统一管理。
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+        </member>
+        <member name="M:Epoint.Frame.Common.DBAccessBaseType.#ctor">
+            <summary>
+            默认构造函数，以Frame_ConnectionString为连接字符串
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+        </member>
+        <member name="M:Epoint.Frame.Common.DBAccessBaseType.#ctor(System.String)">
+            <summary>
+            构造函数
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <param name="_connectionStringName">连接字符串名称</param>
+        </member>
+        <member name="P:Epoint.Frame.Common.DBAccessBaseType.ConnectionStringName">
+            <summary>
+            联机字符串名称
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+        </member>
+        <member name="P:Epoint.Frame.Common.DBAccessBaseType.IsOracle">
+            <summary>
+            当前连接数据库是否为Oracle
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+        </member>
+        <member name="P:Epoint.Frame.Common.DBAccessBaseType.SQLServerVersion">
+            <summary>
+            获取SQLServer版本号
+            </summary>
+        </member>
+        <member name="T:Epoint.Frame.Common.UrlOperate">
+            <summary>
+            Url操作类。
+            </summary>
+        </member>
+        <member name="M:Epoint.Frame.Common.UrlOperate.GetApplicationPath">
+            <summary>
+            取得虚拟目录名称，后面带上/
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="M:Epoint.Frame.Common.UrlOperate.GetHandlelUrl(System.String)">
+            <summary>
+            取得待办事宜的处理URL，如果URL中间有://，则认为非本地系统Url，前面不需要处理
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <param name="strHandleUrl">待办事宜的处理URL</param>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Frame.Common.UrlOperate.GetResponse(System.String)">
+            <summary>
+            取得URL的返回内容
+            可以用于：取得天气预报等网站的内容。
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <param name="strUrl">服务的地址</param>
+            <returns>如果取得成功，返回该URL的内容,否则,返回空</returns>
+        </member>
+        <member name="M:Epoint.Frame.Common.UrlOperate.getHttpWeb(System.String)">
+            <summary>
+            调用URL方法
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <param name="ReceiveUrl">调用的URL地址</param>
+            <returns>string</returns>
+        </member>
+        <member name="M:Epoint.Frame.Common.UrlOperate.CreatRootTempFolder">
+            <summary>
+            创建服务器上来临时文件的的文件夹，并返回此临时文件夹的绝对路径。
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="M:Epoint.Frame.Common.UrlOperate.AddNextParams(System.String,System.String,System.String)">
+            <summary>
+            在模块地址后面添加上新的参数
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <param name="ModuleUrl">模块地址</param>
+            <param name="ParamsName">参数名称</param>
+            <param name="ParamsValue">参数值</param>
+            <returns>string</returns>
+        </member>
+        <member name="M:Epoint.Frame.Common.UrlOperate.AddFileServerUrl(System.String)">
+            <summary>
+            此方法用途暂时不明。
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <param name="html"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Frame.Common.UrlOperate.getJSLink(System.Web.UI.ClientScriptManager,System.Type,System.String,System.String)">
+            <summary>
+            获取JS链接的方法,此方法用于把JS文件作为资源文件放在DLL中，以此方法来获取JS引用。
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <param name="cs"></param>
+            <param name="rsType"></param>
+            <param name="key"></param>
+            <param name="strSourceControl">使用此JS脚本的控件类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Frame.Common.UrlOperate.getCssLink(System.Web.UI.ClientScriptManager,System.Type,System.String)">
+            <summary>
+            获取Css链接的方法,此方法用于把Css文件作为资源文件放在DLL中，以此方法来获取Css引用。
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <param name="cs"></param>
+            <param name="rsType"></param>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Epoint.Frame.Common.SQLOperate">
+            <summary>
+            SQL语句操作类
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+        </member>
+        <member name="M:Epoint.Frame.Common.SQLOperate.ReplaceSql(System.String)">
+            <summary>
+            屏蔽非法字符
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <param name="sql">strCol</param>
+            <returns></returns>
+        </member>
+        <member name="M:Epoint.Frame.Common.SQLOperate.Generate_Top_Select_Oracle(System.String,System.Int32)">
+            <summary>
+            生成Oracle专用的  Top N SQL  语句
+            说明：请在strSql中写入你需要排序的条件
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <param name="strSql">SQL语句，如：Select * from Users</param>
+            <param name="topRows">取头"topRows"条数据</param>
+            <returns></returns>
+        </member>
+        <member name="T:Epoint.Frame.Common.ImageOperate">
+            <summary>
+            图片操作类
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+        </member>
+        <member name="M:Epoint.Frame.Common.ImageOperate.MakeThumbnail(System.String,System.String,System.Int32,System.Int32,Epoint.Frame.Common.EpointEnum.ThumbnailMode)">
+            <summary>
+            生成缩略图.
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <param name="originalImagePath">源图路径（物理路径）</param>
+            <param name="thumbnailPath">缩略图路径（物理路径）</param>
+            <param name="width">缩略图宽度</param>
+            <param name="height">缩略图高度</param>
+            <param name="mode">生成缩略图的方式</param>      
+        </member>
+        <member name="M:Epoint.Frame.Common.ImageOperate.MakeThumbnail(System.String,System.String,System.Int32,System.Int32,System.String)">
+            <summary>
+            生成缩略图。
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <param name="originalImagePath">源图路径（物理路径）</param>
+            <param name="thumbnailPath">缩略图路径（物理路径）</param>
+            <param name="width">缩略图宽度</param>
+            <param name="height">缩略图高度</param>
+            <param name="mode">生成缩略图的方式</param>    
+        </member>
+        <member name="M:Epoint.Frame.Common.ImageOperate.MakeWaterImage_Text(System.String,System.String,System.String,Epoint.Frame.Common.EpointEnum.ImagePosition,System.Int32,System.Int32,System.Drawing.Font,System.Drawing.Brush)">
+            <summary>
+            在图片上增加文字水印。
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <param name="OrgImagePath">源图路径（物理路径）</param>
+            <param name="ResultImagePath">结果图路径（物理路径）</param>
+            <param name="WaterText">水印文字</param>
+            <param name="pos">位置类型</param>
+            <param name="x">文字位置x</param>
+            <param name="y">文字位置y.</param>
+            <param name="font">字体</param>
+            <param name="brush">画刷</param>
+        </member>
+        <member name="M:Epoint.Frame.Common.ImageOperate.MakeWaterImage_Text(System.String,System.String,System.String,Epoint.Frame.Common.EpointEnum.ImagePosition,System.Int32,System.Int32)">
+            <summary>
+            在图片上增加文字水印,默认字体：Verdana，大小60；字体颜色：Green。
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <param name="OrgImagePath">源图路径（物理路径）</param>
+            <param name="ResultImagePath">结果图路径（物理路径）</param>
+            <param name="WaterText">水印文字</param>
+            <param name="pos">位置类型</param>
+            <param name="x">文字位置x</param>
+            <param name="y">文字位置y.</param>
+        </member>
+        <member name="M:Epoint.Frame.Common.ImageOperate.MakeWaterImage_Text(System.String,System.String,System.String,Epoint.Frame.Common.EpointEnum.ImagePosition)">
+            <summary>
+            在图片上增加文字水印，默认位置：20，20，字体：Verdana，大小60；字体颜色：Green。
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <param name="OrgImagePath">源图路径（物理路径）</param>
+            <param name="ResultImagePath">结果图路径（物理路径）</param>
+            <param name="WaterText">水印文字</param>
+            <param name="pos">位置类型</param>
+        </member>
+        <member name="M:Epoint.Frame.Common.ImageOperate.MakeWaterImage_Img(System.String,System.String,System.String,Epoint.Frame.Common.EpointEnum.ImagePosition,System.Int32,System.Int32)">
+            <summary>
+            在图片上增加图片水印。
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <param name="OrgImagePath">源图路径（物理路径）</param>
+            <param name="ResultImagePath">结果图路径（物理路径）</param>
+            <param name="WaterImagePath">水印图路径（物理路径）</param>
+            <param name="pos">位置类型</param>
+            <param name="x">文字位置x</param>
+            <param name="y">文字位置y.</param>
+        </member>
+        <member name="M:Epoint.Frame.Common.ImageOperate.MakeWaterImage_Img(System.String,System.String,System.String,Epoint.Frame.Common.EpointEnum.ImagePosition)">
+            <summary>
+            在图片上增加图片水印，默认位置为20，20
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <param name="OrgImagePath">源图路径（物理路径）</param>
+            <param name="ResultImagePath">结果图路径（物理路径）</param>
+            <param name="WaterImagePath">水印图路径（物理路径）</param>
+            <param name="pos">位置类型</param>
+        </member>
+        <member name="T:Epoint.Frame.Common.HTMLOperate">
+            <summary>
+            HTML操作类
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+        </member>
+        <member name="M:Epoint.Frame.Common.HTMLOperate.ReplaceHtml(System.String)">
+            <summary>
+            屏蔽非法字符“'”,“"”
+            作者：徐国春
+            时间：2010-4-8
+            </summary>
+            <param name="html">需要检查和替换的字符串</param>
+            <returns>String</returns>
+        </member>
+        <!-- 对于成员“M:Epoint.Frame.Common.HTMLOperate.FormatHTML(System.String)”忽略有格式错误的 XML 注释 -->
+        <member name="M:Epoint.Frame.Common.HTMLOperate.WriteAjaxMessage(System.Web.UI.UpdatePanel,System.String)">
+            <summary>
+            向客户端写入Ajax脚本语言
+            在使用了ScriptManager的页面如果需要执行脚本方法，则需要调用此方法
+            崔爱民
+            2006-6-13
+            </summary>
+            <param name="UpdatePanel1">页面控件的UpdatePanel名称</param>
+            <param name="scriptValue">需要执行脚本方法</param>
+        </member>
+        <member name="M:Epoint.Frame.Common.HTMLOperate.WriteAjaxMessage(System.Web.UI.Page,System.String)">
+            <summary>
+            向客户端写入Ajax脚本语言
+            在使用了ScriptManager的页面如果需要执行脚本方法，则需要调用此方法
+            李强
+            2006-6-21
+            </summary>
+            <param name="page">Page页面</param>
+            <param name="scriptValue">The script value.</param>
+        </member>
+    </members>
+</doc>

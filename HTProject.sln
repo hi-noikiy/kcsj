@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HTProject", "HTProject\HTProject.csproj", "{38255BD4-D982-4511-A026-02B9CE12F274}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HTProject_Bizlogic", "HTProject_Bizlogic\HTProject_Bizlogic.csproj", "{385AFC0B-C9F9-4BD4-8625-E4CD9B93A39D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "配置文件", "配置文件", "{A1E73F5A-1FB7-4080-8985-33CA383B2236}"
+	ProjectSection(SolutionItems) = preProject
+		..\企业登录用项目\RegisterUser\Web.config = ..\企业登录用项目\RegisterUser\Web.config
+		..\企业登录用项目\HeTongBeiAn\web.config = ..\企业登录用项目\HeTongBeiAn\web.config
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HTFUser", "ERegisterUser\HTFUser.csproj", "{B0F6C81C-D14F-4D6F-BF66-421CB64E36F4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{38255BD4-D982-4511-A026-02B9CE12F274}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38255BD4-D982-4511-A026-02B9CE12F274}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38255BD4-D982-4511-A026-02B9CE12F274}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38255BD4-D982-4511-A026-02B9CE12F274}.Release|Any CPU.Build.0 = Release|Any CPU
+		{385AFC0B-C9F9-4BD4-8625-E4CD9B93A39D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{385AFC0B-C9F9-4BD4-8625-E4CD9B93A39D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{385AFC0B-C9F9-4BD4-8625-E4CD9B93A39D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{385AFC0B-C9F9-4BD4-8625-E4CD9B93A39D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0F6C81C-D14F-4D6F-BF66-421CB64E36F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0F6C81C-D14F-4D6F-BF66-421CB64E36F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0F6C81C-D14F-4D6F-BF66-421CB64E36F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0F6C81C-D14F-4D6F-BF66-421CB64E36F4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
