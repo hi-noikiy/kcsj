@@ -113,11 +113,11 @@ namespace HTProject.Pages.RG_QYZiZhi
         HTProject_Bizlogic.SMS HTSMS = new SMS();
         protected void btSubmit_Click(object sender, System.EventArgs e)
         {
-            if (RG_DW.IsExistByZiZhi(ZiZhiCode_2020.Text.Trim(), Request["RowGuid"]))
-            {
-                this.WriteAjaxMessage("alert('该资质编号已存在');");
-                return;
-            }
+            //if (RG_DW.IsExistByZiZhi(ZiZhiCode_2020.Text.Trim(), Request["RowGuid"]))
+            //{
+            //    this.WriteAjaxMessage("alert('该资质编号已存在');");
+            //    return;
+            //}
             //先将原来的删除，防止重复
             new HTProject_Bizlogic.DB_Messages_Center().DeleteWH("审核企业资质", Request["RowGuid"]);
             ZiZhiText_2020.Text = RegionTreeView.Text;
