@@ -44,7 +44,7 @@ namespace HTProject.Pages.Print
 
                 #region 人员
                 HeTongInfo ds = new HeTongInfo();
-                strSql = "select * from RG_XMAndRY where XMGuid='" + Request["RowGuid"] + "' order by ZhuanYeCode asc,ddrole desc";
+                strSql = "select * from RG_XMAndRY where XMGuid='" + Request["RowGuid"] + "' order by substring(RY.ZhuanYeCode,1,4) asc,ddrole desc";
                 DataView dvRY = Epoint.MisBizLogic2.DB.ExecuteDataView(strSql);
 
                 for (int i = 0; i < dvRY.Count; i++)
