@@ -251,6 +251,7 @@
                                     </asp:DropDownList>
                                     <epoint:TextBox ID="DWGuid_2021" runat="server" MaxLength="50"></epoint:TextBox>
                                     <epoint:TextBox ID="DWName_2021" runat="server" MaxLength="500"></epoint:TextBox>
+                                    <epoint:TextBox ID="TJRGuid_2021" runat="server" MaxLength="50"></epoint:TextBox>
                                 </td>
                                 <td class="TableSpecial1" width="15%">
                                     É¾³ý×´Ì¬

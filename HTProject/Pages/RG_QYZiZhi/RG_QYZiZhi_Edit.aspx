@@ -163,6 +163,7 @@
                                     <asp:Label ID="lblDWName" runat="server"></asp:Label>
                                     <epoint:TextBox ID="ZuZhiJGDM_2020" runat="server" Width="80%"></epoint:TextBox>
                                     <epoint:DateTextBox ID="TJ_Date_2020" runat="server" InputDateType="Input" Character="HX"></epoint:DateTextBox>
+                                    <epoint:TextBox ID="TJRGuid_2020" runat="server" MaxLength="50"></epoint:TextBox>
                                 </td>
                             </tr>
                         </table>

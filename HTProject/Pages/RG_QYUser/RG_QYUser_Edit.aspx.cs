@@ -155,6 +155,7 @@ namespace HTProject.Pages.RG_QYUser
             }
             ZhuanYeCS_2019.Text = RegionTreeView.Text;
             ZhuanYeCSCode_2019.Text = RegionTreeView.Value;
+            TJRGuid_2019.Text = this.UserGuid;
             oEditPage.SaveTableValues(Request["RowGuid"], tdContainer);
 
             if (ApplicationOperate.GetConfigValueByName("IsHoldCurPage", "0") == "1")
@@ -187,6 +188,7 @@ namespace HTProject.Pages.RG_QYUser
             new HTProject_Bizlogic.DB_Messages_Center().DeleteWH("人员信息审核", Request["RowGuid"]);
             ZhuanYeCS_2019.Text = RegionTreeView.Text;
             ZhuanYeCSCode_2019.Text = RegionTreeView.Value;
+            TJRGuid_2019.Text = this.UserGuid;
             Status_2019.SelectedValue = "70";
             TJ_Date_2019.Text = DateTime.Now.ToString("yyyy-MM-dd");
             oEditPage.SaveTableValues(Request["RowGuid"], tdContainer);
@@ -237,6 +239,8 @@ namespace HTProject.Pages.RG_QYUser
 
         protected void btnLiZhi_Click(object sender, System.EventArgs e)
         {
+            TJRGuid_2019.Text = this.UserGuid;
+            oEditPage.SaveTableValues(Request["RowGuid"], tdContainer);
             Epoint.MisBizLogic2.Data.MisGuidRow oRow = new Epoint.MisBizLogic2.Data.MisGuidRow(oEditPage.TableDetail.SQL_TableName, Request["RowGuid"]);
             
             //先将原来的删除，防止重复

@@ -130,6 +130,7 @@ namespace HTProject.Pages.RG_XMBeiAn
             //    WriteAjaxMessage("alert('" + message + "');");
             //    return;
             //}
+            TJRGuid_2021.Text = this.UserGuid;
             TJDate_2021.Text = DateTime.Now.ToString();
             oEditPage.SaveTableValues(Request["RowGuid"], tdContainer);
 			
@@ -278,6 +279,7 @@ namespace HTProject.Pages.RG_XMBeiAn
             {
                 Status_2021.SelectedValue = "70";
             }
+            TJRGuid_2021.Text = this.UserGuid;
             TJDate_2021.Text = DateTime.Now.ToString("yyyy-MM-dd");
             oEditPage.SaveTableValues(Request["RowGuid"], tdContainer);
             for (int m = 0; m < dv.Count; m++)

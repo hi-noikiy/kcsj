@@ -307,6 +307,7 @@
                         </td>
                         <td class="TableSpecial" width="35%" height="26">
                             <asp:Label ID="Status_2019" Width="100%" runat="server"></asp:Label>
+                            <asp:Label ID="TJRGuid_2019" runat="server" MaxLength="50"></asp:Label>
                         </td>
                         <td class="TableSpecial1" width="15%">
                             É¾³ý×´Ì¬:

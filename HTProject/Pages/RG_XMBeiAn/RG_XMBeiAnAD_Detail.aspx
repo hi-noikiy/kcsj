@@ -244,6 +244,7 @@
                             <asp:Label ID="Status_2021" runat="server">
                             </asp:Label>
                             <asp:Label ID="DWGuid_2021" runat="server" MaxLength="50"></asp:Label>
+                            <asp:Label ID="TJRGuid_2021" Width="100%" runat="server"></asp:Label>
                         </td>
                         <td class="TableSpecial1" width="15%">
                             É¾³ý×´Ì¬

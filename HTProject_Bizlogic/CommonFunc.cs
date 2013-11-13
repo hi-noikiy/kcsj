@@ -1282,9 +1282,9 @@ namespace HTProject_Bizlogic
 
         public void SendSMS(object sendUserName, object receiveUserName, object smsContent, object receiveMobilePhone)
         {
-            string rowid = "zjcw" + Guid.NewGuid().ToString();
-            string messagesql = "insert into messages_center(messagetarget,fromdispname,targetdispname,MessageItemGuid,issend,sendmode,content)values('"
-                + receiveMobilePhone.ToString().Trim() + "','" + sendUserName + "','" + receiveUserName + "','" + rowid + "',0 ,1,'" + smsContent + "')";
+            string rowid = "kcsj" + Guid.NewGuid().ToString();
+            string messagesql = "insert into T_SendTask(DestNumber,Content,SendFlag)values('"
+                + receiveMobilePhone.ToString().Trim() + "','" + smsContent + "',0)";
             if (SqlEvent(messagesql))
             {//写入短信发送
                 string addsql = "insert into smsMessage (sendUserName,receiveUserName,smscontent,receiveMobilePhone,issend,row_id,senddate,messagetarget)values('"

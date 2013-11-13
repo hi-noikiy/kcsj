@@ -273,7 +273,7 @@ namespace HTProject.Pages.RG_XMBeiAn
                 string IsSendSMS = ApplicationOperate.GetConfigValueByName("IsSendOUSMS");
                 if (IsSendSMS == "1")
                 {
-                    Detail_RG_User D_R_User = DB_R_User.GetDetail(this.UserGuid);
+                    Detail_RG_User D_R_User = DB_R_User.GetDetail(TJRGuid_2021.Text);
                     if (D_R_User.Mobile != "")
                     {
                         HTSMS.SendSMS(this.DisplayName, D_R_User.DispName, "您提交的" + XMName_2021.Text + "的项目备案信息已被" + Opinion2 + "审核通过，请及时关注，谢谢", D_R_User.Mobile);
@@ -304,7 +304,7 @@ namespace HTProject.Pages.RG_XMBeiAn
             string IsSendSMS = ApplicationOperate.GetConfigValueByName("IsSendOUSMS");
             if (IsSendSMS == "1")
             {
-                Detail_RG_User D_R_User = DB_R_User.GetDetail(this.UserGuid);
+                Detail_RG_User D_R_User = DB_R_User.GetDetail(TJRGuid_2021.Text);
                 if (D_R_User.Mobile != "")
                 {
                     HTSMS.SendSMS(this.DisplayName, D_R_User.DispName, "您提交的" + XMName_2021.Text + "的项目备案信息审核未通过，请及时关注，谢谢", D_R_User.Mobile);

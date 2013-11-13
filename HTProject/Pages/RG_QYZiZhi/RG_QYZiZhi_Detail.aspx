@@ -184,6 +184,7 @@
                         </td>
                         <td class="TableSpecial" width="35%" height="26">
                             <asp:Label ID="Status_2020" Width="100%" runat="server"></asp:Label>
+                            <asp:Label ID="TJRGuid_2020" Width="100%" runat="server"></asp:Label>
                         </td>
                     </tr>
                 </table>

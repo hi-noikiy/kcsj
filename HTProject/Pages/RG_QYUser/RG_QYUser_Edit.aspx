@@ -406,6 +406,7 @@
                                     <asp:DropDownList ID="DelStatus_2019" runat="server" Width="100%" Height="100%">
                                     </asp:DropDownList>
                                     <epoint:TextBox ID="ZhuanYeCSCode_2019" runat="server" MaxLength="50"></epoint:TextBox>
+                                    <epoint:TextBox ID="TJRGuid_2019" runat="server" MaxLength="50"></epoint:TextBox>
                                     <epoint:TextBox ID="ZhuanYeCS_2019" runat="server" MaxLength="50" Width="80%"></epoint:TextBox>
                                     <asp:Label ID="lblDWName" runat="server"></asp:Label>
                                     <epoint:TextBox ID="ZuZhiJGDM_2019" runat="server" Width="80%"></epoint:TextBox>

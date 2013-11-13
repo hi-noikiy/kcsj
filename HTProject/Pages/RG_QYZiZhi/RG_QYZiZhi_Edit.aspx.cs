@@ -101,6 +101,7 @@ namespace HTProject.Pages.RG_QYZiZhi
             }
             ZiZhiText_2020.Text = RegionTreeView.Text;
             ZiZhiTextCode_2020.Text = RegionTreeView.Value;
+            TJRGuid_2020.Text = this.UserGuid;
             oEditPage.SaveTableValues(Request["RowGuid"], tdContainer);
 			
             if (ApplicationOperate.GetConfigValueByName("IsHoldCurPage", "0") == "1")
@@ -124,6 +125,7 @@ namespace HTProject.Pages.RG_QYZiZhi
             ZiZhiTextCode_2020.Text = RegionTreeView.Value;
             Status_2020.SelectedValue = "70";
             TJ_Date_2020.Text = DateTime.Now.ToString("yyyy-MM-dd");
+            TJRGuid_2020.Text = this.UserGuid;
             oEditPage.SaveTableValues(Request["RowGuid"], tdContainer);
             //发送待审核事宜，根据角色来
             DataView dv = DBF.GetUserByRoleName("企业资质审核");

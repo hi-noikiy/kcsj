@@ -245,13 +245,13 @@ namespace HTProject_Bizlogic
                     {
                         myDetail.OfficeTel = Convert.ToString(myReader["OfficeTel"]);
                     }                    
-                    if (!Convert.IsDBNull(myReader["DWGuid"]))
+                    if (!Convert.IsDBNull(myReader["DanWeiGuid"]))
                     {
-                        myDetail.DWGuid = Convert.ToString(myReader["DWGuid"]);
+                        myDetail.DWGuid = Convert.ToString(myReader["DanWeiGuid"]);
                     }
-                    if (!Convert.IsDBNull(myReader["DWName"]))
+                    if (!Convert.IsDBNull(myReader["DanWeiGuid"]))
                     {
-                        myDetail.DWName = Epoint.MisBizLogic2.DB.ExecuteToString("SELECT EnterpriseName FROM RG_OUInfo WHERE RowGuid='" + myReader["DWGuid"] + "'");
+                        myDetail.DWName = Epoint.MisBizLogic2.DB.ExecuteToString("SELECT EnterpriseName FROM RG_OUInfo WHERE RowGuid='" + myReader["DanWeiGuid"] + "'");
                     }
                 }
             }
@@ -297,13 +297,13 @@ namespace HTProject_Bizlogic
                     {
                         myDetail.OfficeTel = Convert.ToString(myReader["OfficeTel"]);
                     }
-                    if (!Convert.IsDBNull(myReader["DWGuid"]))
+                    if (!Convert.IsDBNull(myReader["DanWeiGuid"]))
                     {
-                        myDetail.DWGuid = Convert.ToString(myReader["DWGuid"]);
+                        myDetail.DWGuid = Convert.ToString(myReader["DanWeiGuid"]);
                     }
-                    if (!Convert.IsDBNull(myReader["DWName"]))
+                    if (!Convert.IsDBNull(myReader["DanWeiGuid"]))
                     {
-                        myDetail.DWName = Epoint.MisBizLogic2.DB.ExecuteToString("SELECT EnterpriseName FROM RG_OUInfo WHERE RowGuid='" + myReader["DWGuid"] + "'");
+                        myDetail.DWName = Epoint.MisBizLogic2.DB.ExecuteToString("SELECT EnterpriseName FROM RG_OUInfo WHERE RowGuid='" + myReader["DanWeiGuid"] + "'");
                     }
                 }
             }

@@ -320,6 +320,15 @@ namespace HTProject.Pages.RG_XMBeiAn {
         protected global::Epoint.Web.UI.WebControls2X.TextBox DWName_2021;
         
         /// <summary>
+        /// TJRGuid_2021 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::Epoint.Web.UI.WebControls2X.TextBox TJRGuid_2021;
+        
+        /// <summary>
         /// DelStatus_2021 控件。
         /// </summary>
         /// <remarks>
