@@ -240,7 +240,7 @@
                                     <asp:TemplateColumn HeaderText="ÐÞ¸Ä">
                                         <ItemStyle HorizontalAlign="Center" Width="40"></ItemStyle>
                                         <ItemTemplate>
-                                            <a href='javascript:OpenWindow("RG_QYUser_Edit_Card.aspx?RowGuid=<%#DataBinder.Eval(Container.DataItem,"RowGuid")%>")'>
+                                            <a href='javascript:OpenWindow("RG_QYUser_Edit_Card.aspx?RowGuid=<%#DataBinder.Eval(Container.DataItem,"RowGuid")%>&DWGuid=<%#DataBinder.Eval(Container.DataItem,"DWGuid")%>")'>
                                                 <img src='../../../images/add1.gif' border='0'></a>
                                         </ItemTemplate>
                                     </asp:TemplateColumn>

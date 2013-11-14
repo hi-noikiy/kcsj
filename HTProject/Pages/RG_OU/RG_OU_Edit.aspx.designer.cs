@@ -374,6 +374,15 @@ namespace HTProject.Pages.RG_OU {
         protected global::Epoint.Web.UI.WebControls2X.TextBox Status_2017;
         
         /// <summary>
+        /// TJRGuid_2017 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::Epoint.Web.UI.WebControls2X.TextBox TJRGuid_2017;
+        
+        /// <summary>
         /// ValidationSummary1 控件。
         /// </summary>
         /// <remarks>

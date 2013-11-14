@@ -184,7 +184,7 @@ namespace HTProject.Pages.RG_OU
             string IsSendSMS = ApplicationOperate.GetConfigValueByName("IsSendOUSMS");
             if (IsSendSMS == "1")
             {
-                Detail_RG_User D_R_User = DB_R_User.GetDetail(this.UserGuid);
+                Detail_RG_User D_R_User = DB_R_User.GetDetail(TJRGuid_2017.Text);
                 if (D_R_User.Mobile != "")
                 {
                     HTSMS.SendSMS(this.DisplayName, D_R_User.DispName, "您提交的企业信息已审核通过，请及时关注，谢谢", D_R_User.Mobile);
@@ -215,7 +215,7 @@ namespace HTProject.Pages.RG_OU
             string IsSendSMS = ApplicationOperate.GetConfigValueByName("IsSendOUSMS");
             if (IsSendSMS == "1")
             {
-                Detail_RG_User D_R_User = DB_R_User.GetDetail(this.UserGuid);
+                Detail_RG_User D_R_User = DB_R_User.GetDetail(TJRGuid_2017.Text);
                 if (D_R_User.Mobile != "")
                 {
                     HTSMS.SendSMS(this.DisplayName, D_R_User.DispName, "您提交的企业信息中有部分信息审核未通过，请及时关注，谢谢", D_R_User.Mobile);

@@ -187,7 +187,7 @@ namespace HTProject_Bizlogic
         public DataView GetUserByRoleAndOU(string OUGuid, string RoleName)
         {
             Database db = DatabaseFactory.CreateDatabase("EpointMis_ConnectionString");
-            string strSql = @"SELECT UserGuid,DisplayName FROM frame_user 
+            string strSql = @"SELECT * FROM frame_user 
 WHERE OUGuid=@OUGuid
 AND UserGuid IN 
 (SELECT UserGuid FROM Frame_UserRoleRelation WHERE RoleGuid=
@@ -202,7 +202,7 @@ AND UserGuid IN
         public DataView GetUserByRoleName(string RoleName)
         {
             Database db = DatabaseFactory.CreateDatabase("EpointMis_ConnectionString");
-            string strSql = @"SELECT UserGuid,DisplayName FROM frame_user 
+            string strSql = @"SELECT * FROM frame_user 
 WHERE UserGuid IN 
 (SELECT UserGuid FROM Frame_UserRoleRelation WHERE RoleGuid=
 (SELECT RoleGuid FROM frame_role WHERE rolename=@RoleName))";

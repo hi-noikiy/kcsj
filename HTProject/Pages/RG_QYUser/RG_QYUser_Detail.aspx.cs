@@ -144,11 +144,14 @@ namespace HTProject.Pages.RG_QYUser
             string IsSendSMS = ApplicationOperate.GetConfigValueByName("IsSendOUSMS");
             if (IsSendSMS == "1")
             {
-                //重新获取提交人信息
-                Detail_RG_User D_R_User = DB_R_User.GetDetail(TJRGuid_2019.Text);
-                if (D_R_User.Mobile != "")
+                if (TJRGuid_2019.Text != "")
                 {
-                    HTSMS.SendSMS(this.DisplayName, D_R_User.DispName, "您提交的" + XM_2019.Text + "的信息已审核通过，请及时关注，谢谢", D_R_User.Mobile);
+                    //重新获取提交人信息
+                    Detail_RG_User D_R_User = DB_R_User.GetDetail(TJRGuid_2019.Text);
+                    if (D_R_User.Mobile != "")
+                    {
+                        HTSMS.SendSMS(this.DisplayName, D_R_User.DispName, "您提交的" + XM_2019.Text + "的信息已审核通过，请及时关注，谢谢", D_R_User.Mobile);
+                    }
                 }
             }
             this.WriteAjaxMessage("refreshParent();");
@@ -171,10 +174,13 @@ namespace HTProject.Pages.RG_QYUser
             string IsSendSMS = ApplicationOperate.GetConfigValueByName("IsSendOUSMS");
             if (IsSendSMS == "1")
             {
-                Detail_RG_User D_R_User = DB_R_User.GetDetail(TJRGuid_2019.Text);
-                if (D_R_User.Mobile != "")
+                if (TJRGuid_2019.Text != "")
                 {
-                    HTSMS.SendSMS(this.DisplayName, D_R_User.DispName, "您提交的" + XM_2019.Text + "的信息审核未通过，请及时关注，谢谢", D_R_User.Mobile);
+                    Detail_RG_User D_R_User = DB_R_User.GetDetail(TJRGuid_2019.Text);
+                    if (D_R_User.Mobile != "")
+                    {
+                        HTSMS.SendSMS(this.DisplayName, D_R_User.DispName, "您提交的" + XM_2019.Text + "的信息审核未通过，请及时关注，谢谢", D_R_User.Mobile);
+                    }
                 }
             }
             this.WriteAjaxMessage("refreshParent();");

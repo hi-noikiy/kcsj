@@ -169,6 +169,7 @@ namespace HTProject.Pages.RG_OU
             DB_MC.DeleteWH("…Û∫À∆Û“µ", Request["RowGuid"]);
             RegistAddress_2017.Text = RegionTreeView.Text;
             RegistAddressCode_2017.Text = RegionTreeView.Value;
+            TJRGuid_2017.Text = this.UserGuid;
             //Status_2017.Text = "70";
             oEditPage.SaveTableValues(Request["RowGuid"], tdContainer);
             Epoint.MisBizLogic2.Data.MisGuidRow oRow = new Epoint.MisBizLogic2.Data.MisGuidRow(oEditPage.TableDetail.SQL_TableName, Request["RowGuid"]);

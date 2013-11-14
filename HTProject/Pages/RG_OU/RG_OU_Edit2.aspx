@@ -316,6 +316,7 @@
                                 </td>
                                 <td class="TableSpecial" width="35%" height="26" align="left">
                                     <epoint:TextBox ID="Status_2017" runat="server" MaxLength="50"></epoint:TextBox>
+                                    <epoint:TextBox ID="TJRGuid_2017" runat="server" MaxLength="50"></epoint:TextBox>
                                 </td>
                             </tr>
                             <tr>

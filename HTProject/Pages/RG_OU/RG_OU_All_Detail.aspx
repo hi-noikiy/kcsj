@@ -290,6 +290,7 @@
                         </td>
                         <td class="TableSpecial" width="35%" height="26" align="left">
                             <asp:Label ID="Status_2017" runat="server" MaxLength="50"></asp:Label>
+                            <asp:Label ID="TJRGuid_2017" runat="server" MaxLength="50"></asp:Label>
                         </td>
                     </tr>
                 </table>
