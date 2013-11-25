@@ -124,7 +124,7 @@
                                             &nbsp;<epoint:Button ID="btnOK" MouseOverClass="ButtonSearch" ForeColor="black" runat="server"
                                                 Text="查找" CssClass="ButtonSearchNoBg" OnClick="btnOK_Click"></epoint:Button>
                                         </td>
-                                        <td id="tdadd" runat="server" style="display: none">
+                                        <td id="tdadd" runat="server">
                                             &nbsp;<epoint:Button ForeColor="black" MouseOverClass="ButtonAdd" CssClass="ButtonAddNoBg"
                                                 ID="btnAddRecord" OnClientClick="OpenUrl();return false;" runat="server" Text="添加用户" />
                                         </td>
@@ -133,14 +133,14 @@
                                                 CssClass="ButtonAddNoBg" OnClick="btnPass_Click" OnClientClick="if(!Check_SelectedStatus('chkAdd')) return false;"
                                                 RaiseMsg="您确定通过审核选定记录吗?" />
                                         </td>
-                                        <td id="td2" runat="server">
+                                        <td id="td2" runat="server" style="display: none">
                                             &nbsp;<epoint:DeleteButton Text="永久删除" ID="btnRemove" MouseOverClass="ButtonDel"
                                                 runat="server" CssClass="ButtonDelNoBg" OnClick="btnRemove_Click" OnClientClick="if(!Check_SelectedStatus('chkAdd')) return false;"
                                                 RaiseMsg="您确定永久删除选定记录吗?" />
                                         </td>
                                         <td id="tddel" runat="server">
                                             &nbsp;<epoint:DeleteButton Text="删除选定" ID="btnDel" MouseOverClass="ButtonDel" runat="server"
-                                                CssClass="ButtonDelNoBg" OnClick="btnDel_Click" OnClientClick="if(!Check_SelectedStatus('chkAdd')) return false;"
+                                                CssClass="ButtonDelNoBg" OnClick="btnRemove_Click" OnClientClick="if(!Check_SelectedStatus('chkAdd')) return false;"
                                                 RaiseMsg="您确定删除选定记录吗?" />
                                         </td>
                                         <td id="tdrecover" runat="server">

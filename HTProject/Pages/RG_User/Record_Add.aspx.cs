@@ -179,7 +179,7 @@ namespace HTProject.Pages.RG_User
             if (string.IsNullOrEmpty(UserKey_2010.Text))
             {
                 // 初始化密码
-                Password_2010.Text = common.authPassword("11111");
+                Password_2010.Text = common.authPassword(LoginID_2010.Text.Trim());
             }
             Boolean UserExisted = Epoint.MisBizLogic2.DB.ExecuteToInt("select count(RowGuid) from RG_User where LoginID='" + LoginID_2010.Text + "' and DelFlag=0") > 0;
             if (UserExisted)
@@ -251,7 +251,7 @@ namespace HTProject.Pages.RG_User
             //oRow["DanWeiGuid"] = DanWeiGuid_2010.Text;
             oRow.Update();
             string url = "Record_Edit.aspx?RowGuid=" + RowGuid ;
-            this.WriteAjaxMessage("refreshParent();alert('添加成功');window.location.href='" + url + "';");
+            this.WriteAjaxMessage("refreshParent();alert('添加成功，密码为您的登录名');window.location.href='" + url + "';");
         }
 
         /// <summary>

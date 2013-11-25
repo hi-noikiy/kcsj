@@ -593,11 +593,20 @@ namespace HTProject.Pages.RG_XMBeiAn
             {
                 if (ZY.Length == 4)
                 {
-                    ddlZY.Items.Add(new ListItem(RG_DW.GetItemText(ZY[m], MainGuid), RG_DW.GetItemText(ZY[m], MainGuid)));
+                    ListItem li = new ListItem(RG_DW.GetItemText(ZY[m], MainGuid), RG_DW.GetItemText(ZY[m], MainGuid));
+                    if (!ddlZY.Items.Contains(li))
+                    {
+                        ddlZY.Items.Add(li);
+                    }
                 }
                 else if (ZY.Length > 0)
                 {
-                    ddlZY.Items.Add(new ListItem(RG_DW.GetItemTextByLen(MainGuid, ZY[m], 4), RG_DW.GetItemTextByLen(MainGuid, ZY[m], 4)));
+                    ListItem li = new ListItem(RG_DW.GetItemTextByLen(MainGuid, ZY[m], 4), RG_DW.GetItemTextByLen(MainGuid, ZY[m], 4));
+                    if (!ddlZY.Items.Contains(li))
+                    {
+
+                        ddlZY.Items.Add(li);
+                    }
                 }
             }
         }

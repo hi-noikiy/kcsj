@@ -10,8 +10,8 @@
 <%@ Register TagPrefix="webdiyer" Namespace="Wuqi.Webdiyer" Assembly="AspNetPager" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <script>
-        function SelDW(rowguid, name) {
-            var ss = rowguid + "/" + name;
+        function SelDW(rowguid, name, ZuZhiJGDM) {
+            var ss = rowguid + "/" + name + "/" + ZuZhiJGDM;
             window.returnValue = ss;
             window.close();
         }
@@ -110,7 +110,7 @@
                                         <HeaderStyle HorizontalAlign="Center" Width="9%"></HeaderStyle>
                                         <ItemStyle HorizontalAlign="Center" Width="9%"></ItemStyle>
                                         <ItemTemplate>
-                                            <input type="button" class="Btnbg" value="Ñ¡Ôñ" onclick="SelDW('<%#DataBinder.Eval(Container.DataItem,"RowGuid")%>','<%# DataBinder.Eval(Container, "DataItem.EnterPriseName")%>')" />
+                                            <input type="button" class="Btnbg" value="Ñ¡Ôñ" onclick="SelDW('<%#DataBinder.Eval(Container.DataItem,"RowGuid")%>','<%# DataBinder.Eval(Container, "DataItem.EnterPriseName")%>','<%# DataBinder.Eval(Container, "DataItem.ZuZhiJGDM")%>')" />
                                         </ItemTemplate>
                                     </asp:TemplateColumn>
                                     <asp:TemplateColumn HeaderText="ÐòºÅ">

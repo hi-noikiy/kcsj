@@ -32,7 +32,7 @@
         }
 
         function SelDW() {
-            var strUrl = "../SelDW.aspx";
+            var strUrl = "SelDW.aspx";
             var rtnVal = OpenDialog(strUrl, 800, 500);
             if (rtnVal != null && rtnVal != "") {
                 var ss;
@@ -81,7 +81,7 @@
                         <asp:HiddenField ID="PIN_2010" runat="server" />
                         <epoint:TextBox ID="Password_2010" runat="server" Visible="false" EnableViewState="true"></epoint:TextBox>
                         <epoint:TextBox ID="UserKey_2010" runat="server" Visible="false" EnableViewState="true"></epoint:TextBox>
-                        <table width="100%" cellspacing="1" align="center" id="tabContent">
+                        <table width="100%" cellspacing="1" align="center" >
                             <tr>
                                 <td class="TableSpecial1" width="100%" style="text-align: center" colspan="4">
                                     <font style="font-weight: bold">基本信息</font>

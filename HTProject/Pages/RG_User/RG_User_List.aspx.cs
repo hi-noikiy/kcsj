@@ -166,7 +166,7 @@ namespace HTProject.Pages.RG_User
                     new ComDataSyn().UpdateWithKeyValue(DataSynTarget.BackEndToFront, "RG_User", "RowGuid", Convert.ToString(Datagrid1.DataKeys[i]));
 
                     // 删除会员相关的应用系统权限
-                    new ComDataSyn().DeleteWithCondition(DataSynTarget.BackEndToFront, "RG_Application_Right", "AllowGuid='" + Convert.ToString(Datagrid1.DataKeys[i]) + "'", "RowGuid");
+                    //new ComDataSyn().DeleteWithCondition(DataSynTarget.BackEndToFront, "RG_Application_Right", "AllowGuid='" + Convert.ToString(Datagrid1.DataKeys[i]) + "'", "RowGuid");
                     // 删除会员相关的模块权限
                     new ComDataSyn().DeleteWithCondition(DataSynTarget.BackEndToFront, "RG_Module_Right", "AllowGuid='" + Convert.ToString(Datagrid1.DataKeys[i]) + "'", "RowGuid");
                     // 删除会员相关的快捷菜单权限
@@ -176,7 +176,7 @@ namespace HTProject.Pages.RG_User
                     // 删除会员相关的分类信息权限
                     new ComDataSyn().DeleteWithCondition(DataSynTarget.BackEndToFront, "RG_WebInfoCateRight", "AllowGuid='" + Convert.ToString(Datagrid1.DataKeys[i]) + "'", "RowGuid");
 
-                    Epoint.MisBizLogic2.DB.ExecuteNonQuery("DELETE FROM RG_Application_Right WHERE AllowGuid='" + Convert.ToString(Datagrid1.DataKeys[i]) + "'");
+                    //Epoint.MisBizLogic2.DB.ExecuteNonQuery("DELETE FROM RG_Application_Right WHERE AllowGuid='" + Convert.ToString(Datagrid1.DataKeys[i]) + "'");
                     Epoint.MisBizLogic2.DB.ExecuteNonQuery("DELETE FROM RG_Module_Right WHERE AllowGuid='" + Convert.ToString(Datagrid1.DataKeys[i]) + "'");
                     Epoint.MisBizLogic2.DB.ExecuteNonQuery("DELETE FROM RG_ShortcutMenu_Right WHERE AllowGuid='" + Convert.ToString(Datagrid1.DataKeys[i]) + "'");
                     Epoint.MisBizLogic2.DB.ExecuteNonQuery("DELETE FROM RG_User_Role WHERE RGUserGUID='" + Convert.ToString(Datagrid1.DataKeys[i]) + "'");
@@ -196,38 +196,39 @@ namespace HTProject.Pages.RG_User
                 if (chk.Checked)
                 {
                     string DanWeiGuid = Epoint.MisBizLogic2.DB.ExecuteToString("select DanWeiGuid from RG_User where RowGuid='" + Convert.ToString(Datagrid1.DataKeys[i]) + "'");
-                    if (!string.IsNullOrEmpty(DanWeiGuid))
-                    {
-                        DataView dvApp = rgModule.GetAppForSyn(DanWeiGuid);
-                        if (dvApp.Count > 0)
-                        {
-                            foreach (DataRowView row in dvApp)
-                            {
-                                new ComDataSyn().DeleteWithKeyValue(row["SynTargetAddr"].ToString(), "RG_User", "RowGuid", Convert.ToString(Datagrid1.DataKeys[i]));
-                            }
-                        }
-                    }
+                    //if (!string.IsNullOrEmpty(DanWeiGuid))
+                    //{
+                    //    DataView dvApp = rgModule.GetAppForSyn(DanWeiGuid);
+                    //    if (dvApp.Count > 0)
+                    //    {
+                    //        foreach (DataRowView row in dvApp)
+                    //        {
+                    //            new ComDataSyn().DeleteWithKeyValue(row["SynTargetAddr"].ToString(), "RG_User", "RowGuid", Convert.ToString(Datagrid1.DataKeys[i]));
+                    //        }
+                    //    }
+                    //}
                     Epoint.MisBizLogic2.DB.ExecuteNonQuery("Delete From RG_User where RowGuid='" + Convert.ToString(Datagrid1.DataKeys[i]) + "'");
-                    new ComDataSyn().DeleteWithKeyValue(DataSynTarget.BackEndToFront, "RG_User", "RowGuid", Convert.ToString(Datagrid1.DataKeys[i]));
+                    //new ComDataSyn().DeleteWithKeyValue(DataSynTarget.BackEndToFront, "RG_User", "RowGuid", Convert.ToString(Datagrid1.DataKeys[i]));
 
                     // 删除会员相关的应用系统权限
-                    new ComDataSyn().DeleteWithCondition(DataSynTarget.BackEndToFront, "RG_Application_Right", "AllowGuid='" + Convert.ToString(Datagrid1.DataKeys[i]) + "'", "RowGuid");
+                    //new ComDataSyn().DeleteWithCondition(DataSynTarget.BackEndToFront, "RG_Application_Right", "AllowGuid='" + Convert.ToString(Datagrid1.DataKeys[i]) + "'", "RowGuid");
                     // 删除会员相关的模块权限
                     new ComDataSyn().DeleteWithCondition(DataSynTarget.BackEndToFront, "RG_Module_Right", "AllowGuid='" + Convert.ToString(Datagrid1.DataKeys[i]) + "'", "RowGuid");
                     // 删除会员相关的快捷菜单权限
-                    new ComDataSyn().DeleteWithCondition(DataSynTarget.BackEndToFront, "RG_ShortcutMenu_Right", "AllowGuid='" + Convert.ToString(Datagrid1.DataKeys[i]) + "'", "RowGuid");
+                    //new ComDataSyn().DeleteWithCondition(DataSynTarget.BackEndToFront, "RG_ShortcutMenu_Right", "AllowGuid='" + Convert.ToString(Datagrid1.DataKeys[i]) + "'", "RowGuid");
                     // 删除会员相关的角色关联
                     new ComDataSyn().DeleteWithCondition(DataSynTarget.BackEndToFront, "RG_User_Role", "RGUserGUID='" + Convert.ToString(Datagrid1.DataKeys[i]) + "'", "RowGuid");
                     // 删除会员相关的分类信息权限
-                    new ComDataSyn().DeleteWithCondition(DataSynTarget.BackEndToFront, "RG_WebInfoCateRight", "AllowGuid='" + Convert.ToString(Datagrid1.DataKeys[i]) + "'", "RowGuid");
+                    //new ComDataSyn().DeleteWithCondition(DataSynTarget.BackEndToFront, "RG_WebInfoCateRight", "AllowGuid='" + Convert.ToString(Datagrid1.DataKeys[i]) + "'", "RowGuid");
 
-                    Epoint.MisBizLogic2.DB.ExecuteNonQuery("DELETE FROM RG_Application_Right WHERE AllowGuid='" + Convert.ToString(Datagrid1.DataKeys[i]) + "'");
+                    //Epoint.MisBizLogic2.DB.ExecuteNonQuery("DELETE FROM RG_Application_Right WHERE AllowGuid='" + Convert.ToString(Datagrid1.DataKeys[i]) + "'");
                     Epoint.MisBizLogic2.DB.ExecuteNonQuery("DELETE FROM RG_Module_Right WHERE AllowGuid='" + Convert.ToString(Datagrid1.DataKeys[i]) + "'");
-                    Epoint.MisBizLogic2.DB.ExecuteNonQuery("DELETE FROM RG_ShortcutMenu_Right WHERE AllowGuid='" + Convert.ToString(Datagrid1.DataKeys[i]) + "'");
+                    //Epoint.MisBizLogic2.DB.ExecuteNonQuery("DELETE FROM RG_ShortcutMenu_Right WHERE AllowGuid='" + Convert.ToString(Datagrid1.DataKeys[i]) + "'");
                     Epoint.MisBizLogic2.DB.ExecuteNonQuery("DELETE FROM RG_User_Role WHERE RGUserGUID='" + Convert.ToString(Datagrid1.DataKeys[i]) + "'");
-                    Epoint.MisBizLogic2.DB.ExecuteNonQuery("DELETE FROM RG_WebInfoCateRight WHERE AllowGuid='" + Convert.ToString(Datagrid1.DataKeys[i]) + "'");
+                    //Epoint.MisBizLogic2.DB.ExecuteNonQuery("DELETE FROM RG_WebInfoCateRight WHERE AllowGuid='" + Convert.ToString(Datagrid1.DataKeys[i]) + "'");
                 }
             }
+            this.AlertAjaxMessage("删除成功！");
             this.RefreshGrid();
         }
         protected void btnPass_Click(object sender, System.EventArgs e)

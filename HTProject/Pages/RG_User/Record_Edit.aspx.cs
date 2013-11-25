@@ -293,7 +293,7 @@ namespace HTProject.Pages.RG_User
                 string pwd = LoginID_2010.Text;
                 oRow["Password"] = common.authPassword(pwd);
                 oRow.Update();
-                AlertAjaxMessage("初始化密码成功。");
+                AlertAjaxMessage("初始化密码成功，已初始化为您的登录帐号。");
                 new ComDataSyn().UpdateWithKeyValue(DataSynTarget.BackEndToFront, "RG_User", "RowGuid", Request["RowGuid"]);
 
             }
