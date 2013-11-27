@@ -4,6 +4,17 @@
 <%@ Register TagPrefix="uc1" TagName="FJ" Src="../../Ascx/FuJian.ascx" %>
 <%@ Register TagPrefix="webdiyer" Namespace="Wuqi.Webdiyer" Assembly="AspNetPager" %>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+
+    <script type="text/javascript">
+        function check(message) { 
+            if(window.confirm('确定所有的企业人员、企业资质都已经审核完成?'))
+            {
+                return window.confirm(message);
+            }
+            return false;
+        }
+    </script>
+
     <asp:UpdatePanel ID="UpdatePanel2" runat="server">
         <ContentTemplate>
             <div id="Div_ControlNoTop">
@@ -11,11 +22,12 @@
                     <tr>
                         <td>
                             <epoint:Button ID="btnPass" runat="server" Text="审核通过" CssClass="ButtonConNoBg" MouseOverClass="ButtonCon"
-                                OnClientClick="return window.confirm('确定审核通过？');" OnClick="btnPass_Click"></epoint:Button>
+                                OnClientClick="return check('确定审核通过？');" OnClick="btnPass_Click">
+                            </epoint:Button>
                         </td>
                         <td>
                             <epoint:Button ID="btnNoPass" runat="server" Text="审核不通过" CssClass="ButtonConNoBg"
-                                OnClick="btnNoPass_Click" MouseOverClass="ButtonCon" OnClientClick="return window.confirm('确定审核不通过？');">
+                                OnClick="btnNoPass_Click" MouseOverClass="ButtonCon" OnClientClick="return check('确定审核不通过？');">
                             </epoint:Button>
                         </td>
                         <td style="width: 100%">

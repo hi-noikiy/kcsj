@@ -997,19 +997,38 @@ VALUES(NEWID(),@ZiZhiCode,@ZiZhiText,@ZhuanYeCode,@RYGuid,@RYName,@XMGuid,@DWGui
             {
                 //获取该专业下是否设置了专业负责人,先看看有没有人
                 strSql = "SELECT COUNT(*) FROM RG_XMAndRY WHERE XMGuid='" + XMGuid + "' AND ZhuanYeCode='" + dvZY[m]["ZhuanYeCode"] + "' ";
-                if (Epoint.MisBizLogic2.DB.ExecuteToString(strSql) != "0")//说明有配置人员
+                if (Epoint.MisBizLogic2.DB.ExecuteToString(strSql) != "0")//说明有配置人员，每个专业循环排查
                 {
-                    //再看看有没有项目负责人
-                    strSql = "SELECT COUNT(*) FROM RG_XMAndRY WHERE XMGuid='" + XMGuid + "' AND (ZhuanYeCode like '" + dvZY[m]["ZhuanYeCode"].ToString().Substring(0, 4) + "&' or ZhuanYeCode='" + dvZY[m]["ZhuanYeCode"] + "' ) and (DDRole='90' or DDRole='94') ";
-                    int i = Epoint.MisBizLogic2.DB.ExecuteToInt(strSql);
-                    if (i != 1 && i != 0)//说明有多个专业负责人
+                    //有几个专业要进行合并处理
+                    if (IsSameZY(dvZY[m]["ZhuanYeCode"]))
                     {
-                        eAll += 1;
+                        //再看看有没有专业负责人,注意是多个专业合并
+                        strSql = "SELECT COUNT(*) FROM RG_XMAndRY WHERE XMGuid='" + XMGuid + "' AND ZhuanYeCode in ('0070','0071','0072','0074','0075','0076','0077','00670001','0067')  and (DDRole='90' or DDRole='94') ";
+                        int i = Epoint.MisBizLogic2.DB.ExecuteToInt(strSql);
+                        if (i != 1 && i != 0)//说明有多个专业负责人
+                        {
+                            eAll += 1;
+                        }
+                        strSql = "SELECT COUNT(*) FROM RG_XMAndRY WHERE XMGuid='" + XMGuid + "' AND ZhuanYeCode in ('0070','0071','0072','0074','0075','0076','0077','00670001','0067')  ";
+                        if (Epoint.MisBizLogic2.DB.ExecuteToInt(strSql) < ZhuanYeRS)//说明人数不够
+                        {
+                            allRYCount += 1;
+                        }
                     }
-                    strSql = "SELECT COUNT(*) FROM RG_XMAndRY WHERE XMGuid='" + XMGuid + "' AND (ZhuanYeCode like '" + dvZY[m]["ZhuanYeCode"].ToString().Substring(0, 4) + "%' or ZhuanYeCode='" + dvZY[m]["ZhuanYeCode"] + "' ) ";
-                    if (Epoint.MisBizLogic2.DB.ExecuteToInt(strSql) < ZhuanYeRS)//说明人数不够
+                    else
                     {
-                        allRYCount += 1;
+                        //再看看有没有专业负责人
+                        strSql = "SELECT COUNT(*) FROM RG_XMAndRY WHERE XMGuid='" + XMGuid + "' AND (ZhuanYeCode like '" + dvZY[m]["ZhuanYeCode"].ToString().Substring(0, 4) + "%' or ZhuanYeCode='" + dvZY[m]["ZhuanYeCode"] + "' ) and (DDRole='90' or DDRole='94') ";
+                        int i = Epoint.MisBizLogic2.DB.ExecuteToInt(strSql);
+                        if (i != 1 && i != 0)//说明有多个专业负责人
+                        {
+                            eAll += 1;
+                        }
+                        strSql = "SELECT COUNT(*) FROM RG_XMAndRY WHERE XMGuid='" + XMGuid + "' AND (ZhuanYeCode like '" + dvZY[m]["ZhuanYeCode"].ToString().Substring(0, 4) + "%' or ZhuanYeCode='" + dvZY[m]["ZhuanYeCode"] + "' ) ";
+                        if (Epoint.MisBizLogic2.DB.ExecuteToInt(strSql) < ZhuanYeRS)//说明人数不够
+                        {
+                            allRYCount += 1;
+                        }
                     }
                 }
             }
@@ -1024,6 +1043,41 @@ VALUES(NEWID(),@ZiZhiCode,@ZiZhiText,@ZhuanYeCode,@RYGuid,@RYName,@XMGuid,@DWGui
                 message += "]个专业设置人员人数不满足要求";
             }
             return message;
+        }
+        public bool IsSameZY(object ZYCode)
+        {
+            bool Is = false;
+            switch(ZYCode.ToString())
+            {
+                case "0070": //岩土工程勘察
+                    Is = true;
+                    break;
+                case "0071":  //岩土工程设计
+                    Is = true;
+                    break;
+                case "0072":  //水文地质
+                    Is = true;
+                    break;
+                case "0074":  //工程物探
+                    Is = true;
+                    break;
+                case "0075":  //岩土测试检测
+                    Is = true;
+                    break;
+                case "0076":  //岩土监测
+                    Is = true;
+                    break;
+                case "0077":  //室内试
+                    Is = true;
+                    break;
+                case "0067":  //岩土
+                    Is = true;
+                    break;
+                case "00670001":  //岩土注册
+                    Is = true;
+                    break;
+            }
+            return Is;
         }
         #endregion
 
