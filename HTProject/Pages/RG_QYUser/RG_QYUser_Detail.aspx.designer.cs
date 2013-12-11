@@ -221,15 +221,6 @@ namespace HTProject.Pages.RG_QYUser {
         protected global::System.Web.UI.WebControls.Label YinZhangNo_2019;
         
         /// <summary>
-        /// ZhiCheng_2019 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label ZhiCheng_2019;
-        
-        /// <summary>
         /// ZCZ_YXQ_2019 控件。
         /// </summary>
         /// <remarks>
@@ -237,6 +228,51 @@ namespace HTProject.Pages.RG_QYUser {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label ZCZ_YXQ_2019;
+        
+        /// <summary>
+        /// YinZhangNo1_2019 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label YinZhangNo1_2019;
+        
+        /// <summary>
+        /// ZCZ_YXQ1_2019 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label ZCZ_YXQ1_2019;
+        
+        /// <summary>
+        /// YinZhangNo2_2019 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label YinZhangNo2_2019;
+        
+        /// <summary>
+        /// ZCZ_YXQ2_2019 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label ZCZ_YXQ2_2019;
+        
+        /// <summary>
+        /// ZhiCheng_2019 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label ZhiCheng_2019;
         
         /// <summary>
         /// HeTongNo_2019 控件。

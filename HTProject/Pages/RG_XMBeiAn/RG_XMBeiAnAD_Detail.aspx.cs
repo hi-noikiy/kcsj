@@ -140,51 +140,103 @@ namespace HTProject.Pages.RG_XMBeiAn
                 
             }
             #endregion
+            string srStatus = oRow["Status"].ToString();
             if (oRow["XMAdd"].ToString() == "320282")//宜兴
             {
-                if (IsND)
+                if (srStatus == "69")//区县初审，要转到区县审批
                 {
-                    oRow["Status"] = "90";
-                    oRow["QXTG_Date"] = DateTime.Now.ToString();
-                    oRow["XMBH"] = RG_DW.CreateXMBH(Request["RowGuid"], DWGuid_2021.Text, oRow["XMAdd"], oRow["XMLB"], qyzcd);
-                    oRow["TGDate"] = DateTime.Now.ToString();
-                    oRow.Update();
-                }
-                else
-                {
-                    oRow["Status"] = "70";
+                    oRow["Status"] = "68";
                     oRow["QXTG_Date"] = DateTime.Now.ToString();
                     oRow.Update();
 
-                    dv = DBF.GetUserByRoleName("备案信息审核");
+                    dv = DBF.GetUserByRoleName("宜兴备案信息审批");
+                    
+                    SaveOpinion("宜兴建设局", false);
                     SendMessage(dv, "备案审核");
                 }
-                SaveOpinion("宜兴建设局",true);
+                else if (srStatus == "68")//区县审批
+                {
+                    if (IsND)// 先区县初审，在区县审批，然后结束
+                    {
+                        oRow["Status"] = "90";
+                        oRow["QXTG_Date"] = DateTime.Now.ToString();
+                        oRow["XMBH"] = RG_DW.CreateXMBH(Request["RowGuid"], DWGuid_2021.Text, oRow["XMAdd"], oRow["XMLB"], qyzcd);
+                        oRow["TGDate"] = DateTime.Now.ToString();
+                        oRow.Update();
+                        SaveOpinion("宜兴建设局", true);
+                    }
+                    else// 先区县初审，在区县审批，然后转市里
+                    {
+                        oRow["Status"] = "70";
+                        oRow["QXTG_Date"] = DateTime.Now.ToString();
+                        oRow.Update();
+
+                        dv = DBF.GetUserByRoleName("备案信息审核");
+                        
+                        SaveOpinion("宜兴建设局", false);
+                        SendMessage(dv, "备案审核");
+                    }
+                }
+                
             }
             else if (oRow["XMAdd"].ToString() == "320281")//江阴
             {
-                if (IsND)
+                if (srStatus == "69")//区县初审，要转到区县审批
                 {
-                    oRow["Status"] = "90";
-                    oRow["QXTG_Date"] = DateTime.Now.ToString();
-                    oRow["XMBH"] = RG_DW.CreateXMBH(Request["RowGuid"], DWGuid_2021.Text, oRow["XMAdd"], oRow["XMLB"], qyzcd);
-                    oRow["TGDate"] = DateTime.Now.ToString();
-                    oRow.Update();
-                }
-                else
-                {
-                    oRow["Status"] = "70";
+                    oRow["Status"] = "68";
                     oRow["QXTG_Date"] = DateTime.Now.ToString();
                     oRow.Update();
 
-                    dv = DBF.GetUserByRoleName("备案信息审核");
+                    dv = DBF.GetUserByRoleName("江阴备案信息审批");
+                    
+                    SaveOpinion("江阴建设局", false);
                     SendMessage(dv, "备案审核");
                 }
-                SaveOpinion("江阴建设局",true);
+                else if (srStatus == "68")//区县审批
+                {
+                    if (IsND)// 先区县初审，在区县审批，然后结束
+                    {
+                        oRow["Status"] = "90";
+                        oRow["QXTG_Date"] = DateTime.Now.ToString();
+                        oRow["XMBH"] = RG_DW.CreateXMBH(Request["RowGuid"], DWGuid_2021.Text, oRow["XMAdd"], oRow["XMLB"], qyzcd);
+                        oRow["TGDate"] = DateTime.Now.ToString();
+                        oRow.Update();
+                        SaveOpinion("江阴建设局", true);
+                    }
+                    else// 先区县初审，在区县审批，然后转市里
+                    {
+                        oRow["Status"] = "70";
+                        oRow["QXTG_Date"] = DateTime.Now.ToString();
+                        oRow.Update();
+
+                        dv = DBF.GetUserByRoleName("备案信息审核");
+                        
+                        SaveOpinion("江阴建设局", false);
+                        SendMessage(dv, "备案审核");
+                    }
+                }
+                //if (IsND)// 先区县初审，在区县审批，然后结束
+                //{
+                //    oRow["Status"] = "90";
+                //    oRow["QXTG_Date"] = DateTime.Now.ToString();
+                //    oRow["XMBH"] = RG_DW.CreateXMBH(Request["RowGuid"], DWGuid_2021.Text, oRow["XMAdd"], oRow["XMLB"], qyzcd);
+                //    oRow["TGDate"] = DateTime.Now.ToString();
+                //    oRow.Update();
+                //}
+                //else// 先区县初审，在区县审批，然后转市里
+                //{
+                //    oRow["Status"] = "70";
+                //    oRow["QXTG_Date"] = DateTime.Now.ToString();
+                //    oRow.Update();
+
+                //    dv = DBF.GetUserByRoleName("备案信息审核");
+                //    SendMessage(dv, "备案审核");
+                //}
+                //SaveOpinion("江阴建设局",true);
             }
             else
             {
-                string srStatus = oRow["Status"].ToString();
+                
                 if (srStatus == "70")//处于初审中，则下一步就是审核中
                 {
                     dv = DBF.GetUserByRoleName("备案信息审核");

@@ -164,13 +164,13 @@ namespace HTProject.Pages.RG_OU
         protected void btnPass_Click(object sender, System.EventArgs e)
         {
             //判断人员和资质是否有没有审核的
-            string strSql = "SELECT * FROM RG_QiYeZiZhi WHERE Status='70' AND DWGuid='" + Request["RowGuid"] + "'";
+            string strSql = "SELECT COUNT(*) FROM RG_QiYeZiZhi WHERE Status='70' AND DWGuid='" + Request["RowGuid"] + "'";
             if (Epoint.MisBizLogic2.DB.ExecuteToInt(strSql) > 0)
             {
                 AlertAjaxMessage("存在未审核的企业资质");
                 return;
             }
-            strSql = "SELECT * FROM RG_QYUser WHERE Status='70' AND DWGuid='" + Request["RowGuid"] + "'";
+            strSql = "SELECT COUNT(*) FROM RG_QYUser WHERE Status='70' AND DWGuid='" + Request["RowGuid"] + "'";
             if (Epoint.MisBizLogic2.DB.ExecuteToInt(strSql) > 0)
             {
                 AlertAjaxMessage("存在未审核的企业人员");
@@ -211,13 +211,13 @@ namespace HTProject.Pages.RG_OU
         protected void btnNoPass_Click(object sender, System.EventArgs e)
         {
             //判断人员和资质是否有没有审核的
-            string strSql = "SELECT * FROM RG_QiYeZiZhi WHERE Status='70' AND DWGuid='" + Request["RowGuid"] + "'";
+            string strSql = "SELECT COUNT(*) FROM RG_QiYeZiZhi WHERE Status='70' AND DWGuid='" + Request["RowGuid"] + "'";
             if (Epoint.MisBizLogic2.DB.ExecuteToInt(strSql) > 0)
             {
                 AlertAjaxMessage("存在未审核的企业资质");
                 return;
             }
-            strSql = "SELECT * FROM RG_QYUser WHERE Status='70' AND DWGuid='" + Request["RowGuid"] + "'";
+            strSql = "SELECT COUNT(*) FROM RG_QYUser WHERE Status='70' AND DWGuid='" + Request["RowGuid"] + "'";
             if (Epoint.MisBizLogic2.DB.ExecuteToInt(strSql) > 0)
             {
                 AlertAjaxMessage("存在未审核的企业人员");

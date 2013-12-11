@@ -392,7 +392,7 @@
                                     </asp:TemplateColumn>
                                     <asp:TemplateColumn HeaderText="注册印章号">
                                         <ItemTemplate>
-                                            <%# DataBinder.Eval(Container, "DataItem.YinZhangNo") %>
+                                            <%# DataBinder.Eval(Container, "DataItem.YinZhangNo") + ";" + DataBinder.Eval(Container, "DataItem.YinZhangNo1") + ";" + DataBinder.Eval(Container, "DataItem.YinZhangNo2")%>
                                         </ItemTemplate>
                                     </asp:TemplateColumn>
                                     <asp:TemplateColumn HeaderText="从事专业">

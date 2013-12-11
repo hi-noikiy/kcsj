@@ -72,17 +72,11 @@
                                 <td class="TableSpecial1" width="15%">
                                     执业印章号
                                 </td>
-                                <td class="TableSpecial" width="35%" height="26" align="left">
-                                    <epoint:TextBox ID="YinZhangNo_2024" runat="server" MaxLength="50" contenteditable="false"
-                                        Width="80%"></epoint:TextBox>
+                                <td class="TableSpecial" width="85%" height="26" align="left"  colspan="3">
+                                    <epoint:TextBox ID="YinZhangNo_2024" runat="server" MaxLength="50" 
+                                        Width="70%"></epoint:TextBox><span style="color:Red">[可根据实际调整]</span>
                                 </td>
-                                <td class="TableSpecial1" width="15%">
-                                    职称
-                                </td>
-                                <td class="TableSpecial" width="35%" height="26" align="left">
-                                    <asp:DropDownList ID="ZhiCheng_2024" runat="server" Width="80%" Height="100%" Enabled="false">
-                                    </asp:DropDownList>
-                                </td>
+                                
                             </tr>
                             <tr>
                                 <td class="TableSpecial1" width="15%">
@@ -104,9 +98,16 @@
                                 <td class="TableSpecial1" width="15%">
                                     证件号码
                                 </td>
-                                <td class="TableSpecial" width="85%" height="26" align="left" colspan="3">
+                                <td class="TableSpecial" width="35%" height="26" align="left">
                                     <epoint:TextBox ID="IDNum_2024" runat="server" MaxLength="50" contenteditable="false"
                                         Width="80%"></epoint:TextBox>
+                                </td>
+                                <td class="TableSpecial1" width="15%">
+                                    职称
+                                </td>
+                                <td class="TableSpecial" width="35%" height="26" align="left">
+                                    <asp:DropDownList ID="ZhiCheng_2024" runat="server" Width="80%" Height="100%" Enabled="false">
+                                    </asp:DropDownList>
                                 </td>
                             </tr>
                             <tr>

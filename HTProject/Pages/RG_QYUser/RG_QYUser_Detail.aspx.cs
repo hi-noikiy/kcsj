@@ -136,6 +136,13 @@ namespace HTProject.Pages.RG_QYUser
 
             oRow.Update();
             //AlertAjaxMessage("操作成功");
+            string Opinion = "审核通过";
+            if (SHOpinion.Text.Trim() != "")
+            {
+                Opinion += "，审核意见为：" + Epoint.MisBizLogic2.DB.SQL_Encode(SHOpinion.Text.Trim());
+            }
+            RG_DW.InsertSHOpinion(Request["RowGuid"], this.DisplayName, Opinion, "");
+            //AlertAjaxMessage("操作成功");
             tabOP.Visible = false;
             //删除待办事宜
             new HTProject_Bizlogic.DB_Messages_Center().WaitHandle_Delete("人员信息审核", Request["RowGuid"]);
@@ -164,7 +171,14 @@ namespace HTProject.Pages.RG_QYUser
             oRow["Status"] = "80";
 
             oRow.Update();
-
+            string Opinion = "审核不通过";
+            if (SHOpinion.Text.Trim() != "")
+            {
+                Opinion += "，审核意见为：" + Epoint.MisBizLogic2.DB.SQL_Encode(SHOpinion.Text.Trim());
+            }
+            RG_DW.InsertSHOpinion(Request["RowGuid"], this.DisplayName, Opinion, "");
+            //AlertAjaxMessage("操作成功");
+            tabOP.Visible = false;
             tabOP.Visible = false;
             //AlertAjaxMessage("操作成功");
             //删除待办事宜

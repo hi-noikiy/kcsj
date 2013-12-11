@@ -174,9 +174,9 @@
                                             <%# DataBinder.Eval(Container, "DataItem.HeTongEndDate", "{0:yyyy-MM-dd}") %>
                                         </ItemTemplate>
                                     </asp:TemplateColumn>
-                                    <asp:TemplateColumn HeaderText="×¢²áÓ¡ÕÂºÅ" SortExpression="YinZhangNo">
+                                    <asp:TemplateColumn HeaderText="×¢²áÓ¡ÕÂºÅ" >
                                         <ItemTemplate>
-                                            <%# DataBinder.Eval(Container, "DataItem.YinZhangNo") %>
+                                            <%# DataBinder.Eval(Container, "DataItem.YinZhangNo") + ";" + DataBinder.Eval(Container, "DataItem.YinZhangNo1") + ";" + DataBinder.Eval(Container, "DataItem.YinZhangNo2")%>
                                         </ItemTemplate>
                                     </asp:TemplateColumn>
                                     <asp:TemplateColumn HeaderText="´ÓÊÂ×¨Òµ">

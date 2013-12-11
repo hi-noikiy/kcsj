@@ -65,14 +65,45 @@ namespace HTProject.Pages.RG_QYUser
                 this.WriteAjaxMessage("alert('该身份证已经存在，姓名为：" + oName + "');");
                 return;
             }
+            //看注册章
             if (YinZhangNo_2019.Text.Trim() != "")
             {
                 if (ZCZ_YXQ_2019.Text == "")
                 {
                     //ZCZ_YXQ_2019.Text = DateTime.Now.AddMonths(1).ToString("yyyy-MM-dd");
-                    this.WriteAjaxMessage("alert('请填写注册章有效期');");
+                    this.WriteAjaxMessage("alert('请填写注册章1有效期');");
                     return;
                 }
+            }
+            else
+            {
+                ZCZ_YXQ_2019.Text = "";
+            }
+            if (YinZhangNo1_2019.Text.Trim() != "")
+            {
+                if (ZCZ_YXQ1_2019.Text == "")
+                {
+                    //ZCZ_YXQ_2019.Text = DateTime.Now.AddMonths(1).ToString("yyyy-MM-dd");
+                    this.WriteAjaxMessage("alert('请填写注册章2有效期');");
+                    return;
+                }
+            }
+            else
+            {
+                ZCZ_YXQ1_2019.Text = "";
+            }
+            if (YinZhangNo2_2019.Text.Trim() != "")
+            {
+                if (ZCZ_YXQ2_2019.Text == "")
+                {
+                    //ZCZ_YXQ_2019.Text = DateTime.Now.AddMonths(1).ToString("yyyy-MM-dd");
+                    this.WriteAjaxMessage("alert('请填写注册章3有效期');");
+                    return;
+                }
+            }
+            else
+            {
+                ZCZ_YXQ2_2019.Text = "";
             }
             ZhuanYeCS_2019.Text = RegionTreeView.Text;
             ZhuanYeCSCode_2019.Text = RegionTreeView.Value;

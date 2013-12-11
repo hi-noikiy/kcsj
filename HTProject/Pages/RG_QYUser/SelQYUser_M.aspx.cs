@@ -45,7 +45,7 @@ namespace HTProject.Pages.RG_QYUser
             //将个人的社保证明时间筛选
             oListPage.OtherCondition += " and Exists(SELECT 1 FROM RG_OUINFO WHERE ROWGUID=RG_QYUser.DWGUID AND SMJZSJ>'" + DateTime.Now.ToString("yyyy-MM-dd") + "' AND STATUS='90' ) ";
             //注册章有效期
-            oListPage.OtherCondition += " and ((YinZhangNo='') or(YinZhangNo!='' and ZCZ_YXQ>'" + DateTime.Now.ToString("yyyy-MM-dd") + "') ) ";
+            oListPage.OtherCondition += " and ((YinZhangNo='') or (YinZhangNo!='' and ZCZ_YXQ>'" + DateTime.Now.ToString("yyyy-MM-dd") + "') or (YinZhangNo1='') or (YinZhangNo1!='' and ZCZ_YXQ1>'" + DateTime.Now.ToString("yyyy-MM-dd") + "') or (YinZhangNo2='') or (YinZhangNo2!='' and ZCZ_YXQ2>'" + DateTime.Now.ToString("yyyy-MM-dd") + "') ) ";
             oListPage.CustomMode = true;            
             //此方法解决删除错位问题。可以使查询条件的值自动从ViewState中恢复。
             controlHolder.Controls.Add(oListPage.RenderSearchCondition());

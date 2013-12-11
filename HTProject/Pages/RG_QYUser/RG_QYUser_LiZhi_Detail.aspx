@@ -197,16 +197,59 @@
                     </tr>
                     <tr>
                         <td class="TableSpecial1" width="15%">
-                            ×¢²áÓ¡ÕÂºÅ:
+                            ×¢²áÓ¡ÕÂºÅ1:
                         </td>
                         <td class="TableSpecial" width="35%" height="26">
                             <asp:Label ID="YinZhangNo_2019" Width="100%" runat="server"></asp:Label>
                         </td>
                         <td class="TableSpecial1" width="15%">
+                            ×¢²áÕÂ1ÓÐÐ§ÆÚ:
+                        </td>
+                        <td class="TableSpecial" width="35%" height="26" align="left">
+                            <asp:Label ID="ZCZ_YXQ_2019" runat="server"></asp:Label>
+                        </td>
+                        
+                    </tr>
+                    <tr>
+                        <td class="TableSpecial1" width="15%">
+                            ×¢²áÓ¡ÕÂºÅ2:
+                        </td>
+                        <td class="TableSpecial" width="35%" height="26">
+                            <asp:Label ID="YinZhangNo1_2019" Width="100%" runat="server"></asp:Label>
+                        </td>
+                        <td class="TableSpecial1" width="15%">
+                            ×¢²áÕÂ2ÓÐÐ§ÆÚ:
+                        </td>
+                        <td class="TableSpecial" width="35%" height="26" align="left">
+                            <asp:Label ID="ZCZ_YXQ1_2019" runat="server"></asp:Label>
+                        </td>
+                        
+                    </tr>
+                    <tr>
+                        <td class="TableSpecial1" width="15%">
+                            ×¢²áÓ¡ÕÂºÅ3:
+                        </td>
+                        <td class="TableSpecial" width="35%" height="26">
+                            <asp:Label ID="YinZhangNo2_2019" Width="100%" runat="server"></asp:Label>
+                        </td>
+                        <td class="TableSpecial1" width="15%">
+                            ×¢²áÕÂ3ÓÐÐ§ÆÚ:
+                        </td>
+                        <td class="TableSpecial" width="35%" height="26" align="left">
+                            <asp:Label ID="ZCZ_YXQ2_2019" runat="server"></asp:Label>
+                        </td>
+                        
+                    </tr>
+                    <tr>
+                        <td class="TableSpecial1" width="15%">
                             Ö°³Æ:
                         </td>
                         <td class="TableSpecial" width="35%" height="26">
                             <asp:Label ID="ZhiCheng_2019" Width="100%" runat="server"></asp:Label>
+                        </td>
+                        <td class="TableSpecial1" width="15%">
+                        </td>
+                        <td class="TableSpecial" width="35%" height="26" align="left">
                         </td>
                     </tr>
                     <tr>

@@ -139,14 +139,45 @@ namespace HTProject.Pages.RG_QYUser
                 this.WriteAjaxMessage("alert('该身份证已经存在，姓名为：" + oName + "');");
                 return;
             }
+            //看注册章
             if (YinZhangNo_2019.Text.Trim() != "")
             {
                 if (ZCZ_YXQ_2019.Text == "")
                 {
                     //ZCZ_YXQ_2019.Text = DateTime.Now.AddMonths(1).ToString("yyyy-MM-dd");
-                    this.WriteAjaxMessage("alert('请填写注册章有效期');");
+                    this.WriteAjaxMessage("alert('请填写注册章1有效期');");
                     return;
                 }
+            }
+            else
+            {
+                ZCZ_YXQ_2019.Text = "";
+            }
+            if (YinZhangNo1_2019.Text.Trim() != "")
+            {
+                if (ZCZ_YXQ1_2019.Text == "")
+                {
+                    //ZCZ_YXQ_2019.Text = DateTime.Now.AddMonths(1).ToString("yyyy-MM-dd");
+                    this.WriteAjaxMessage("alert('请填写注册章2有效期');");
+                    return;
+                }
+            }
+            else
+            {
+                ZCZ_YXQ1_2019.Text = "";
+            }
+            if (YinZhangNo2_2019.Text.Trim() != "")
+            {
+                if (ZCZ_YXQ2_2019.Text == "")
+                {
+                    //ZCZ_YXQ_2019.Text = DateTime.Now.AddMonths(1).ToString("yyyy-MM-dd");
+                    this.WriteAjaxMessage("alert('请填写注册章3有效期');");
+                    return;
+                }
+            }
+            else
+            {
+                ZCZ_YXQ2_2019.Text = "";
             }
             //看看状态，是编辑中，还是已通过
             if (Status_2019.SelectedValue == "90")//审核通过的，保存是变成变更状态
@@ -174,7 +205,46 @@ namespace HTProject.Pages.RG_QYUser
                 this.WriteAjaxMessage("alert('该身份证已经存在，姓名为：" + oName + "');");
                 return;
             }
-
+            //看注册章
+            if (YinZhangNo_2019.Text.Trim() != "")
+            {
+                if (ZCZ_YXQ_2019.Text == "")
+                {
+                    //ZCZ_YXQ_2019.Text = DateTime.Now.AddMonths(1).ToString("yyyy-MM-dd");
+                    this.WriteAjaxMessage("alert('请填写注册章1有效期');");
+                    return;
+                }
+            }
+            else
+            {
+                ZCZ_YXQ_2019.Text = "";
+            }
+            if (YinZhangNo1_2019.Text.Trim() != "")
+            {
+                if (ZCZ_YXQ1_2019.Text == "")
+                {
+                    //ZCZ_YXQ_2019.Text = DateTime.Now.AddMonths(1).ToString("yyyy-MM-dd");
+                    this.WriteAjaxMessage("alert('请填写注册章2有效期');");
+                    return;
+                }
+            }
+            else
+            {
+                ZCZ_YXQ1_2019.Text = "";
+            }
+            if (YinZhangNo2_2019.Text.Trim() != "")
+            {
+                if (ZCZ_YXQ2_2019.Text == "")
+                {
+                    //ZCZ_YXQ_2019.Text = DateTime.Now.AddMonths(1).ToString("yyyy-MM-dd");
+                    this.WriteAjaxMessage("alert('请填写注册章3有效期');");
+                    return;
+                }
+            }
+            else
+            {
+                ZCZ_YXQ2_2019.Text = "";
+            }
             //看看有没有上传个人签名
             Epoint.Frame.Bizlogic.AttachStorageInfo.StorageCom StorgCom = new Epoint.Frame.Bizlogic.AttachStorageInfo.StorageCom();
             string CliGuid = Request["RowGuid"] + "RY_GRQM";

@@ -232,26 +232,57 @@
                             </tr>
                             <tr>
                                 <td class="TableSpecial1" width="15%">
-                                    执业印章号:
+                                    执业印章号1:
                                 </td>
                                 <td class="TableSpecial" width="35%" height="26" align="left">
                                     <epoint:TextBox ID="YinZhangNo_2019" runat="server" MaxLength="50" Width="80%"></epoint:TextBox>
                                 </td>
+                                <td class="TableSpecial1" width="15%">
+                                    注册章1有效期:
+                                </td>
+                                <td class="TableSpecial" width="35%" height="26" align="left">
+                                    <epoint:DateTextBox ID="ZCZ_YXQ_2019" runat="server" InputDateType="Select"
+                                        Character="HX" Width="120px"></epoint:DateTextBox><span style="color:Red">如无执业印章，可不填写</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableSpecial1" width="15%">
+                                    执业印章号2:
+                                </td>
+                                <td class="TableSpecial" width="35%" height="26" align="left">
+                                    <epoint:TextBox ID="YinZhangNo1_2019" runat="server" MaxLength="50" Width="80%"></epoint:TextBox>
+                                </td>
+                                <td class="TableSpecial1" width="15%">
+                                    注册章2有效期:
+                                </td>
+                                <td class="TableSpecial" width="35%" height="26" align="left">
+                                    <epoint:DateTextBox ID="ZCZ_YXQ1_2019" runat="server" InputDateType="Select"
+                                        Character="HX" Width="120px"></epoint:DateTextBox><span style="color:Red">如无执业印章，可不填写</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="TableSpecial1" width="15%">
+                                    执业印章号3:
+                                </td>
+                                <td class="TableSpecial" width="35%" height="26" align="left">
+                                    <epoint:TextBox ID="YinZhangNo2_2019" runat="server" MaxLength="50" Width="80%"></epoint:TextBox>
+                                </td>
+                                <td class="TableSpecial1" width="15%">
+                                    注册章3有效期:
+                                </td>
+                                <td class="TableSpecial" width="35%" height="26" align="left">
+                                    <epoint:DateTextBox ID="ZCZ_YXQ2_2019" runat="server" InputDateType="Select"
+                                        Character="HX" Width="120px"></epoint:DateTextBox><span style="color:Red">如无执业印章，可不填写</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                
                                 <td class="TableSpecial1" width="15%">
                                     职称:
                                 </td>
                                 <td class="TableSpecial" width="35%" height="26" align="left">
                                     <asp:DropDownList ID="ZhiCheng_2019" runat="server" Width="50%" Height="100%">
                                     </asp:DropDownList>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="TableSpecial1" width="15%">
-                                    注册章有效期:
-                                </td>
-                                <td class="TableSpecial" width="35%" height="26" align="left">
-                                    <epoint:DateTextBox ID="ZCZ_YXQ_2019" runat="server" InputDateType="Select"
-                                        Character="HX" Width="120px"></epoint:DateTextBox><span style="color:Red">如无执业印章，可不填写</span>
                                 </td>
                                 <td class="TableSpecial1" width="15%">
                                     

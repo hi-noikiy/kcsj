@@ -95,15 +95,6 @@ namespace HTProject.Pages.RG_XMBeiAn {
         protected global::Epoint.Web.UI.WebControls2X.TextBox YinZhangNo_2024;
         
         /// <summary>
-        /// ZhiCheng_2024 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ZhiCheng_2024;
-        
-        /// <summary>
         /// ZhuanYeSX_2024 控件。
         /// </summary>
         /// <remarks>
@@ -129,6 +120,15 @@ namespace HTProject.Pages.RG_XMBeiAn {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::Epoint.Web.UI.WebControls2X.TextBox IDNum_2024;
+        
+        /// <summary>
+        /// ZhiCheng_2024 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ZhiCheng_2024;
         
         /// <summary>
         /// ZhuanYeCS_2024 控件。

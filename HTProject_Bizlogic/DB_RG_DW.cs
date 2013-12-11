@@ -1143,8 +1143,12 @@ VALUES(NEWID(),@ZiZhiCode,@ZiZhiText,@ZhuanYeCode,@RYGuid,@RYName,@XMGuid,@DWGui
         public string GetTip(object Status, object SF, object IsSW, string XMADD)
         {
             /* 60  编辑中
-             * 70  待审核
+             * 68  区县审核
+             * 69  区县审批
+             * 70  初审
              * 80  审核退回
+             * 86  审核
+             * 87  审批
              * 90  审核通过
              */
             StringBuilder sb = new StringBuilder();
@@ -1154,8 +1158,8 @@ VALUES(NEWID(),@ZiZhiCode,@ZiZhiText,@ZhuanYeCode,@RYGuid,@RYName,@XMGuid,@DWGui
             string strBla = "<span>{0}</span>"; ;
             string str1 = "第一步：填写项目合同备案信息</br>";
             string str2 = "第二步：配置项目人员，配置完成后下载备案表，相关人员签字并加盖单位公章后将该文件上传至页面下方的[勘察设计合同备案表]中，然后提交审核</br>";
-            string strJY = "第三步：江阴主管单位对备案信息进行审核</br>";
-            string strYX = "第三步：宜兴主管单位对备案信息进行审核</br>";
+            string strJY = "第三步：江阴主管单位对备案信息进行审核、审批</br>";
+            string strYX = "第三步：宜兴主管单位对备案信息进行审核、审批</br>";
             string str3 = "第三步：主管单位对备案信息进行审核";
             string str31 = "第四步：主管单位对备案信息进行审核";
 
@@ -1164,6 +1168,7 @@ VALUES(NEWID(),@ZiZhiCode,@ZiZhiText,@ZhuanYeCode,@RYGuid,@RYName,@XMGuid,@DWGui
 
             string str41 = "第五步：审核不通过，根据审核意见进行调整后重复第二步";
             string str51 = "第五步：审核通过";
+
             //if (IsSW != "1")
             //{
             //    str5 = "第四步：审核通过";
@@ -1190,6 +1195,32 @@ VALUES(NEWID(),@ZiZhiCode,@ZiZhiText,@ZhuanYeCode,@RYGuid,@RYName,@XMGuid,@DWGui
             #endregion
             #region 区县审核
             else if (_Status == "69")//区县审核
+            {
+                sb.Append(string.Format(strBla, str1));
+                sb.Append(string.Format(strBla, str2));
+                if (XMADD == "320282")//宜兴
+                {
+                    sb.Append(string.Format(strRed, strYX));
+                    sb.Append(string.Format(strBla, str31) + "</br>");
+                    sb.Append(string.Format(strBla, str51));
+                }
+                else if (XMADD == "320281")//江阴
+                {
+                    sb.Append(string.Format(strRed, strJY));
+                    sb.Append(string.Format(strBla, str31) + "</br>");
+                    sb.Append(string.Format(strBla, str51));
+                }
+                else
+                {
+                    sb.Append(string.Format(strRed, str3) + "</br>");
+                    sb.Append(string.Format(strBla, str5));
+                }
+
+
+            }
+            #endregion
+            #region 区县审批
+            else if (_Status == "68")//区县审核
             {
                 sb.Append(string.Format(strBla, str1));
                 sb.Append(string.Format(strBla, str2));
