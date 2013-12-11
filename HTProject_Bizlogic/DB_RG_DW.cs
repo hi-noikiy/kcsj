@@ -468,6 +468,27 @@ namespace HTProject_Bizlogic
             return cszy;
         }
 
+        public string GetZCZ(object Z1, object Z2, object Z3)
+        {
+            string svalue = "";
+            if (Z1.ToString() != "")
+            {
+                svalue += Z1;
+                svalue += ";";
+            }
+            if (Z2.ToString() != "")
+            {
+                svalue += Z2;
+                svalue += ";";
+            }
+            if (Z3.ToString() != "")
+            {
+                svalue += Z3;
+                svalue += ";";
+            }
+            return svalue;
+        }
+
 
         public string GetItemText(object ITCode, object MainGuid)
         {

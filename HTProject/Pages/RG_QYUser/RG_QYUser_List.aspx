@@ -172,7 +172,7 @@
                                     </asp:TemplateColumn>
                                     <asp:TemplateColumn HeaderText="注册印章号" >
                                         <ItemTemplate>
-                                            <%# DataBinder.Eval(Container, "DataItem.YinZhangNo") + ";" + DataBinder.Eval(Container, "DataItem.YinZhangNo1") + ";" + DataBinder.Eval(Container, "DataItem.YinZhangNo2")%>
+                                            <%# RG_DW.GetZCZ( DataBinder.Eval(Container, "DataItem.YinZhangNo") ,DataBinder.Eval(Container, "DataItem.YinZhangNo1") ,DataBinder.Eval(Container, "DataItem.YinZhangNo2"))%>
                                         </ItemTemplate>
                                     </asp:TemplateColumn>
                                     <asp:TemplateColumn HeaderText="从事专业">
@@ -182,7 +182,7 @@
                                     </asp:TemplateColumn>
                                     <asp:TemplateColumn HeaderText="注册专业">
                                         <ItemTemplate>
-                                            <%# RG_DW.GetItemTextByLen("29b7967e-8098-42d5-8b40-ec757b0865a5", DataBinder.Eval(Container, "DataItem.ZhuanYeCSCode"), 8)%>
+                                            <%# RG_DW.GetItemTextByLen2("29b7967e-8098-42d5-8b40-ec757b0865a5", DataBinder.Eval(Container, "DataItem.ZhuanYeCSCode"), 0)%>
                                         </ItemTemplate>
                                     </asp:TemplateColumn>
                                     <asp:TemplateColumn HeaderText="工龄" SortExpression="GongLing">

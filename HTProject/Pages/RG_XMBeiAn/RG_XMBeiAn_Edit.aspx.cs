@@ -200,7 +200,7 @@ namespace HTProject.Pages.RG_XMBeiAn
                         if (!RG_DW.IsExistRYOfXM(RYG, Request["RowGuid"]))
                         {
                             RG_DW.InsertXMRY(ZiZhiDJCode_2021.Text, ZiZhiDJ_2021.Text, hiZYCode.Text, RYG, oRowRY["XM"], Request["RowGuid"], DWGuid_2021.Text, oRowRY["IDNum"], oRowRY["ZhiCheng"],
-                                oRowRY["YinZhangNo"] + ";" + oRowRY["YinZhangNo1"] + ";" + oRowRY["YinZhangNo2"], oRowRY["ZhuanYe"], oRowRY["ZhuanYeCS"], oRowRY["ZhuanYeCSCode"], oRowRY["GongLing"], "85", hiZYText.Text);
+                                RG_DW.GetZCZ( oRowRY["YinZhangNo"] ,oRowRY["YinZhangNo1"],oRowRY["YinZhangNo2"]), oRowRY["ZhuanYe"], oRowRY["ZhuanYeCS"], oRowRY["ZhuanYeCSCode"], oRowRY["GongLing"], "85", hiZYText.Text);
                         }
                         else
                         {
