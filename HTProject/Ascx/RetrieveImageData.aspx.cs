@@ -8,6 +8,7 @@ using System.Text;
 using System.IO;
 using System.Drawing.Imaging;
 using System.Drawing.Drawing2D;
+using HTProject_Bizlogic;
 
 namespace HTProject.Ascx
 {
@@ -15,10 +16,16 @@ namespace HTProject.Ascx
     {
         string WatermarkImageUrl = "";
         string WatermarkText = "";
+        string StampImageUrl = "";
+        string StampImageUrl_JY = "";
+        string StampImageUrl_YX = "";
 
         protected void Page_Load(object sender, System.EventArgs e)
         {
             WatermarkImageUrl = Request.ApplicationPath + "/HTProject/Pages/Images/合同备案水印.jpg";
+            StampImageUrl = Request.ApplicationPath + "/HTProject/Pages/Images/合同备案公章.gif";
+            StampImageUrl_JY = Request.ApplicationPath + "/HTProject/Pages/Images/江阴合同备案公章.gif";
+            StampImageUrl_YX = Request.ApplicationPath + "/HTProject/Pages/Images/宜兴合同备案公章.gif";
             WatermarkText = new Epoint.Frame.Bizlogic.Frame_Config().GetDetail("AppDeptName").ConfigValue;
 
             Response.Clear();
@@ -126,9 +133,14 @@ namespace HTProject.Ascx
                 #endregion
 
                 MakeThumbnail_And_AddWaterMark(strFullFilePathR);
+                string fileNameR_W = fileName.Substring(0, site) + "_R_W" + fileName.Substring(site, fileName.Length - site);
+                string strFullFilePathR_W = Server.MapPath(attPath + "/" + AttachGuid + "/" + fileNameR_W);
+                //AddShuiYinWord(strFullFilePathR, strFullFilePathR_W);
+
                 Response.Redirect(attPath + "/" + AttachGuid + "/" + fileNameR);
             }
             #endregion
+
 
         }
 
@@ -184,12 +196,42 @@ namespace HTProject.Ascx
 
             if (this.WatermarkImageUrl != "")
             {
-                this.addWatermarkImage(g, towidth, toheight, HTProject_Bizlogic.CommonEnum.WaterMarkPosition.TOP_LEFT);
+                System.Drawing.Image watermark = new Bitmap(this.Page.MapPath(StampImageUrl));
+                if (String.IsNullOrEmpty(Request["BeiAnGuid"]))
+                {
+                    this.addWatermarkImage(g, towidth, toheight, HTProject_Bizlogic.CommonEnum.WaterMarkPosition.TOP_LEFT);
+                }
+                else
+                {
+                    //无锡市公章
+                    this.addWatermarkImage2(g, watermark.Width, watermark.Height, HTProject_Bizlogic.CommonEnum.WaterMarkPosition.TOP_LEFT, StampImageUrl);
+                    //再考虑加个江阴或宜兴的章
+                    //合同备案盖章及有效期
+                    string BeiAnGuid = Request["BeiAnGuid"];
+                    //通过备案表获取信息
+                    Epoint.MisBizLogic2.Data.MisGuidRow oRow = new Epoint.MisBizLogic2.Data.MisGuidRow("RG_XMBeiAn", Request["BeiAnGuid"]);
+                    string address = oRow["XMAdd"].ToString();
+                    if (address == "320282")
+                    {
+                        addWatermarkImage3(g, watermark.Width, watermark.Height, HTProject_Bizlogic.CommonEnum.WaterMarkPosition.TOP_LEFT, StampImageUrl_YX);
+                    }
+                    else if (address == "320281")
+                    {
+                        addWatermarkImage3(g, watermark.Width, watermark.Height, HTProject_Bizlogic.CommonEnum.WaterMarkPosition.TOP_LEFT, StampImageUrl_JY);
+                    }
+                    string strMessage = "项目备案号：";
+                    strMessage += oRow["XMBH"];
+                    strMessage += " 有效期至：";
+                    strMessage += DateTime.Parse(oRow["TGDate"].ToString()).AddYears(2).ToString("yyyy年MM月dd日");
+                    BeiAnImageUtil util = new BeiAnImageUtil();
+                    util.addStampAndDate(bitmap, g, strMessage, this.Page.MapPath(this.StampImageUrl));
+                }
             }
-            else if (this.WatermarkText != "")
-            {
-                this.addWatermarkText(g, towidth, toheight, HTProject_Bizlogic.CommonEnum.WaterMarkPosition.BOTTOM_LEFT);
-            }
+            //if (this.WatermarkText != "")
+            //{
+
+            //    this.addWatermarkText(g, towidth, toheight, HTProject_Bizlogic.CommonEnum.WaterMarkPosition.BOTTOM_LEFT);
+            //}
             try
             {
                 //保存高清晰度的缩略图
@@ -222,6 +264,15 @@ namespace HTProject.Ascx
             }
 
             System.IO.File.Delete(sRawImagePath);//删除原来的文件
+
+            //Test
+            //BeiAnImageUtil util = new BeiAnImageUtil();
+            //String folder = "E:\\";
+            //util.createImage(folder + "test.jpg", "SN-XQ-S-201311250025", folder + "test2.jpg");
+            //Bitmap b = util.ByteArraytoBitmap((byte[])oRow["Content"]);
+            //byte[] output = util.createImage(b, "SN-XQ-S-201311250025", folder + "test2.jpg");
+            //Bitmap bm = util.ByteArraytoBitmap(output);
+            //bm.Save(folder + util.getTimeStamp() + ".jpeg", System.Drawing.Imaging.ImageFormat.Jpeg);
         }
 
 
@@ -236,13 +287,21 @@ namespace HTProject.Ascx
             int[] sizes = new int[] { 16, 14, 12, 10, 8, 6, 4 };
             Font crFont = null;
             SizeF crSize = new SizeF();
-            for (int i = 0; i < 7; i++)
+            for (int i = 0; i < sizes.Length; i++)
             {
+                crFont.Dispose();
                 crFont = new Font("arial", sizes[i], FontStyle.Bold);
-                crSize = picture.MeasureString(this.WatermarkText, crFont);
+                try
+                {
+                    Brush brush = Brushes.Black;
+                    crSize = picture.MeasureString(this.WatermarkText, crFont);
 
-                if ((ushort)crSize.Width < (ushort)_width)
-                    break;
+                    if ((ushort)crSize.Width < (ushort)_width)
+                        break;
+
+                }
+                catch
+                { }
             }
 
             float xpos = 0;
@@ -282,6 +341,7 @@ namespace HTProject.Ascx
             semiTransBrush2.Dispose();
             semiTransBrush.Dispose();
         }
+
 
         /// <summary>
         /// 加水印图片
@@ -323,90 +383,124 @@ namespace HTProject.Ascx
             int WatermarkWidth = 0;
             int WatermarkHeight = 0;
             double bl = 1d;
-            //计算水印图片的比率
-            //取背景的1/4宽度来比较
-            //if ((_width > watermark.Width * 4) && (_height > watermark.Height * 4))
-            //{
-            //    bl = 1;
-            //}
-            //else if ((_width > watermark.Width * 4) && (_height < watermark.Height * 4))
-            //{
-            //    bl = Convert.ToDouble(_height / 4) / Convert.ToDouble(watermark.Height);
 
-            //}
-            //else
 
-            //    if ((_width < watermark.Width * 4) && (_height > watermark.Height * 4))
-            //    {
-            //        bl = Convert.ToDouble(_width / 4) / Convert.ToDouble(watermark.Width);
-            //    }
-            //    else
-            //    {
-            //        if ((_width * watermark.Height) > (_height * watermark.Width))
-            //        {
-            //            bl = Convert.ToDouble(_height / 4) / Convert.ToDouble(watermark.Height);
-
-            //        }
-            //        else
-            //        {
-            //            bl = Convert.ToDouble(_width / 4) / Convert.ToDouble(watermark.Width);
-
-            //        }
-
-            //    }
             WatermarkWidth = watermark.Width; //Convert.ToInt32(_width);
             WatermarkHeight = watermark.Height;// Convert.ToInt32(_height);
 
-            //switch (Pos)
-            //{
-            //    case HTProject_Bizlogic.CommonEnum.WaterMarkPosition.TOP_LEFT:
-            //        xpos = 0;
-            //        ypos = 0;
-            //        break;
-            //    case HTProject_Bizlogic.CommonEnum.WaterMarkPosition.TOP_RIGHT:
-            //        xpos = _width - WatermarkWidth - 10;
-            //        ypos = 10;
-            //        break;
-            //    case HTProject_Bizlogic.CommonEnum.WaterMarkPosition.BOTTOM_RIGHT:
-            //        xpos = _width - WatermarkWidth - 10;
-            //        ypos = _height - WatermarkHeight - 10;
-            //        break;
-            //    case HTProject_Bizlogic.CommonEnum.WaterMarkPosition.BOTTOM_LEFT:
-            //        xpos = 0;
-            //        ypos = _height - WatermarkHeight - 10;
-            //        break;
-            //}
 
             //picture.DrawImage(watermark, new Rectangle(xpos, ypos, WatermarkWidth, WatermarkHeight), 0, 0, watermark.Width, watermark.Height, GraphicsUnit.Pixel, imageAttributes);
             //循环加上水印
-            for (int y = 0; y < _height; y = y + WatermarkHeight*2)
+            for (int y = 0; y < _height; y = y + WatermarkHeight * 2)
             {
-                for (int x = 0; x < _width; x = x + WatermarkWidth*2)
+                for (int x = 0; x < _width; x = x + WatermarkWidth * 2)
                 {
-                    //switch (Pos)
-                    //{
-                    //    case HTProject_Bizlogic.CommonEnum.WaterMarkPosition.TOP_LEFT:
-                    //        xpos = 0;
-                    //        ypos = 0;
-                    //        break;
-                    //    case HTProject_Bizlogic.CommonEnum.WaterMarkPosition.TOP_RIGHT:
-                    //        xpos = _width - WatermarkWidth - 10;
-                    //        ypos = 10;
-                    //        break;
-                    //    case HTProject_Bizlogic.CommonEnum.WaterMarkPosition.BOTTOM_RIGHT:
-                    //        xpos = _width - WatermarkWidth - 10;
-                    //        ypos = _height - WatermarkHeight - 10;
-                    //        break;
-                    //    case HTProject_Bizlogic.CommonEnum.WaterMarkPosition.BOTTOM_LEFT:
-                    //        xpos = 0;
-                    //        ypos = _height - WatermarkHeight - 10;
-                    //        break;
-                    //}
+
                     xpos = x;
                     ypos = y;
                     picture.DrawImage(watermark, new Rectangle(xpos, ypos, WatermarkWidth, WatermarkHeight), 0, 0, watermark.Width, watermark.Height, GraphicsUnit.Pixel, imageAttributes);
                 }
             }
+
+            watermark.Dispose();
+            imageAttributes.Dispose();
+        }
+
+        private void addWatermarkImage2(Graphics picture, int _width, int _height, HTProject_Bizlogic.CommonEnum.WaterMarkPosition Pos, string GZPath)
+        {
+            if (!System.IO.File.Exists(this.Page.MapPath(GZPath)))
+            {
+                return;
+            }
+            System.Drawing.Image watermark = new Bitmap(this.Page.MapPath(GZPath));
+
+            ImageAttributes imageAttributes = new ImageAttributes();
+            ColorMap colorMap = new ColorMap();
+
+            colorMap.OldColor = Color.FromArgb(255, 0, 255, 0);
+            colorMap.NewColor = Color.FromArgb(0, 0, 0, 0);
+            ColorMap[] remapTable = { colorMap };
+
+            imageAttributes.SetRemapTable(remapTable, ColorAdjustType.Bitmap);
+
+            float[][] colorMatrixElements = {
+                                                new float[] {1.0f,  0.0f,  0.0f,  0.0f, 0.0f},
+                                                new float[] {0.0f,  1.0f,  0.0f,  0.0f, 0.0f},
+                                                new float[] {0.0f,  0.0f,  1.0f,  0.0f, 0.0f},
+                                                 new float[] {0.0f,  0.0f,  0.0f,  0.3f, 0.0f},
+                                                new float[] {0.0f,  0.0f,  0.0f,  0.0f, 1.0f}
+                                             };
+
+            ColorMatrix colorMatrix = new ColorMatrix(colorMatrixElements);
+
+            imageAttributes.SetColorMatrix(colorMatrix, ColorMatrixFlag.Default, ColorAdjustType.Bitmap);
+
+            int xpos = 0;
+            int ypos = 0;
+            int WatermarkWidth = 0;
+            int WatermarkHeight = 0;
+            double bl = 1d;
+
+
+            WatermarkWidth = Convert.ToInt32(_width); //watermark.Width; //
+            WatermarkHeight = Convert.ToInt32(_height); //watermark.Height;// 
+
+
+            //加上水印
+            xpos = WatermarkWidth / 2 ;
+            ypos = WatermarkHeight / 2 ;
+            picture.DrawImage(watermark, new Rectangle(xpos, ypos, WatermarkWidth, WatermarkHeight), 0, 0, watermark.Width, watermark.Height, GraphicsUnit.Pixel, imageAttributes);
+
+
+            watermark.Dispose();
+            imageAttributes.Dispose();
+        }
+
+        private void addWatermarkImage3(Graphics picture, int _width, int _height, HTProject_Bizlogic.CommonEnum.WaterMarkPosition Pos, string GZPath)
+        {
+            if (!System.IO.File.Exists(this.Page.MapPath(GZPath)))
+            {
+                return;
+            }
+            System.Drawing.Image watermark = new Bitmap(this.Page.MapPath(GZPath));
+
+            ImageAttributes imageAttributes = new ImageAttributes();
+            ColorMap colorMap = new ColorMap();
+
+            colorMap.OldColor = Color.FromArgb(255, 0, 255, 0);
+            colorMap.NewColor = Color.FromArgb(0, 0, 0, 0);
+            ColorMap[] remapTable = { colorMap };
+
+            imageAttributes.SetRemapTable(remapTable, ColorAdjustType.Bitmap);
+
+            float[][] colorMatrixElements = {
+                                                new float[] {1.0f,  0.0f,  0.0f,  0.0f, 0.0f},
+                                                new float[] {0.0f,  1.0f,  0.0f,  0.0f, 0.0f},
+                                                new float[] {0.0f,  0.0f,  1.0f,  0.0f, 0.0f},
+                                                 new float[] {0.0f,  0.0f,  0.0f,  0.3f, 0.0f},
+                                                new float[] {0.0f,  0.0f,  0.0f,  0.0f, 1.0f}
+                                             };
+
+            ColorMatrix colorMatrix = new ColorMatrix(colorMatrixElements);
+
+            imageAttributes.SetColorMatrix(colorMatrix, ColorMatrixFlag.Default, ColorAdjustType.Bitmap);
+
+            int xpos = 0;
+            int ypos = 0;
+            int WatermarkWidth = 0;
+            int WatermarkHeight = 0;
+            double bl = 1d;
+
+
+            WatermarkWidth = Convert.ToInt32(_width);//watermark.Width; //
+            WatermarkHeight = Convert.ToInt32(_height);//watermark.Height;// 
+
+
+            //加上水印
+            xpos = WatermarkWidth / 2;
+            ypos = WatermarkHeight * 2;
+            picture.DrawImage(watermark, new Rectangle(xpos, ypos, WatermarkWidth, WatermarkHeight), 0, 0, watermark.Width, watermark.Height, GraphicsUnit.Pixel, imageAttributes);
+
 
             watermark.Dispose();
             imageAttributes.Dispose();

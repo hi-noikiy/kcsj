@@ -196,7 +196,14 @@ namespace HTProject.Ascx
             string rtnHtml = "";
             if (ContentType.ToString().IndexOf("image") > -1)
             {
-                rtnHtml = "<a   target='_blank'  href='" + Epoint.Frame.Bizlogic.common.GetApplicationPath() + "HTProject/Ascx/RetrieveImageData.aspx?AttachGuid=" + AttachGuid + "'> <font color=\"red\">" + AttachFileName.ToString() + "</font></a>";//target=\"_blank\"
+                if (_Status == "90")//¼Ó¸Ç¹«ÕÂ
+                {
+                    rtnHtml = "<a   target='_blank'  href='" + Epoint.Frame.Bizlogic.common.GetApplicationPath() + "HTProject/Ascx/RetrieveImageData.aspx?BeiAnGuid=" + Request["RowGuid"] + "&AttachGuid=" + AttachGuid + "'> <font color=\"red\">" + AttachFileName.ToString() + "</font></a>";//target=\"_blank\"
+                }
+                else
+                {
+                    rtnHtml = "<a   target='_blank'  href='" + Epoint.Frame.Bizlogic.common.GetApplicationPath() + "HTProject/Ascx/RetrieveImageData.aspx?AttachGuid=" + AttachGuid + "'> <font color=\"red\">" + AttachFileName.ToString() + "</font></a>";//target=\"_blank\"
+                }
             }
             else
             {
