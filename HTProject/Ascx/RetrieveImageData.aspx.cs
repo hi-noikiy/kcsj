@@ -219,12 +219,14 @@ namespace HTProject.Ascx
                     {
                         addWatermarkImage3(g, watermark.Width, watermark.Height, HTProject_Bizlogic.CommonEnum.WaterMarkPosition.TOP_LEFT, StampImageUrl_JY);
                     }
-                    string strMessage = "项目备案号：";
+                    string strMessage = "项目备案号:";
                     strMessage += oRow["XMBH"];
-                    strMessage += " 有效期至：";
+                    strMessage += ";审批日期:";
+                    strMessage += DateTime.Parse(oRow["TGDate"].ToString()).ToString("yyyy年MM月dd日");
+                    strMessage += ";有效期至:";
                     strMessage += DateTime.Parse(oRow["TGDate"].ToString()).AddYears(2).ToString("yyyy年MM月dd日");
                     BeiAnImageUtil util = new BeiAnImageUtil();
-                    util.addStampAndDate(bitmap, g, strMessage, this.Page.MapPath(this.StampImageUrl));
+                    util.addStampAndDate(bitmap, g, strMessage, this.Page.MapPath(this.StampImageUrl), watermark.Width+5);
                 }
             }
             //if (this.WatermarkText != "")
@@ -447,8 +449,8 @@ namespace HTProject.Ascx
 
 
             //加上水印
-            xpos = WatermarkWidth / 2 ;
-            ypos = WatermarkHeight / 2 ;
+            xpos = 0 ;
+            ypos = 0 ;
             picture.DrawImage(watermark, new Rectangle(xpos, ypos, WatermarkWidth, WatermarkHeight), 0, 0, watermark.Width, watermark.Height, GraphicsUnit.Pixel, imageAttributes);
 
 
@@ -497,8 +499,8 @@ namespace HTProject.Ascx
 
 
             //加上水印
-            xpos = WatermarkWidth / 2;
-            ypos = WatermarkHeight * 2;
+            xpos = 0;
+            ypos = WatermarkHeight+5;
             picture.DrawImage(watermark, new Rectangle(xpos, ypos, WatermarkWidth, WatermarkHeight), 0, 0, watermark.Width, watermark.Height, GraphicsUnit.Pixel, imageAttributes);
 
 

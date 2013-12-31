@@ -143,6 +143,7 @@ namespace HTProject.Pages.RG_XMBeiAn
             string srStatus = oRow["Status"].ToString();
             if (oRow["XMAdd"].ToString() == "320282")//宜兴
             {
+                #region 宜兴建设局
                 if (srStatus == "69")//区县初审，要转到区县审批
                 {
                     oRow["Status"] = "68";
@@ -171,16 +172,47 @@ namespace HTProject.Pages.RG_XMBeiAn
                         oRow["QXTG_Date"] = DateTime.Now.ToString();
                         oRow.Update();
 
-                        dv = DBF.GetUserByRoleName("备案信息审核");
+                        dv = DBF.GetUserByRoleName("备案信息初审");//备案信息初审
                         
                         SaveOpinion("宜兴建设局", false);
-                        SendMessage(dv, "备案审核");
+                        SendMessage(dv, "备案初审");
                     }
                 }
-                
+                else if (srStatus == "70")//处于初审中，则下一步就是审核中
+                {
+                    dv = DBF.GetUserByRoleName("备案信息审核");
+                    oRow["Status"] = "86";
+                    oRow["XMBH"] = ""; //RG_DW.CreateXMBH(Request["RowGuid"], DWGuid_2021.Text, oRow["XMAdd"], oRow["XMLB"], qyzcd);
+                    oRow["TGDate"] = DateTime.Now.ToString();
+                    oRow.Update();
+
+                    SaveOpinion("无锡建设局", true);
+                    SendMessage(dv, "备案审核");
+                }
+                else if (srStatus == "86")//处于审核中，则下一步就是审批中
+                {
+                    dv = DBF.GetUserByRoleName("备案信息审批");
+                    oRow["Status"] = "87";
+                    oRow["XMBH"] = "";// RG_DW.CreateXMBH(Request["RowGuid"], DWGuid_2021.Text, oRow["XMAdd"], oRow["XMLB"], qyzcd);
+                    oRow["TGDate"] = DateTime.Now.ToString();
+                    oRow.Update();
+
+                    SaveOpinion("无锡建设局", true);
+                    SendMessage(dv, "备案审批");
+                }
+                else
+                {
+                    oRow["Status"] = "90";
+                    oRow["XMBH"] = RG_DW.CreateXMBH(Request["RowGuid"], DWGuid_2021.Text, oRow["XMAdd"], oRow["XMLB"], qyzcd);
+                    oRow["TGDate"] = DateTime.Now.ToString();
+                    oRow.Update();
+                    SaveOpinion("无锡建设局", true);
+                }
+                #endregion
             }
             else if (oRow["XMAdd"].ToString() == "320281")//江阴
             {
+                #region 江阴
                 if (srStatus == "69")//区县初审，要转到区县审批
                 {
                     oRow["Status"] = "68";
@@ -209,42 +241,20 @@ namespace HTProject.Pages.RG_XMBeiAn
                         oRow["QXTG_Date"] = DateTime.Now.ToString();
                         oRow.Update();
 
-                        dv = DBF.GetUserByRoleName("备案信息审核");
+                        dv = DBF.GetUserByRoleName("备案信息初审");
                         
                         SaveOpinion("江阴建设局", false);
-                        SendMessage(dv, "备案审核");
+                        SendMessage(dv, "备案初审");
                     }
                 }
-                //if (IsND)// 先区县初审，在区县审批，然后结束
-                //{
-                //    oRow["Status"] = "90";
-                //    oRow["QXTG_Date"] = DateTime.Now.ToString();
-                //    oRow["XMBH"] = RG_DW.CreateXMBH(Request["RowGuid"], DWGuid_2021.Text, oRow["XMAdd"], oRow["XMLB"], qyzcd);
-                //    oRow["TGDate"] = DateTime.Now.ToString();
-                //    oRow.Update();
-                //}
-                //else// 先区县初审，在区县审批，然后转市里
-                //{
-                //    oRow["Status"] = "70";
-                //    oRow["QXTG_Date"] = DateTime.Now.ToString();
-                //    oRow.Update();
-
-                //    dv = DBF.GetUserByRoleName("备案信息审核");
-                //    SendMessage(dv, "备案审核");
-                //}
-                //SaveOpinion("江阴建设局",true);
-            }
-            else
-            {
-                
-                if (srStatus == "70")//处于初审中，则下一步就是审核中
+                else if (srStatus == "70")//处于初审中，则下一步就是审核中
                 {
                     dv = DBF.GetUserByRoleName("备案信息审核");
                     oRow["Status"] = "86";
-                    oRow["XMBH"] = RG_DW.CreateXMBH(Request["RowGuid"], DWGuid_2021.Text, oRow["XMAdd"], oRow["XMLB"], qyzcd);
+                    oRow["XMBH"] = ""; //RG_DW.CreateXMBH(Request["RowGuid"], DWGuid_2021.Text, oRow["XMAdd"], oRow["XMLB"], qyzcd);
                     oRow["TGDate"] = DateTime.Now.ToString();
                     oRow.Update();
-                   
+
                     SaveOpinion("无锡建设局", true);
                     SendMessage(dv, "备案审核");
                 }
@@ -252,7 +262,42 @@ namespace HTProject.Pages.RG_XMBeiAn
                 {
                     dv = DBF.GetUserByRoleName("备案信息审批");
                     oRow["Status"] = "87";
+                    oRow["XMBH"] = "";// RG_DW.CreateXMBH(Request["RowGuid"], DWGuid_2021.Text, oRow["XMAdd"], oRow["XMLB"], qyzcd);
+                    oRow["TGDate"] = DateTime.Now.ToString();
+                    oRow.Update();
+
+                    SaveOpinion("无锡建设局", true);
+                    SendMessage(dv, "备案审批");
+                }
+                else
+                {
+                    oRow["Status"] = "90";
                     oRow["XMBH"] = RG_DW.CreateXMBH(Request["RowGuid"], DWGuid_2021.Text, oRow["XMAdd"], oRow["XMLB"], qyzcd);
+                    oRow["TGDate"] = DateTime.Now.ToString();
+                    oRow.Update();
+                    SaveOpinion("无锡建设局", true);
+                }
+                #endregion
+            }
+            else
+            {
+                #region 其他
+                if (srStatus == "70")//处于初审中，则下一步就是审核中
+                {
+                    dv = DBF.GetUserByRoleName("备案信息审核");
+                    oRow["Status"] = "86";
+                    oRow["XMBH"] = ""; //RG_DW.CreateXMBH(Request["RowGuid"], DWGuid_2021.Text, oRow["XMAdd"], oRow["XMLB"], qyzcd);
+                    oRow["TGDate"] = DateTime.Now.ToString();
+                    oRow.Update();
+                   
+                    SaveOpinion("无锡建设局", true);
+                    SendMessage(dv, "备案初审");
+                }
+                else if (srStatus == "86")//处于审核中，则下一步就是审批中
+                {
+                    dv = DBF.GetUserByRoleName("备案信息审批");
+                    oRow["Status"] = "87";
+                    oRow["XMBH"] = "";// RG_DW.CreateXMBH(Request["RowGuid"], DWGuid_2021.Text, oRow["XMAdd"], oRow["XMLB"], qyzcd);
                     oRow["TGDate"] = DateTime.Now.ToString();
                     oRow.Update();
                     
@@ -267,6 +312,7 @@ namespace HTProject.Pages.RG_XMBeiAn
                     oRow.Update();
                     SaveOpinion("无锡建设局", true);
                 }
+                #endregion
             }
             
 
