@@ -74,6 +74,8 @@ namespace HTProject.Pages.RG_XMBeiAn
                 }
 
                 lblOUName.Text = RG_DW.GetDWName(DWGuid_2021.Text);
+
+                lblCS.Text = new DB_RG_DW().CreateXMBH(Request["RowGuid"], DWGuid_2021.Text, oRow["XMAdd"], "K", "320282", 2015);
             }
             //如果是省内的，就不要显示
             string QYZCD = Epoint.MisBizLogic2.DB.ExecuteToString("SELECT RegistAddressCode FROM RG_OUInfo WHERE RowGuid='" + DWGuid_2021.Text + "'");
@@ -89,7 +91,7 @@ namespace HTProject.Pages.RG_XMBeiAn
             {
                 XM_HTBA.SAdd = "SW";
             }
-
+            
         }
 
         override protected void OnInit(EventArgs e)

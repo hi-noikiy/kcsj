@@ -118,7 +118,7 @@ namespace HTProject.Pages.Print
                     string YXQ = "";
                     if (dv[0]["TGDate"].ToString() == "")
                     {
-                        if (dv[0]["QXTG_Date"].ToString() == "")
+                        if (dv[0]["QXTG_Date"].ToString() != "")
                         {
                             DateTime dtPass = DateTime.Parse(dv[0]["QXTG_Date"].ToString());
                             string qxTGDate = dtPass.ToString("yyyy 年 MM 月 dd 日 ");

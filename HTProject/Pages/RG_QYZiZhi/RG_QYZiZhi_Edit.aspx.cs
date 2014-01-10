@@ -141,7 +141,7 @@ namespace HTProject.Pages.RG_QYZiZhi
                                     "",
                                     "",
                                     "",
-                                    @"HTProject/Pages/RG_QYZiZhi/RG_QYZiZhi_ADDetail.aspx?RowGuid=" + Request["RowGuid"],
+                                    @"HTProject/Pages/RG_QYZiZhi/RG_QYZiZhi_ADDetail.aspx?stype=shenhe&RowGuid=" + Request["RowGuid"],
                                     "",
                                     "",
                                     1,

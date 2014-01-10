@@ -282,7 +282,7 @@ namespace HTProject.Pages.RG_QYUser
                                     "",
                                     "",
                                     "",
-                                    @"HTProject/Pages/RG_QYUser/RG_QYUser_Detail.aspx?RowGuid=" + Request["RowGuid"],
+                                    @"HTProject/Pages/RG_QYUser/RG_QYUser_Detail.aspx?stype=shenhe&RowGuid=" + Request["RowGuid"],
                                     "",
                                     "",
                                     1,

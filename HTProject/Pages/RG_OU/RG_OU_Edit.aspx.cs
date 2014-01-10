@@ -108,7 +108,9 @@ namespace HTProject.Pages.RG_OU
             RegistAddress_2017.Text = RegionTreeView.Text;
             RegistAddressCode_2017.Text = RegionTreeView.Value;
             oEditPage.SaveTableValues(Request["RowGuid"], tdContainer);
-
+            Epoint.MisBizLogic2.Data.MisGuidRow oRow = new Epoint.MisBizLogic2.Data.MisGuidRow(oEditPage.TableDetail.SQL_TableName, Request["RowGuid"]);
+            oRow["Status"] = "85";
+            oRow.Update();
             if (ApplicationOperate.GetConfigValueByName("IsHoldCurPage", "0") == "1")
                 this.WriteAjaxMessage("refreshParentHoldCurPage();");
             else
@@ -148,7 +150,7 @@ namespace HTProject.Pages.RG_OU
                                     "",
                                     "",
                                     "",
-                                    @"HTProject/Pages/RG_OU/RG_OU_All_Detail.aspx?RowGuid=" + Request["RowGuid"],
+                                    @"HTProject/Pages/RG_OU/RG_OU_All_Detail.aspx?stype=shenhe&RowGuid=" + Request["RowGuid"],
                                     "",
                                     "",
                                     1,

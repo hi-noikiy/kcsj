@@ -232,7 +232,7 @@
                                     <asp:TemplateColumn HeaderText="ÐÞ¸Ä">
                                         <ItemStyle HorizontalAlign="Center" Width="40"></ItemStyle>
                                         <ItemTemplate>
-                                            <%# new HTProject_Bizlogic.DB_RG_DW().GetOperateButton2(DataBinder.Eval(Container, "DataItem.RowGuid"), DataBinder.Eval(Container, "DataItem.Status"), "RG_XMBeiAn_Edit.aspx", "../../../images/add1.gif","list")%>
+                                            <%# new HTProject_Bizlogic.DB_RG_DW().GetOperateButton2(DataBinder.Eval(Container, "DataItem.RowGuid"), DataBinder.Eval(Container, "DataItem.Status"), "RG_XMBeiAn_Edit.aspx", "../../../images/add1.gif","list",Request["DWGuid"])%>
                                             <%--<a href='javascript:OpenWindow("RG_XMBeiAn_Edit.aspx?RowGuid=<%#DataBinder.Eval(Container.DataItem,"RowGuid")%>")'>
                                                 <img src='../../../images/add1.gif' border='0'></a>--%>
                                         </ItemTemplate>

@@ -203,7 +203,9 @@ namespace HTProject.Pages.RG_XMBeiAn
                 {
                     if (GM >= 80)//中大型
                     {
-                        if (ZYZCCode != "00020001")//不是一级注册
+                        if (ZiZhiDJCode2 == "0005")//一体化的，不要求注册
+                        { }
+                        else if (ZYZCCode != "00020001")//不是一级注册
                         {
                             AlertAjaxMessage("大中型项目的建筑专业专业负责人应至少是一级注册");
                             return;
@@ -211,7 +213,9 @@ namespace HTProject.Pages.RG_XMBeiAn
                     }
                     else
                     {
-                        if (ZYZCCode != "00020002")//不是二级注册
+                        if (ZiZhiDJCode2 == "0005")//一体化的，不要求注册
+                        { }
+                        else if (ZYZCCode != "00020002")//不是二级注册
                         {
                             if (ZYZCCode == "00020001")
                             { }
@@ -227,7 +231,9 @@ namespace HTProject.Pages.RG_XMBeiAn
                 {
                     if (GM >= 80)//中大型
                     {
-                        if (ZYZCCode != "00030001")//不是一级注册
+                        if (ZiZhiDJCode2 == "0005")//一体化的，不要求注册
+                        { }
+                        else if (ZYZCCode != "00030001")//不是一级注册
                         {
                             AlertAjaxMessage("大中型项目的结构专业专业负责人应至少是一级注册");
                             return;
@@ -235,7 +241,9 @@ namespace HTProject.Pages.RG_XMBeiAn
                     }
                     else
                     {
-                        if (ZYZCCode != "00030002")//不是二级注册
+                        if (ZiZhiDJCode2 == "0005")//一体化的，不要求注册
+                        { }
+                        else if (ZYZCCode != "00030002")//不是二级注册
                         {
                             if (ZYZCCode == "00030001")
                             { }
@@ -310,7 +318,9 @@ namespace HTProject.Pages.RG_XMBeiAn
                 {
                     if (GM >= 80)//中大型
                     {
-                        if (ZYZCCode != "00020001")//不是一级注册
+                        if (ZiZhiDJCode2 == "0005")//一体化的，不要求注册
+                        { }
+                        else if (ZYZCCode != "00020001")//不是一级注册
                         {
                             AlertAjaxMessage("大中型项目的建筑专业专业负责人应至少是一级注册");
                             return;
@@ -318,7 +328,9 @@ namespace HTProject.Pages.RG_XMBeiAn
                     }
                     else
                     {
-                        if (ZYZCCode != "00020002")//不是二级注册
+                        if (ZiZhiDJCode2 == "0005")//一体化的，不要求注册
+                        { }
+                        else if (ZYZCCode != "00020002")//不是二级注册
                         {
                             if (ZYZCCode == "00020001")
                             { }
@@ -334,7 +346,9 @@ namespace HTProject.Pages.RG_XMBeiAn
                 {
                     if (GM >= 80)//中大型
                     {
-                        if (ZYZCCode != "00030001")//不是一级注册
+                        if (ZiZhiDJCode2 == "0005")//一体化的，不要求注册
+                        { }
+                        else if (ZYZCCode != "00030001")//不是一级注册
                         {
                             AlertAjaxMessage("大中型项目的结构专业专业负责人应至少是一级注册");
                             return;
@@ -342,7 +356,9 @@ namespace HTProject.Pages.RG_XMBeiAn
                     }
                     else
                     {
-                        if (ZYZCCode != "00030002")//不是二级注册
+                        if (ZiZhiDJCode2 == "0005")//一体化的，不要求注册
+                        { }
+                        else if (ZYZCCode != "00030002")//不是二级注册
                         {
                             if (ZYZCCode == "00030001")
                             { }

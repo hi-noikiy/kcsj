@@ -13,6 +13,7 @@ namespace HTProject.Ascx
 {
     public partial class OUEdit : System.Web.UI.UserControl
     {
+        Epoint.MisBizLogic2.Code.DB_CodeMain DB_CM = new Epoint.MisBizLogic2.Code.DB_CodeMain();
         protected void Page_Load(object sender, EventArgs e)
         {
             //获取当前企业的guid
@@ -20,21 +21,22 @@ namespace HTProject.Ascx
             ViewState["DWGuid"] = Epoint.MisBizLogic2.DB.ExecuteToString(strSql);
             string QYStatus = Epoint.MisBizLogic2.DB.ExecuteToString( "SELECT STATUS FROM RG_OUInfo WHERE ROWGUID='" + ViewState["DWGuid"] + "'");
             //获取状态，编辑中、审核退回的，到edit2
-            if(QYStatus == "60" || QYStatus == "80")
-            {
-                lblQYEditMessage.Text = "企业信息修改";
-                OE.Attributes.Add("onclick", "OpenWindow('Pages/RG_OU/RG_OU_Edit2.aspx?RowGuid=" + ViewState["DWGuid"].ToString() + "',800,700);");
-            }
+            //if(QYStatus == "60" || QYStatus == "80")
+            //{
+            //    lblQYEditMessage.Text = "企业信息修改";
+            //    OE.Attributes.Add("onclick", "OpenWindow('Pages/RG_OU/RG_OU_Edit2.aspx?RowGuid=" + ViewState["DWGuid"].ToString() + "',800,700);");
+            //}
             //通过的、变更中的，到edit
-            else if (QYStatus == "85" || QYStatus == "90")
+            if (QYStatus == "60" || QYStatus == "85" || QYStatus == "80" || QYStatus == "90")//if (QYStatus == "85" || QYStatus == "90")
             {
-                lblQYEditMessage.Text = "企业信息修改";
+                lblQYEditMessage.Text = "企业信息 - " + DB_CM.GetCodeText_FromHash("审核状态", QYStatus);
                 OE.Attributes.Add("onclick", "OpenWindow('Pages/RG_OU/RG_OU_Edit.aspx?RowGuid=" + ViewState["DWGuid"].ToString() + "',800,700);");
             }
             else//查看
             {
-                lblQYEditMessage.Text = "企业信息查看";
-                OE.Attributes.Add("onclick", "OpenWindow('Pages/RG_OU/RG_OU_All_Detail.aspx?RowGuid=" + ViewState["DWGuid"].ToString() + "',800,700);");
+
+                lblQYEditMessage.Text = "企业信息 - " + DB_CM.GetCodeText_FromHash("审核状态", QYStatus);
+                OE.Attributes.Add("onclick", "OpenWindow('Pages/RG_OU/RG_OU_All_Detail.aspx?stype=view&RowGuid=" + ViewState["DWGuid"].ToString() + "',800,700);");
             }
 
             //获取未审核通过的企业职业人员数

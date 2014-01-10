@@ -363,7 +363,7 @@
                                             <%# new Epoint.MisBizLogic2.Code.DB_CodeMain().GetCodeText_FromHash("ÉóºË×´Ì¬", Convert.ToString(DataBinder.Eval(Container, "DataItem.Status"))) %>
                                         </ItemTemplate>
                                     </asp:TemplateColumn>
-                                    <asp:TemplateColumn HeaderText="²Ù×÷">
+                                    <asp:TemplateColumn HeaderText="²Ù×÷" >
                                         <ItemStyle HorizontalAlign="Center" Width="40"></ItemStyle>
                                         <ItemTemplate>
                                             <%#GetButton(DataBinder.Eval(Container, "DataItem.Status"),DataBinder.Eval(Container.DataItem,"RowGuid"),"../RG_QYZiZhi/RG_QYZiZhi_Detail.aspx")%>
@@ -474,7 +474,7 @@
                                             <%# new Epoint.MisBizLogic2.Code.DB_CodeMain().GetCodeText_FromHash("ÉóºË×´Ì¬", Convert.ToString(DataBinder.Eval(Container, "DataItem.Status"))) %>
                                         </ItemTemplate>
                                     </asp:TemplateColumn>
-                                    <asp:TemplateColumn HeaderText="²Ù×÷">
+                                    <asp:TemplateColumn HeaderText="²Ù×÷" >
                                         <ItemStyle HorizontalAlign="Center" Width="40"></ItemStyle>
                                         <ItemTemplate>
                                             <%#GetButton(DataBinder.Eval(Container, "DataItem.Status"), DataBinder.Eval(Container.DataItem, "RowGuid"), "../RG_QYUser/RG_QYUser_Detail.aspx")%>
@@ -575,7 +575,7 @@
                                             <%# new Epoint.MisBizLogic2.Code.DB_CodeMain().GetCodeText_FromHash("ÉóºË×´Ì¬", Convert.ToString(DataBinder.Eval(Container, "DataItem.Status"))) %>
                                         </ItemTemplate>
                                     </asp:TemplateColumn>
-                                    <asp:TemplateColumn HeaderText="²é¿´">
+                                    <asp:TemplateColumn HeaderText="²é¿´" >
                                         <ItemStyle HorizontalAlign="Center" Width="40"></ItemStyle>
                                         <ItemTemplate>
                                             <a href='javascript:OpenWindow("../RG_XMBeiAn/RG_XMBeiAnAD_Detail.aspx?RowGuid=<%#DataBinder.Eval(Container.DataItem,"RowGuid")%>")'>

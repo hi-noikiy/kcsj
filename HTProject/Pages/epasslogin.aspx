@@ -13,38 +13,23 @@
     </style>
     <meta content="MSHTML 6.00.6000.16809" name="GENERATOR">
 </head>
-<body id="userlogin_body">
-    <form id="ValidForm" method='post' action='ePassVerify.aspx' onsubmit='return Validate();'
+<body id="userlogin_body" onkeydown="BindEnter(event)">
+    <form id="ValidForm" method='post' 
     language='jscript'>
     <input type="hidden" value="login" name="action">
     <input id="logintype" type="hidden" name="logintype">
 
     <script language="javascript">
-        function onChgAuth() {
-            var imgsrc = document.getElementById("imgauthcode");
-            imgsrc.src = "authcode.php?rnd=" + Math.random();
-        }
-        function doLogin() {
-            if (!checkData()) return false;
-            checkLoginType();
-            document.getElementById("theform").submit();
-        }
-        function doEnterKey() {
-            if (event.keyCode == 13) {
-                doLogin();
-            }
-        }
-        function checkLoginType() {
-            var acct = document.getElementById("account").value;
-            var emailRe = /\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/;
-            if (emailRe.test(acct)) {
-                document.getElementById("logintype").value = "email";
-            } else {
-                document.getElementById("logintype").value = "username";
-            }
-        }
         
-       
+
+        function BindEnter(obj) {     //使用document.getElementById获取到按钮对象
+
+            if (obj.keyCode == 13) {
+                //setTimeout(Validate(), 1000);
+                Validate();
+            }
+            
+        }
 
     </script>
 
@@ -83,14 +68,7 @@
             results = document.all.ePass.GetStrProperty(7, 0, 0);
             //alert(results);
             //alert("3.用户PIN码认证");
-            //            try {
-            //                document.all.ePass.VerifyPIN(0, TheForm.UserPIN.value);
-            //            }
-            //            catch (err) {
-            //                alert('用户PIN码认证失败!!!');
-            //                document.all.ePass.CloseDevice();
-            //                return false;
-            //            }
+            
             //alert("4.打开第一个密码文件证");
             try {
                 document.all.ePass.OpenFile(0, 1);
@@ -101,22 +79,24 @@
                 return false;
             }
             //alert("5.HashToken compute");
-            //            try {
-            //                Digest = document.all.ePass.HashToken(1, 2, '<%=Session["Message"].ToString()%>');
-            //            }
-            //            catch (err) {
-            //                alert('HashToken compute!');
-            //                document.all.ePass.CloseDevice();
-            //                return false;
-            //            }
-            //DigestID.innerHTML = "<input type='hidden' name='Digest' Value='" + Digest + "'>";
+            
             snID.innerHTML = "<input type='hidden' name='SN_SERAL' Value='" + results + "'>";
             var PassWord = TheForm.UserPIN.value;
             //alert(Digest + '|*|' + results);
             //alert("6.CloseDevice");
+            //alert(PassWord);
             try {
+                //alert('1');
                 document.all.ePass.CloseDevice();
-                window.location = "ePassVerify.aspx?SN_SERAL=" + results + "&PassWord=" + PassWord; //"&Digest=" + Digest
+                //alert('2');
+                var sURL = "ePassVerify.aspx?SN_SERAL=" + results + "&PassWord=" + PassWord;
+                //alert(sURL);
+                //window.location = sURL; //"&Digest=" + Digest
+                window.open(sURL);
+                window.close();
+                //alert(window.location);
+                //alert(PassWord);
+                return;
             }
             catch (err) {
                 alert(err.message);
@@ -177,7 +157,7 @@
                                 </li>
                                 <li class="user_main_r">
                                     <img class="IbtnEnterCssClass" id="IbtnEnter" style="border-top-width: 0px; border-left-width: 0px;
-                                        cursor: pointer; border-bottom-width: 0px; border-right-width: 0px" name="Submit"
+                                        cursor: pointer; border-bottom-width: 0px; border-right-width: 0px" 
                                         src="Images/user_botton.gif" name="IbtnEnter" onclick="Validate();" />
                                 </li>
                             </ul>

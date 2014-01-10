@@ -102,7 +102,10 @@ namespace HTProject.Pages.RG_QYZiZhi
                 {
                     tabOP.Visible = true;
                 }
-
+                if (Request["stype"] != "shenhe")
+                {
+                    tabOP.Visible = false;
+                }
                 lblSHOpinion.Text = RG_DW.GetSHOpinion(Request["RowGuid"], "");
             }
 
@@ -149,7 +152,7 @@ namespace HTProject.Pages.RG_QYZiZhi
                     }
                 }
             }
-
+            
             this.WriteAjaxMessage("refreshParent();");
             this.WriteAjaxMessage("window.close();");
         }

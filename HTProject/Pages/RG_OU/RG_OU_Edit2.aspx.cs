@@ -1,5 +1,6 @@
 /*
  * 编辑中、审核退回
+ * 该页面功能暂停使用
  */
 using System;
 using System.Collections;
@@ -216,7 +217,7 @@ namespace HTProject.Pages.RG_OU
                                     "",
                                     "",
                                     "",
-                                    @"HTProject/Pages/RG_OU/RG_OU_All_Detail.aspx?RowGuid=" + Request["RowGuid"],
+                                    @"HTProject/Pages/RG_OU/RG_OU_All_Detail.aspx?type=shenhe&RowGuid=" + Request["RowGuid"],
                                     "",
                                     "",
                                     1,

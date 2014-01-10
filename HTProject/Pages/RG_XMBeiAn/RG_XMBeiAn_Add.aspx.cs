@@ -43,7 +43,12 @@ namespace HTProject.Pages.RG_XMBeiAn
                 Epoint.MisBizLogic2.Web.CodeGenerator.InitiateControl_AddPage(oAddPage, tdContainer);
                 //添加上传文件的大小和类型检查
                 this.Add_FileUploadCheck_Script();
-
+                string strSql = "SELECT Status FROM RG_OUInfo WHERE RowGuid='" + Request["DWGuid"] + "'";
+                if (Epoint.MisBizLogic2.DB.ExecuteToString(strSql) != "90")
+                {
+                    WriteAjaxMessage("alert('企业信息还未审核通过，不能新增备案信息');window.close();");
+                    return;
+                }
                 //获取资质等级及证号
                 //string strSql = "select * from RG_QiYeZiZhi where ZiZhiEndDate>='"+ DateTime.Now.ToString("yyyy-MM-dd") +"' and DelStatus='1' and Status='90' and DWGuid='" + Request["DWGuid"]+"' ";
                 DataView dv = RG_DW.GetZiZhiByDWGuid(Request["DWGuid"]); //Epoint.MisBizLogic2.DB.ExecuteDataView(strSql);
@@ -59,8 +64,9 @@ namespace HTProject.Pages.RG_XMBeiAn
                     ZiZhiBH_2021.Text = dv[0]["ZiZhiCode"].ToString();
                 }
                 lblTips.Text = RG_DW.GetTip("60", "Add","0","");
-                string strSql = "SELECT EnterpriseName FROM RG_OUInfo WHERE RowGuid='" + Request["DWGuid"] + "'";
+                strSql = "SELECT EnterpriseName FROM RG_OUInfo WHERE RowGuid='" + Request["DWGuid"] + "'";
                 DWName_2021.Text = Epoint.MisBizLogic2.DB.ExecuteToString(strSql);
+                //看状态，如果没有通过，提示，并关闭
             }
         }
 
@@ -84,7 +90,7 @@ namespace HTProject.Pages.RG_XMBeiAn
                     //将资质与专业的对应关系复制成项目和专业的对应关系
 
                     RG_DW.CopyZZZYToXM(ZiZhiDJCode_2021.Text, RowGuid, Request["DWGuid"]);
-                    WriteAjaxMessage("window.location.href='RG_XMBeiAn_Edit.aspx?RowGuid=" + RowGuid + "';alert('保存成功');refreshParent();");
+                    WriteAjaxMessage("window.location.href='RG_XMBeiAn_Edit.aspx?RowGuid=" + RowGuid + "&DWGuid=" + Request["DWGuid"] + "';alert('保存成功');refreshParent();");
 
                 }
             }

@@ -88,7 +88,7 @@ namespace HTProject_Bizlogic
         }
 
         //在左上角盖章，右上角动态写有效期
-        public void addStampAndDate(Image bitMapImage, Graphics graphicImage, String beiAnNumber, String beiAnStampImagePath)
+        public void addStampAndDate(Image bitMapImage, Graphics graphicImage, String beiAnNumber, String beiAnStampImagePath, int width)
         {
             //Draw valid date range
             //Smooth graphics is nice.
@@ -99,9 +99,9 @@ namespace HTProject_Bizlogic
             Font font = new Font("Tahoma", 12);
             //int x_axis = 910;
             int y_axis = 25;
-            int x_axis = size.Width / 3;
+            int x_axis = width;
             //int y_axis = size.Height-100;
-            int distance = 25;
+            //int distance = 25;
             graphicImage.DrawString(beiAnNumber, font, Brushes.Black, new PointF(x_axis, y_axis));
             //graphicImage.DrawString(DateTime.Now.ToString("yyyy-MM-dd"), font, Brushes.Black, new PointF(x_axis + 90, y_axis + distance));
             //String validDate = DateTime.Now.AddYears(2).ToString("yyyy-MM-dd");

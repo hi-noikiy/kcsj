@@ -30,6 +30,8 @@ namespace HTProject.Pages.RG_XMBeiAn
 		{
 			if (!Page.IsPostBack )
 			{
+                
+
                 ViewState["TableName"] = oEditPage.TableDetail.TableName;
                 Epoint.MisBizLogic2.Data.MisGuidRow oRow = new Epoint.MisBizLogic2.Data.MisGuidRow(oEditPage.TableDetail.SQL_TableName, Request["RowGuid"]);
 				if (!oRow.R_HasFilled)
@@ -91,6 +93,13 @@ namespace HTProject.Pages.RG_XMBeiAn
                 //如果是省内的，就不要显示
                 string QYZCD = Epoint.MisBizLogic2.DB.ExecuteToString("SELECT RegistAddressCode FROM RG_OUInfo WHERE RowGuid='" + DWGuid_2021.Text + "'");
                 hiQYZCD.Value = QYZCD.Substring(0, 2);
+
+                string strSql = "SELECT Status FROM RG_OUInfo WHERE RowGuid='" + Request["DWGuid"] + "'";
+                if (Epoint.MisBizLogic2.DB.ExecuteToString(strSql) != "90")
+                {
+                    WriteAjaxMessage("alert('企业信息还未审核通过，不能维护备案信息');window.close();");
+                    return;
+                }
 			}
 
             if (hiQYZCD.Value == "32")
@@ -219,6 +228,12 @@ namespace HTProject.Pages.RG_XMBeiAn
         HTProject_Bizlogic.SMS HTSMS = new SMS();
         protected void btnSub_Click(object sender, System.EventArgs e)
         {
+            string strSql = "SELECT Status FROM RG_OUInfo WHERE RowGuid='" + Request["DWGuid"] + "'";
+            if (Epoint.MisBizLogic2.DB.ExecuteToString(strSql) != "90")
+            {
+                WriteAjaxMessage("alert('企业信息还未审核通过，不能维护备案信息');window.close();");
+                return;
+            }
             string message = "";
             if (this.LoginID != "lift")
             {
@@ -302,7 +317,7 @@ namespace HTProject.Pages.RG_XMBeiAn
                                     ""
                              );
                 //更新标志位
-                string strSql = "update messages_center set PType='备案信息审核',PGuid='" + Request["RowGuid"] + "' where MessageItemGuid='" + messageGuid + "'";
+                strSql = "update messages_center set PType='备案信息审核',PGuid='" + Request["RowGuid"] + "' where MessageItemGuid='" + messageGuid + "'";
                 Epoint.MisBizLogic2.DB.ExecuteNonQuery(strSql);
 
                 //添加短信
@@ -321,6 +336,9 @@ namespace HTProject.Pages.RG_XMBeiAn
 
         protected void btnXZ_Click(object sender, System.EventArgs e)
         {
+            TJRGuid_2021.Text = this.UserGuid;
+            TJDate_2021.Text = DateTime.Now.ToString();
+            oEditPage.SaveTableValues(Request["RowGuid"], tdContainer);
 
             bool IsND = false;//如果是省外、年度备案企业，则更改为true；
             #region 对企业进行判断

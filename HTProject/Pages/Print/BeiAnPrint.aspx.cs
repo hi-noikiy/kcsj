@@ -45,6 +45,7 @@ namespace HTProject.Pages.Print
                 strSql = "select * from RG_XMAndRY RY where XMGuid='" + Request["RowGuid"] + "' order by substring(RY.ZhuanYeCode,1,4) asc,RY.DDRole desc ";
                 DataView dvRY = Epoint.MisBizLogic2.DB.ExecuteDataView(strSql);
 
+                int count = dvRY.Count;
                 for (int i = 0; i < dvRY.Count; i++)
                 {
                     DataRow dr4;
@@ -76,6 +77,7 @@ namespace HTProject.Pages.Print
                     dr4["OrNo"] = i + 1;
                     ds.Tables["RYOfXM"].Rows.Add(dr4);
                 }
+         
 
                 //for (int m = 19; m > dvRY.Count; m--)
                 //{

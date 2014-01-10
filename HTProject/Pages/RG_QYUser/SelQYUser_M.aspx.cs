@@ -43,7 +43,8 @@ namespace HTProject.Pages.RG_QYUser
             //将个人的身份证到期时间筛选
             oListPage.OtherCondition += " and sfzyxqz>='" + DateTime.Now.ToString("yyyy-MM-dd") + "'  ";
             //将个人的社保证明时间筛选
-            oListPage.OtherCondition += " and Exists(SELECT 1 FROM RG_OUINFO WHERE ROWGUID=RG_QYUser.DWGUID AND SMJZSJ>'" + DateTime.Now.ToString("yyyy-MM-dd") + "' AND STATUS='90' ) ";
+            //暂时不看社保证明，数据库社保证明时间有误!
+            //oListPage.OtherCondition += " and Exists(SELECT 1 FROM RG_OUINFO WHERE ROWGUID=RG_QYUser.DWGUID AND SMJZSJ>'" + DateTime.Now.ToString("yyyy-MM-dd") + "' AND STATUS='90' ) ";
             //注册章有效期
             oListPage.OtherCondition += " and ((YinZhangNo='') or (YinZhangNo!='' and ZCZ_YXQ>'" + DateTime.Now.ToString("yyyy-MM-dd") + "') or (YinZhangNo1='') or (YinZhangNo1!='' and ZCZ_YXQ1>'" + DateTime.Now.ToString("yyyy-MM-dd") + "') or (YinZhangNo2='') or (YinZhangNo2!='' and ZCZ_YXQ2>'" + DateTime.Now.ToString("yyyy-MM-dd") + "') ) ";
             oListPage.CustomMode = true;            

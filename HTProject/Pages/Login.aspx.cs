@@ -134,9 +134,9 @@ namespace HTProject
             string PINCode = Epoint.MisBizLogic2.DB.ExecuteToString(strSql);
             if (PINCode.Length > 0)
             {
-                WriteAjaxMessage("alert('您已经有加密锁，请通过加密锁登录！');");
-                WriteAjaxMessage("window.location='epasslogin.aspx';");
-                return;
+                //WriteAjaxMessage("alert('您已经有加密锁，请通过加密锁登录！');");
+                //WriteAjaxMessage("window.location='epasslogin.aspx';");
+                //return;
             }
             //判断当前用户是否已经配置key，如果已配置，则检查当前系统是否启用了key，如果启用了key，再检查是否配置了不运行普通登录
             RegisterUserRow_ID = rgUser.RegisterUserLogin(account.Value, common.authPassword(password.Value));

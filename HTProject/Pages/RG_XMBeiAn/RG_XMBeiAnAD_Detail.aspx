@@ -73,6 +73,7 @@
                 valign="middle" align="center" height="36">
                 <font face="ËÎÌו"></font>
                 <%=ViewState ["TableName"]%><asp:Label ID="XMBH_2021" runat="server"></asp:Label>
+                <asp:Label ID="lblCS" runat="server" Text="Label" Visible="false"></asp:Label>
             </td>
         </tr>
         <tr>

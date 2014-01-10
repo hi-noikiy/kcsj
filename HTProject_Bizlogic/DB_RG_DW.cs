@@ -55,12 +55,12 @@ namespace HTProject_Bizlogic
             }
             return "";
         }
-        public string GetOperateButton2(object RowGuid, object Status, string url, string imgUrl, string from)
+        public string GetOperateButton2(object RowGuid, object Status, string url, string imgUrl, string from,object DWGuid)
         {
-            string sRTN = "<a href='javascript:OpenWindow(\"{0}?RowGuid={1}&from={3}\")' ><img src='{2}' border='0'/></a>";
+            string sRTN = "<a href='javascript:OpenWindow(\"{0}?RowGuid={1}&from={3}&DWGuid={4}\")' ><img src='{2}' border='0'/></a>";
             if (CanOperate2(Status))
             {
-                return string.Format(sRTN, url, RowGuid, imgUrl, from);
+                return string.Format(sRTN, url, RowGuid, imgUrl, from,DWGuid);
             }
             return "";
         }
@@ -252,6 +252,87 @@ namespace HTProject_Bizlogic
             XMBH += GetMaxXMBH_LSH(DateTime.Now.Year);
             return XMBH;
         }
+        /// <summary>
+        /// 项目编号
+        /// </summary>
+        /// <param name="XMGuid"></param>
+        /// <param name="DWGuid"></param>
+        /// <param name="XMAdd"></param>
+        /// <param name="XMLB"></param>
+        /// <param name="QYZCD"></param>
+        /// <param name="Year"></param>
+        /// <returns></returns>
+        public string CreateXMBH(object XMGuid, object DWGuid, object XMAdd, object XMLB, string QYZCD,int Year)
+        {
+            string XMBH = "";
+            //首先看企业注册地址，分为省内、省外，获取注册地区的前两位，如果是32，代表江苏
+            //首先看企业注册地区
+            //string QYZCD = Epoint.MisBizLogic2.DB.ExecuteToString("SELECT RegistAddressCode FROM RG_OUInfo WHERE RowGuid='" + DWGuid + "'");
+            if (QYZCD.Substring(0, 2) == "32")
+            {
+                XMBH += "SN-";
+            }
+            else
+            {
+                XMBH += "SW-";
+            }
+            string add = XMAdd.ToString();
+            //项目所在地区，分为市区、江阴、宜兴
+            if (add == "320281")//江阴
+            {
+                XMBH += "JY";
+            }
+            else if (add == "320282")//宜兴
+            {
+                XMBH += "YX";
+            }
+            else if (add == "320202")//崇安
+            {
+                XMBH += "CA";
+            }
+            else if (add == "320203")//南长区
+            {
+                XMBH += "NC";
+            }
+            else if (add == "320204")//北塘区
+            {
+                XMBH += "BT";
+            }
+            else if (add == "320205")//锡山区
+            {
+                XMBH += "XS";
+            }
+            else if (add == "320206")//惠山区
+            {
+                XMBH += "HS";
+            }
+            else if (add == "320211")//滨湖区
+            {
+                XMBH += "BH";
+            }
+            else if (add == "320207")//无锡新区
+            {
+                XMBH += "XQ";
+            }
+            else
+            {
+                XMBH += "SQ";
+            }
+
+            if (XMLB.ToString() == "")
+            {
+                XMBH += "-K-";
+            }
+            else
+            {
+                XMBH += "-" + XMLB + "-";
+            }
+            //再加上年月日
+            XMBH += DateTime.Now.ToString("yyyyMMdd");
+            //最后，再加一个年度流水号
+            XMBH += GetMaxXMBH_LSH(Year);
+            return XMBH;
+        }
 
         public string GetXMBH(object XMGuid, object DWGuid, object XMAdd, object XMBH, object XMLB)
         {
@@ -262,74 +343,75 @@ namespace HTProject_Bizlogic
             }
             else
             {
-                string QYZCD = Epoint.MisBizLogic2.DB.ExecuteToString("SELECT RegistAddressCode FROM RG_OUInfo WHERE RowGuid='" + DWGuid + "'");
-                if (QYZCD.Substring(0, 2) == "32")
-                {
-                    bh += "SN-";
-                }
-                else
-                {
-                    bh += "SW-";
-                }
+                return "";
+                //string QYZCD = Epoint.MisBizLogic2.DB.ExecuteToString("SELECT RegistAddressCode FROM RG_OUInfo WHERE RowGuid='" + DWGuid + "'");
+                //if (QYZCD.Substring(0, 2) == "32")
+                //{
+                //    bh += "SN-";
+                //}
+                //else
+                //{
+                //    bh += "SW-";
+                //}
 
-                string add = XMAdd.ToString();
-                //项目所在地区，分为市区、江阴、宜兴
-                if (add == "320281")//江阴
-                {
-                    XMBH += "JY";
-                }
-                else if (add == "320282")//宜兴
-                {
-                    XMBH += "YX";
-                }
-                else if (add == "320202")//崇安
-                {
-                    XMBH += "CA";
-                }
-                else if (add == "320203")//南长区
-                {
-                    XMBH += "NC";
-                }
-                else if (add == "320204")//北塘区
-                {
-                    XMBH += "BT";
-                }
-                else if (add == "320205")//锡山区
-                {
-                    XMBH += "XS";
-                }
-                else if (add == "320206")//惠山区
-                {
-                    XMBH += "HS";
-                }
-                else if (add == "320211")//滨湖区
-                {
-                    XMBH += "BH";
-                }
-                else if (add == "320207")//无锡新区
-                {
-                    XMBH += "XQ";
-                }
-                else
-                {
-                    XMBH += "SQ";
-                }
+                //string add = XMAdd.ToString();
+                ////项目所在地区，分为市区、江阴、宜兴
+                //if (add == "320281")//江阴
+                //{
+                //    XMBH += "JY";
+                //}
+                //else if (add == "320282")//宜兴
+                //{
+                //    XMBH += "YX";
+                //}
+                //else if (add == "320202")//崇安
+                //{
+                //    XMBH += "CA";
+                //}
+                //else if (add == "320203")//南长区
+                //{
+                //    XMBH += "NC";
+                //}
+                //else if (add == "320204")//北塘区
+                //{
+                //    XMBH += "BT";
+                //}
+                //else if (add == "320205")//锡山区
+                //{
+                //    XMBH += "XS";
+                //}
+                //else if (add == "320206")//惠山区
+                //{
+                //    XMBH += "HS";
+                //}
+                //else if (add == "320211")//滨湖区
+                //{
+                //    XMBH += "BH";
+                //}
+                //else if (add == "320207")//无锡新区
+                //{
+                //    XMBH += "XQ";
+                //}
+                //else
+                //{
+                //    XMBH += "SQ";
+                //}
 
-                if (XMLB.ToString() == "")
-                {
-                    XMBH += "-K-";
-                }
-                else
-                {
-                    XMBH += "-" + XMLB + "-";
-                }
-                return bh + XMBH;
+                //if (XMLB.ToString() == "")
+                //{
+                //    XMBH += "-K-";
+                //}
+                //else
+                //{
+                //    XMBH += "-" + XMLB + "-";
+                //}
+                //return bh + XMBH;
             }
         }
 
         public string GetMaxXMBH_LSH(int Year)
         {
-            string strSql = "SELECT TOP(1) XMBH FROM RG_XMBeiAn WHERE XMBH LIKE '%" + Year + "%' ORDER BY XMBH DESC";
+            string strSql = "SELECT TOP(1) XMBH FROM RG_XMBeiAn WHERE XMBH LIKE '%" + Year + "%' ORDER BY SUBSTRING(XMBH,LEN(XMBH)-3,4) DESC";
             string xmbh = Epoint.MisBizLogic2.DB.ExecuteToString(strSql);
             if (xmbh == "")
             {
