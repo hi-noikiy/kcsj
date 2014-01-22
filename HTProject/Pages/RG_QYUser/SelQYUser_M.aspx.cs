@@ -73,7 +73,7 @@ namespace HTProject.Pages.RG_QYUser
             {
                 int ordNo = Epoint.MisBizLogic2.DB.ExecuteToInt("select OrderNumber from Frame_Code_Item where ItemCode='" + Request["ZYCode"] + "'  and MainGuid='29b7967e-8098-42d5-8b40-ec757b0865a5'");
                 string code = getGGJB(Server.UrlDecode(Request["ItemText"]).Replace("二级", "一级"), ordNo + 1);
-                oListPage.OtherCondition += " and (ZhuanYeCSCode like '%" + Request["ZYCode"] + "%' or ZhuanYeCSCode like '" + code + "%')";
+                oListPage.OtherCondition += " and (ZhuanYeCSCode like '%" + Request["ZYCode"] + ";%' or ZhuanYeCSCode like '%" + code + ";%')";
             }
             else
             {

@@ -203,8 +203,27 @@ namespace HTProject.Ascx
                 }
                 else
                 {
-                    //无锡市公章
-                    this.addWatermarkImage2(g, watermark.Width, watermark.Height, HTProject_Bizlogic.CommonEnum.WaterMarkPosition.TOP_LEFT, StampImageUrl);
+                    //需要看看是否应该加无锡的公章：
+                    bool IsND = false;
+                    string strSql = "SELECT IsNDBA,RegistAddress,* FROM RG_OUInfo WHERE ROWGUID=(select DWGuid from RG_XMBeiAn where RowGuid='" + Request["BeiAnGuid"] + "')";
+                    string qyzcd = "";
+                    DataView dvQY = Epoint.MisBizLogic2.DB.ExecuteDataView(strSql);
+                    if (dvQY.Count > 0)
+                    {
+                        qyzcd = dvQY[0]["RegistAddressCode"].ToString().Substring(0, 2);
+                        if (dvQY[0]["IsNDBA"].ToString() == "1")
+                        {
+                            IsND = true;
+                        }
+                        else if (qyzcd == "32")
+                        {
+                            IsND = true;
+                        }
+
+
+                    }
+                    
+                    
                     //再考虑加个江阴或宜兴的章
                     //合同备案盖章及有效期
                     string BeiAnGuid = Request["BeiAnGuid"];
@@ -214,16 +233,31 @@ namespace HTProject.Ascx
                     if (address == "320282")
                     {
                         addWatermarkImage3(g, watermark.Width, watermark.Height, HTProject_Bizlogic.CommonEnum.WaterMarkPosition.TOP_LEFT, StampImageUrl_YX);
+                        if (!IsND)
+                        {
+                            //无锡市公章
+                            this.addWatermarkImage2(g, watermark.Width, watermark.Height, HTProject_Bizlogic.CommonEnum.WaterMarkPosition.TOP_LEFT, StampImageUrl);
+                        }
                     }
                     else if (address == "320281")
                     {
                         addWatermarkImage3(g, watermark.Width, watermark.Height, HTProject_Bizlogic.CommonEnum.WaterMarkPosition.TOP_LEFT, StampImageUrl_JY);
+                        if (!IsND)
+                        {
+                            //无锡市公章
+                            this.addWatermarkImage2(g, watermark.Width, watermark.Height, HTProject_Bizlogic.CommonEnum.WaterMarkPosition.TOP_LEFT, StampImageUrl);
+                        }
+                    }
+                    else
+                    {
+                        //无锡市公章
+                        this.addWatermarkImage2(g, watermark.Width, watermark.Height, HTProject_Bizlogic.CommonEnum.WaterMarkPosition.TOP_LEFT, StampImageUrl);
                     }
                     string strMessage = "项目备案号:";
                     strMessage += oRow["XMBH"];
-                    strMessage += ";审批日期:";
-                    strMessage += DateTime.Parse(oRow["TGDate"].ToString()).ToString("yyyy年MM月dd日");
-                    strMessage += ";有效期至:";
+                    //strMessage += ";审批日期:";
+                    //strMessage += DateTime.Parse(oRow["TGDate"].ToString()).ToString("yyyy年MM月dd日");
+                    strMessage += "\n有效期至:";
                     strMessage += DateTime.Parse(oRow["TGDate"].ToString()).AddYears(2).ToString("yyyy年MM月dd日");
                     BeiAnImageUtil util = new BeiAnImageUtil();
                     util.addStampAndDate(bitmap, g, strMessage, this.Page.MapPath(this.StampImageUrl), watermark.Width+5);

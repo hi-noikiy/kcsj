@@ -98,7 +98,7 @@ namespace HTProject_Bizlogic
             Size size = bitMapImage.Size;
             Font font = new Font("Tahoma", 12);
             //int x_axis = 910;
-            int y_axis = 25;
+            int y_axis = 5;
             int x_axis = width;
             //int y_axis = size.Height-100;
             //int distance = 25;

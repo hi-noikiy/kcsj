@@ -1263,8 +1263,8 @@ VALUES(NEWID(),@ZiZhiCode,@ZiZhiText,@ZhuanYeCode,@RYGuid,@RYName,@XMGuid,@DWGui
             string str2 = "第二步：配置项目人员，配置完成后下载备案表，相关人员签字并加盖单位公章后将该文件上传至页面下方的[勘察设计合同备案表]中，然后提交审核</br>";
             string strJY = "第三步：江阴主管单位对备案信息进行审核、审批</br>";
             string strYX = "第三步：宜兴主管单位对备案信息进行审核、审批</br>";
-            string str3 = "第三步：主管单位对备案信息进行审核";
-            string str31 = "第四步：主管单位对备案信息进行审核";
+            string str3 = "第三步：主管单位对备案信息进行审核</br>";
+            string str31 = "第四步：主管单位对备案信息进行审核</br>";
 
             string str4 = "第四步：审核不通过，根据审核意见进行调整后重复第二步";
             string str5 = "第四步：审核通过";

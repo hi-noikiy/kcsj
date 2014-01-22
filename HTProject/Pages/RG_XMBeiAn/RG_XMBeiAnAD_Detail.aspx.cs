@@ -135,10 +135,15 @@ namespace HTProject.Pages.RG_XMBeiAn
             if (dvQY.Count > 0)
             {
                 qyzcd = dvQY[0]["RegistAddressCode"].ToString().Substring(0, 2);
-                if (dvQY[0]["IsNDBA"].ToString() == "1" && qyzcd != "32")
+                if (dvQY[0]["IsNDBA"].ToString() == "1")
                 {
                     IsND = true;
                 }
+                else if (qyzcd == "32")
+                {
+                    IsND = true;
+                }
+
                 
             }
             #endregion
@@ -163,7 +168,10 @@ namespace HTProject.Pages.RG_XMBeiAn
                     {
                         oRow["Status"] = "90";
                         oRow["QXTG_Date"] = DateTime.Now.ToString();
-                        oRow["XMBH"] = RG_DW.CreateXMBH(Request["RowGuid"], DWGuid_2021.Text, oRow["XMAdd"], oRow["XMLB"], qyzcd);
+                        if (oRow["XMBH"].ToString() != "")
+                        {
+                            oRow["XMBH"] = RG_DW.CreateXMBH(Request["RowGuid"], DWGuid_2021.Text, oRow["XMAdd"], oRow["XMLB"], qyzcd);
+                        }
                         oRow["TGDate"] = DateTime.Now.ToString();
                         oRow.Update();
                         SaveOpinion("宜兴建设局", true);
@@ -205,7 +213,10 @@ namespace HTProject.Pages.RG_XMBeiAn
                 else
                 {
                     oRow["Status"] = "90";
-                    oRow["XMBH"] = RG_DW.CreateXMBH(Request["RowGuid"], DWGuid_2021.Text, oRow["XMAdd"], oRow["XMLB"], qyzcd);
+                    if (oRow["XMBH"].ToString() != "")
+                    {
+                        oRow["XMBH"] = RG_DW.CreateXMBH(Request["RowGuid"], DWGuid_2021.Text, oRow["XMAdd"], oRow["XMLB"], qyzcd);
+                    }
                     oRow["TGDate"] = DateTime.Now.ToString();
                     oRow.Update();
                     SaveOpinion("无锡建设局", true);
@@ -232,7 +243,10 @@ namespace HTProject.Pages.RG_XMBeiAn
                     {
                         oRow["Status"] = "90";
                         oRow["QXTG_Date"] = DateTime.Now.ToString();
-                        oRow["XMBH"] = RG_DW.CreateXMBH(Request["RowGuid"], DWGuid_2021.Text, oRow["XMAdd"], oRow["XMLB"], qyzcd);
+                        if (oRow["XMBH"].ToString() != "")
+                        {
+                            oRow["XMBH"] = RG_DW.CreateXMBH(Request["RowGuid"], DWGuid_2021.Text, oRow["XMAdd"], oRow["XMLB"], qyzcd);
+                        }
                         oRow["TGDate"] = DateTime.Now.ToString();
                         oRow.Update();
                         SaveOpinion("江阴建设局", true);
@@ -274,7 +288,10 @@ namespace HTProject.Pages.RG_XMBeiAn
                 else
                 {
                     oRow["Status"] = "90";
-                    oRow["XMBH"] = RG_DW.CreateXMBH(Request["RowGuid"], DWGuid_2021.Text, oRow["XMAdd"], oRow["XMLB"], qyzcd);
+                    if (oRow["XMBH"].ToString() != "")
+                    {
+                        oRow["XMBH"] = RG_DW.CreateXMBH(Request["RowGuid"], DWGuid_2021.Text, oRow["XMAdd"], oRow["XMLB"], qyzcd);
+                    }
                     oRow["TGDate"] = DateTime.Now.ToString();
                     oRow.Update();
                     SaveOpinion("无锡建设局", true);
@@ -309,7 +326,10 @@ namespace HTProject.Pages.RG_XMBeiAn
                 else
                 {
                     oRow["Status"] = "90";
-                    oRow["XMBH"] = RG_DW.CreateXMBH(Request["RowGuid"], DWGuid_2021.Text, oRow["XMAdd"], oRow["XMLB"], qyzcd);
+                    if (oRow["XMBH"].ToString() != "")
+                    {
+                        oRow["XMBH"] = RG_DW.CreateXMBH(Request["RowGuid"], DWGuid_2021.Text, oRow["XMAdd"], oRow["XMLB"], qyzcd);
+                    }
                     oRow["TGDate"] = DateTime.Now.ToString();
                     oRow.Update();
                     SaveOpinion("无锡建设局", true);

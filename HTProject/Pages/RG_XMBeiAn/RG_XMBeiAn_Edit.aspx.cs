@@ -235,7 +235,7 @@ namespace HTProject.Pages.RG_XMBeiAn
                 return;
             }
             string message = "";
-            if (this.LoginID != "lift")
+            if (this.LoginID != "lift")//lift //13328457-X
             {
                 //增加对人员的限制
                 message = RG_DW.ChenkZYRY(Request["RowGuid"], DWGuid_2021.Text, ZiZhiDJCode_2021.Text);
