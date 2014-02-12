@@ -23,7 +23,8 @@ namespace HTProject.Ascx
         protected void Page_Load(object sender, System.EventArgs e)
         {
             WatermarkImageUrl = Request.ApplicationPath + "/HTProject/Pages/Images/合同备案水印.jpg";
-            StampImageUrl = Request.ApplicationPath + "/HTProject/Pages/Images/合同备案公章.gif";
+            //StampImageUrl = Request.ApplicationPath + "/HTProject/Pages/Images/合同备案公章.gif"; 原先使用的gif格式
+            StampImageUrl = Request.ApplicationPath + "/HTProject/Pages/Images/合同备案公章.png";
             StampImageUrl_JY = Request.ApplicationPath + "/HTProject/Pages/Images/江阴合同备案公章.gif";
             StampImageUrl_YX = Request.ApplicationPath + "/HTProject/Pages/Images/宜兴合同备案公章.gif";
             WatermarkText = new Epoint.Frame.Bizlogic.Frame_Config().GetDetail("AppDeptName").ConfigValue;

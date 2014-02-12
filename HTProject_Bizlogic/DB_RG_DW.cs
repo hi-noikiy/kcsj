@@ -140,13 +140,14 @@ namespace HTProject_Bizlogic
         public string GetSHOpinion(object FRowGuid, object OtherGuid)
         {
             StringBuilder sb = new StringBuilder();
-            string strSql = "SELECT * FROM ShenHeInfo WHERE FRowGuid='" + FRowGuid + "' ";
+            string strSql = "SELECT top(10) * FROM ShenHeInfo WHERE FRowGuid='" + FRowGuid + "' ";
             if (OtherGuid.ToString() != "")
             {
                 strSql += " AND OtherGuid='" + OtherGuid + "' ";
             }
             strSql += " ORDER BY ROW_ID DESC ";
             DataView dvOP = Epoint.MisBizLogic2.DB.ExecuteDataView(strSql);
+            sb.Append("最近10条审核意见：<br/>");
             string strOpinion = "[{0}]在[{1}]，[{2}]";
             for (int m = 0; m < dvOP.Count; m++)
             {
@@ -1118,6 +1119,8 @@ VALUES(NEWID(),@ZiZhiCode,@ZiZhiText,@ZhuanYeCode,@RYGuid,@RYName,@XMGuid,@DWGui
                             allRYCount += 1;
                         }
                     }
+                    else if (dvZY[m]["ZhuanYeCode"].ToString() == "00100002" || dvZY[m]["ZhuanYeCode"].ToString() == "0010")
+                    { }
                     else
                     {
                         //再看看有没有专业负责人

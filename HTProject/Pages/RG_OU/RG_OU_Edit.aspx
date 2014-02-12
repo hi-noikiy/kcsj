@@ -46,6 +46,20 @@
                                 Text="取消修改" runat="server" CausesValidation="false" OnClientClick="window.close();">
                             </epoint:Button>
                         </td>
+                        <td style="width:80%">
+                            &nbsp;
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            &nbsp;
+                        </td>
+                        <td>
+                            审核意见
+                        </td>
+                        <td colspan="3">
+                            <asp:Label ID="lblSHOpinion" runat="server"></asp:Label>
+                        </td>
                     </tr>
                 </table>
             </div>

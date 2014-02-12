@@ -213,7 +213,7 @@ namespace HTProject.Pages.RG_XMBeiAn
                 else
                 {
                     oRow["Status"] = "90";
-                    if (oRow["XMBH"].ToString() != "")
+                    if (oRow["XMBH"].ToString() == "")
                     {
                         oRow["XMBH"] = RG_DW.CreateXMBH(Request["RowGuid"], DWGuid_2021.Text, oRow["XMAdd"], oRow["XMLB"], qyzcd);
                     }
@@ -288,7 +288,7 @@ namespace HTProject.Pages.RG_XMBeiAn
                 else
                 {
                     oRow["Status"] = "90";
-                    if (oRow["XMBH"].ToString() != "")
+                    if (oRow["XMBH"].ToString() == "")
                     {
                         oRow["XMBH"] = RG_DW.CreateXMBH(Request["RowGuid"], DWGuid_2021.Text, oRow["XMAdd"], oRow["XMLB"], qyzcd);
                     }
@@ -326,7 +326,7 @@ namespace HTProject.Pages.RG_XMBeiAn
                 else
                 {
                     oRow["Status"] = "90";
-                    if (oRow["XMBH"].ToString() != "")
+                    if (oRow["XMBH"].ToString() == "")
                     {
                         oRow["XMBH"] = RG_DW.CreateXMBH(Request["RowGuid"], DWGuid_2021.Text, oRow["XMAdd"], oRow["XMLB"], qyzcd);
                     }

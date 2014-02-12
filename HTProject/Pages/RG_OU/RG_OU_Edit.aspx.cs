@@ -28,6 +28,7 @@ namespace HTProject.Pages.RG_OU
         public int TableID = 2017;
         Epoint.MisBizLogic2.Web.EditPage oEditPage;
         HTProject_Bizlogic.DataBaseFunc DBF = new DataBaseFunc();
+        protected HTProject_Bizlogic.DB_RG_DW RG_DW = new DB_RG_DW();
         protected void Page_Load(object sender, System.EventArgs e)
         {
 
@@ -89,6 +90,8 @@ namespace HTProject.Pages.RG_OU
                 QY_QYQT.ClientTag = "企业其它文件";
                 QY_QYQT.NodeCode = Request["RowGuid"];
                 QY_QYQT.MisRowGuid = Request["RowGuid"];
+
+                lblSHOpinion.Text = RG_DW.GetSHOpinion(Request["RowGuid"], "");
 
             }
             InitCityTree();
